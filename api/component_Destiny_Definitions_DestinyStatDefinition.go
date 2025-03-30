@@ -3,6 +3,18 @@
 package api
 
 type Destiny_Definitions_DestinyStatDefinition struct {
+    // DisplayProperties.
+    //
+    // Many Destiny*Definition contracts - the "first order" entities of Destiny that have their own tables in the Manifest Database - also have displayable information. This is the base class for that display information.
+    DisplayProperties Destiny_Definitions_Common_DestinyDisplayPropertiesDefinition `json:"displayProperties"`
+
+    // HasComputedBlock.
+    //
+    // True if the stat is computed rather than being delivered as a raw value on items.
+    //
+    // For instance, the Light stat in Destiny 1 was a computed stat.
+    HasComputedBlock bool `json:"hasComputedBlock"`
+
     // Hash.
     //
     // The unique identifier for this entity. Guaranteed to be unique for the type of entity, but not globally.
@@ -29,16 +41,4 @@ type Destiny_Definitions_DestinyStatDefinition struct {
     //
     // Stats can exist on a character or an item, and they may potentially be aggregated in different ways. The DestinyStatAggregationType enum value indicates the way that this stat is being aggregated.
     AggregationType int32 `json:"aggregationType"`
-
-    // DisplayProperties.
-    //
-    // Many Destiny*Definition contracts - the "first order" entities of Destiny that have their own tables in the Manifest Database - also have displayable information. This is the base class for that display information.
-    DisplayProperties any `json:"displayProperties"`
-
-    // HasComputedBlock.
-    //
-    // True if the stat is computed rather than being delivered as a raw value on items.
-    //
-    // For instance, the Light stat in Destiny 1 was a computed stat.
-    HasComputedBlock bool `json:"hasComputedBlock"`
 }

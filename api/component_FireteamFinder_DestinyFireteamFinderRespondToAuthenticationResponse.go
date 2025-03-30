@@ -3,23 +3,23 @@
 package api
 
 type FireteamFinder_DestinyFireteamFinderRespondToAuthenticationResponse struct {
-    // ApplicationRevision.
-    //
-    // 
-    ApplicationRevision int32 `json:"applicationRevision"`
-
     // Listing.
     //
     // 
-    Listing any `json:"listing"`
+    Listing FireteamFinder_DestinyFireteamFinderListing `json:"listing"`
 
     // Offer.
     //
     // 
-    Offer any `json:"offer"`
+    Offer FireteamFinder_DestinyFireteamFinderOffer `json:"offer"`
 
     // ApplicationId.
     //
     // 
     ApplicationId int64 `json:"applicationId"`
+
+    // ApplicationRevision.
+    //
+    // 
+    ApplicationRevision int32 `json:"applicationRevision"`
 }

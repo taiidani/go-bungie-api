@@ -3,16 +3,6 @@
 package api
 
 type Destiny_Definitions_Artifacts_DestinyArtifactDefinition struct {
-    // TranslationBlock.
-    //
-    // Any Geometry/3D info we know about the Artifact. Currently sourced from a related inventory item's gearset information, but the source of this data is subject to change.
-    TranslationBlock any `json:"translationBlock"`
-
-    // DisplayProperties.
-    //
-    // Any basic display info we know about the Artifact. Currently sourced from a related inventory item, but the source of this data is subject to change.
-    DisplayProperties any `json:"displayProperties"`
-
     // Hash.
     //
     // The unique identifier for this entity. Guaranteed to be unique for the type of entity, but not globally.
@@ -34,4 +24,14 @@ type Destiny_Definitions_Artifacts_DestinyArtifactDefinition struct {
     //
     // Any Tier/Rank data related to this artifact, listed in display order.  Currently sourced from a Vendor, but this source is subject to change.
     Tiers []Destiny_Definitions_Artifacts_DestinyArtifactTierDefinition `json:"tiers"`
+
+    // TranslationBlock.
+    //
+    // Any Geometry/3D info we know about the Artifact. Currently sourced from a related inventory item's gearset information, but the source of this data is subject to change.
+    TranslationBlock any `json:"translationBlock"`
+
+    // DisplayProperties.
+    //
+    // Any basic display info we know about the Artifact. Currently sourced from a related inventory item, but the source of this data is subject to change.
+    DisplayProperties any `json:"displayProperties"`
 }

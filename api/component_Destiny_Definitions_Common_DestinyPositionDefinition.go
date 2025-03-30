@@ -3,11 +3,6 @@
 package api
 
 type Destiny_Definitions_Common_DestinyPositionDefinition struct {
-    // Z.
-    //
-    // 
-    Z int32 `json:"z"`
-
     // X.
     //
     // 
@@ -17,4 +12,9 @@ type Destiny_Definitions_Common_DestinyPositionDefinition struct {
     //
     // 
     Y int32 `json:"y"`
+
+    // Z.
+    //
+    // 
+    Z int32 `json:"z"`
 }

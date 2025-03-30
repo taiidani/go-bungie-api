@@ -3,11 +3,6 @@
 package api
 
 type DictionaryComponentResponseOfint64AndDestinyItemObjectivesComponent struct {
-    // Disabled.
-    //
-    // If true, this component is disabled.
-    Disabled bool `json:"disabled"`
-
     // Privacy.
     //
     // 
@@ -17,4 +12,9 @@ type DictionaryComponentResponseOfint64AndDestinyItemObjectivesComponent struct 
     //
     // 
     Data any `json:"data"`
+
+    // Disabled.
+    //
+    // If true, this component is disabled.
+    Disabled bool `json:"disabled"`
 }

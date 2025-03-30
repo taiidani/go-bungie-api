@@ -3,21 +3,6 @@
 package api
 
 type User_EMailSettingSubscriptionLocalization struct {
-    // UnregisteredUserDescription.
-    //
-    // 
-    UnregisteredUserDescription string `json:"unregisteredUserDescription"`
-
-    // Description.
-    //
-    // 
-    Description string `json:"description"`
-
-    // KnownUserActionText.
-    //
-    // 
-    KnownUserActionText string `json:"knownUserActionText"`
-
     // RegisteredUserDescription.
     //
     // 
@@ -37,4 +22,19 @@ type User_EMailSettingSubscriptionLocalization struct {
     //
     // 
     UnknownUserDescription string `json:"unknownUserDescription"`
+
+    // UnregisteredUserDescription.
+    //
+    // 
+    UnregisteredUserDescription string `json:"unregisteredUserDescription"`
+
+    // Description.
+    //
+    // 
+    Description string `json:"description"`
+
+    // KnownUserActionText.
+    //
+    // 
+    KnownUserActionText string `json:"knownUserActionText"`
 }

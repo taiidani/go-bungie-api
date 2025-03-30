@@ -6,10 +6,10 @@ type DestinyBaseItemComponentSetOfuint32 struct {
     // Objectives.
     //
     // 
-    Objectives any `json:"objectives"`
+    Objectives DictionaryComponentResponseOfuint32AndDestinyItemObjectivesComponent `json:"objectives"`
 
     // Perks.
     //
     // 
-    Perks any `json:"perks"`
+    Perks DictionaryComponentResponseOfuint32AndDestinyItemPerksComponent `json:"perks"`
 }

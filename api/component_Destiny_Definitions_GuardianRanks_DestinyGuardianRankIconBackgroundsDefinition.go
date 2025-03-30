@@ -3,46 +3,6 @@
 package api
 
 type Destiny_Definitions_GuardianRanks_DestinyGuardianRankIconBackgroundsDefinition struct {
-    // BackgroundFilledGrayHeavyAlphaBorderedImagePath.
-    //
-    // 
-    BackgroundFilledGrayHeavyAlphaBorderedImagePath string `json:"backgroundFilledGrayHeavyAlphaBorderedImagePath"`
-
-    // BackgroundFilledWhiteImagePath.
-    //
-    // 
-    BackgroundFilledWhiteImagePath string `json:"backgroundFilledWhiteImagePath"`
-
-    // BackgroundFilledWhiteMediumAlphaImagePath.
-    //
-    // 
-    BackgroundFilledWhiteMediumAlphaImagePath string `json:"backgroundFilledWhiteMediumAlphaImagePath"`
-
-    // BackgroundPlateBlackAlphaImagePath.
-    //
-    // 
-    BackgroundPlateBlackAlphaImagePath string `json:"backgroundPlateBlackAlphaImagePath"`
-
-    // BackgroundEmptyBlueGradientBorderedImagePath.
-    //
-    // 
-    BackgroundEmptyBlueGradientBorderedImagePath string `json:"backgroundEmptyBlueGradientBorderedImagePath"`
-
-    // BackgroundEmptyBorderedImagePath.
-    //
-    // 
-    BackgroundEmptyBorderedImagePath string `json:"backgroundEmptyBorderedImagePath"`
-
-    // BackgroundFilledBlueGradientBorderedImagePath.
-    //
-    // 
-    BackgroundFilledBlueGradientBorderedImagePath string `json:"backgroundFilledBlueGradientBorderedImagePath"`
-
-    // BackgroundFilledBlueBorderedImagePath.
-    //
-    // 
-    BackgroundFilledBlueBorderedImagePath string `json:"backgroundFilledBlueBorderedImagePath"`
-
     // BackgroundFilledGrayMediumAlphaBorderedImagePath.
     //
     // 
@@ -53,18 +13,58 @@ type Destiny_Definitions_GuardianRanks_DestinyGuardianRankIconBackgroundsDefinit
     // 
     BackgroundPlateBlackImagePath string `json:"backgroundPlateBlackImagePath"`
 
-    // BackgroundPlateWhiteImagePath.
-    //
-    // 
-    BackgroundPlateWhiteImagePath string `json:"backgroundPlateWhiteImagePath"`
-
     // BackgroundFilledBlueLowAlphaImagePath.
     //
     // 
     BackgroundFilledBlueLowAlphaImagePath string `json:"backgroundFilledBlueLowAlphaImagePath"`
 
+    // BackgroundFilledGrayHeavyAlphaBorderedImagePath.
+    //
+    // 
+    BackgroundFilledGrayHeavyAlphaBorderedImagePath string `json:"backgroundFilledGrayHeavyAlphaBorderedImagePath"`
+
+    // BackgroundFilledWhiteMediumAlphaImagePath.
+    //
+    // 
+    BackgroundFilledWhiteMediumAlphaImagePath string `json:"backgroundFilledWhiteMediumAlphaImagePath"`
+
+    // BackgroundEmptyBlueGradientBorderedImagePath.
+    //
+    // 
+    BackgroundEmptyBlueGradientBorderedImagePath string `json:"backgroundEmptyBlueGradientBorderedImagePath"`
+
+    // BackgroundPlateWhiteImagePath.
+    //
+    // 
+    BackgroundPlateWhiteImagePath string `json:"backgroundPlateWhiteImagePath"`
+
+    // BackgroundEmptyBorderedImagePath.
+    //
+    // 
+    BackgroundEmptyBorderedImagePath string `json:"backgroundEmptyBorderedImagePath"`
+
     // BackgroundFilledBlueMediumAlphaImagePath.
     //
     // 
     BackgroundFilledBlueMediumAlphaImagePath string `json:"backgroundFilledBlueMediumAlphaImagePath"`
+
+    // BackgroundFilledWhiteImagePath.
+    //
+    // 
+    BackgroundFilledWhiteImagePath string `json:"backgroundFilledWhiteImagePath"`
+
+    // BackgroundPlateBlackAlphaImagePath.
+    //
+    // 
+    BackgroundPlateBlackAlphaImagePath string `json:"backgroundPlateBlackAlphaImagePath"`
+
+    // BackgroundFilledBlueBorderedImagePath.
+    //
+    // 
+    BackgroundFilledBlueBorderedImagePath string `json:"backgroundFilledBlueBorderedImagePath"`
+
+    // BackgroundFilledBlueGradientBorderedImagePath.
+    //
+    // 
+    BackgroundFilledBlueGradientBorderedImagePath string `json:"backgroundFilledBlueGradientBorderedImagePath"`
 }

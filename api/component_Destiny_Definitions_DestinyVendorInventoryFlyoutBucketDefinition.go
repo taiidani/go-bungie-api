@@ -3,6 +3,11 @@
 package api
 
 type Destiny_Definitions_DestinyVendorInventoryFlyoutBucketDefinition struct {
+    // SortItemsBy.
+    //
+    // The methodology to use for sorting items from the flyout.
+    SortItemsBy int32 `json:"sortItemsBy"`
+
     // Collapsible.
     //
     // If true, the inventory bucket should be able to be collapsed visually.
@@ -12,9 +17,4 @@ type Destiny_Definitions_DestinyVendorInventoryFlyoutBucketDefinition struct {
     //
     // The inventory bucket whose contents should be shown.
     InventoryBucketHash uint32 `json:"inventoryBucketHash"`
-
-    // SortItemsBy.
-    //
-    // The methodology to use for sorting items from the flyout.
-    SortItemsBy int32 `json:"sortItemsBy"`
 }

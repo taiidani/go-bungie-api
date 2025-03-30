@@ -11,7 +11,7 @@ type SingleComponentResponseOfDestinyCharacterProgressionComponent struct {
     // Data.
     //
     // This component returns anything that could be considered "Progression" on a user: data where the user is gaining levels, reputation, completions, rewards, etc...
-    Data any `json:"data"`
+    Data Destiny_Entities_Characters_DestinyCharacterProgressionComponent `json:"data"`
 
     // Disabled.
     //

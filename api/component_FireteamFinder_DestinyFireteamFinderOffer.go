@@ -3,16 +3,6 @@
 package api
 
 type FireteamFinder_DestinyFireteamFinderOffer struct {
-    // State.
-    //
-    // 
-    State int32 `json:"state"`
-
-    // TargetId.
-    //
-    // 
-    TargetId any `json:"targetId"`
-
     // ApplicationId.
     //
     // 
@@ -37,4 +27,14 @@ type FireteamFinder_DestinyFireteamFinderOffer struct {
     //
     // 
     Revision int32 `json:"revision"`
+
+    // State.
+    //
+    // 
+    State int32 `json:"state"`
+
+    // TargetId.
+    //
+    // 
+    TargetId FireteamFinder_DestinyFireteamFinderPlayerId `json:"targetId"`
 }

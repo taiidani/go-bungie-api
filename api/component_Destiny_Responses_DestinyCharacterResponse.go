@@ -3,45 +3,12 @@
 package api
 
 type Destiny_Responses_DestinyCharacterResponse struct {
-    // Loadouts.
+    // RenderData.
     //
-    // The loadouts available to the character.
+    // Character rendering data - a minimal set of information about equipment and dyes used for rendering.
     //
-    // COMPONENT TYPE: CharacterLoadouts
-    Loadouts any `json:"loadouts"`
-
-    // Activities.
-    //
-    // Activity data - info about current activities available to the player.
-    //
-    // COMPONENT TYPE: CharacterActivities
-    Activities any `json:"activities"`
-
-    // Character.
-    //
-    // Base information about the character in question.
-    //
-    // COMPONENT TYPE: Characters
-    Character any `json:"character"`
-
-    // UninstancedItemComponents.
-    //
-    // The set of components belonging to the player's UNinstanced items. Because apparently now those too can have information relevant to the character's state.
-    //
-    // COMPONENT TYPE: [See inside the DestinyItemComponentSet contract for component types.]
-    UninstancedItemComponents any `json:"uninstancedItemComponents"`
-
-    // Progressions.
-    //
-    // Character progression data, including Milestones.
-    //
-    // COMPONENT TYPE: CharacterProgressions
-    Progressions any `json:"progressions"`
-
-    // Records.
-    //
-    // COMPONENT TYPE: Records
-    Records any `json:"records"`
+    // COMPONENT TYPE: CharacterRenderData
+    RenderData any `json:"renderData"`
 
     // Equipment.
     //
@@ -50,36 +17,17 @@ type Destiny_Responses_DestinyCharacterResponse struct {
     // COMPONENT TYPE: CharacterEquipment
     Equipment any `json:"equipment"`
 
-    // ItemComponents.
+    // Records.
     //
-    // The set of components belonging to the player's instanced items.
-    //
-    // COMPONENT TYPE: [See inside the DestinyItemComponentSet contract for component types.]
-    ItemComponents any `json:"itemComponents"`
+    // COMPONENT TYPE: Records
+    Records any `json:"records"`
 
-    // PresentationNodes.
+    // Activities.
     //
-    // COMPONENT TYPE: PresentationNodes
-    PresentationNodes any `json:"presentationNodes"`
-
-    // RenderData.
+    // Activity data - info about current activities available to the player.
     //
-    // Character rendering data - a minimal set of information about equipment and dyes used for rendering.
-    //
-    // COMPONENT TYPE: CharacterRenderData
-    RenderData any `json:"renderData"`
-
-    // Collectibles.
-    //
-    // COMPONENT TYPE: Collectibles
-    Collectibles any `json:"collectibles"`
-
-    // CurrencyLookups.
-    //
-    // A "lookup" convenience component that can be used to quickly check if the character has access to items that can be used for purchasing.
-    //
-    // COMPONENT TYPE: CurrencyLookups
-    CurrencyLookups any `json:"currencyLookups"`
+    // COMPONENT TYPE: CharacterActivities
+    Activities any `json:"activities"`
 
     // Kiosks.
     //
@@ -87,6 +35,39 @@ type Destiny_Responses_DestinyCharacterResponse struct {
     //
     // COMPONENT TYPE: Kiosks
     Kiosks any `json:"kiosks"`
+
+    // Character.
+    //
+    // Base information about the character in question.
+    //
+    // COMPONENT TYPE: Characters
+    Character any `json:"character"`
+
+    // PresentationNodes.
+    //
+    // COMPONENT TYPE: PresentationNodes
+    PresentationNodes any `json:"presentationNodes"`
+
+    // Inventory.
+    //
+    // The character-level non-equipped inventory items.
+    //
+    // COMPONENT TYPE: CharacterInventories
+    Inventory any `json:"inventory"`
+
+    // UninstancedItemComponents.
+    //
+    // The set of components belonging to the player's UNinstanced items. Because apparently now those too can have information relevant to the character's state.
+    //
+    // COMPONENT TYPE: [See inside the DestinyItemComponentSet contract for component types.]
+    UninstancedItemComponents any `json:"uninstancedItemComponents"`
+
+    // CurrencyLookups.
+    //
+    // A "lookup" convenience component that can be used to quickly check if the character has access to items that can be used for purchasing.
+    //
+    // COMPONENT TYPE: CurrencyLookups
+    CurrencyLookups any `json:"currencyLookups"`
 
     // PlugSets.
     //
@@ -97,10 +78,29 @@ type Destiny_Responses_DestinyCharacterResponse struct {
     // COMPONENT TYPE: ItemSockets
     PlugSets any `json:"plugSets"`
 
-    // Inventory.
+    // Progressions.
     //
-    // The character-level non-equipped inventory items.
+    // Character progression data, including Milestones.
     //
-    // COMPONENT TYPE: CharacterInventories
-    Inventory any `json:"inventory"`
+    // COMPONENT TYPE: CharacterProgressions
+    Progressions any `json:"progressions"`
+
+    // Collectibles.
+    //
+    // COMPONENT TYPE: Collectibles
+    Collectibles any `json:"collectibles"`
+
+    // ItemComponents.
+    //
+    // The set of components belonging to the player's instanced items.
+    //
+    // COMPONENT TYPE: [See inside the DestinyItemComponentSet contract for component types.]
+    ItemComponents any `json:"itemComponents"`
+
+    // Loadouts.
+    //
+    // The loadouts available to the character.
+    //
+    // COMPONENT TYPE: CharacterLoadouts
+    Loadouts any `json:"loadouts"`
 }

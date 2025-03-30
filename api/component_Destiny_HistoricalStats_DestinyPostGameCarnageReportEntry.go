@@ -3,11 +3,6 @@
 package api
 
 type Destiny_HistoricalStats_DestinyPostGameCarnageReportEntry struct {
-    // Score.
-    //
-    // Score of the player if available
-    Score any `json:"score"`
-
     // Standing.
     //
     // Standing of the player
@@ -32,4 +27,9 @@ type Destiny_HistoricalStats_DestinyPostGameCarnageReportEntry struct {
     //
     // Identity details of the player
     Player any `json:"player"`
+
+    // Score.
+    //
+    // Score of the player if available
+    Score any `json:"score"`
 }

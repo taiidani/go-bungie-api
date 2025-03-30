@@ -3,6 +3,16 @@
 package api
 
 type Destiny_Components_Profiles_DestinyProfileTransitoryTrackingEntry struct {
+    // ObjectiveHash.
+    //
+    // OPTIONAL - If this is tracking the status of a DestinyObjectiveDefinition, this is the identifier for that objective.
+    ObjectiveHash uint32 `json:"objectiveHash"`
+
+    // QuestlineItemHash.
+    //
+    // OPTIONAL - If this is tracking the status of a quest, this is the identifier for the DestinyInventoryItemDefinition that containst that questline data.
+    QuestlineItemHash uint32 `json:"questlineItemHash"`
+
     // TrackedDate.
     //
     // OPTIONAL - I've got to level with you, I don't really know what this is. Is it when you started tracking it? Is it only populated for tracked items that have time limits?
@@ -24,14 +34,4 @@ type Destiny_Components_Profiles_DestinyProfileTransitoryTrackingEntry struct {
     //
     // OPTIONAL - If this is tracking a DestinyLocationDefinition, this is the identifier for that location.
     LocationHash uint32 `json:"locationHash"`
-
-    // ObjectiveHash.
-    //
-    // OPTIONAL - If this is tracking the status of a DestinyObjectiveDefinition, this is the identifier for that objective.
-    ObjectiveHash uint32 `json:"objectiveHash"`
-
-    // QuestlineItemHash.
-    //
-    // OPTIONAL - If this is tracking the status of a quest, this is the identifier for the DestinyInventoryItemDefinition that containst that questline data.
-    QuestlineItemHash uint32 `json:"questlineItemHash"`
 }

@@ -6,7 +6,7 @@ type SingleComponentResponseOfDestinyLoadoutsComponent struct {
     // Data.
     //
     // 
-    Data any `json:"data"`
+    Data Destiny_Components_Loadouts_DestinyLoadoutsComponent `json:"data"`
 
     // Disabled.
     //

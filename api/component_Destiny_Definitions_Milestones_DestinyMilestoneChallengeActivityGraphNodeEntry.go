@@ -3,13 +3,13 @@
 package api
 
 type Destiny_Definitions_Milestones_DestinyMilestoneChallengeActivityGraphNodeEntry struct {
-    // ActivityGraphHash.
-    //
-    // 
-    ActivityGraphHash uint32 `json:"activityGraphHash"`
-
     // ActivityGraphNodeHash.
     //
     // 
     ActivityGraphNodeHash uint32 `json:"activityGraphNodeHash"`
+
+    // ActivityGraphHash.
+    //
+    // 
+    ActivityGraphHash uint32 `json:"activityGraphHash"`
 }

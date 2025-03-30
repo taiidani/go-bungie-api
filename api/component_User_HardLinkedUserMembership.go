@@ -3,6 +3,11 @@
 package api
 
 type User_HardLinkedUserMembership struct {
+    // CrossSaveOverriddenMembershipId.
+    //
+    // 
+    CrossSaveOverriddenMembershipId int64 `json:"CrossSaveOverriddenMembershipId"`
+
     // CrossSaveOverriddenType.
     //
     // 
@@ -17,9 +22,4 @@ type User_HardLinkedUserMembership struct {
     //
     // 
     MembershipType int32 `json:"membershipType"`
-
-    // CrossSaveOverriddenMembershipId.
-    //
-    // 
-    CrossSaveOverriddenMembershipId int64 `json:"CrossSaveOverriddenMembershipId"`
 }

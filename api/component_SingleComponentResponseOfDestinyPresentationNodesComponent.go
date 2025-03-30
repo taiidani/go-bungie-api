@@ -3,18 +3,18 @@
 package api
 
 type SingleComponentResponseOfDestinyPresentationNodesComponent struct {
+    // Privacy.
+    //
+    // 
+    Privacy int32 `json:"privacy"`
+
     // Data.
     //
     // 
-    Data any `json:"data"`
+    Data Destiny_Components_Presentation_DestinyPresentationNodesComponent `json:"data"`
 
     // Disabled.
     //
     // If true, this component is disabled.
     Disabled bool `json:"disabled"`
-
-    // Privacy.
-    //
-    // 
-    Privacy int32 `json:"privacy"`
 }

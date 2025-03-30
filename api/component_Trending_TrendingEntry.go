@@ -8,40 +8,10 @@ type Trending_TrendingEntry struct {
     // If the entry has a date at which it was created, this is that date.
     CreationDate string `json:"creationDate"`
 
-    // Image.
+    // FeatureImage.
     //
-    // 
-    Image string `json:"image"`
-
-    // StartDate.
-    //
-    // 
-    StartDate string `json:"startDate"`
-
-    // EndDate.
-    //
-    // 
-    EndDate string `json:"endDate"`
-
-    // WebmVideo.
-    //
-    // If this is populated, the entry has a related WebM video to show. I am 100% certain I am going to regret putting this directly on TrendingEntry, but it will work so yolo
-    WebmVideo string `json:"webmVideo"`
-
-    // Link.
-    //
-    // 
-    Link string `json:"link"`
-
-    // DisplayName.
-    //
-    // The localized "display name/article title/'primary localized identifier'" of the entity.
-    DisplayName string `json:"displayName"`
-
-    // Mp4Video.
-    //
-    // If this is populated, the entry has a related MP4 video to show. I am 100% certain I am going to regret putting this directly on TrendingEntry, but it will work so yolo
-    Mp4Video string `json:"mp4Video"`
+    // If isFeatured, this image will be populated with whatever the featured image is. Note that this will likely be a very large image, so don't use it all the time.
+    FeatureImage string `json:"featureImage"`
 
     // EntityType.
     //
@@ -53,20 +23,10 @@ type Trending_TrendingEntry struct {
     // If the item is of entityType TrendingEntryType.Container, it may have items - also Trending Entries - contained within it. This is the ordered list of those to display under the Container's header.
     Items []Trending_TrendingEntry `json:"items"`
 
-    // FeatureImage.
+    // Mp4Video.
     //
-    // If isFeatured, this image will be populated with whatever the featured image is. Note that this will likely be a very large image, so don't use it all the time.
-    FeatureImage string `json:"featureImage"`
-
-    // Identifier.
-    //
-    // We don't know whether the identifier will be a string, a uint, or a long... so we're going to cast it all to a string. But either way, we need any trending item created to have a single unique identifier for its type.
-    Identifier string `json:"identifier"`
-
-    // IsFeatured.
-    //
-    // 
-    IsFeatured bool `json:"isFeatured"`
+    // If this is populated, the entry has a related MP4 video to show. I am 100% certain I am going to regret putting this directly on TrendingEntry, but it will work so yolo
+    Mp4Video string `json:"mp4Video"`
 
     // Tagline.
     //
@@ -77,4 +37,44 @@ type Trending_TrendingEntry struct {
     //
     // The weighted score of this trending item.
     Weight float64 `json:"weight"`
+
+    // StartDate.
+    //
+    // 
+    StartDate string `json:"startDate"`
+
+    // Identifier.
+    //
+    // We don't know whether the identifier will be a string, a uint, or a long... so we're going to cast it all to a string. But either way, we need any trending item created to have a single unique identifier for its type.
+    Identifier string `json:"identifier"`
+
+    // WebmVideo.
+    //
+    // If this is populated, the entry has a related WebM video to show. I am 100% certain I am going to regret putting this directly on TrendingEntry, but it will work so yolo
+    WebmVideo string `json:"webmVideo"`
+
+    // DisplayName.
+    //
+    // The localized "display name/article title/'primary localized identifier'" of the entity.
+    DisplayName string `json:"displayName"`
+
+    // EndDate.
+    //
+    // 
+    EndDate string `json:"endDate"`
+
+    // IsFeatured.
+    //
+    // 
+    IsFeatured bool `json:"isFeatured"`
+
+    // Link.
+    //
+    // 
+    Link string `json:"link"`
+
+    // Image.
+    //
+    // 
+    Image string `json:"image"`
 }

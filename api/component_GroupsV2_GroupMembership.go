@@ -6,10 +6,10 @@ type GroupsV2_GroupMembership struct {
     // Group.
     //
     // 
-    Group any `json:"group"`
+    Group GroupsV2_GroupV2 `json:"group"`
 
     // Member.
     //
     // 
-    Member any `json:"member"`
+    Member GroupsV2_GroupMember `json:"member"`
 }

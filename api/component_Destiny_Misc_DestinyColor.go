@@ -3,6 +3,11 @@
 package api
 
 type Destiny_Misc_DestinyColor struct {
+    // Alpha.
+    //
+    // 
+    Alpha byte `json:"alpha"`
+
     // Blue.
     //
     // 
@@ -17,9 +22,4 @@ type Destiny_Misc_DestinyColor struct {
     //
     // 
     Red byte `json:"red"`
-
-    // Alpha.
-    //
-    // 
-    Alpha byte `json:"alpha"`
 }

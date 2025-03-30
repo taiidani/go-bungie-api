@@ -3,13 +3,13 @@
 package api
 
 type User_ExactSearchRequest struct {
-    // DisplayNameCode.
-    //
-    // 
-    DisplayNameCode int16 `json:"displayNameCode"`
-
     // DisplayName.
     //
     // 
     DisplayName string `json:"displayName"`
+
+    // DisplayNameCode.
+    //
+    // 
+    DisplayNameCode int16 `json:"displayNameCode"`
 }

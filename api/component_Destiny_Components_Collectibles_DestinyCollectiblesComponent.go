@@ -3,11 +3,6 @@
 package api
 
 type Destiny_Components_Collectibles_DestinyCollectiblesComponent struct {
-    // Collectibles.
-    //
-    // 
-    Collectibles any `json:"collectibles"`
-
     // CollectionBadgesRootNodeHash.
     //
     // The hash for the root presentation node definition of Collection Badges.
@@ -17,4 +12,9 @@ type Destiny_Components_Collectibles_DestinyCollectiblesComponent struct {
     //
     // The hash for the root presentation node definition of Collection categories.
     CollectionCategoriesRootNodeHash uint32 `json:"collectionCategoriesRootNodeHash"`
+
+    // Collectibles.
+    //
+    // 
+    Collectibles any `json:"collectibles"`
 }

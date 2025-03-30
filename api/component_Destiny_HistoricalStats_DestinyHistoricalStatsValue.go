@@ -3,6 +3,16 @@
 package api
 
 type Destiny_HistoricalStats_DestinyHistoricalStatsValue struct {
+    // Pga.
+    //
+    // Per game average for the statistic, if applicable
+    Pga any `json:"pga"`
+
+    // StatId.
+    //
+    // Unique ID for this stat
+    StatId string `json:"statId"`
+
     // Weighted.
     //
     // Weighted value of the stat if a weight greater than 1 has been assigned.
@@ -17,14 +27,4 @@ type Destiny_HistoricalStats_DestinyHistoricalStatsValue struct {
     //
     // Basic stat value.
     Basic any `json:"basic"`
-
-    // Pga.
-    //
-    // Per game average for the statistic, if applicable
-    Pga any `json:"pga"`
-
-    // StatId.
-    //
-    // Unique ID for this stat
-    StatId string `json:"statId"`
 }

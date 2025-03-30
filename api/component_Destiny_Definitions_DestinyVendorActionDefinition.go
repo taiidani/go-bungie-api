@@ -13,35 +13,35 @@ type Destiny_Definitions_DestinyVendorActionDefinition struct {
     // 
     ActionHash uint32 `json:"actionHash"`
 
-    // ActionId.
+    // ExecuteSeconds.
     //
     // 
-    ActionId string `json:"actionId"`
+    ExecuteSeconds int32 `json:"executeSeconds"`
 
     // Icon.
     //
     // 
     Icon string `json:"icon"`
 
-    // ExecuteSeconds.
+    // IsPositive.
     //
     // 
-    ExecuteSeconds int32 `json:"executeSeconds"`
-
-    // AutoPerformAction.
-    //
-    // 
-    AutoPerformAction bool `json:"autoPerformAction"`
+    IsPositive bool `json:"isPositive"`
 
     // Description.
     //
     // 
     Description string `json:"description"`
 
-    // IsPositive.
+    // ActionId.
     //
     // 
-    IsPositive bool `json:"isPositive"`
+    ActionId string `json:"actionId"`
+
+    // AutoPerformAction.
+    //
+    // 
+    AutoPerformAction bool `json:"autoPerformAction"`
 
     // Name.
     //

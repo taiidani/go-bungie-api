@@ -131,50 +131,51 @@ func renderObject(_ context.Context, key string, schema openapi3.SchemaRef) (*Ob
 	}
 
 	for id, prop := range schema.Value.Properties {
-		name := strings.ToUpper(string(id[0])) + id[1:]
-
 		add := Property{
-			Name:        name,
+			Name:        strings.ToUpper(string(id[0])) + id[1:],
 			Identifier:  id,
 			Key:         key,
+			Type:        resolveTypeFormat(prop),
 			Description: strings.Split(prop.Value.Description, "\n"),
-		}
-
-		switch prop.Value.Format {
-		case "date-time":
-			// TODO Can we get more specific?
-			add.Type = "string"
-		case "byte", "int16", "int32", "uint32", "int64":
-			add.Type = prop.Value.Format
-		case "float":
-			add.Type = "float32"
-		case "double":
-			add.Type = "float64"
-		default:
-			if prop.Value.Type.Is("string") {
-				add.Type = "string"
-			} else if prop.Value.Type.Is("boolean") {
-				add.Type = "bool"
-			} else if prop.Value.Type.Is("integer") {
-				// We couldn't find a more specific type in either Type or Format
-				add.Type = "int"
-			} else if prop.Value.Type.Is("array") {
-				add.Type = "[]any"
-				if prop.Value.Items.Ref != "" {
-					// #/components/schemas/Destiny.Config.ImagePyramidEntry
-					ref := strings.TrimPrefix(prop.Value.Items.Ref, "#/components/schemas/")
-					add.Type = "[]" + strings.ReplaceAll(ref, ".", "_")
-				}
-			} else if prop.Value.Type.Is("object") {
-				// TODO
-				add.Type = "any"
-			} else {
-				return nil, fmt.Errorf("'%q' property type and %q format not supported", prop.Value.Type, prop.Value.Format)
-			}
 		}
 
 		ret.Properties = append(ret.Properties, add)
 	}
 
 	return ret, nil
+}
+
+func resolveTypeFormat(prop *openapi3.SchemaRef) string {
+	switch prop.Value.Format {
+	case "date-time":
+		// TODO Can we get more specific?
+		return "string"
+	case "byte", "int16", "int32", "uint32", "int64":
+		return prop.Value.Format
+	case "float":
+		return "float32"
+	case "double":
+		return "float64"
+	default:
+		if prop.Value.Type.Is("string") {
+			return "string"
+		} else if prop.Value.Type.Is("boolean") {
+			return "bool"
+		} else if prop.Value.Type.Is("integer") {
+			// We couldn't find a more specific type in either Type or Format
+			return "int"
+		} else if prop.Value.Type.Is("array") {
+			return "[]" + resolveTypeFormat(prop.Value.Items)
+		} else if prop.Ref != "" {
+			// #/components/schemas/Destiny.Config.ImagePyramidEntry
+			ref := strings.TrimPrefix(prop.Ref, "#/components/schemas/")
+			return strings.ReplaceAll(ref, ".", "_")
+		} else if prop.Value.Type.Is("object") {
+			// TODO
+			return "any"
+		} else {
+			slog.Error(fmt.Sprintf("'%q' property type and %q format not supported", prop.Value.Type, prop.Value.Format))
+			return ""
+		}
+	}
 }

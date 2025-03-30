@@ -3,110 +3,110 @@
 package api
 
 type Fireteam_FireteamSummary struct {
-    // FireteamId.
+    // OwnerCurrentGuardianRankSnapshot.
     //
     // 
-    FireteamId int64 `json:"fireteamId"`
-
-    // PlayerSlotCount.
-    //
-    // 
-    PlayerSlotCount int32 `json:"playerSlotCount"`
-
-    // AlternateSlotCount.
-    //
-    // 
-    AlternateSlotCount int32 `json:"alternateSlotCount"`
-
-    // IsPublic.
-    //
-    // 
-    IsPublic bool `json:"isPublic"`
-
-    // IsValid.
-    //
-    // 
-    IsValid bool `json:"isValid"`
-
-    // DateModified.
-    //
-    // 
-    DateModified string `json:"dateModified"`
-
-    // IsImmediate.
-    //
-    // 
-    IsImmediate bool `json:"isImmediate"`
-
-    // ActivityType.
-    //
-    // 
-    ActivityType int32 `json:"activityType"`
-
-    // Platform.
-    //
-    // 
-    Platform byte `json:"platform"`
-
-    // OwnerHighestLifetimeGuardianRankSnapshot.
-    //
-    // 
-    OwnerHighestLifetimeGuardianRankSnapshot int32 `json:"ownerHighestLifetimeGuardianRankSnapshot"`
-
-    // OwnerTotalCommendationScoreSnapshot.
-    //
-    // 
-    OwnerTotalCommendationScoreSnapshot int32 `json:"ownerTotalCommendationScoreSnapshot"`
-
-    // Title.
-    //
-    // 
-    Title string `json:"title"`
+    OwnerCurrentGuardianRankSnapshot int32 `json:"ownerCurrentGuardianRankSnapshot"`
 
     // TitleBeforeModeration.
     //
     // 
     TitleBeforeModeration string `json:"titleBeforeModeration"`
 
-    // OwnerCurrentGuardianRankSnapshot.
-    //
-    // 
-    OwnerCurrentGuardianRankSnapshot int32 `json:"ownerCurrentGuardianRankSnapshot"`
-
     // DateCreated.
     //
     // 
     DateCreated string `json:"dateCreated"`
-
-    // AvailablePlayerSlotCount.
-    //
-    // 
-    AvailablePlayerSlotCount int32 `json:"availablePlayerSlotCount"`
-
-    // OwnerMembershipId.
-    //
-    // 
-    OwnerMembershipId int64 `json:"ownerMembershipId"`
 
     // AvailableAlternateSlotCount.
     //
     // 
     AvailableAlternateSlotCount int32 `json:"availableAlternateSlotCount"`
 
-    // Locale.
+    // AvailablePlayerSlotCount.
     //
     // 
-    Locale string `json:"locale"`
+    AvailablePlayerSlotCount int32 `json:"availablePlayerSlotCount"`
+
+    // DateModified.
+    //
+    // 
+    DateModified string `json:"dateModified"`
+
+    // IsValid.
+    //
+    // 
+    IsValid bool `json:"isValid"`
+
+    // Title.
+    //
+    // 
+    Title string `json:"title"`
+
+    // ActivityType.
+    //
+    // 
+    ActivityType int32 `json:"activityType"`
 
     // ScheduledTime.
     //
     // 
     ScheduledTime string `json:"scheduledTime"`
 
+    // Locale.
+    //
+    // 
+    Locale string `json:"locale"`
+
+    // PlayerSlotCount.
+    //
+    // 
+    PlayerSlotCount int32 `json:"playerSlotCount"`
+
+    // OwnerMembershipId.
+    //
+    // 
+    OwnerMembershipId int64 `json:"ownerMembershipId"`
+
+    // IsImmediate.
+    //
+    // 
+    IsImmediate bool `json:"isImmediate"`
+
+    // IsPublic.
+    //
+    // 
+    IsPublic bool `json:"isPublic"`
+
+    // OwnerHighestLifetimeGuardianRankSnapshot.
+    //
+    // 
+    OwnerHighestLifetimeGuardianRankSnapshot int32 `json:"ownerHighestLifetimeGuardianRankSnapshot"`
+
+    // FireteamId.
+    //
+    // 
+    FireteamId int64 `json:"fireteamId"`
+
+    // AlternateSlotCount.
+    //
+    // 
+    AlternateSlotCount int32 `json:"alternateSlotCount"`
+
     // GroupId.
     //
     // 
     GroupId int64 `json:"groupId"`
+
+    // OwnerTotalCommendationScoreSnapshot.
+    //
+    // 
+    OwnerTotalCommendationScoreSnapshot int32 `json:"ownerTotalCommendationScoreSnapshot"`
+
+    // Platform.
+    //
+    // 
+    Platform byte `json:"platform"`
 
     // DatePlayerModified.
     //

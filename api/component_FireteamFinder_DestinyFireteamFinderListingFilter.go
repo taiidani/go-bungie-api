@@ -3,6 +3,11 @@
 package api
 
 type FireteamFinder_DestinyFireteamFinderListingFilter struct {
+    // ListingValue.
+    //
+    // 
+    ListingValue FireteamFinder_DestinyFireteamFinderListingValue `json:"listingValue"`
+
     // MatchType.
     //
     // 
@@ -12,9 +17,4 @@ type FireteamFinder_DestinyFireteamFinderListingFilter struct {
     //
     // 
     RangeType int `json:"rangeType"`
-
-    // ListingValue.
-    //
-    // 
-    ListingValue any `json:"listingValue"`
 }

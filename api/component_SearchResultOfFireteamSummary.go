@@ -6,7 +6,7 @@ type SearchResultOfFireteamSummary struct {
     // Query.
     //
     // 
-    Query any `json:"query"`
+    Query Queries_PagedQuery `json:"query"`
 
     // ReplacementContinuationToken.
     //

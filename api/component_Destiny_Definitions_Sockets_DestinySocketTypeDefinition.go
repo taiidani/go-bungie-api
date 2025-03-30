@@ -3,20 +3,24 @@
 package api
 
 type Destiny_Definitions_Sockets_DestinySocketTypeDefinition struct {
-    // InsertAction.
+    // PlugWhitelist.
     //
-    // Defines what happens when a plug is inserted into sockets of this type.
-    InsertAction any `json:"insertAction"`
+    // A list of Plug "Categories" that are allowed to be plugged into sockets of this type.
+    //
+    // These should be compared against a given plug item's DestinyInventoryItemDefinition.plug.plugCategoryHash, which indicates the plug item's category.
+    //
+    // If the plug's category matches any whitelisted plug, or if the whitelist is empty, it is allowed to be inserted.
+    PlugWhitelist []Destiny_Definitions_Sockets_DestinyPlugWhitelistEntryDefinition `json:"plugWhitelist"`
 
-    // IsPreviewEnabled.
+    // Redacted.
+    //
+    // If this is true, then there is an entity with this identifier/type combination, but BNet is not yet allowed to show it. Sorry!
+    Redacted bool `json:"redacted"`
+
+    // SocketCategoryHash.
     //
     // 
-    IsPreviewEnabled bool `json:"isPreviewEnabled"`
-
-    // Visibility.
-    //
-    // Sometimes a socket isn't visible. These are some of the conditions under which sockets of this type are not visible. Unfortunately, the truth of visibility is much, much more complex. Best to rely on the live data for whether the socket is visible and enabled.
-    Visibility int32 `json:"visibility"`
+    SocketCategoryHash uint32 `json:"socketCategoryHash"`
 
     // AlwaysRandomizeSockets.
     //
@@ -28,41 +32,10 @@ type Destiny_Definitions_Sockets_DestinySocketTypeDefinition struct {
     // 
     AvoidDuplicatesOnInitialization bool `json:"avoidDuplicatesOnInitialization"`
 
-    // DisplayProperties.
-    //
-    // There are fields for this display data, but they appear to be unpopulated as of now. I am not sure where in the UI these would show if they even were populated, but I will continue to return this data in case it becomes useful.
-    DisplayProperties any `json:"displayProperties"`
-
-    // Hash.
-    //
-    // The unique identifier for this entity. Guaranteed to be unique for the type of entity, but not globally.
-    //
-    // When entities refer to each other in Destiny content, it is this hash that they are referring to.
-    Hash uint32 `json:"hash"`
-
     // HideDuplicateReusablePlugs.
     //
     // 
     HideDuplicateReusablePlugs bool `json:"hideDuplicateReusablePlugs"`
-
-    // PlugWhitelist.
-    //
-    // A list of Plug "Categories" that are allowed to be plugged into sockets of this type.
-    //
-    // These should be compared against a given plug item's DestinyInventoryItemDefinition.plug.plugCategoryHash, which indicates the plug item's category.
-    //
-    // If the plug's category matches any whitelisted plug, or if the whitelist is empty, it is allowed to be inserted.
-    PlugWhitelist []Destiny_Definitions_Sockets_DestinyPlugWhitelistEntryDefinition `json:"plugWhitelist"`
-
-    // SocketCategoryHash.
-    //
-    // 
-    SocketCategoryHash uint32 `json:"socketCategoryHash"`
-
-    // CurrencyScalars.
-    //
-    // 
-    CurrencyScalars []Destiny_Definitions_Sockets_DestinySocketTypeScalarMaterialRequirementEntry `json:"currencyScalars"`
 
     // Index.
     //
@@ -74,8 +47,35 @@ type Destiny_Definitions_Sockets_DestinySocketTypeDefinition struct {
     // This property indicates if the socket type determines whether Emblem icons and nameplates should be overridden by the inserted plug item's icon and nameplate.
     OverridesUiAppearance bool `json:"overridesUiAppearance"`
 
-    // Redacted.
+    // Visibility.
     //
-    // If this is true, then there is an entity with this identifier/type combination, but BNet is not yet allowed to show it. Sorry!
-    Redacted bool `json:"redacted"`
+    // Sometimes a socket isn't visible. These are some of the conditions under which sockets of this type are not visible. Unfortunately, the truth of visibility is much, much more complex. Best to rely on the live data for whether the socket is visible and enabled.
+    Visibility int32 `json:"visibility"`
+
+    // CurrencyScalars.
+    //
+    // 
+    CurrencyScalars []Destiny_Definitions_Sockets_DestinySocketTypeScalarMaterialRequirementEntry `json:"currencyScalars"`
+
+    // DisplayProperties.
+    //
+    // There are fields for this display data, but they appear to be unpopulated as of now. I am not sure where in the UI these would show if they even were populated, but I will continue to return this data in case it becomes useful.
+    DisplayProperties any `json:"displayProperties"`
+
+    // IsPreviewEnabled.
+    //
+    // 
+    IsPreviewEnabled bool `json:"isPreviewEnabled"`
+
+    // Hash.
+    //
+    // The unique identifier for this entity. Guaranteed to be unique for the type of entity, but not globally.
+    //
+    // When entities refer to each other in Destiny content, it is this hash that they are referring to.
+    Hash uint32 `json:"hash"`
+
+    // InsertAction.
+    //
+    // Defines what happens when a plug is inserted into sockets of this type.
+    InsertAction any `json:"insertAction"`
 }

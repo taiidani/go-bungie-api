@@ -6,10 +6,10 @@ type FireteamFinder_DestinyFireteamFinderUpdateLobbySettingsResponse struct {
     // UpdatedListing.
     //
     // 
-    UpdatedListing any `json:"updatedListing"`
+    UpdatedListing FireteamFinder_DestinyFireteamFinderListing `json:"updatedListing"`
 
     // UpdatedLobby.
     //
     // 
-    UpdatedLobby any `json:"updatedLobby"`
+    UpdatedLobby FireteamFinder_DestinyFireteamFinderLobbyResponse `json:"updatedLobby"`
 }

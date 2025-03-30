@@ -3,6 +3,11 @@
 package api
 
 type Destiny_Components_Records_DestinyCharacterRecordsComponent struct {
+    // FeaturedRecordHashes.
+    //
+    // 
+    FeaturedRecordHashes []uint32 `json:"featuredRecordHashes"`
+
     // RecordCategoriesRootNodeHash.
     //
     // The hash for the root presentation node definition of Triumph categories.
@@ -17,9 +22,4 @@ type Destiny_Components_Records_DestinyCharacterRecordsComponent struct {
     //
     // 
     Records any `json:"records"`
-
-    // FeaturedRecordHashes.
-    //
-    // 
-    FeaturedRecordHashes []any `json:"featuredRecordHashes"`
 }

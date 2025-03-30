@@ -3,10 +3,25 @@
 package api
 
 type Destiny_Character_DestinyCharacterCustomization struct {
-    // Face.
+    // SkinColor.
     //
     // 
-    Face uint32 `json:"face"`
+    SkinColor uint32 `json:"skinColor"`
+
+    // DecalColor.
+    //
+    // 
+    DecalColor uint32 `json:"decalColor"`
+
+    // EyeColor.
+    //
+    // 
+    EyeColor uint32 `json:"eyeColor"`
+
+    // HairColors.
+    //
+    // 
+    HairColors []uint32 `json:"hairColors"`
 
     // HairIndex.
     //
@@ -18,48 +33,33 @@ type Destiny_Character_DestinyCharacterCustomization struct {
     // 
     LipColor uint32 `json:"lipColor"`
 
+    // Face.
+    //
+    // 
+    Face uint32 `json:"face"`
+
     // WearHelmet.
     //
     // 
     WearHelmet bool `json:"wearHelmet"`
-
-    // DecalColor.
-    //
-    // 
-    DecalColor uint32 `json:"decalColor"`
 
     // DecalIndex.
     //
     // 
     DecalIndex int32 `json:"decalIndex"`
 
-    // EyeColor.
-    //
-    // 
-    EyeColor uint32 `json:"eyeColor"`
-
     // FeatureIndex.
     //
     // 
     FeatureIndex int32 `json:"featureIndex"`
-
-    // HairColors.
-    //
-    // 
-    HairColors []any `json:"hairColors"`
-
-    // FeatureColors.
-    //
-    // 
-    FeatureColors []any `json:"featureColors"`
 
     // Personality.
     //
     // 
     Personality uint32 `json:"personality"`
 
-    // SkinColor.
+    // FeatureColors.
     //
     // 
-    SkinColor uint32 `json:"skinColor"`
+    FeatureColors []uint32 `json:"featureColors"`
 }

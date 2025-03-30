@@ -3,6 +3,11 @@
 package api
 
 type Destiny_Definitions_Items_DestinyEnergyCostEntry struct {
+    // EnergyCost.
+    //
+    // The Energy cost for inserting this plug.
+    EnergyCost int32 `json:"energyCost"`
+
     // EnergyType.
     //
     // The type of energy that this plug costs, in enum form.
@@ -12,9 +17,4 @@ type Destiny_Definitions_Items_DestinyEnergyCostEntry struct {
     //
     // The type of energy that this plug costs, as a reference to the DestinyEnergyTypeDefinition of the energy type.
     EnergyTypeHash uint32 `json:"energyTypeHash"`
-
-    // EnergyCost.
-    //
-    // The Energy cost for inserting this plug.
-    EnergyCost int32 `json:"energyCost"`
 }

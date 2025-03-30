@@ -6,7 +6,7 @@ type Tags_Models_Contracts_TagResponse struct {
     // IgnoreStatus.
     //
     // 
-    IgnoreStatus any `json:"ignoreStatus"`
+    IgnoreStatus Ignores_IgnoreResponse `json:"ignoreStatus"`
 
     // TagText.
     //

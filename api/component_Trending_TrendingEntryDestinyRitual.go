@@ -3,6 +3,16 @@
 package api
 
 type Trending_TrendingEntryDestinyRitual struct {
+    // MilestoneDetails.
+    //
+    // A destiny event does not necessarily have a related Milestone, but if it does the details will be returned here.
+    MilestoneDetails any `json:"milestoneDetails"`
+
+    // Subtitle.
+    //
+    // 
+    Subtitle string `json:"subtitle"`
+
     // Title.
     //
     // 
@@ -32,14 +42,4 @@ type Trending_TrendingEntryDestinyRitual struct {
     //
     // 
     Image string `json:"image"`
-
-    // MilestoneDetails.
-    //
-    // A destiny event does not necessarily have a related Milestone, but if it does the details will be returned here.
-    MilestoneDetails any `json:"milestoneDetails"`
-
-    // Subtitle.
-    //
-    // 
-    Subtitle string `json:"subtitle"`
 }

@@ -3,6 +3,11 @@
 package api
 
 type GroupsV2_GroupSearchResponse struct {
+    // TotalResults.
+    //
+    // 
+    TotalResults int32 `json:"totalResults"`
+
     // UseTotalResults.
     //
     // If useTotalResults is true, then totalResults represents an accurate count.
@@ -22,7 +27,7 @@ type GroupsV2_GroupSearchResponse struct {
     // Query.
     //
     // 
-    Query any `json:"query"`
+    Query Queries_PagedQuery `json:"query"`
 
     // ReplacementContinuationToken.
     //
@@ -33,9 +38,4 @@ type GroupsV2_GroupSearchResponse struct {
     //
     // 
     Results []GroupsV2_GroupV2Card `json:"results"`
-
-    // TotalResults.
-    //
-    // 
-    TotalResults int32 `json:"totalResults"`
 }

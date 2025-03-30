@@ -11,5 +11,5 @@ type Destiny_Components_Vendors_DestinyVendorGroup struct {
     // VendorHashes.
     //
     // The ordered list of vendors within a particular group.
-    VendorHashes []any `json:"vendorHashes"`
+    VendorHashes []uint32 `json:"vendorHashes"`
 }

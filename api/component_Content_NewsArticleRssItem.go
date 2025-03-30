@@ -3,26 +3,6 @@
 package api
 
 type Content_NewsArticleRssItem struct {
-    // Link.
-    //
-    // 
-    Link string `json:"Link"`
-
-    // OptionalMobileImagePath.
-    //
-    // 
-    OptionalMobileImagePath string `json:"OptionalMobileImagePath"`
-
-    // PubDate.
-    //
-    // 
-    PubDate string `json:"PubDate"`
-
-    // Title.
-    //
-    // 
-    Title string `json:"Title"`
-
     // UniqueIdentifier.
     //
     // 
@@ -42,4 +22,24 @@ type Content_NewsArticleRssItem struct {
     //
     // 
     ImagePath string `json:"ImagePath"`
+
+    // Link.
+    //
+    // 
+    Link string `json:"Link"`
+
+    // OptionalMobileImagePath.
+    //
+    // 
+    OptionalMobileImagePath string `json:"OptionalMobileImagePath"`
+
+    // PubDate.
+    //
+    // 
+    PubDate string `json:"PubDate"`
+
+    // Title.
+    //
+    // 
+    Title string `json:"Title"`
 }

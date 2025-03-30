@@ -3,6 +3,21 @@
 package api
 
 type Destiny_Definitions_DestinyActivityPlaylistItemDefinition struct {
+    // ActivityHash.
+    //
+    // The hash identifier of the Activity that can be played. Use it to look up the DestinyActivityDefinition.
+    ActivityHash uint32 `json:"activityHash"`
+
+    // ActivityModeHashes.
+    //
+    // The hash identifiers for Activity Modes relevant to this entry.
+    ActivityModeHashes []uint32 `json:"activityModeHashes"`
+
+    // ActivityModeTypes.
+    //
+    // The activity modes - if any - in enum form. Because we can't seem to escape the enums.
+    ActivityModeTypes []int32 `json:"activityModeTypes"`
+
     // DirectActivityModeHash.
     //
     // If this playlist entry had an activity mode directly defined on it, this will be the hash of that mode.
@@ -12,19 +27,4 @@ type Destiny_Definitions_DestinyActivityPlaylistItemDefinition struct {
     //
     // If the playlist entry had an activity mode directly defined on it, this will be the enum value of that mode.
     DirectActivityModeType int32 `json:"directActivityModeType"`
-
-    // ActivityHash.
-    //
-    // The hash identifier of the Activity that can be played. Use it to look up the DestinyActivityDefinition.
-    ActivityHash uint32 `json:"activityHash"`
-
-    // ActivityModeHashes.
-    //
-    // The hash identifiers for Activity Modes relevant to this entry.
-    ActivityModeHashes []any `json:"activityModeHashes"`
-
-    // ActivityModeTypes.
-    //
-    // The activity modes - if any - in enum form. Because we can't seem to escape the enums.
-    ActivityModeTypes []any `json:"activityModeTypes"`
 }

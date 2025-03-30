@@ -3,11 +3,6 @@
 package api
 
 type Destiny_Definitions_DestinyMaterialRequirementSetDefinition struct {
-    // Index.
-    //
-    // The index of the entity as it was found in the investment tables.
-    Index int32 `json:"index"`
-
     // Materials.
     //
     // The list of all materials that are required.
@@ -24,4 +19,9 @@ type Destiny_Definitions_DestinyMaterialRequirementSetDefinition struct {
     //
     // When entities refer to each other in Destiny content, it is this hash that they are referring to.
     Hash uint32 `json:"hash"`
+
+    // Index.
+    //
+    // The index of the entity as it was found in the investment tables.
+    Index int32 `json:"index"`
 }

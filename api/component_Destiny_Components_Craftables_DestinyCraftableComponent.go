@@ -3,18 +3,18 @@
 package api
 
 type Destiny_Components_Craftables_DestinyCraftableComponent struct {
-    // Visible.
-    //
-    // 
-    Visible bool `json:"visible"`
-
     // FailedRequirementIndexes.
     //
     // If the requirements are not met for crafting this item, these will index into the list of failure strings.
-    FailedRequirementIndexes []any `json:"failedRequirementIndexes"`
+    FailedRequirementIndexes []int32 `json:"failedRequirementIndexes"`
 
     // Sockets.
     //
     // Plug item state for the crafting sockets.
     Sockets []Destiny_Components_Craftables_DestinyCraftableSocketComponent `json:"sockets"`
+
+    // Visible.
+    //
+    // 
+    Visible bool `json:"visible"`
 }

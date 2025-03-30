@@ -3,13 +3,13 @@
 package api
 
 type Destiny_Components_Craftables_DestinyCraftableSocketPlugComponent struct {
+    // FailedRequirementIndexes.
+    //
+    // Index into the unlock requirements to display failure descriptions
+    FailedRequirementIndexes []int32 `json:"failedRequirementIndexes"`
+
     // PlugItemHash.
     //
     // 
     PlugItemHash uint32 `json:"plugItemHash"`
-
-    // FailedRequirementIndexes.
-    //
-    // Index into the unlock requirements to display failure descriptions
-    FailedRequirementIndexes []any `json:"failedRequirementIndexes"`
 }

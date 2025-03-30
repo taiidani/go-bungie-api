@@ -3,6 +3,11 @@
 package api
 
 type Config_ClanBanner_ClanBannerDecal struct {
+    // BackgroundPath.
+    //
+    // 
+    BackgroundPath string `json:"backgroundPath"`
+
     // ForegroundPath.
     //
     // 
@@ -12,9 +17,4 @@ type Config_ClanBanner_ClanBannerDecal struct {
     //
     // 
     Identifier string `json:"identifier"`
-
-    // BackgroundPath.
-    //
-    // 
-    BackgroundPath string `json:"backgroundPath"`
 }

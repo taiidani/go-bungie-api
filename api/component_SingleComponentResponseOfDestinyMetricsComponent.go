@@ -3,11 +3,6 @@
 package api
 
 type SingleComponentResponseOfDestinyMetricsComponent struct {
-    // Data.
-    //
-    // 
-    Data any `json:"data"`
-
     // Disabled.
     //
     // If true, this component is disabled.
@@ -17,4 +12,9 @@ type SingleComponentResponseOfDestinyMetricsComponent struct {
     //
     // 
     Privacy int32 `json:"privacy"`
+
+    // Data.
+    //
+    // 
+    Data Destiny_Components_Metrics_DestinyMetricsComponent `json:"data"`
 }

@@ -11,7 +11,7 @@ type Destiny_HistoricalStats_DestinyHistoricalStatsPerCharacter struct {
     // Merged.
     //
     // 
-    Merged any `json:"merged"`
+    Merged Destiny_HistoricalStats_DestinyHistoricalStatsByPeriod `json:"merged"`
 
     // Results.
     //

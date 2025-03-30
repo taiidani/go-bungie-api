@@ -11,12 +11,12 @@ type Destiny_Definitions_Presentation_DestinyScoredPresentationNodeBaseDefinitio
     // TraitHashes.
     //
     // 
-    TraitHashes []any `json:"traitHashes"`
+    TraitHashes []uint32 `json:"traitHashes"`
 
     // TraitIds.
     //
     // 
-    TraitIds []any `json:"traitIds"`
+    TraitIds []string `json:"traitIds"`
 
     // Hash.
     //
@@ -38,7 +38,7 @@ type Destiny_Definitions_Presentation_DestinyScoredPresentationNodeBaseDefinitio
     // ParentNodeHashes.
     //
     // A quick reference to presentation nodes that have this node as a child. Presentation nodes can be parented under multiple parents.
-    ParentNodeHashes []any `json:"parentNodeHashes"`
+    ParentNodeHashes []uint32 `json:"parentNodeHashes"`
 
     // PresentationNodeType.
     //

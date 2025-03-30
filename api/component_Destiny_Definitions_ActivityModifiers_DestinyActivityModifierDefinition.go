@@ -3,16 +3,6 @@
 package api
 
 type Destiny_Definitions_ActivityModifiers_DestinyActivityModifierDefinition struct {
-    // Redacted.
-    //
-    // If this is true, then there is an entity with this identifier/type combination, but BNet is not yet allowed to show it. Sorry!
-    Redacted bool `json:"redacted"`
-
-    // DisplayInActivitySelection.
-    //
-    // 
-    DisplayInActivitySelection bool `json:"displayInActivitySelection"`
-
     // DisplayInNavMode.
     //
     // 
@@ -21,7 +11,7 @@ type Destiny_Definitions_ActivityModifiers_DestinyActivityModifierDefinition str
     // DisplayProperties.
     //
     // Many Destiny*Definition contracts - the "first order" entities of Destiny that have their own tables in the Manifest Database - also have displayable information. This is the base class for that display information.
-    DisplayProperties any `json:"displayProperties"`
+    DisplayProperties Destiny_Definitions_Common_DestinyDisplayPropertiesDefinition `json:"displayProperties"`
 
     // Hash.
     //
@@ -34,4 +24,14 @@ type Destiny_Definitions_ActivityModifiers_DestinyActivityModifierDefinition str
     //
     // The index of the entity as it was found in the investment tables.
     Index int32 `json:"index"`
+
+    // Redacted.
+    //
+    // If this is true, then there is an entity with this identifier/type combination, but BNet is not yet allowed to show it. Sorry!
+    Redacted bool `json:"redacted"`
+
+    // DisplayInActivitySelection.
+    //
+    // 
+    DisplayInActivitySelection bool `json:"displayInActivitySelection"`
 }

@@ -3,6 +3,20 @@
 package api
 
 type Destiny_Responses_DestinyItemResponse struct {
+    // Item.
+    //
+    // Common data for the item relevant to its non-instanced properties.
+    //
+    // COMPONENT TYPE: ItemCommonData
+    Item any `json:"item"`
+
+    // PlugObjectives.
+    //
+    // Information about objectives on Plugs for a given item. See the component's documentation for more info.
+    //
+    // COMPONENT TYPE: ItemPlugObjectives
+    PlugObjectives any `json:"plugObjectives"`
+
     // ReusablePlugs.
     //
     // Information about the Reusable Plugs for sockets on an item. These are plugs that you can insert into the given socket regardless of if you actually own an instance of that plug: they are logic-driven plugs rather than inventory-driven.
@@ -12,33 +26,12 @@ type Destiny_Responses_DestinyItemResponse struct {
     //  COMPONENT TYPE: ItemReusablePlugs
     ReusablePlugs any `json:"reusablePlugs"`
 
-    // Objectives.
+    // Sockets.
     //
-    // Information specifically about the item's objectives.
+    // Information about the sockets of the item: which are currently active, what potential sockets you could have and the stats/abilities/perks you can gain from them.
     //
-    // COMPONENT TYPE: ItemObjectives
-    Objectives any `json:"objectives"`
-
-    // Perks.
-    //
-    // Information specifically about the perks currently active on the item.
-    //
-    // COMPONENT TYPE: ItemPerks
-    Perks any `json:"perks"`
-
-    // PlugObjectives.
-    //
-    // Information about objectives on Plugs for a given item. See the component's documentation for more info.
-    //
-    // COMPONENT TYPE: ItemPlugObjectives
-    PlugObjectives any `json:"plugObjectives"`
-
-    // RenderData.
-    //
-    // Information about how to render the item in 3D.
-    //
-    // COMPONENT TYPE: ItemRenderData
-    RenderData any `json:"renderData"`
+    // COMPONENT TYPE: ItemSockets
+    Sockets any `json:"sockets"`
 
     // Stats.
     //
@@ -47,24 +40,12 @@ type Destiny_Responses_DestinyItemResponse struct {
     // COMPONENT TYPE: ItemStats
     Stats any `json:"stats"`
 
-    // Sockets.
-    //
-    // Information about the sockets of the item: which are currently active, what potential sockets you could have and the stats/abilities/perks you can gain from them.
-    //
-    // COMPONENT TYPE: ItemSockets
-    Sockets any `json:"sockets"`
-
     // TalentGrid.
     //
     // Information about the talent grid attached to the item. Talent nodes can provide a variety of benefits and abilities, and in Destiny 2 are used almost exclusively for the character's "Builds".
     //
     // COMPONENT TYPE: ItemTalentGrids
     TalentGrid any `json:"talentGrid"`
-
-    // CharacterId.
-    //
-    // If the item is on a character, this will return the ID of the character that is holding the item.
-    CharacterId int64 `json:"characterId"`
 
     // Instance.
     //
@@ -73,10 +54,29 @@ type Destiny_Responses_DestinyItemResponse struct {
     // COMPONENT TYPE: ItemInstances
     Instance any `json:"instance"`
 
-    // Item.
+    // Objectives.
     //
-    // Common data for the item relevant to its non-instanced properties.
+    // Information specifically about the item's objectives.
     //
-    // COMPONENT TYPE: ItemCommonData
-    Item any `json:"item"`
+    // COMPONENT TYPE: ItemObjectives
+    Objectives any `json:"objectives"`
+
+    // CharacterId.
+    //
+    // If the item is on a character, this will return the ID of the character that is holding the item.
+    CharacterId int64 `json:"characterId"`
+
+    // Perks.
+    //
+    // Information specifically about the perks currently active on the item.
+    //
+    // COMPONENT TYPE: ItemPerks
+    Perks any `json:"perks"`
+
+    // RenderData.
+    //
+    // Information about how to render the item in 3D.
+    //
+    // COMPONENT TYPE: ItemRenderData
+    RenderData any `json:"renderData"`
 }

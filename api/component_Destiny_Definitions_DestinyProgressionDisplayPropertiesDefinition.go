@@ -3,6 +3,11 @@
 package api
 
 type Destiny_Definitions_DestinyProgressionDisplayPropertiesDefinition struct {
+    // HasIcon.
+    //
+    // 
+    HasIcon bool `json:"hasIcon"`
+
     // HighResIcon.
     //
     // If this item has a high-res icon (at least for now, many things won't), then the path to that icon will be here.
@@ -36,9 +41,4 @@ type Destiny_Definitions_DestinyProgressionDisplayPropertiesDefinition struct {
     //
     // When progressions show your "experience" gained, that bar has units (i.e. "Experience", "Bad Dudes Snuffed Out", whatever). This is the localized string for that unit of measurement.
     DisplayUnitsName string `json:"displayUnitsName"`
-
-    // HasIcon.
-    //
-    // 
-    HasIcon bool `json:"hasIcon"`
 }

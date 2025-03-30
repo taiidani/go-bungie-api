@@ -3,32 +3,46 @@
 package api
 
 type Destiny_Entities_Characters_DestinyCharacterComponent struct {
-    // Stats.
+    // RaceType.
     //
-    // Your character's stats, such as Agility, Resilience, etc... *not* historical stats.
+    // Mostly for historical purposes at this point, this is an enumeration for the character's race.
     //
-    // You'll have to call a different endpoint for those.
-    Stats any `json:"stats"`
+    // It'll be preferable in the general case to look up the related definition: but for some people this was too convenient to remove.
+    RaceType int32 `json:"raceType"`
+
+    // ClassType.
+    //
+    // Mostly for historical purposes at this point, this is an enumeration for the character's class.
+    //
+    // It'll be preferable in the general case to look up the related definition: but for some people this was too convenient to remove.
+    ClassType int32 `json:"classType"`
+
+    // EmblemBackgroundPath.
+    //
+    // A shortcut path to the user's currently equipped emblem background image. If you're just showing summary info for a user, this is more convenient than examining their equipped emblem and looking up the definition.
+    EmblemBackgroundPath string `json:"emblemBackgroundPath"`
+
+    // GenderType.
+    //
+    // Mostly for historical purposes at this point, this is an enumeration for the character's Gender.
+    //
+    // It'll be preferable in the general case to look up the related definition: but for some people this was too convenient to remove. And yeah, it's an enumeration and not a boolean. Fight me.
+    GenderType int32 `json:"genderType"`
+
+    // CharacterId.
+    //
+    // The unique identifier for the character.
+    CharacterId int64 `json:"characterId"`
+
+    // MembershipId.
+    //
+    // Every Destiny Profile has a membershipId. This is provided on the character as well for convenience.
+    MembershipId int64 `json:"membershipId"`
 
     // BaseCharacterLevel.
     //
     // The "base" level of your character, not accounting for any light level.
     BaseCharacterLevel int32 `json:"baseCharacterLevel"`
-
-    // EmblemHash.
-    //
-    // The hash of the currently equipped emblem for the user. Can be used to look up the DestinyInventoryItemDefinition.
-    EmblemHash uint32 `json:"emblemHash"`
-
-    // GenderHash.
-    //
-    // Use this hash to look up the character's DestinyGenderDefinition.
-    GenderHash uint32 `json:"genderHash"`
-
-    // TitleRecordHash.
-    //
-    // If this Character has a title assigned to it, this is the identifier of the DestinyRecordDefinition that has that title information.
-    TitleRecordHash uint32 `json:"titleRecordHash"`
 
     // RaceHash.
     //
@@ -40,71 +54,62 @@ type Destiny_Entities_Characters_DestinyCharacterComponent struct {
     // The user's calculated "Light Level". Light level is an indicator of your power that mostly matters in the end game, once you've reached the maximum character level: it's a level that's dependent on the average Attack/Defense power of your items.
     Light int32 `json:"light"`
 
-    // GenderType.
-    //
-    // Mostly for historical purposes at this point, this is an enumeration for the character's Gender.
-    //
-    // It'll be preferable in the general case to look up the related definition: but for some people this was too convenient to remove. And yeah, it's an enumeration and not a boolean. Fight me.
-    GenderType int32 `json:"genderType"`
-
-    // DateLastPlayed.
-    //
-    // The last date that the user played Destiny.
-    DateLastPlayed string `json:"dateLastPlayed"`
-
-    // CharacterId.
-    //
-    // The unique identifier for the character.
-    CharacterId int64 `json:"characterId"`
-
     // MinutesPlayedThisSession.
     //
     // If the user is currently playing, this is how long they've been playing.
     MinutesPlayedThisSession int64 `json:"minutesPlayedThisSession"`
-
-    // ClassHash.
-    //
-    // Use this hash to look up the character's DestinyClassDefinition.
-    ClassHash uint32 `json:"classHash"`
-
-    // PercentToNextLevel.
-    //
-    // A number between 0 and 100, indicating the whole and fractional % remaining to get to the next character level.
-    PercentToNextLevel float32 `json:"percentToNextLevel"`
-
-    // RaceType.
-    //
-    // Mostly for historical purposes at this point, this is an enumeration for the character's race.
-    //
-    // It'll be preferable in the general case to look up the related definition: but for some people this was too convenient to remove.
-    RaceType int32 `json:"raceType"`
 
     // EmblemColor.
     //
     // A shortcut for getting the background color of the user's currently equipped emblem without having to do a DestinyInventoryItemDefinition lookup.
     EmblemColor any `json:"emblemColor"`
 
+    // DateLastPlayed.
+    //
+    // The last date that the user played Destiny.
+    DateLastPlayed string `json:"dateLastPlayed"`
+
+    // GenderHash.
+    //
+    // Use this hash to look up the character's DestinyGenderDefinition.
+    GenderHash uint32 `json:"genderHash"`
+
+    // Stats.
+    //
+    // Your character's stats, such as Agility, Resilience, etc... *not* historical stats.
+    //
+    // You'll have to call a different endpoint for those.
+    Stats any `json:"stats"`
+
+    // TitleRecordHash.
+    //
+    // If this Character has a title assigned to it, this is the identifier of the DestinyRecordDefinition that has that title information.
+    TitleRecordHash uint32 `json:"titleRecordHash"`
+
+    // MinutesPlayedTotal.
+    //
+    // If this value is 525,600, then they played Destiny for a year. Or they're a very dedicated Rent fan. Note that this includes idle time, not just time spent actually in activities shooting things.
+    MinutesPlayedTotal int64 `json:"minutesPlayedTotal"`
+
+    // PercentToNextLevel.
+    //
+    // A number between 0 and 100, indicating the whole and fractional % remaining to get to the next character level.
+    PercentToNextLevel float32 `json:"percentToNextLevel"`
+
+    // ClassHash.
+    //
+    // Use this hash to look up the character's DestinyClassDefinition.
+    ClassHash uint32 `json:"classHash"`
+
+    // EmblemHash.
+    //
+    // The hash of the currently equipped emblem for the user. Can be used to look up the DestinyInventoryItemDefinition.
+    EmblemHash uint32 `json:"emblemHash"`
+
     // EmblemPath.
     //
     // A shortcut path to the user's currently equipped emblem image. If you're just showing summary info for a user, this is more convenient than examining their equipped emblem and looking up the definition.
     EmblemPath string `json:"emblemPath"`
-
-    // MembershipId.
-    //
-    // Every Destiny Profile has a membershipId. This is provided on the character as well for convenience.
-    MembershipId int64 `json:"membershipId"`
-
-    // EmblemBackgroundPath.
-    //
-    // A shortcut path to the user's currently equipped emblem background image. If you're just showing summary info for a user, this is more convenient than examining their equipped emblem and looking up the definition.
-    EmblemBackgroundPath string `json:"emblemBackgroundPath"`
-
-    // ClassType.
-    //
-    // Mostly for historical purposes at this point, this is an enumeration for the character's class.
-    //
-    // It'll be preferable in the general case to look up the related definition: but for some people this was too convenient to remove.
-    ClassType int32 `json:"classType"`
 
     // LevelProgression.
     //
@@ -115,9 +120,4 @@ type Destiny_Entities_Characters_DestinyCharacterComponent struct {
     //
     // membershipType tells you the platform on which the character plays. Examine the BungieMembershipType enumeration for possible values.
     MembershipType int32 `json:"membershipType"`
-
-    // MinutesPlayedTotal.
-    //
-    // If this value is 525,600, then they played Destiny for a year. Or they're a very dedicated Rent fan. Note that this includes idle time, not just time spent actually in activities shooting things.
-    MinutesPlayedTotal int64 `json:"minutesPlayedTotal"`
 }

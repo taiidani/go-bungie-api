@@ -3,16 +3,6 @@
 package api
 
 type Destiny_Requests_Actions_DestinyInsertPlugsFreeActionRequest struct {
-    // CharacterId.
-    //
-    // 
-    CharacterId int64 `json:"characterId"`
-
-    // ItemId.
-    //
-    // The instance ID of the item for this action request.
-    ItemId int64 `json:"itemId"`
-
     // MembershipType.
     //
     // 
@@ -22,4 +12,14 @@ type Destiny_Requests_Actions_DestinyInsertPlugsFreeActionRequest struct {
     //
     // The plugs being inserted.
     Plug any `json:"plug"`
+
+    // CharacterId.
+    //
+    // 
+    CharacterId int64 `json:"characterId"`
+
+    // ItemId.
+    //
+    // The instance ID of the item for this action request.
+    ItemId int64 `json:"itemId"`
 }

@@ -3,10 +3,35 @@
 package api
 
 type Destiny_Definitions_DestinyLocationReleaseDefinition struct {
+    // SmallTransparentIcon.
+    //
+    // 
+    SmallTransparentIcon string `json:"smallTransparentIcon"`
+
+    // ActivityGraphNodeHash.
+    //
+    // The Activity Graph Node being pointed to by this location. (Remember that Activity Graph Node hashes are only unique within an Activity Graph: so use the combination to find the node being spoken of)
+    ActivityGraphNodeHash uint32 `json:"activityGraphNodeHash"`
+
     // ActivityHash.
     //
     // The Activity being pointed to by this location.
     ActivityHash uint32 `json:"activityHash"`
+
+    // LargeTransparentIcon.
+    //
+    // 
+    LargeTransparentIcon string `json:"largeTransparentIcon"`
+
+    // MapIcon.
+    //
+    // 
+    MapIcon string `json:"mapIcon"`
+
+    // ActivityPathDestination.
+    //
+    // If we had map information, this would tell us about path information related to destination on the map. Sad. Maybe you can do something cool with it. Go to town man.
+    ActivityPathDestination uint32 `json:"activityPathDestination"`
 
     // DestinationHash.
     //
@@ -18,40 +43,15 @@ type Destiny_Definitions_DestinyLocationReleaseDefinition struct {
     // If we had map information, this spawnPoint would be interesting. But sadly, we don't have that info.
     SpawnPoint uint32 `json:"spawnPoint"`
 
-    // ActivityPathDestination.
+    // WorldPosition.
     //
-    // If we had map information, this would tell us about path information related to destination on the map. Sad. Maybe you can do something cool with it. Go to town man.
-    ActivityPathDestination uint32 `json:"activityPathDestination"`
-
-    // MapIcon.
-    //
-    // 
-    MapIcon string `json:"mapIcon"`
-
-    // SmallTransparentIcon.
-    //
-    // 
-    SmallTransparentIcon string `json:"smallTransparentIcon"`
+    // Looks like it should be the position on the map, but sadly it does not look populated... yet?
+    WorldPosition []int32 `json:"worldPosition"`
 
     // ActivityGraphHash.
     //
     // The Activity Graph being pointed to by this location.
     ActivityGraphHash uint32 `json:"activityGraphHash"`
-
-    // ActivityGraphNodeHash.
-    //
-    // The Activity Graph Node being pointed to by this location. (Remember that Activity Graph Node hashes are only unique within an Activity Graph: so use the combination to find the node being spoken of)
-    ActivityGraphNodeHash uint32 `json:"activityGraphNodeHash"`
-
-    // LargeTransparentIcon.
-    //
-    // 
-    LargeTransparentIcon string `json:"largeTransparentIcon"`
-
-    // NavPointType.
-    //
-    // The type of Nav Point that this represents. See the enumeration for more info.
-    NavPointType int32 `json:"navPointType"`
 
     // ActivityPathBundle.
     //
@@ -63,10 +63,10 @@ type Destiny_Definitions_DestinyLocationReleaseDefinition struct {
     // Sadly, these don't appear to be populated anymore (ever?)
     DisplayProperties any `json:"displayProperties"`
 
-    // WorldPosition.
+    // NavPointType.
     //
-    // Looks like it should be the position on the map, but sadly it does not look populated... yet?
-    WorldPosition []any `json:"worldPosition"`
+    // The type of Nav Point that this represents. See the enumeration for more info.
+    NavPointType int32 `json:"navPointType"`
 
     // ActivityBubbleName.
     //

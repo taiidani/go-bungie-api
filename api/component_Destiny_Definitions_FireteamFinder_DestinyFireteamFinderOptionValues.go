@@ -21,7 +21,7 @@ type Destiny_Definitions_FireteamFinder_DestinyFireteamFinderOptionValues struct
     // OptionalNull.
     //
     // Many Destiny*Definition contracts - the "first order" entities of Destiny that have their own tables in the Manifest Database - also have displayable information. This is the base class for that display information.
-    OptionalNull any `json:"optionalNull"`
+    OptionalNull Destiny_Definitions_Common_DestinyDisplayPropertiesDefinition `json:"optionalNull"`
 
     // Type.
     //

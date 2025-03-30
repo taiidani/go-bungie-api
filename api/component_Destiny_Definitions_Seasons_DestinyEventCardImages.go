@@ -3,21 +3,6 @@
 package api
 
 type Destiny_Definitions_Seasons_DestinyEventCardImages struct {
-    // UnownedCardSleeveImagePath.
-    //
-    // 
-    UnownedCardSleeveImagePath string `json:"unownedCardSleeveImagePath"`
-
-    // UnownedCardSleeveWrapImagePath.
-    //
-    // 
-    UnownedCardSleeveWrapImagePath string `json:"unownedCardSleeveWrapImagePath"`
-
-    // CardCompleteImagePath.
-    //
-    // 
-    CardCompleteImagePath string `json:"cardCompleteImagePath"`
-
     // CardCompleteWrapImagePath.
     //
     // 
@@ -37,4 +22,19 @@ type Destiny_Definitions_Seasons_DestinyEventCardImages struct {
     //
     // 
     ThemeBackgroundImagePath string `json:"themeBackgroundImagePath"`
+
+    // UnownedCardSleeveImagePath.
+    //
+    // 
+    UnownedCardSleeveImagePath string `json:"unownedCardSleeveImagePath"`
+
+    // UnownedCardSleeveWrapImagePath.
+    //
+    // 
+    UnownedCardSleeveWrapImagePath string `json:"unownedCardSleeveWrapImagePath"`
+
+    // CardCompleteImagePath.
+    //
+    // 
+    CardCompleteImagePath string `json:"cardCompleteImagePath"`
 }

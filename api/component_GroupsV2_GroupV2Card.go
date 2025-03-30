@@ -3,56 +3,6 @@
 package api
 
 type GroupsV2_GroupV2Card struct {
-    // GroupId.
-    //
-    // 
-    GroupId int64 `json:"groupId"`
-
-    // GroupType.
-    //
-    // 
-    GroupType int32 `json:"groupType"`
-
-    // Locale.
-    //
-    // 
-    Locale string `json:"locale"`
-
-    // Capabilities.
-    //
-    // 
-    Capabilities int32 `json:"capabilities"`
-
-    // RemoteGroupId.
-    //
-    // 
-    RemoteGroupId int64 `json:"remoteGroupId"`
-
-    // CreationDate.
-    //
-    // 
-    CreationDate string `json:"creationDate"`
-
-    // MemberCount.
-    //
-    // 
-    MemberCount int32 `json:"memberCount"`
-
-    // MembershipOption.
-    //
-    // 
-    MembershipOption int32 `json:"membershipOption"`
-
-    // Motto.
-    //
-    // 
-    Motto string `json:"motto"`
-
-    // Name.
-    //
-    // 
-    Name string `json:"name"`
-
     // Theme.
     //
     // 
@@ -68,8 +18,58 @@ type GroupsV2_GroupV2Card struct {
     // 
     AvatarPath string `json:"avatarPath"`
 
+    // Capabilities.
+    //
+    // 
+    Capabilities int32 `json:"capabilities"`
+
+    // GroupId.
+    //
+    // 
+    GroupId int64 `json:"groupId"`
+
+    // Locale.
+    //
+    // 
+    Locale string `json:"locale"`
+
+    // Name.
+    //
+    // 
+    Name string `json:"name"`
+
+    // MemberCount.
+    //
+    // 
+    MemberCount int32 `json:"memberCount"`
+
+    // MembershipOption.
+    //
+    // 
+    MembershipOption int32 `json:"membershipOption"`
+
+    // RemoteGroupId.
+    //
+    // 
+    RemoteGroupId int64 `json:"remoteGroupId"`
+
+    // GroupType.
+    //
+    // 
+    GroupType int32 `json:"groupType"`
+
+    // Motto.
+    //
+    // 
+    Motto string `json:"motto"`
+
     // ClanInfo.
     //
     // This contract contains clan-specific group information. It does not include any investment data.
-    ClanInfo any `json:"clanInfo"`
+    ClanInfo GroupsV2_GroupV2ClanInfo `json:"clanInfo"`
+
+    // CreationDate.
+    //
+    // 
+    CreationDate string `json:"creationDate"`
 }

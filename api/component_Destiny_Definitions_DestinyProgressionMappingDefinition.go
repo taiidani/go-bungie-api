@@ -3,11 +3,6 @@
 package api
 
 type Destiny_Definitions_DestinyProgressionMappingDefinition struct {
-    // DisplayProperties.
-    //
-    // Infrequently defined in practice. Defer to the individual progressions' display properties.
-    DisplayProperties any `json:"displayProperties"`
-
     // DisplayUnits.
     //
     // The localized unit of measurement for progression across the progressions defined in this mapping. Unfortunately, this is very infrequently defined. Defer to the individual progressions' display units.
@@ -29,4 +24,9 @@ type Destiny_Definitions_DestinyProgressionMappingDefinition struct {
     //
     // If this is true, then there is an entity with this identifier/type combination, but BNet is not yet allowed to show it. Sorry!
     Redacted bool `json:"redacted"`
+
+    // DisplayProperties.
+    //
+    // Infrequently defined in practice. Defer to the individual progressions' display properties.
+    DisplayProperties any `json:"displayProperties"`
 }

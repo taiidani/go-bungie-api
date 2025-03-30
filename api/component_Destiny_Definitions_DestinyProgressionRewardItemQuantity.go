@@ -3,10 +3,10 @@
 package api
 
 type Destiny_Definitions_DestinyProgressionRewardItemQuantity struct {
-    // ItemInstanceId.
+    // HasConditionalVisibility.
     //
-    // If this quantity is referring to a specific instance of an item, this will have the item's instance ID. Normally, this will be null.
-    ItemInstanceId int64 `json:"itemInstanceId"`
+    // Indicates that this item quantity may be conditionally shown or hidden, based on various sources of state. For example: server flags, account state, or character progress.
+    HasConditionalVisibility bool `json:"hasConditionalVisibility"`
 
     // RewardItemIndex.
     //
@@ -17,6 +17,26 @@ type Destiny_Definitions_DestinyProgressionRewardItemQuantity struct {
     //
     // 
     UiDisplayStyle string `json:"uiDisplayStyle"`
+
+    // ItemHash.
+    //
+    // The hash identifier for the item in question. Use it to look up the item's DestinyInventoryItemDefinition.
+    ItemHash uint32 `json:"itemHash"`
+
+    // ItemInstanceId.
+    //
+    // If this quantity is referring to a specific instance of an item, this will have the item's instance ID. Normally, this will be null.
+    ItemInstanceId int64 `json:"itemInstanceId"`
+
+    // RewardedAtProgressionLevel.
+    //
+    // 
+    RewardedAtProgressionLevel int32 `json:"rewardedAtProgressionLevel"`
+
+    // AcquisitionBehavior.
+    //
+    // 
+    AcquisitionBehavior int32 `json:"acquisitionBehavior"`
 
     // Quantity.
     //
@@ -31,25 +51,5 @@ type Destiny_Definitions_DestinyProgressionRewardItemQuantity struct {
     // ClaimUnlockDisplayStrings.
     //
     // 
-    ClaimUnlockDisplayStrings []any `json:"claimUnlockDisplayStrings"`
-
-    // HasConditionalVisibility.
-    //
-    // Indicates that this item quantity may be conditionally shown or hidden, based on various sources of state. For example: server flags, account state, or character progress.
-    HasConditionalVisibility bool `json:"hasConditionalVisibility"`
-
-    // RewardedAtProgressionLevel.
-    //
-    // 
-    RewardedAtProgressionLevel int32 `json:"rewardedAtProgressionLevel"`
-
-    // ItemHash.
-    //
-    // The hash identifier for the item in question. Use it to look up the item's DestinyInventoryItemDefinition.
-    ItemHash uint32 `json:"itemHash"`
-
-    // AcquisitionBehavior.
-    //
-    // 
-    AcquisitionBehavior int32 `json:"acquisitionBehavior"`
+    ClaimUnlockDisplayStrings []string `json:"claimUnlockDisplayStrings"`
 }

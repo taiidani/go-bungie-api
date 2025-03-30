@@ -3,15 +3,25 @@
 package api
 
 type Destiny_Definitions_Director_DestinyActivityGraphDefinition struct {
-    // Connections.
+    // LinkedGraphs.
     //
-    // Represents connections between graph nodes. However, it lacks context that we'd need to make good use of it.
-    Connections []Destiny_Definitions_Director_DestinyActivityGraphConnectionDefinition `json:"connections"`
+    // Represents links between this Activity Graph and other ones.
+    LinkedGraphs []Destiny_Definitions_Director_DestinyLinkedGraphDefinition `json:"linkedGraphs"`
 
     // DisplayProgressions.
     //
     // Progressions can also display on maps, but similarly to displayObjectives we appear to lack some required information and context right now. We will have to look into it later and add more data if possible.
     DisplayProgressions []Destiny_Definitions_Director_DestinyActivityGraphDisplayProgressionDefinition `json:"displayProgressions"`
+
+    // Index.
+    //
+    // The index of the entity as it was found in the investment tables.
+    Index int32 `json:"index"`
+
+    // Connections.
+    //
+    // Represents connections between graph nodes. However, it lacks context that we'd need to make good use of it.
+    Connections []Destiny_Definitions_Director_DestinyActivityGraphConnectionDefinition `json:"connections"`
 
     // Hash.
     //
@@ -19,16 +29,6 @@ type Destiny_Definitions_Director_DestinyActivityGraphDefinition struct {
     //
     // When entities refer to each other in Destiny content, it is this hash that they are referring to.
     Hash uint32 `json:"hash"`
-
-    // Index.
-    //
-    // The index of the entity as it was found in the investment tables.
-    Index int32 `json:"index"`
-
-    // LinkedGraphs.
-    //
-    // Represents links between this Activity Graph and other ones.
-    LinkedGraphs []Destiny_Definitions_Director_DestinyLinkedGraphDefinition `json:"linkedGraphs"`
 
     // Nodes.
     //

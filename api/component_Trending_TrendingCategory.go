@@ -3,11 +3,6 @@
 package api
 
 type Trending_TrendingCategory struct {
-    // Entries.
-    //
-    // 
-    Entries any `json:"entries"`
-
     // CategoryId.
     //
     // 
@@ -17,4 +12,9 @@ type Trending_TrendingCategory struct {
     //
     // 
     CategoryName string `json:"categoryName"`
+
+    // Entries.
+    //
+    // 
+    Entries SearchResultOfTrendingEntry `json:"entries"`
 }

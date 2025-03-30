@@ -3,10 +3,30 @@
 package api
 
 type GroupsV2_GroupMemberApplication struct {
+    // BungieNetUserInfo.
+    //
+    // This contract supplies basic information commonly used to display a minimal amount of information about a user. Take care to not add more properties here unless the property applies in all (or at least the majority) of the situations where UserInfoCard is used. Avoid adding game specific or platform specific details here. In cases where UserInfoCard is a subset of the data needed in a contract, use UserInfoCard as a property of other contracts.
+    BungieNetUserInfo User_UserInfoCard `json:"bungieNetUserInfo"`
+
+    // GroupId.
+    //
+    // 
+    GroupId int64 `json:"groupId"`
+
     // ResolveDate.
     //
     // 
     ResolveDate string `json:"resolveDate"`
+
+    // CreationDate.
+    //
+    // 
+    CreationDate string `json:"creationDate"`
+
+    // ResolveState.
+    //
+    // 
+    ResolveState int32 `json:"resolveState"`
 
     // ResolveMessage.
     //
@@ -18,33 +38,13 @@ type GroupsV2_GroupMemberApplication struct {
     // 
     ResolvedByMembershipId int64 `json:"resolvedByMembershipId"`
 
-    // ResolveState.
+    // DestinyUserInfo.
     //
     // 
-    ResolveState int32 `json:"resolveState"`
-
-    // GroupId.
-    //
-    // 
-    GroupId int64 `json:"groupId"`
-
-    // BungieNetUserInfo.
-    //
-    // This contract supplies basic information commonly used to display a minimal amount of information about a user. Take care to not add more properties here unless the property applies in all (or at least the majority) of the situations where UserInfoCard is used. Avoid adding game specific or platform specific details here. In cases where UserInfoCard is a subset of the data needed in a contract, use UserInfoCard as a property of other contracts.
-    BungieNetUserInfo any `json:"bungieNetUserInfo"`
+    DestinyUserInfo GroupsV2_GroupUserInfoCard `json:"destinyUserInfo"`
 
     // RequestMessage.
     //
     // 
     RequestMessage string `json:"requestMessage"`
-
-    // CreationDate.
-    //
-    // 
-    CreationDate string `json:"creationDate"`
-
-    // DestinyUserInfo.
-    //
-    // 
-    DestinyUserInfo any `json:"destinyUserInfo"`
 }

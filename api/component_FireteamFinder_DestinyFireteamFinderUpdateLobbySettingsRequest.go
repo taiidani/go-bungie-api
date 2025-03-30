@@ -6,5 +6,5 @@ type FireteamFinder_DestinyFireteamFinderUpdateLobbySettingsRequest struct {
     // UpdatedSettings.
     //
     // 
-    UpdatedSettings any `json:"updatedSettings"`
+    UpdatedSettings FireteamFinder_DestinyFireteamFinderLobbySettings `json:"updatedSettings"`
 }

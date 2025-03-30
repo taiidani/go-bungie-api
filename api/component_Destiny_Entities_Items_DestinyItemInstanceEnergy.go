@@ -3,11 +3,6 @@
 package api
 
 type Destiny_Entities_Items_DestinyItemInstanceEnergy struct {
-    // EnergyUsed.
-    //
-    // The amount of Energy currently in use by inserted plugs.
-    EnergyUsed int32 `json:"energyUsed"`
-
     // EnergyCapacity.
     //
     // The total capacity of Energy that the item currently has, regardless of if it is currently being used.
@@ -27,4 +22,9 @@ type Destiny_Entities_Items_DestinyItemInstanceEnergy struct {
     //
     // The amount of energy still available for inserting new plugs.
     EnergyUnused int32 `json:"energyUnused"`
+
+    // EnergyUsed.
+    //
+    // The amount of Energy currently in use by inserted plugs.
+    EnergyUsed int32 `json:"energyUsed"`
 }

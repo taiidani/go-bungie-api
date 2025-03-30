@@ -3,60 +3,15 @@
 package api
 
 type Destiny_Entities_Items_DestinyItemInstanceComponent struct {
-    // DamageType.
-    //
-    // If the item has a damage type, this is the item's current damage type.
-    DamageType int32 `json:"damageType"`
-
-    // Quality.
-    //
-    // The "Quality" of the item has a lesser - but still impactful - bearing on stats like Light and Power.
-    Quality int32 `json:"quality"`
-
-    // DamageTypeHash.
-    //
-    // The current damage type's hash, so you can look up localized info and icons for it.
-    DamageTypeHash uint32 `json:"damageTypeHash"`
-
-    // Energy.
-    //
-    // IF populated, this item supports Energy mechanics (i.e. Armor 2.0), and these are the current details of its energy type and available capacity to spend energy points.
-    Energy any `json:"energy"`
-
-    // BreakerType.
-    //
-    // If populated, this item has a breaker type corresponding to the given value. See DestinyBreakerTypeDefinition for more details.
-    BreakerType int32 `json:"breakerType"`
-
-    // BreakerTypeHash.
-    //
-    // If populated, this is the hash identifier for the item's breaker type. See DestinyBreakerTypeDefinition for more details.
-    BreakerTypeHash uint32 `json:"breakerTypeHash"`
-
-    // CanEquip.
-    //
-    // If this is an equippable item, you can check it here. There are permanent as well as transitory reasons why an item might not be able to be equipped: check cannotEquipReason for details.
-    CanEquip bool `json:"canEquip"`
-
     // EquipRequiredLevel.
     //
     // If the item cannot be equipped until you reach a certain level, that level will be reflected here.
     EquipRequiredLevel int32 `json:"equipRequiredLevel"`
 
-    // IsEquipped.
+    // BreakerTypeHash.
     //
-    // Is the item currently equipped on the given character?
-    IsEquipped bool `json:"isEquipped"`
-
-    // PrimaryStat.
-    //
-    // The item stat that we consider to be "primary" for the item. For instance, this would be "Attack" for Weapons or "Defense" for armor.
-    PrimaryStat any `json:"primaryStat"`
-
-    // CannotEquipReason.
-    //
-    // If you cannot equip the item, this is a flags enum that enumerates all of the reasons why you couldn't equip the item. You may need to refine your UI further by using unlockHashesRequiredToEquip and equipRequiredLevel.
-    CannotEquipReason int32 `json:"cannotEquipReason"`
+    // If populated, this is the hash identifier for the item's breaker type. See DestinyBreakerTypeDefinition for more details.
+    BreakerTypeHash uint32 `json:"breakerTypeHash"`
 
     // ItemLevel.
     //
@@ -68,5 +23,50 @@ type Destiny_Entities_Items_DestinyItemInstanceComponent struct {
     // Sometimes, there are limitations to equipping that are represented by character-level flags called "unlocks".
     //
     // This is a list of flags that they need in order to equip the item that the character has not met. Use these to look up the descriptions to show in your UI by looking up the relevant DestinyUnlockDefinitions for the hashes.
-    UnlockHashesRequiredToEquip []any `json:"unlockHashesRequiredToEquip"`
+    UnlockHashesRequiredToEquip []uint32 `json:"unlockHashesRequiredToEquip"`
+
+    // CanEquip.
+    //
+    // If this is an equippable item, you can check it here. There are permanent as well as transitory reasons why an item might not be able to be equipped: check cannotEquipReason for details.
+    CanEquip bool `json:"canEquip"`
+
+    // DamageType.
+    //
+    // If the item has a damage type, this is the item's current damage type.
+    DamageType int32 `json:"damageType"`
+
+    // DamageTypeHash.
+    //
+    // The current damage type's hash, so you can look up localized info and icons for it.
+    DamageTypeHash uint32 `json:"damageTypeHash"`
+
+    // Energy.
+    //
+    // IF populated, this item supports Energy mechanics (i.e. Armor 2.0), and these are the current details of its energy type and available capacity to spend energy points.
+    Energy any `json:"energy"`
+
+    // Quality.
+    //
+    // The "Quality" of the item has a lesser - but still impactful - bearing on stats like Light and Power.
+    Quality int32 `json:"quality"`
+
+    // IsEquipped.
+    //
+    // Is the item currently equipped on the given character?
+    IsEquipped bool `json:"isEquipped"`
+
+    // PrimaryStat.
+    //
+    // The item stat that we consider to be "primary" for the item. For instance, this would be "Attack" for Weapons or "Defense" for armor.
+    PrimaryStat any `json:"primaryStat"`
+
+    // BreakerType.
+    //
+    // If populated, this item has a breaker type corresponding to the given value. See DestinyBreakerTypeDefinition for more details.
+    BreakerType int32 `json:"breakerType"`
+
+    // CannotEquipReason.
+    //
+    // If you cannot equip the item, this is a flags enum that enumerates all of the reasons why you couldn't equip the item. You may need to refine your UI further by using unlockHashesRequiredToEquip and equipRequiredLevel.
+    CannotEquipReason int32 `json:"cannotEquipReason"`
 }

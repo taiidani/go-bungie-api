@@ -3,11 +3,6 @@
 package api
 
 type SingleComponentResponseOfDestinyItemTalentGridComponent struct {
-    // Privacy.
-    //
-    // 
-    Privacy int32 `json:"privacy"`
-
     // Data.
     //
     // Well, we're here in Destiny 2, and Talent Grids are unfortunately still around.
@@ -23,10 +18,15 @@ type SingleComponentResponseOfDestinyItemTalentGridComponent struct {
     // Nodes can be grouped into exclusivity sets *and* as of D2, exclusivity groups (which are collections of exclusivity sets that affect each other).
     //
     // See DestinyTalentGridDefinition for more information. Brace yourself, the water's cold out there in the deep end.
-    Data any `json:"data"`
+    Data Destiny_Entities_Items_DestinyItemTalentGridComponent `json:"data"`
 
     // Disabled.
     //
     // If true, this component is disabled.
     Disabled bool `json:"disabled"`
+
+    // Privacy.
+    //
+    // 
+    Privacy int32 `json:"privacy"`
 }

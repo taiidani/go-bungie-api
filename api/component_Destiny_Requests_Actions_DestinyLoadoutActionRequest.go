@@ -3,11 +3,6 @@
 package api
 
 type Destiny_Requests_Actions_DestinyLoadoutActionRequest struct {
-    // CharacterId.
-    //
-    // 
-    CharacterId int64 `json:"characterId"`
-
     // LoadoutIndex.
     //
     // The index of the loadout for this action request.
@@ -17,4 +12,9 @@ type Destiny_Requests_Actions_DestinyLoadoutActionRequest struct {
     //
     // 
     MembershipType int32 `json:"membershipType"`
+
+    // CharacterId.
+    //
+    // 
+    CharacterId int64 `json:"characterId"`
 }

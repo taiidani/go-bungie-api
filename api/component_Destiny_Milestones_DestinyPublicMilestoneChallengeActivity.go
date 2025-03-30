@@ -3,17 +3,22 @@
 package api
 
 type Destiny_Milestones_DestinyPublicMilestoneChallengeActivity struct {
+    // LoadoutRequirementIndex.
+    //
+    // If returned, this is the index into the DestinyActivityDefinition's "loadouts" property, indicating the currently active loadout requirements.
+    LoadoutRequirementIndex int32 `json:"loadoutRequirementIndex"`
+
     // ModifierHashes.
     //
     // If the activity has modifiers, this will be the list of modifiers that all variants have in common. Perform lookups against DestinyActivityModifierDefinition which defines the modifier being applied to get at the modifier data.
     //
     // Note that, in the DestiyActivityDefinition, you will see many more modifiers than this being referred to: those are all *possible* modifiers for the activity, not the active ones. Use only the active ones to match what's really live.
-    ModifierHashes []any `json:"modifierHashes"`
+    ModifierHashes []uint32 `json:"modifierHashes"`
 
     // PhaseHashes.
     //
     // The ordered list of phases for this activity, if any. Note that we have no human readable info for phases, nor any entities to relate them to: relating these hashes to something human readable is up to you unfortunately.
-    PhaseHashes []any `json:"phaseHashes"`
+    PhaseHashes []uint32 `json:"phaseHashes"`
 
     // ActivityHash.
     //
@@ -32,10 +37,5 @@ type Destiny_Milestones_DestinyPublicMilestoneChallengeActivity struct {
     // ChallengeObjectiveHashes.
     //
     // 
-    ChallengeObjectiveHashes []any `json:"challengeObjectiveHashes"`
-
-    // LoadoutRequirementIndex.
-    //
-    // If returned, this is the index into the DestinyActivityDefinition's "loadouts" property, indicating the currently active loadout requirements.
-    LoadoutRequirementIndex int32 `json:"loadoutRequirementIndex"`
+    ChallengeObjectiveHashes []uint32 `json:"challengeObjectiveHashes"`
 }

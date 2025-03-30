@@ -26,5 +26,5 @@ type Destiny_Definitions_Sockets_DestinyPlugWhitelistEntryDefinition struct {
     // Then, look at the Plugs that can fit in that socket. Find the Whitelist in the DestinySocketTypeDefinition that matches the plug item’s categoryhash.
     //
     // That whitelist entry will potentially have a new “reinitializationPossiblePlugHashes” property.If it does, that means we know what it will roll if you try to insert this plug into this socket.
-    ReinitializationPossiblePlugHashes []any `json:"reinitializationPossiblePlugHashes"`
+    ReinitializationPossiblePlugHashes []uint32 `json:"reinitializationPossiblePlugHashes"`
 }

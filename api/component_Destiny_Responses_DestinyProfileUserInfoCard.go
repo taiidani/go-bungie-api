@@ -3,30 +3,20 @@
 package api
 
 type Destiny_Responses_DestinyProfileUserInfoCard struct {
-    // BungieGlobalDisplayName.
+    // IsCrossSavePrimary.
     //
-    // The bungie global display name, if set.
-    BungieGlobalDisplayName string `json:"bungieGlobalDisplayName"`
-
-    // MembershipId.
-    //
-    // Membership ID as they user is known in the Accounts service
-    MembershipId int64 `json:"membershipId"`
-
-    // MembershipType.
-    //
-    // Type of the membership. Not necessarily the native type.
-    MembershipType int32 `json:"membershipType"`
-
-    // BungieGlobalDisplayNameCode.
-    //
-    // The bungie global display name code, if set.
-    BungieGlobalDisplayNameCode int16 `json:"bungieGlobalDisplayNameCode"`
+    // If true, this account is hooked up as the "Primary" cross save account for one or more platforms.
+    IsCrossSavePrimary bool `json:"isCrossSavePrimary"`
 
     // DateLastPlayed.
     //
     // 
     DateLastPlayed string `json:"dateLastPlayed"`
+
+    // SupplementalDisplayName.
+    //
+    // A platform specific additional display name - ex: psn Real Name, bnet Unique Name, etc.
+    SupplementalDisplayName string `json:"supplementalDisplayName"`
 
     // UnpairedGameVersions.
     //
@@ -37,47 +27,25 @@ type Destiny_Responses_DestinyProfileUserInfoCard struct {
     //  If we ever can get this data, this field will be deprecated and replaced with data on the DestinyLinkedProfileResponse itself, with game versions per linked Platform. But since we can't get that, we have this as a stop-gap measure for getting the data in the only situation that we currently need it.
     UnpairedGameVersions int32 `json:"unpairedGameVersions"`
 
-    // IconPath.
-    //
-    // URL the Icon if available.
-    IconPath string `json:"iconPath"`
-
     // IsPublic.
     //
     // If True, this is a public user membership.
     IsPublic bool `json:"isPublic"`
 
-    // ApplicableMembershipTypes.
+    // BungieGlobalDisplayNameCode.
     //
-    // The list of Membership Types indicating the platforms on which this Membership can be used.
-    //
-    //  Not in Cross Save = its original membership type. Cross Save Primary = Any membership types it is overridding, and its original membership type Cross Save Overridden = Empty list
-    ApplicableMembershipTypes []any `json:"applicableMembershipTypes"`
+    // The bungie global display name code, if set.
+    BungieGlobalDisplayNameCode int16 `json:"bungieGlobalDisplayNameCode"`
 
-    // DisplayName.
+    // BungieGlobalDisplayName.
     //
-    // Display Name the player has chosen for themselves. The display name is optional when the data type is used as input to a platform API.
-    DisplayName string `json:"displayName"`
+    // The bungie global display name, if set.
+    BungieGlobalDisplayName string `json:"bungieGlobalDisplayName"`
 
-    // IsCrossSavePrimary.
+    // MembershipType.
     //
-    // If true, this account is hooked up as the "Primary" cross save account for one or more platforms.
-    IsCrossSavePrimary bool `json:"isCrossSavePrimary"`
-
-    // CrossSaveOverride.
-    //
-    // If there is a cross save override in effect, this value will tell you the type that is overridding this one.
-    CrossSaveOverride int32 `json:"crossSaveOverride"`
-
-    // SupplementalDisplayName.
-    //
-    // A platform specific additional display name - ex: psn Real Name, bnet Unique Name, etc.
-    SupplementalDisplayName string `json:"supplementalDisplayName"`
-
-    // IsOverridden.
-    //
-    // If this profile is being overridden/obscured by Cross Save, this will be set to true. We will still return the profile for display purposes where users need to know the info: it is up to any given area of the app/site to determine if this profile should still be shown.
-    IsOverridden bool `json:"isOverridden"`
+    // Type of the membership. Not necessarily the native type.
+    MembershipType int32 `json:"membershipType"`
 
     // PlatformSilver.
     //
@@ -85,4 +53,36 @@ type Destiny_Responses_DestinyProfileUserInfoCard struct {
     //
     //  This is only available if you are requesting yourself.
     PlatformSilver any `json:"platformSilver"`
+
+    // ApplicableMembershipTypes.
+    //
+    // The list of Membership Types indicating the platforms on which this Membership can be used.
+    //
+    //  Not in Cross Save = its original membership type. Cross Save Primary = Any membership types it is overridding, and its original membership type Cross Save Overridden = Empty list
+    ApplicableMembershipTypes []int32 `json:"applicableMembershipTypes"`
+
+    // IsOverridden.
+    //
+    // If this profile is being overridden/obscured by Cross Save, this will be set to true. We will still return the profile for display purposes where users need to know the info: it is up to any given area of the app/site to determine if this profile should still be shown.
+    IsOverridden bool `json:"isOverridden"`
+
+    // MembershipId.
+    //
+    // Membership ID as they user is known in the Accounts service
+    MembershipId int64 `json:"membershipId"`
+
+    // CrossSaveOverride.
+    //
+    // If there is a cross save override in effect, this value will tell you the type that is overridding this one.
+    CrossSaveOverride int32 `json:"crossSaveOverride"`
+
+    // DisplayName.
+    //
+    // Display Name the player has chosen for themselves. The display name is optional when the data type is used as input to a platform API.
+    DisplayName string `json:"displayName"`
+
+    // IconPath.
+    //
+    // URL the Icon if available.
+    IconPath string `json:"iconPath"`
 }

@@ -3,148 +3,148 @@
 package api
 
 type GroupsV2_GroupV2 struct {
-    // IsPublicTopicAdminOnly.
+    // AvatarPath.
     //
     // 
-    IsPublicTopicAdminOnly bool `json:"isPublicTopicAdminOnly"`
-
-    // EnableInvitationMessagingForAdmins.
-    //
-    // 
-    EnableInvitationMessagingForAdmins bool `json:"enableInvitationMessagingForAdmins"`
-
-    // BanExpireDate.
-    //
-    // 
-    BanExpireDate string `json:"banExpireDate"`
-
-    // IsDefaultPostPublic.
-    //
-    // 
-    IsDefaultPostPublic bool `json:"isDefaultPostPublic"`
-
-    // MembershipOption.
-    //
-    // 
-    MembershipOption int32 `json:"membershipOption"`
+    AvatarPath string `json:"avatarPath"`
 
     // About.
     //
     // 
     About string `json:"about"`
 
-    // Motto.
+    // EnableInvitationMessagingForAdmins.
     //
     // 
-    Motto string `json:"motto"`
-
-    // Name.
-    //
-    // 
-    Name string `json:"name"`
-
-    // DefaultPublicity.
-    //
-    // 
-    DefaultPublicity int32 `json:"defaultPublicity"`
-
-    // Homepage.
-    //
-    // 
-    Homepage int32 `json:"homepage"`
-
-    // AllowChat.
-    //
-    // 
-    AllowChat bool `json:"allowChat"`
-
-    // RemoteGroupId.
-    //
-    // 
-    RemoteGroupId int64 `json:"remoteGroupId"`
-
-    // BannerPath.
-    //
-    // 
-    BannerPath string `json:"bannerPath"`
-
-    // MemberCount.
-    //
-    // 
-    MemberCount int32 `json:"memberCount"`
-
-    // ModificationDate.
-    //
-    // 
-    ModificationDate string `json:"modificationDate"`
-
-    // ChatSecurity.
-    //
-    // 
-    ChatSecurity int32 `json:"chatSecurity"`
-
-    // IsPublic.
-    //
-    // 
-    IsPublic bool `json:"isPublic"`
-
-    // MembershipIdCreated.
-    //
-    // 
-    MembershipIdCreated int64 `json:"membershipIdCreated"`
-
-    // Tags.
-    //
-    // 
-    Tags []any `json:"tags"`
+    EnableInvitationMessagingForAdmins bool `json:"enableInvitationMessagingForAdmins"`
 
     // GroupId.
     //
     // 
     GroupId int64 `json:"groupId"`
 
+    // BanExpireDate.
+    //
+    // 
+    BanExpireDate string `json:"banExpireDate"`
+
+    // MembershipOption.
+    //
+    // 
+    MembershipOption int32 `json:"membershipOption"`
+
     // GroupType.
     //
     // 
     GroupType int32 `json:"groupType"`
 
-    // Locale.
-    //
-    // 
-    Locale string `json:"locale"`
-
-    // Features.
-    //
-    // 
-    Features any `json:"features"`
-
     // ClanInfo.
     //
     // The same as GroupV2ClanInfo, but includes any investment data.
-    ClanInfo any `json:"clanInfo"`
+    ClanInfo GroupsV2_GroupV2ClanInfoAndInvestment `json:"clanInfo"`
 
     // ConversationId.
     //
     // 
     ConversationId int64 `json:"conversationId"`
 
-    // AvatarImageIndex.
+    // ModificationDate.
     //
     // 
-    AvatarImageIndex int32 `json:"avatarImageIndex"`
+    ModificationDate string `json:"modificationDate"`
+
+    // Tags.
+    //
+    // 
+    Tags []string `json:"tags"`
+
+    // MemberCount.
+    //
+    // 
+    MemberCount int32 `json:"memberCount"`
+
+    // RemoteGroupId.
+    //
+    // 
+    RemoteGroupId int64 `json:"remoteGroupId"`
+
+    // Theme.
+    //
+    // 
+    Theme string `json:"theme"`
 
     // CreationDate.
     //
     // 
     CreationDate string `json:"creationDate"`
 
-    // AvatarPath.
+    // IsPublic.
     //
     // 
-    AvatarPath string `json:"avatarPath"`
+    IsPublic bool `json:"isPublic"`
 
-    // Theme.
+    // Features.
     //
     // 
-    Theme string `json:"theme"`
+    Features GroupsV2_GroupFeatures `json:"features"`
+
+    // Homepage.
+    //
+    // 
+    Homepage int32 `json:"homepage"`
+
+    // BannerPath.
+    //
+    // 
+    BannerPath string `json:"bannerPath"`
+
+    // MembershipIdCreated.
+    //
+    // 
+    MembershipIdCreated int64 `json:"membershipIdCreated"`
+
+    // AllowChat.
+    //
+    // 
+    AllowChat bool `json:"allowChat"`
+
+    // Motto.
+    //
+    // 
+    Motto string `json:"motto"`
+
+    // Locale.
+    //
+    // 
+    Locale string `json:"locale"`
+
+    // IsDefaultPostPublic.
+    //
+    // 
+    IsDefaultPostPublic bool `json:"isDefaultPostPublic"`
+
+    // IsPublicTopicAdminOnly.
+    //
+    // 
+    IsPublicTopicAdminOnly bool `json:"isPublicTopicAdminOnly"`
+
+    // AvatarImageIndex.
+    //
+    // 
+    AvatarImageIndex int32 `json:"avatarImageIndex"`
+
+    // DefaultPublicity.
+    //
+    // 
+    DefaultPublicity int32 `json:"defaultPublicity"`
+
+    // Name.
+    //
+    // 
+    Name string `json:"name"`
+
+    // ChatSecurity.
+    //
+    // 
+    ChatSecurity int32 `json:"chatSecurity"`
 }

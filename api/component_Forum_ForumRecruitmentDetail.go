@@ -3,53 +3,53 @@
 package api
 
 type Forum_ForumRecruitmentDetail struct {
-    // ConversationId.
-    //
-    // 
-    ConversationId int64 `json:"conversationId"`
-
-    // MicrophoneRequired.
-    //
-    // 
-    MicrophoneRequired bool `json:"microphoneRequired"`
-
     // Tone.
     //
     // 
     Tone byte `json:"tone"`
-
-    // PlayerSlotsTotal.
-    //
-    // 
-    PlayerSlotsTotal int32 `json:"playerSlotsTotal"`
 
     // TopicId.
     //
     // 
     TopicId int64 `json:"topicId"`
 
-    // Fireteam.
-    //
-    // 
-    Fireteam []User_GeneralUser `json:"Fireteam"`
-
-    // KickedPlayerIds.
-    //
-    // 
-    KickedPlayerIds []any `json:"kickedPlayerIds"`
-
     // Intensity.
     //
     // 
     Intensity byte `json:"intensity"`
+
+    // MicrophoneRequired.
+    //
+    // 
+    MicrophoneRequired bool `json:"microphoneRequired"`
+
+    // Approved.
+    //
+    // 
+    Approved bool `json:"approved"`
+
+    // KickedPlayerIds.
+    //
+    // 
+    KickedPlayerIds []int64 `json:"kickedPlayerIds"`
 
     // PlayerSlotsRemaining.
     //
     // 
     PlayerSlotsRemaining int32 `json:"playerSlotsRemaining"`
 
-    // Approved.
+    // PlayerSlotsTotal.
     //
     // 
-    Approved bool `json:"approved"`
+    PlayerSlotsTotal int32 `json:"playerSlotsTotal"`
+
+    // Fireteam.
+    //
+    // 
+    Fireteam []User_GeneralUser `json:"Fireteam"`
+
+    // ConversationId.
+    //
+    // 
+    ConversationId int64 `json:"conversationId"`
 }

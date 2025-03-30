@@ -8,6 +8,26 @@ type Fireteam_FireteamUserInfoCard struct {
     // A platform specific additional display name - ex: psn Real Name, bnet Unique Name, etc.
     SupplementalDisplayName string `json:"supplementalDisplayName"`
 
+    // BungieGlobalDisplayNameCode.
+    //
+    // The bungie global display name code, if set.
+    BungieGlobalDisplayNameCode int16 `json:"bungieGlobalDisplayNameCode"`
+
+    // IsPublic.
+    //
+    // If True, this is a public user membership.
+    IsPublic bool `json:"isPublic"`
+
+    // MembershipType.
+    //
+    // Type of the membership. Not necessarily the native type.
+    MembershipType int32 `json:"membershipType"`
+
+    // FireteamDisplayName.
+    //
+    // 
+    FireteamDisplayName string `json:"FireteamDisplayName"`
+
     // FireteamMembershipType.
     //
     // 
@@ -18,50 +38,30 @@ type Fireteam_FireteamUserInfoCard struct {
     // The list of Membership Types indicating the platforms on which this Membership can be used.
     //
     //  Not in Cross Save = its original membership type. Cross Save Primary = Any membership types it is overridding, and its original membership type Cross Save Overridden = Empty list
-    ApplicableMembershipTypes []any `json:"applicableMembershipTypes"`
+    ApplicableMembershipTypes []int32 `json:"applicableMembershipTypes"`
 
     // DisplayName.
     //
     // Display Name the player has chosen for themselves. The display name is optional when the data type is used as input to a platform API.
     DisplayName string `json:"displayName"`
 
-    // BungieGlobalDisplayName.
-    //
-    // The bungie global display name, if set.
-    BungieGlobalDisplayName string `json:"bungieGlobalDisplayName"`
-
-    // IconPath.
-    //
-    // URL the Icon if available.
-    IconPath string `json:"iconPath"`
-
-    // IsPublic.
-    //
-    // If True, this is a public user membership.
-    IsPublic bool `json:"isPublic"`
-
-    // BungieGlobalDisplayNameCode.
-    //
-    // The bungie global display name code, if set.
-    BungieGlobalDisplayNameCode int16 `json:"bungieGlobalDisplayNameCode"`
-
     // MembershipId.
     //
     // Membership ID as they user is known in the Accounts service
     MembershipId int64 `json:"membershipId"`
 
-    // FireteamDisplayName.
+    // BungieGlobalDisplayName.
     //
-    // 
-    FireteamDisplayName string `json:"FireteamDisplayName"`
+    // The bungie global display name, if set.
+    BungieGlobalDisplayName string `json:"bungieGlobalDisplayName"`
 
     // CrossSaveOverride.
     //
     // If there is a cross save override in effect, this value will tell you the type that is overridding this one.
     CrossSaveOverride int32 `json:"crossSaveOverride"`
 
-    // MembershipType.
+    // IconPath.
     //
-    // Type of the membership. Not necessarily the native type.
-    MembershipType int32 `json:"membershipType"`
+    // URL the Icon if available.
+    IconPath string `json:"iconPath"`
 }

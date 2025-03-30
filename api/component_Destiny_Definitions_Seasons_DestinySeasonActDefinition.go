@@ -3,6 +3,11 @@
 package api
 
 type Destiny_Definitions_Seasons_DestinySeasonActDefinition struct {
+    // DisplayName.
+    //
+    // The name of the Act.
+    DisplayName string `json:"displayName"`
+
     // RankCount.
     //
     // The number of ranks included in the Act.
@@ -12,9 +17,4 @@ type Destiny_Definitions_Seasons_DestinySeasonActDefinition struct {
     //
     // The start time of the Act.
     StartTime string `json:"startTime"`
-
-    // DisplayName.
-    //
-    // The name of the Act.
-    DisplayName string `json:"displayName"`
 }

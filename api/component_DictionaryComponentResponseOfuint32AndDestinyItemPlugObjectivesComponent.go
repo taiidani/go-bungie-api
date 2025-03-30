@@ -3,6 +3,11 @@
 package api
 
 type DictionaryComponentResponseOfuint32AndDestinyItemPlugObjectivesComponent struct {
+    // Privacy.
+    //
+    // 
+    Privacy int32 `json:"privacy"`
+
     // Data.
     //
     // 
@@ -12,9 +17,4 @@ type DictionaryComponentResponseOfuint32AndDestinyItemPlugObjectivesComponent st
     //
     // If true, this component is disabled.
     Disabled bool `json:"disabled"`
-
-    // Privacy.
-    //
-    // 
-    Privacy int32 `json:"privacy"`
 }

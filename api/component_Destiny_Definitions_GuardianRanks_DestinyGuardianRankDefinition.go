@@ -3,25 +3,20 @@
 package api
 
 type Destiny_Definitions_GuardianRanks_DestinyGuardianRankDefinition struct {
-    // DisplayProperties.
+    // Index.
     //
-    // Many Destiny*Definition contracts - the "first order" entities of Destiny that have their own tables in the Manifest Database - also have displayable information. This is the base class for that display information.
-    DisplayProperties any `json:"displayProperties"`
+    // The index of the entity as it was found in the investment tables.
+    Index int32 `json:"index"`
 
-    // ForegroundImagePath.
+    // PresentationNodeHash.
     //
     // 
-    ForegroundImagePath string `json:"foregroundImagePath"`
+    PresentationNodeHash uint32 `json:"presentationNodeHash"`
 
     // RankNumber.
     //
     // 
     RankNumber int32 `json:"rankNumber"`
-
-    // Redacted.
-    //
-    // If this is true, then there is an entity with this identifier/type combination, but BNet is not yet allowed to show it. Sorry!
-    Redacted bool `json:"redacted"`
 
     // Hash.
     //
@@ -30,23 +25,28 @@ type Destiny_Definitions_GuardianRanks_DestinyGuardianRankDefinition struct {
     // When entities refer to each other in Destiny content, it is this hash that they are referring to.
     Hash uint32 `json:"hash"`
 
-    // OverlayImagePath.
-    //
-    // 
-    OverlayImagePath string `json:"overlayImagePath"`
-
-    // Index.
-    //
-    // The index of the entity as it was found in the investment tables.
-    Index int32 `json:"index"`
-
     // OverlayMaskImagePath.
     //
     // 
     OverlayMaskImagePath string `json:"overlayMaskImagePath"`
 
-    // PresentationNodeHash.
+    // OverlayImagePath.
     //
     // 
-    PresentationNodeHash uint32 `json:"presentationNodeHash"`
+    OverlayImagePath string `json:"overlayImagePath"`
+
+    // Redacted.
+    //
+    // If this is true, then there is an entity with this identifier/type combination, but BNet is not yet allowed to show it. Sorry!
+    Redacted bool `json:"redacted"`
+
+    // DisplayProperties.
+    //
+    // Many Destiny*Definition contracts - the "first order" entities of Destiny that have their own tables in the Manifest Database - also have displayable information. This is the base class for that display information.
+    DisplayProperties Destiny_Definitions_Common_DestinyDisplayPropertiesDefinition `json:"displayProperties"`
+
+    // ForegroundImagePath.
+    //
+    // 
+    ForegroundImagePath string `json:"foregroundImagePath"`
 }

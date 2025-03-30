@@ -11,5 +11,5 @@ type Destiny_Definitions_DestinyItemSocketCategoryDefinition struct {
     // SocketIndexes.
     //
     // Use these indexes to look up the sockets in the "sockets.socketEntries" property on the item definition. These are the indexes under the category, in game-rendered order.
-    SocketIndexes []any `json:"socketIndexes"`
+    SocketIndexes []int32 `json:"socketIndexes"`
 }

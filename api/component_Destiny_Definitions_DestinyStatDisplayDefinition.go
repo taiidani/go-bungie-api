@@ -3,18 +3,6 @@
 package api
 
 type Destiny_Definitions_DestinyStatDisplayDefinition struct {
-    // MaximumValue.
-    //
-    // Regardless of the output of interpolation, this is the maximum possible value that the stat can be. It should also be used as the upper bound for displaying the stat as a progress bar (the minimum always being 0)
-    MaximumValue int32 `json:"maximumValue"`
-
-    // StatHash.
-    //
-    // The hash identifier for the stat being transformed into a Display stat.
-    //
-    // Use it to look up the DestinyStatDefinition, or key into a DestinyInventoryItemDefinition's stats property.
-    StatHash uint32 `json:"statHash"`
-
     // DisplayAsNumeric.
     //
     // If this is true, the stat should be displayed as a number. Otherwise, display it as a progress bar. Or, you know, do whatever you want. There's no displayAsNumeric police.
@@ -26,4 +14,16 @@ type Destiny_Definitions_DestinyStatDisplayDefinition struct {
     //
     // See DestinyStatDefinition for a description of the stages of stat transformation.
     DisplayInterpolation []Interpolation_InterpolationPoint `json:"displayInterpolation"`
+
+    // MaximumValue.
+    //
+    // Regardless of the output of interpolation, this is the maximum possible value that the stat can be. It should also be used as the upper bound for displaying the stat as a progress bar (the minimum always being 0)
+    MaximumValue int32 `json:"maximumValue"`
+
+    // StatHash.
+    //
+    // The hash identifier for the stat being transformed into a Display stat.
+    //
+    // Use it to look up the DestinyStatDefinition, or key into a DestinyInventoryItemDefinition's stats property.
+    StatHash uint32 `json:"statHash"`
 }

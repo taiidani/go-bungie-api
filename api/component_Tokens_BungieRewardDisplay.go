@@ -3,18 +3,18 @@
 package api
 
 type Tokens_BungieRewardDisplay struct {
+    // ObjectiveDisplayProperties.
+    //
+    // 
+    ObjectiveDisplayProperties Tokens_RewardDisplayProperties `json:"ObjectiveDisplayProperties"`
+
     // RewardDisplayProperties.
     //
     // 
-    RewardDisplayProperties any `json:"RewardDisplayProperties"`
+    RewardDisplayProperties Tokens_RewardDisplayProperties `json:"RewardDisplayProperties"`
 
     // UserRewardAvailabilityModel.
     //
     // 
-    UserRewardAvailabilityModel any `json:"UserRewardAvailabilityModel"`
-
-    // ObjectiveDisplayProperties.
-    //
-    // 
-    ObjectiveDisplayProperties any `json:"ObjectiveDisplayProperties"`
+    UserRewardAvailabilityModel Tokens_UserRewardAvailabilityModel `json:"UserRewardAvailabilityModel"`
 }

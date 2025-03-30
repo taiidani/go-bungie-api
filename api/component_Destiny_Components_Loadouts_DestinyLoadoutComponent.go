@@ -3,11 +3,6 @@
 package api
 
 type Destiny_Components_Loadouts_DestinyLoadoutComponent struct {
-    // NameHash.
-    //
-    // 
-    NameHash uint32 `json:"nameHash"`
-
     // ColorHash.
     //
     // 
@@ -22,4 +17,9 @@ type Destiny_Components_Loadouts_DestinyLoadoutComponent struct {
     //
     // 
     Items []Destiny_Components_Loadouts_DestinyLoadoutItemComponent `json:"items"`
+
+    // NameHash.
+    //
+    // 
+    NameHash uint32 `json:"nameHash"`
 }

@@ -6,7 +6,7 @@ type Destiny_Definitions_Items_DestinyParentItemOverride struct {
     // AdditionalEquipRequirementsDisplayStrings.
     //
     // 
-    AdditionalEquipRequirementsDisplayStrings []any `json:"additionalEquipRequirementsDisplayStrings"`
+    AdditionalEquipRequirementsDisplayStrings []string `json:"additionalEquipRequirementsDisplayStrings"`
 
     // PipIcon.
     //

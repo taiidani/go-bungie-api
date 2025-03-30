@@ -3,6 +3,11 @@
 package api
 
 type Destiny_Definitions_DestinyArrangementRegionFilterDefinition struct {
+    // ArrangementIndexByStatValue.
+    //
+    // 
+    ArrangementIndexByStatValue any `json:"arrangementIndexByStatValue"`
+
     // ArtArrangementRegionHash.
     //
     // 
@@ -17,9 +22,4 @@ type Destiny_Definitions_DestinyArrangementRegionFilterDefinition struct {
     //
     // 
     StatHash uint32 `json:"statHash"`
-
-    // ArrangementIndexByStatValue.
-    //
-    // 
-    ArrangementIndexByStatValue any `json:"arrangementIndexByStatValue"`
 }

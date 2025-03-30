@@ -3,6 +3,11 @@
 package api
 
 type Destiny_Definitions_Artifacts_DestinyArtifactTierDefinition struct {
+    // DisplayTitle.
+    //
+    // The human readable title of this tier, if any.
+    DisplayTitle string `json:"displayTitle"`
+
     // Items.
     //
     // The items that can be earned within this tier.
@@ -22,9 +27,4 @@ type Destiny_Definitions_Artifacts_DestinyArtifactTierDefinition struct {
     //
     // An identifier, unique within the Artifact, for this specific tier.
     TierHash uint32 `json:"tierHash"`
-
-    // DisplayTitle.
-    //
-    // The human readable title of this tier, if any.
-    DisplayTitle string `json:"displayTitle"`
 }

@@ -3,18 +3,18 @@
 package api
 
 type Destiny_Definitions_Presentation_DestinyPresentationChildBlock struct {
-    // DisplayStyle.
-    //
-    // 
-    DisplayStyle int32 `json:"displayStyle"`
-
     // ParentPresentationNodeHashes.
     //
     // 
-    ParentPresentationNodeHashes []any `json:"parentPresentationNodeHashes"`
+    ParentPresentationNodeHashes []uint32 `json:"parentPresentationNodeHashes"`
 
     // PresentationNodeType.
     //
     // 
     PresentationNodeType int32 `json:"presentationNodeType"`
+
+    // DisplayStyle.
+    //
+    // 
+    DisplayStyle int32 `json:"displayStyle"`
 }

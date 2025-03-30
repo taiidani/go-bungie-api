@@ -3,16 +3,6 @@
 package api
 
 type Destiny_Definitions_Seasons_DestinyEventCardDefinition struct {
-    // LinkRedirectPath.
-    //
-    // 
-    LinkRedirectPath string `json:"linkRedirectPath"`
-
-    // SealPresentationNodeHash.
-    //
-    // 
-    SealPresentationNodeHash uint32 `json:"sealPresentationNodeHash"`
-
     // Hash.
     //
     // The unique identifier for this entity. Guaranteed to be unique for the type of entity, but not globally.
@@ -20,20 +10,55 @@ type Destiny_Definitions_Seasons_DestinyEventCardDefinition struct {
     // When entities refer to each other in Destiny content, it is this hash that they are referring to.
     Hash uint32 `json:"hash"`
 
+    // TicketVendorHash.
+    //
+    // 
+    TicketVendorHash uint32 `json:"ticketVendorHash"`
+
+    // EndTime.
+    //
+    // 
+    EndTime int64 `json:"endTime"`
+
     // Images.
     //
     // 
-    Images any `json:"images"`
+    Images Destiny_Definitions_Seasons_DestinyEventCardImages `json:"images"`
 
     // Index.
     //
     // The index of the entity as it was found in the investment tables.
     Index int32 `json:"index"`
 
-    // TicketVendorHash.
+    // Redacted.
+    //
+    // If this is true, then there is an entity with this identifier/type combination, but BNet is not yet allowed to show it. Sorry!
+    Redacted bool `json:"redacted"`
+
+    // SealPresentationNodeHash.
     //
     // 
-    TicketVendorHash uint32 `json:"ticketVendorHash"`
+    SealPresentationNodeHash uint32 `json:"sealPresentationNodeHash"`
+
+    // TicketCurrencyItemHash.
+    //
+    // 
+    TicketCurrencyItemHash uint32 `json:"ticketCurrencyItemHash"`
+
+    // DisplayProperties.
+    //
+    // Many Destiny*Definition contracts - the "first order" entities of Destiny that have their own tables in the Manifest Database - also have displayable information. This is the base class for that display information.
+    DisplayProperties Destiny_Definitions_Common_DestinyDisplayPropertiesDefinition `json:"displayProperties"`
+
+    // LinkRedirectPath.
+    //
+    // 
+    LinkRedirectPath string `json:"linkRedirectPath"`
+
+    // TicketVendorCategoryHash.
+    //
+    // 
+    TicketVendorCategoryHash uint32 `json:"ticketVendorCategoryHash"`
 
     // TriumphsPresentationNodeHash.
     //
@@ -43,30 +68,5 @@ type Destiny_Definitions_Seasons_DestinyEventCardDefinition struct {
     // Color.
     //
     // Represents a color whose RGBA values are all represented as values between 0 and 255.
-    Color any `json:"color"`
-
-    // DisplayProperties.
-    //
-    // Many Destiny*Definition contracts - the "first order" entities of Destiny that have their own tables in the Manifest Database - also have displayable information. This is the base class for that display information.
-    DisplayProperties any `json:"displayProperties"`
-
-    // EndTime.
-    //
-    // 
-    EndTime int64 `json:"endTime"`
-
-    // TicketVendorCategoryHash.
-    //
-    // 
-    TicketVendorCategoryHash uint32 `json:"ticketVendorCategoryHash"`
-
-    // Redacted.
-    //
-    // If this is true, then there is an entity with this identifier/type combination, but BNet is not yet allowed to show it. Sorry!
-    Redacted bool `json:"redacted"`
-
-    // TicketCurrencyItemHash.
-    //
-    // 
-    TicketCurrencyItemHash uint32 `json:"ticketCurrencyItemHash"`
+    Color Destiny_Misc_DestinyColor `json:"color"`
 }

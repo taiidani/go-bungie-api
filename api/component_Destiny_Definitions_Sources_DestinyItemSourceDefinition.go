@@ -11,7 +11,7 @@ type Destiny_Definitions_Sources_DestinyItemSourceDefinition struct {
     // SourceHashes.
     //
     // The DestinyRewardSourceDefinitions found that can spawn the item at this level.
-    SourceHashes []any `json:"sourceHashes"`
+    SourceHashes []uint32 `json:"sourceHashes"`
 
     // ComputedStats.
     //

@@ -6,7 +6,7 @@ type Destiny_HistoricalStats_DestinyHistoricalStatsWithMerged struct {
     // Merged.
     //
     // 
-    Merged any `json:"merged"`
+    Merged Destiny_HistoricalStats_DestinyHistoricalStatsByPeriod `json:"merged"`
 
     // Results.
     //

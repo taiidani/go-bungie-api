@@ -3,6 +3,28 @@
 package api
 
 type User_CrossSaveUserMembership struct {
+    // ApplicableMembershipTypes.
+    //
+    // The list of Membership Types indicating the platforms on which this Membership can be used.
+    //
+    //  Not in Cross Save = its original membership type. Cross Save Primary = Any membership types it is overridding, and its original membership type Cross Save Overridden = Empty list
+    ApplicableMembershipTypes []int32 `json:"applicableMembershipTypes"`
+
+    // BungieGlobalDisplayName.
+    //
+    // The bungie global display name, if set.
+    BungieGlobalDisplayName string `json:"bungieGlobalDisplayName"`
+
+    // BungieGlobalDisplayNameCode.
+    //
+    // The bungie global display name code, if set.
+    BungieGlobalDisplayNameCode int16 `json:"bungieGlobalDisplayNameCode"`
+
+    // CrossSaveOverride.
+    //
+    // If there is a cross save override in effect, this value will tell you the type that is overridding this one.
+    CrossSaveOverride int32 `json:"crossSaveOverride"`
+
     // DisplayName.
     //
     // Display Name the player has chosen for themselves. The display name is optional when the data type is used as input to a platform API.
@@ -22,26 +44,4 @@ type User_CrossSaveUserMembership struct {
     //
     // Type of the membership. Not necessarily the native type.
     MembershipType int32 `json:"membershipType"`
-
-    // ApplicableMembershipTypes.
-    //
-    // The list of Membership Types indicating the platforms on which this Membership can be used.
-    //
-    //  Not in Cross Save = its original membership type. Cross Save Primary = Any membership types it is overridding, and its original membership type Cross Save Overridden = Empty list
-    ApplicableMembershipTypes []any `json:"applicableMembershipTypes"`
-
-    // BungieGlobalDisplayName.
-    //
-    // The bungie global display name, if set.
-    BungieGlobalDisplayName string `json:"bungieGlobalDisplayName"`
-
-    // BungieGlobalDisplayNameCode.
-    //
-    // The bungie global display name code, if set.
-    BungieGlobalDisplayNameCode int16 `json:"bungieGlobalDisplayNameCode"`
-
-    // CrossSaveOverride.
-    //
-    // If there is a cross save override in effect, this value will tell you the type that is overridding this one.
-    CrossSaveOverride int32 `json:"crossSaveOverride"`
 }

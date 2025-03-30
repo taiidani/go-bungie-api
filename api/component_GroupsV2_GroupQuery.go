@@ -8,21 +8,6 @@ type GroupsV2_GroupQuery struct {
     // 
     Name string `json:"name"`
 
-    // CreationDate.
-    //
-    // 
-    CreationDate int32 `json:"creationDate"`
-
-    // RequestContinuationToken.
-    //
-    // 
-    RequestContinuationToken string `json:"requestContinuationToken"`
-
-    // GroupType.
-    //
-    // 
-    GroupType int32 `json:"groupType"`
-
     // SortBy.
     //
     // 
@@ -33,10 +18,10 @@ type GroupsV2_GroupQuery struct {
     // 
     TagText string `json:"tagText"`
 
-    // CurrentPage.
+    // CreationDate.
     //
     // 
-    CurrentPage int32 `json:"currentPage"`
+    CreationDate int32 `json:"creationDate"`
 
     // GroupMemberCountFilter.
     //
@@ -48,8 +33,23 @@ type GroupsV2_GroupQuery struct {
     // 
     ItemsPerPage int32 `json:"itemsPerPage"`
 
+    // RequestContinuationToken.
+    //
+    // 
+    RequestContinuationToken string `json:"requestContinuationToken"`
+
     // LocaleFilter.
     //
     // 
     LocaleFilter string `json:"localeFilter"`
+
+    // CurrentPage.
+    //
+    // 
+    CurrentPage int32 `json:"currentPage"`
+
+    // GroupType.
+    //
+    // 
+    GroupType int32 `json:"groupType"`
 }

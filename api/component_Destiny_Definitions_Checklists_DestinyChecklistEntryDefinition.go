@@ -3,37 +3,10 @@
 package api
 
 type Destiny_Definitions_Checklists_DestinyChecklistEntryDefinition struct {
-    // ActivityHash.
+    // DisplayProperties.
     //
-    // 
-    ActivityHash uint32 `json:"activityHash"`
-
-    // DestinationHash.
-    //
-    // 
-    DestinationHash uint32 `json:"destinationHash"`
-
-    // VendorHash.
-    //
-    // 
-    VendorHash uint32 `json:"vendorHash"`
-
-    // BubbleHash.
-    //
-    // Note that a Bubble's hash doesn't uniquely identify a "top level" entity in Destiny. Only the combination of location and bubble can uniquely identify a place in the world of Destiny: so if bubbleHash is populated, locationHash must too be populated for it to have any meaning.
-    //
-    // You can use this property if it is populated to look up the DestinyLocationDefinition's associated .locationReleases[].activityBubbleName property.
-    BubbleHash uint32 `json:"bubbleHash"`
-
-    // ItemHash.
-    //
-    // 
-    ItemHash uint32 `json:"itemHash"`
-
-    // LocationHash.
-    //
-    // 
-    LocationHash uint32 `json:"locationHash"`
+    // Even if no other associations exist, we will give you *something* for display properties. In cases where we have no associated entities, it may be as simple as a numerical identifier.
+    DisplayProperties any `json:"displayProperties"`
 
     // Scope.
     //
@@ -45,13 +18,40 @@ type Destiny_Definitions_Checklists_DestinyChecklistEntryDefinition struct {
     // 
     VendorInteractionIndex int32 `json:"vendorInteractionIndex"`
 
-    // DisplayProperties.
+    // ActivityHash.
     //
-    // Even if no other associations exist, we will give you *something* for display properties. In cases where we have no associated entities, it may be as simple as a numerical identifier.
-    DisplayProperties any `json:"displayProperties"`
+    // 
+    ActivityHash uint32 `json:"activityHash"`
+
+    // ItemHash.
+    //
+    // 
+    ItemHash uint32 `json:"itemHash"`
+
+    // VendorHash.
+    //
+    // 
+    VendorHash uint32 `json:"vendorHash"`
 
     // Hash.
     //
     // The identifier for this Checklist entry. Guaranteed unique only within this Checklist Definition, and not globally/for all checklists.
     Hash uint32 `json:"hash"`
+
+    // LocationHash.
+    //
+    // 
+    LocationHash uint32 `json:"locationHash"`
+
+    // BubbleHash.
+    //
+    // Note that a Bubble's hash doesn't uniquely identify a "top level" entity in Destiny. Only the combination of location and bubble can uniquely identify a place in the world of Destiny: so if bubbleHash is populated, locationHash must too be populated for it to have any meaning.
+    //
+    // You can use this property if it is populated to look up the DestinyLocationDefinition's associated .locationReleases[].activityBubbleName property.
+    BubbleHash uint32 `json:"bubbleHash"`
+
+    // DestinationHash.
+    //
+    // 
+    DestinationHash uint32 `json:"destinationHash"`
 }

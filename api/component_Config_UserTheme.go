@@ -3,11 +3,6 @@
 package api
 
 type Config_UserTheme struct {
-    // UserThemeId.
-    //
-    // 
-    UserThemeId int32 `json:"userThemeId"`
-
     // UserThemeName.
     //
     // 
@@ -17,4 +12,9 @@ type Config_UserTheme struct {
     //
     // 
     UserThemeDescription string `json:"userThemeDescription"`
+
+    // UserThemeId.
+    //
+    // 
+    UserThemeId int32 `json:"userThemeId"`
 }

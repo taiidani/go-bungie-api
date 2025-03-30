@@ -6,5 +6,5 @@ type Destiny_Definitions_Common_DestinyIconSequenceDefinition struct {
     // Frames.
     //
     // 
-    Frames []any `json:"frames"`
+    Frames []string `json:"frames"`
 }

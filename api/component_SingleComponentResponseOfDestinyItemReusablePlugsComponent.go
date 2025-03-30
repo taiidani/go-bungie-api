@@ -3,11 +3,6 @@
 package api
 
 type SingleComponentResponseOfDestinyItemReusablePlugsComponent struct {
-    // Data.
-    //
-    // 
-    Data any `json:"data"`
-
     // Disabled.
     //
     // If true, this component is disabled.
@@ -17,4 +12,9 @@ type SingleComponentResponseOfDestinyItemReusablePlugsComponent struct {
     //
     // 
     Privacy int32 `json:"privacy"`
+
+    // Data.
+    //
+    // 
+    Data Destiny_Components_Items_DestinyItemReusablePlugsComponent `json:"data"`
 }

@@ -3,11 +3,6 @@
 package api
 
 type Destiny_Definitions_Metrics_DestinyMetricDefinition struct {
-    // Redacted.
-    //
-    // If this is true, then there is an entity with this identifier/type combination, but BNet is not yet allowed to show it. Sorry!
-    Redacted bool `json:"redacted"`
-
     // TrackingObjectiveHash.
     //
     // 
@@ -16,12 +11,32 @@ type Destiny_Definitions_Metrics_DestinyMetricDefinition struct {
     // TraitHashes.
     //
     // 
-    TraitHashes []any `json:"traitHashes"`
+    TraitHashes []uint32 `json:"traitHashes"`
+
+    // DisplayProperties.
+    //
+    // Many Destiny*Definition contracts - the "first order" entities of Destiny that have their own tables in the Manifest Database - also have displayable information. This is the base class for that display information.
+    DisplayProperties Destiny_Definitions_Common_DestinyDisplayPropertiesDefinition `json:"displayProperties"`
+
+    // LowerValueIsBetter.
+    //
+    // 
+    LowerValueIsBetter bool `json:"lowerValueIsBetter"`
+
+    // ParentNodeHashes.
+    //
+    // A quick reference to presentation nodes that have this node as a child. Presentation nodes can be parented under multiple parents.
+    ParentNodeHashes []uint32 `json:"parentNodeHashes"`
+
+    // Index.
+    //
+    // The index of the entity as it was found in the investment tables.
+    Index int32 `json:"index"`
 
     // TraitIds.
     //
     // 
-    TraitIds []any `json:"traitIds"`
+    TraitIds []string `json:"traitIds"`
 
     // Hash.
     //
@@ -30,28 +45,13 @@ type Destiny_Definitions_Metrics_DestinyMetricDefinition struct {
     // When entities refer to each other in Destiny content, it is this hash that they are referring to.
     Hash uint32 `json:"hash"`
 
-    // Index.
-    //
-    // The index of the entity as it was found in the investment tables.
-    Index int32 `json:"index"`
-
     // PresentationNodeType.
     //
     // 
     PresentationNodeType int32 `json:"presentationNodeType"`
 
-    // LowerValueIsBetter.
+    // Redacted.
     //
-    // 
-    LowerValueIsBetter bool `json:"lowerValueIsBetter"`
-
-    // DisplayProperties.
-    //
-    // Many Destiny*Definition contracts - the "first order" entities of Destiny that have their own tables in the Manifest Database - also have displayable information. This is the base class for that display information.
-    DisplayProperties any `json:"displayProperties"`
-
-    // ParentNodeHashes.
-    //
-    // A quick reference to presentation nodes that have this node as a child. Presentation nodes can be parented under multiple parents.
-    ParentNodeHashes []any `json:"parentNodeHashes"`
+    // If this is true, then there is an entity with this identifier/type combination, but BNet is not yet allowed to show it. Sorry!
+    Redacted bool `json:"redacted"`
 }

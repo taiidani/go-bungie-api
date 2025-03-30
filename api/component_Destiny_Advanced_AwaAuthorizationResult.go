@@ -3,6 +3,16 @@
 package api
 
 type Destiny_Advanced_AwaAuthorizationResult struct {
+    // MembershipType.
+    //
+    // MembershipType from the permission request.
+    MembershipType int32 `json:"membershipType"`
+
+    // ResponseReason.
+    //
+    // 
+    ResponseReason int32 `json:"responseReason"`
+
     // Type.
     //
     // Advanced Write Action Type from the permission request.
@@ -32,14 +42,4 @@ type Destiny_Advanced_AwaAuthorizationResult struct {
     //
     // This token may be used to perform the requested action this number of times, at a maximum. If this value is 0, then there is no limit.
     MaximumNumberOfUses int32 `json:"maximumNumberOfUses"`
-
-    // MembershipType.
-    //
-    // MembershipType from the permission request.
-    MembershipType int32 `json:"membershipType"`
-
-    // ResponseReason.
-    //
-    // 
-    ResponseReason int32 `json:"responseReason"`
 }

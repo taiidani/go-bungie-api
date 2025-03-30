@@ -16,5 +16,5 @@ type SingleComponentResponseOfDestinyProfileRecordsComponent struct {
     // Data.
     //
     // 
-    Data any `json:"data"`
+    Data Destiny_Components_Records_DestinyProfileRecordsComponent `json:"data"`
 }

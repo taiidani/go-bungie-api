@@ -3,15 +3,15 @@
 package api
 
 type Destiny_Definitions_DestinyActivityChallengeDefinition struct {
-    // ObjectiveHash.
-    //
-    // The hash for the Objective that matches this challenge. Use it to look up the DestinyObjectiveDefinition.
-    ObjectiveHash uint32 `json:"objectiveHash"`
-
     // DummyRewards.
     //
     // The rewards as they're represented in the UI. Note that they generally link to "dummy" items that give a summary of rewards rather than direct, real items themselves.
     //
     // If the quantity is 0, don't show the quantity.
     DummyRewards []Destiny_DestinyItemQuantity `json:"dummyRewards"`
+
+    // ObjectiveHash.
+    //
+    // The hash for the Objective that matches this challenge. Use it to look up the DestinyObjectiveDefinition.
+    ObjectiveHash uint32 `json:"objectiveHash"`
 }

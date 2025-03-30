@@ -3,13 +3,13 @@
 package api
 
 type GroupsV2_GroupMemberLeaveResult struct {
+    // Group.
+    //
+    // 
+    Group GroupsV2_GroupV2 `json:"group"`
+
     // GroupDeleted.
     //
     // 
     GroupDeleted bool `json:"groupDeleted"`
-
-    // Group.
-    //
-    // 
-    Group any `json:"group"`
 }

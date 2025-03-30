@@ -3,10 +3,15 @@
 package api
 
 type Destiny_Definitions_DestinyItemSourceBlockDefinition struct {
+    // Exclusive.
+    //
+    // If we found that this item is exclusive to a specific platform, this will be set to the BungieMembershipType enumeration that matches that platform.
+    Exclusive int32 `json:"exclusive"`
+
     // SourceHashes.
     //
     // The list of hash identifiers for Reward Sources that hint where the item can be found (DestinyRewardSourceDefinition).
-    SourceHashes []any `json:"sourceHashes"`
+    SourceHashes []uint32 `json:"sourceHashes"`
 
     // Sources.
     //
@@ -17,9 +22,4 @@ type Destiny_Definitions_DestinyItemSourceBlockDefinition struct {
     //
     // A denormalized reference back to vendors that potentially sell this item.
     VendorSources []Destiny_Definitions_DestinyItemVendorSourceReference `json:"vendorSources"`
-
-    // Exclusive.
-    //
-    // If we found that this item is exclusive to a specific platform, this will be set to the BungieMembershipType enumeration that matches that platform.
-    Exclusive int32 `json:"exclusive"`
 }

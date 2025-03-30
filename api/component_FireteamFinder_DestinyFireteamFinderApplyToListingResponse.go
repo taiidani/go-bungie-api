@@ -6,12 +6,12 @@ type FireteamFinder_DestinyFireteamFinderApplyToListingResponse struct {
     // Listing.
     //
     // 
-    Listing any `json:"listing"`
+    Listing FireteamFinder_DestinyFireteamFinderListing `json:"listing"`
 
     // Application.
     //
     // 
-    Application any `json:"application"`
+    Application FireteamFinder_DestinyFireteamFinderApplication `json:"application"`
 
     // IsApplied.
     //

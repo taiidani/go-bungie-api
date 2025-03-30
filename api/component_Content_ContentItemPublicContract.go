@@ -3,30 +3,17 @@
 package api
 
 type Content_ContentItemPublicContract struct {
-    // ModifyDate.
+    // Properties.
     //
-    // 
-    ModifyDate string `json:"modifyDate"`
+    // Firehose content is really a collection of metadata and "properties", which are the potentially-but-not-strictly localizable data that comprises the meat of whatever content is being shown.
+    //
+    // As Cole Porter would have crooned, "Anything Goes" with Firehose properties. They are most often strings, but they can theoretically be anything. They are JSON encoded, and could be JSON structures, simple strings, numbers etc... The Content Type of the item (cType) will describe the properties, and thus how they ought to be deserialized.
+    Properties any `json:"properties"`
 
-    // Author.
+    // CreationDate.
     //
     // 
-    Author any `json:"author"`
-
-    // Representations.
-    //
-    // 
-    Representations []Content_ContentRepresentation `json:"representations"`
-
-    // AutoEnglishPropertyFallback.
-    //
-    // 
-    AutoEnglishPropertyFallback bool `json:"autoEnglishPropertyFallback"`
-
-    // AllowComments.
-    //
-    // 
-    AllowComments bool `json:"allowComments"`
+    CreationDate string `json:"creationDate"`
 
     // CType.
     //
@@ -38,45 +25,58 @@ type Content_ContentItemPublicContract struct {
     // 
     MinimumAge int32 `json:"minimumAge"`
 
-    // CreationDate.
+    // Author.
     //
     // 
-    CreationDate string `json:"creationDate"`
+    Author User_GeneralUser `json:"author"`
 
-    // Tags.
+    // ModifyDate.
     //
-    // NOTE: Tags will always be lower case.
-    Tags []any `json:"tags"`
+    // 
+    ModifyDate string `json:"modifyDate"`
+
+    // CommentSummary.
+    //
+    // 
+    CommentSummary Content_CommentSummary `json:"commentSummary"`
 
     // CmsPath.
     //
     // 
     CmsPath string `json:"cmsPath"`
 
-    // RatingImagePath.
-    //
-    // 
-    RatingImagePath string `json:"ratingImagePath"`
-
     // HasAgeGate.
     //
     // 
     HasAgeGate bool `json:"hasAgeGate"`
 
-    // Properties.
+    // RatingImagePath.
     //
-    // Firehose content is really a collection of metadata and "properties", which are the potentially-but-not-strictly localizable data that comprises the meat of whatever content is being shown.
+    // 
+    RatingImagePath string `json:"ratingImagePath"`
+
+    // AllowComments.
     //
-    // As Cole Porter would have crooned, "Anything Goes" with Firehose properties. They are most often strings, but they can theoretically be anything. They are JSON encoded, and could be JSON structures, simple strings, numbers etc... The Content Type of the item (cType) will describe the properties, and thus how they ought to be deserialized.
-    Properties any `json:"properties"`
+    // 
+    AllowComments bool `json:"allowComments"`
+
+    // Representations.
+    //
+    // 
+    Representations []Content_ContentRepresentation `json:"representations"`
 
     // ContentId.
     //
     // 
     ContentId int64 `json:"contentId"`
 
-    // CommentSummary.
+    // Tags.
+    //
+    // NOTE: Tags will always be lower case.
+    Tags []string `json:"tags"`
+
+    // AutoEnglishPropertyFallback.
     //
     // 
-    CommentSummary any `json:"commentSummary"`
+    AutoEnglishPropertyFallback bool `json:"autoEnglishPropertyFallback"`
 }

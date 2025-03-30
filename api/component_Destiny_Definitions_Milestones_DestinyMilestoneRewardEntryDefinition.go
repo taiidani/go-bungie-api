@@ -3,11 +3,6 @@
 package api
 
 type Destiny_Definitions_Milestones_DestinyMilestoneRewardEntryDefinition struct {
-    // Order.
-    //
-    // If you want to follow BNet's ordering of these rewards, use this number within a given category to order the rewards. Yeah, I know. I feel dirty too.
-    Order int32 `json:"order"`
-
     // RewardEntryHash.
     //
     // The identifier for this reward entry. Runtime data will refer to reward entries by this hash. Only guaranteed unique within the specific Milestone.
@@ -32,4 +27,9 @@ type Destiny_Definitions_Milestones_DestinyMilestoneRewardEntryDefinition struct
     //
     // The items you will get as rewards, and how much of it you'll get.
     Items []Destiny_DestinyItemQuantity `json:"items"`
+
+    // Order.
+    //
+    // If you want to follow BNet's ordering of these rewards, use this number within a given category to order the rewards. Yeah, I know. I feel dirty too.
+    Order int32 `json:"order"`
 }

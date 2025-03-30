@@ -3,40 +3,25 @@
 package api
 
 type GroupsV2_GroupResponse struct {
-    // GroupJoinInviteCount.
+    // CurrentUserMembershipsInactiveForDestiny.
     //
-    // 
-    GroupJoinInviteCount int32 `json:"groupJoinInviteCount"`
+    // A convenience property that indicates if every membership you (the current user) have that is a part of this group are part of an account that is considered inactive - for example, overridden accounts in Cross Save.
+    CurrentUserMembershipsInactiveForDestiny bool `json:"currentUserMembershipsInactiveForDestiny"`
 
     // ParentGroup.
     //
     // 
-    ParentGroup any `json:"parentGroup"`
+    ParentGroup GroupsV2_GroupV2 `json:"parentGroup"`
 
     // AllianceStatus.
     //
     // 
     AllianceStatus int32 `json:"allianceStatus"`
 
-    // Detail.
-    //
-    // 
-    Detail any `json:"detail"`
-
-    // AlliedIds.
-    //
-    // 
-    AlliedIds []any `json:"alliedIds"`
-
     // CurrentUserMemberMap.
     //
     // This property will be populated if the authenticated user is a member of the group. Note that because of account linking, a user can sometimes be part of a clan more than once. As such, this returns the highest member type available.
     CurrentUserMemberMap any `json:"currentUserMemberMap"`
-
-    // CurrentUserMembershipsInactiveForDestiny.
-    //
-    // A convenience property that indicates if every membership you (the current user) have that is a part of this group are part of an account that is considered inactive - for example, overridden accounts in Cross Save.
-    CurrentUserMembershipsInactiveForDestiny bool `json:"currentUserMembershipsInactiveForDestiny"`
 
     // CurrentUserPotentialMemberMap.
     //
@@ -46,5 +31,20 @@ type GroupsV2_GroupResponse struct {
     // Founder.
     //
     // 
-    Founder any `json:"founder"`
+    Founder GroupsV2_GroupMember `json:"founder"`
+
+    // GroupJoinInviteCount.
+    //
+    // 
+    GroupJoinInviteCount int32 `json:"groupJoinInviteCount"`
+
+    // AlliedIds.
+    //
+    // 
+    AlliedIds []int64 `json:"alliedIds"`
+
+    // Detail.
+    //
+    // 
+    Detail GroupsV2_GroupV2 `json:"detail"`
 }

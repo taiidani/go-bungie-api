@@ -3,6 +3,11 @@
 package api
 
 type DictionaryComponentResponseOfuint32AndDestinyItemRenderComponent struct {
+    // Disabled.
+    //
+    // If true, this component is disabled.
+    Disabled bool `json:"disabled"`
+
     // Privacy.
     //
     // 
@@ -12,9 +17,4 @@ type DictionaryComponentResponseOfuint32AndDestinyItemRenderComponent struct {
     //
     // 
     Data any `json:"data"`
-
-    // Disabled.
-    //
-    // If true, this component is disabled.
-    Disabled bool `json:"disabled"`
 }

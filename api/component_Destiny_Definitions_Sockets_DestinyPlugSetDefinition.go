@@ -3,6 +3,11 @@
 package api
 
 type Destiny_Definitions_Sockets_DestinyPlugSetDefinition struct {
+    // DisplayProperties.
+    //
+    // If you want to show these plugs in isolation, these are the display properties for them.
+    DisplayProperties any `json:"displayProperties"`
+
     // Hash.
     //
     // The unique identifier for this entity. Guaranteed to be unique for the type of entity, but not globally.
@@ -33,9 +38,4 @@ type Destiny_Definitions_Sockets_DestinyPlugSetDefinition struct {
     //
     // If this list is populated, you will not be allowed to plug an arbitrary item in the socket: you will only be able to choose from one of these reusable plugs.
     ReusablePlugItems []Destiny_Definitions_DestinyItemSocketEntryPlugItemRandomizedDefinition `json:"reusablePlugItems"`
-
-    // DisplayProperties.
-    //
-    // If you want to show these plugs in isolation, these are the display properties for them.
-    DisplayProperties any `json:"displayProperties"`
 }

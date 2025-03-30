@@ -3,55 +3,35 @@
 package api
 
 type Destiny_Definitions_DestinyVendorCategoryEntryDefinition struct {
-    // HideFromRegularPurchase.
+    // IsDisplayOnly.
     //
-    // True if this category doesn't allow purchases.
-    HideFromRegularPurchase bool `json:"hideFromRegularPurchase"`
-
-    // QuantityAvailable.
-    //
-    // The amount of items that will be available when this category is shown.
-    QuantityAvailable int32 `json:"quantityAvailable"`
-
-    // IsPreview.
-    //
-    // Sometimes a category isn't actually used to sell items, but rather to preview them. This implies different UI (and manual placement of the category in the UI) in the game, and special treatment.
-    IsPreview bool `json:"isPreview"`
-
-    // CategoryIndex.
-    //
-    // The index of the category in the original category definitions for the vendor.
-    CategoryIndex int32 `json:"categoryIndex"`
+    // If true, this category only displays items: you can't purchase anything in them.
+    IsDisplayOnly bool `json:"isDisplayOnly"`
 
     // ShowUnavailableItems.
     //
     // If items aren't up for sale in this category, should we still show them (greyed out)?
     ShowUnavailableItems bool `json:"showUnavailableItems"`
 
-    // SortValue.
-    //
-    // Used in sorting items in vendors... but there's a lot more to it. Just go with the order provided in the itemIndexes property on the DestinyVendorCategoryComponent instead, it should be more reliable than trying to recalculate it yourself.
-    SortValue int32 `json:"sortValue"`
-
-    // DisabledDescription.
-    //
-    // If the category is disabled, this is the localized description to show.
-    DisabledDescription string `json:"disabledDescription"`
-
-    // HideIfNoCurrency.
-    //
-    // If you don't have the currency required to buy items from this category, should the items be hidden?
-    HideIfNoCurrency bool `json:"hideIfNoCurrency"`
-
-    // VendorItemIndexes.
-    //
-    // A shortcut for the vendor item indexes sold under this category. Saves us from some expensive reorganization at runtime.
-    VendorItemIndexes []any `json:"vendorItemIndexes"`
-
     // Overlay.
     //
     // If this category has an overlay prompt that should appear, this contains the details of that prompt.
     Overlay any `json:"overlay"`
+
+    // QuantityAvailable.
+    //
+    // The amount of items that will be available when this category is shown.
+    QuantityAvailable int32 `json:"quantityAvailable"`
+
+    // BuyStringOverride.
+    //
+    // The localized string for making purchases from this category, if it is different from the vendor's string for purchasing.
+    BuyStringOverride string `json:"buyStringOverride"`
+
+    // IsPreview.
+    //
+    // Sometimes a category isn't actually used to sell items, but rather to preview them. This implies different UI (and manual placement of the category in the UI) in the game, and special treatment.
+    IsPreview bool `json:"isPreview"`
 
     // ResetIntervalMinutesOverride.
     //
@@ -63,23 +43,43 @@ type Destiny_Definitions_DestinyVendorCategoryEntryDefinition struct {
     // The hashed identifier for the category.
     CategoryHash uint32 `json:"categoryHash"`
 
-    // IsDisplayOnly.
+    // SortValue.
     //
-    // If true, this category only displays items: you can't purchase anything in them.
-    IsDisplayOnly bool `json:"isDisplayOnly"`
+    // Used in sorting items in vendors... but there's a lot more to it. Just go with the order provided in the itemIndexes property on the DestinyVendorCategoryComponent instead, it should be more reliable than trying to recalculate it yourself.
+    SortValue int32 `json:"sortValue"`
 
-    // ResetOffsetMinutesOverride.
+    // HideFromRegularPurchase.
     //
-    // 
-    ResetOffsetMinutesOverride int32 `json:"resetOffsetMinutesOverride"`
+    // True if this category doesn't allow purchases.
+    HideFromRegularPurchase bool `json:"hideFromRegularPurchase"`
+
+    // CategoryIndex.
+    //
+    // The index of the category in the original category definitions for the vendor.
+    CategoryIndex int32 `json:"categoryIndex"`
 
     // DisplayTitle.
     //
     // The localized title of the category.
     DisplayTitle string `json:"displayTitle"`
 
-    // BuyStringOverride.
+    // HideIfNoCurrency.
     //
-    // The localized string for making purchases from this category, if it is different from the vendor's string for purchasing.
-    BuyStringOverride string `json:"buyStringOverride"`
+    // If you don't have the currency required to buy items from this category, should the items be hidden?
+    HideIfNoCurrency bool `json:"hideIfNoCurrency"`
+
+    // ResetOffsetMinutesOverride.
+    //
+    // 
+    ResetOffsetMinutesOverride int32 `json:"resetOffsetMinutesOverride"`
+
+    // DisabledDescription.
+    //
+    // If the category is disabled, this is the localized description to show.
+    DisabledDescription string `json:"disabledDescription"`
+
+    // VendorItemIndexes.
+    //
+    // A shortcut for the vendor item indexes sold under this category. Saves us from some expensive reorganization at runtime.
+    VendorItemIndexes []int32 `json:"vendorItemIndexes"`
 }

@@ -6,5 +6,5 @@ type GroupsV2_GroupMembershipBase struct {
     // Group.
     //
     // 
-    Group any `json:"group"`
+    Group GroupsV2_GroupV2 `json:"group"`
 }

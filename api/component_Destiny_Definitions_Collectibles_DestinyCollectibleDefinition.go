@@ -3,6 +3,41 @@
 package api
 
 type Destiny_Definitions_Collectibles_DestinyCollectibleDefinition struct {
+    // StateInfo.
+    //
+    // 
+    StateInfo Destiny_Definitions_Collectibles_DestinyCollectibleStateBlock `json:"stateInfo"`
+
+    // TraitHashes.
+    //
+    // 
+    TraitHashes []uint32 `json:"traitHashes"`
+
+    // AcquisitionInfo.
+    //
+    // 
+    AcquisitionInfo Destiny_Definitions_Collectibles_DestinyCollectibleAcquisitionBlock `json:"acquisitionInfo"`
+
+    // PresentationInfo.
+    //
+    // 
+    PresentationInfo Destiny_Definitions_Presentation_DestinyPresentationChildBlock `json:"presentationInfo"`
+
+    // SourceString.
+    //
+    // A human readable string for a hint about how to acquire the item.
+    SourceString string `json:"sourceString"`
+
+    // ParentNodeHashes.
+    //
+    // A quick reference to presentation nodes that have this node as a child. Presentation nodes can be parented under multiple parents.
+    ParentNodeHashes []uint32 `json:"parentNodeHashes"`
+
+    // PresentationNodeType.
+    //
+    // 
+    PresentationNodeType int32 `json:"presentationNodeType"`
+
     // Hash.
     //
     // The unique identifier for this entity. Guaranteed to be unique for the type of entity, but not globally.
@@ -10,40 +45,20 @@ type Destiny_Definitions_Collectibles_DestinyCollectibleDefinition struct {
     // When entities refer to each other in Destiny content, it is this hash that they are referring to.
     Hash uint32 `json:"hash"`
 
-    // PresentationNodeType.
-    //
-    // 
-    PresentationNodeType int32 `json:"presentationNodeType"`
-
-    // ParentNodeHashes.
-    //
-    // A quick reference to presentation nodes that have this node as a child. Presentation nodes can be parented under multiple parents.
-    ParentNodeHashes []any `json:"parentNodeHashes"`
-
-    // SourceString.
-    //
-    // A human readable string for a hint about how to acquire the item.
-    SourceString string `json:"sourceString"`
-
-    // Redacted.
-    //
-    // If this is true, then there is an entity with this identifier/type combination, but BNet is not yet allowed to show it. Sorry!
-    Redacted bool `json:"redacted"`
-
-    // TraitIds.
-    //
-    // 
-    TraitIds []any `json:"traitIds"`
-
     // ItemHash.
     //
     // 
     ItemHash uint32 `json:"itemHash"`
 
-    // PresentationInfo.
+    // Scope.
+    //
+    // Indicates whether the state of this Collectible is determined on a per-character or on an account-wide basis.
+    Scope int32 `json:"scope"`
+
+    // TraitIds.
     //
     // 
-    PresentationInfo any `json:"presentationInfo"`
+    TraitIds []string `json:"traitIds"`
 
     // SourceHash.
     //
@@ -54,33 +69,18 @@ type Destiny_Definitions_Collectibles_DestinyCollectibleDefinition struct {
     // This hash also doesn't relate to an actual definition, just to note: we've got nothing useful other than the source string for this data.
     SourceHash uint32 `json:"sourceHash"`
 
-    // StateInfo.
+    // DisplayProperties.
     //
-    // 
-    StateInfo any `json:"stateInfo"`
-
-    // TraitHashes.
-    //
-    // 
-    TraitHashes []any `json:"traitHashes"`
-
-    // AcquisitionInfo.
-    //
-    // 
-    AcquisitionInfo any `json:"acquisitionInfo"`
-
-    // Scope.
-    //
-    // Indicates whether the state of this Collectible is determined on a per-character or on an account-wide basis.
-    Scope int32 `json:"scope"`
+    // Many Destiny*Definition contracts - the "first order" entities of Destiny that have their own tables in the Manifest Database - also have displayable information. This is the base class for that display information.
+    DisplayProperties Destiny_Definitions_Common_DestinyDisplayPropertiesDefinition `json:"displayProperties"`
 
     // Index.
     //
     // The index of the entity as it was found in the investment tables.
     Index int32 `json:"index"`
 
-    // DisplayProperties.
+    // Redacted.
     //
-    // Many Destiny*Definition contracts - the "first order" entities of Destiny that have their own tables in the Manifest Database - also have displayable information. This is the base class for that display information.
-    DisplayProperties any `json:"displayProperties"`
+    // If this is true, then there is an entity with this identifier/type combination, but BNet is not yet allowed to show it. Sorry!
+    Redacted bool `json:"redacted"`
 }

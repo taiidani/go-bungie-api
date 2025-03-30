@@ -3,13 +3,13 @@
 package api
 
 type Destiny_HistoricalStats_DestinyHistoricalStatsValuePair struct {
-    // Value.
-    //
-    // Raw value of the statistic
-    Value float64 `json:"value"`
-
     // DisplayValue.
     //
     // Localized formated version of the value.
     DisplayValue string `json:"displayValue"`
+
+    // Value.
+    //
+    // Raw value of the statistic
+    Value float64 `json:"value"`
 }

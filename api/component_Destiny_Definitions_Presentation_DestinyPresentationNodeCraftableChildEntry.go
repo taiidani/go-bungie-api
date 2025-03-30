@@ -3,13 +3,13 @@
 package api
 
 type Destiny_Definitions_Presentation_DestinyPresentationNodeCraftableChildEntry struct {
-    // CraftableItemHash.
-    //
-    // 
-    CraftableItemHash uint32 `json:"craftableItemHash"`
-
     // NodeDisplayPriority.
     //
     // Use this value to sort the presentation node children in ascending order.
     NodeDisplayPriority uint32 `json:"nodeDisplayPriority"`
+
+    // CraftableItemHash.
+    //
+    // 
+    CraftableItemHash uint32 `json:"craftableItemHash"`
 }

@@ -3,16 +3,6 @@
 package api
 
 type SearchResultOfGroupEditHistory struct {
-    // HasMore.
-    //
-    // 
-    HasMore bool `json:"hasMore"`
-
-    // Query.
-    //
-    // 
-    Query any `json:"query"`
-
     // ReplacementContinuationToken.
     //
     // 
@@ -38,4 +28,14 @@ type SearchResultOfGroupEditHistory struct {
     //
     // This is a long-held historical throwback to when we used to do paging with known total results. Those queries toasted our database, and we were left to hastily alter our endpoints and create backward- compatible shims, of which useTotalResults is one.
     UseTotalResults bool `json:"useTotalResults"`
+
+    // HasMore.
+    //
+    // 
+    HasMore bool `json:"hasMore"`
+
+    // Query.
+    //
+    // 
+    Query Queries_PagedQuery `json:"query"`
 }

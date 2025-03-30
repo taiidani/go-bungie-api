@@ -3,6 +3,13 @@
 package api
 
 type Destiny_Components_Vendors_DestinyVendorSaleItemBaseComponent struct {
+    // VendorItemIndex.
+    //
+    // The index into the DestinyVendorDefinition.itemList property. Note that this means Vendor data *is* Content Version dependent: make sure you have the latest content before you use Vendor data, or these indexes may mismatch. 
+    //
+    // Most systems avoid this problem, but Vendors is one area where we are unable to reasonably avoid content dependency at the moment.
+    VendorItemIndex int32 `json:"vendorItemIndex"`
+
     // ApiPurchasable.
     //
     // If true, this item can be purchased through the Bungie.net API.
@@ -36,11 +43,4 @@ type Destiny_Components_Vendors_DestinyVendorSaleItemBaseComponent struct {
     //
     // How much of the item you'll be getting.
     Quantity int32 `json:"quantity"`
-
-    // VendorItemIndex.
-    //
-    // The index into the DestinyVendorDefinition.itemList property. Note that this means Vendor data *is* Content Version dependent: make sure you have the latest content before you use Vendor data, or these indexes may mismatch. 
-    //
-    // Most systems avoid this problem, but Vendors is one area where we are unable to reasonably avoid content dependency at the moment.
-    VendorItemIndex int32 `json:"vendorItemIndex"`
 }

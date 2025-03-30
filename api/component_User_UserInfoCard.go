@@ -3,15 +3,35 @@
 package api
 
 type User_UserInfoCard struct {
-    // BungieGlobalDisplayNameCode.
+    // SupplementalDisplayName.
     //
-    // The bungie global display name code, if set.
-    BungieGlobalDisplayNameCode int16 `json:"bungieGlobalDisplayNameCode"`
+    // A platform specific additional display name - ex: psn Real Name, bnet Unique Name, etc.
+    SupplementalDisplayName string `json:"supplementalDisplayName"`
 
     // BungieGlobalDisplayName.
     //
     // The bungie global display name, if set.
     BungieGlobalDisplayName string `json:"bungieGlobalDisplayName"`
+
+    // BungieGlobalDisplayNameCode.
+    //
+    // The bungie global display name code, if set.
+    BungieGlobalDisplayNameCode int16 `json:"bungieGlobalDisplayNameCode"`
+
+    // DisplayName.
+    //
+    // Display Name the player has chosen for themselves. The display name is optional when the data type is used as input to a platform API.
+    DisplayName string `json:"displayName"`
+
+    // IsPublic.
+    //
+    // If True, this is a public user membership.
+    IsPublic bool `json:"isPublic"`
+
+    // IconPath.
+    //
+    // URL the Icon if available.
+    IconPath string `json:"iconPath"`
 
     // MembershipId.
     //
@@ -23,35 +43,15 @@ type User_UserInfoCard struct {
     // Type of the membership. Not necessarily the native type.
     MembershipType int32 `json:"membershipType"`
 
-    // SupplementalDisplayName.
-    //
-    // A platform specific additional display name - ex: psn Real Name, bnet Unique Name, etc.
-    SupplementalDisplayName string `json:"supplementalDisplayName"`
-
-    // CrossSaveOverride.
-    //
-    // If there is a cross save override in effect, this value will tell you the type that is overridding this one.
-    CrossSaveOverride int32 `json:"crossSaveOverride"`
-
     // ApplicableMembershipTypes.
     //
     // The list of Membership Types indicating the platforms on which this Membership can be used.
     //
     //  Not in Cross Save = its original membership type. Cross Save Primary = Any membership types it is overridding, and its original membership type Cross Save Overridden = Empty list
-    ApplicableMembershipTypes []any `json:"applicableMembershipTypes"`
+    ApplicableMembershipTypes []int32 `json:"applicableMembershipTypes"`
 
-    // DisplayName.
+    // CrossSaveOverride.
     //
-    // Display Name the player has chosen for themselves. The display name is optional when the data type is used as input to a platform API.
-    DisplayName string `json:"displayName"`
-
-    // IconPath.
-    //
-    // URL the Icon if available.
-    IconPath string `json:"iconPath"`
-
-    // IsPublic.
-    //
-    // If True, this is a public user membership.
-    IsPublic bool `json:"isPublic"`
+    // If there is a cross save override in effect, this value will tell you the type that is overridding this one.
+    CrossSaveOverride int32 `json:"crossSaveOverride"`
 }

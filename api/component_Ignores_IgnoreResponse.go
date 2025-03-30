@@ -3,13 +3,13 @@
 package api
 
 type Ignores_IgnoreResponse struct {
-    // IsIgnored.
-    //
-    // 
-    IsIgnored bool `json:"isIgnored"`
-
     // IgnoreFlags.
     //
     // 
     IgnoreFlags int32 `json:"ignoreFlags"`
+
+    // IsIgnored.
+    //
+    // 
+    IsIgnored bool `json:"isIgnored"`
 }

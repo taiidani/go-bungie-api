@@ -6,5 +6,5 @@ type Destiny_Definitions_FireteamFinder_DestinyFireteamFinderOptionCreatorSettin
     // Control.
     //
     // 
-    Control any `json:"control"`
+    Control Destiny_Definitions_FireteamFinder_DestinyFireteamFinderOptionSettingsControl `json:"control"`
 }

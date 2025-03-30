@@ -3,16 +3,6 @@
 package api
 
 type Tokens_PartnerOfferSkuHistoryResponse struct {
-    // ClaimDate.
-    //
-    // 
-    ClaimDate string `json:"ClaimDate"`
-
-    // LocalizedDescription.
-    //
-    // 
-    LocalizedDescription string `json:"LocalizedDescription"`
-
     // LocalizedName.
     //
     // 
@@ -37,4 +27,14 @@ type Tokens_PartnerOfferSkuHistoryResponse struct {
     //
     // 
     AllOffersApplied bool `json:"AllOffersApplied"`
+
+    // ClaimDate.
+    //
+    // 
+    ClaimDate string `json:"ClaimDate"`
+
+    // LocalizedDescription.
+    //
+    // 
+    LocalizedDescription string `json:"LocalizedDescription"`
 }

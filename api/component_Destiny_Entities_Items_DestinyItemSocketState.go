@@ -20,7 +20,7 @@ type Destiny_Entities_Items_DestinyItemSocketState struct {
     // EnableFailIndexes.
     //
     // If a plug is inserted but not enabled, this will be populated with indexes into the plug item definition's plug.enabledRules property, so that you can show the reasons why it is not enabled.
-    EnableFailIndexes []any `json:"enableFailIndexes"`
+    EnableFailIndexes []int32 `json:"enableFailIndexes"`
 
     // IsEnabled.
     //

@@ -6,7 +6,7 @@ type Destiny_Definitions_DestinyEntitySearchResult struct {
     // SuggestedWords.
     //
     // A list of suggested words that might make for better search results, based on the text searched for.
-    SuggestedWords []any `json:"suggestedWords"`
+    SuggestedWords []string `json:"suggestedWords"`
 
     // Results.
     //

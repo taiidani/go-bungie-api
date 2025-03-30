@@ -3,21 +3,6 @@
 package api
 
 type GroupsV2_GroupPotentialMembershipSearchResponse struct {
-    // ReplacementContinuationToken.
-    //
-    // 
-    ReplacementContinuationToken string `json:"replacementContinuationToken"`
-
-    // Results.
-    //
-    // 
-    Results []GroupsV2_GroupPotentialMembership `json:"results"`
-
-    // TotalResults.
-    //
-    // 
-    TotalResults int32 `json:"totalResults"`
-
     // UseTotalResults.
     //
     // If useTotalResults is true, then totalResults represents an accurate count.
@@ -37,5 +22,20 @@ type GroupsV2_GroupPotentialMembershipSearchResponse struct {
     // Query.
     //
     // 
-    Query any `json:"query"`
+    Query Queries_PagedQuery `json:"query"`
+
+    // ReplacementContinuationToken.
+    //
+    // 
+    ReplacementContinuationToken string `json:"replacementContinuationToken"`
+
+    // Results.
+    //
+    // 
+    Results []GroupsV2_GroupPotentialMembership `json:"results"`
+
+    // TotalResults.
+    //
+    // 
+    TotalResults int32 `json:"totalResults"`
 }

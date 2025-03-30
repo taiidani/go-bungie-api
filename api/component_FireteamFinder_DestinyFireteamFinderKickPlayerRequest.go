@@ -3,13 +3,13 @@
 package api
 
 type FireteamFinder_DestinyFireteamFinderKickPlayerRequest struct {
-    // TargetCharacterId.
-    //
-    // 
-    TargetCharacterId int64 `json:"targetCharacterId"`
-
     // TargetMembershipType.
     //
     // 
     TargetMembershipType int32 `json:"targetMembershipType"`
+
+    // TargetCharacterId.
+    //
+    // 
+    TargetCharacterId int64 `json:"targetCharacterId"`
 }

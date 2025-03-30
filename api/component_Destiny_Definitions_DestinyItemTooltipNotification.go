@@ -3,13 +3,13 @@
 package api
 
 type Destiny_Definitions_DestinyItemTooltipNotification struct {
-    // DisplayStyle.
-    //
-    // 
-    DisplayStyle string `json:"displayStyle"`
-
     // DisplayString.
     //
     // 
     DisplayString string `json:"displayString"`
+
+    // DisplayStyle.
+    //
+    // 
+    DisplayStyle string `json:"displayStyle"`
 }

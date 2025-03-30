@@ -3,6 +3,11 @@
 package api
 
 type GroupsV2_GroupMembershipSearchResponse struct {
+    // Results.
+    //
+    // 
+    Results []GroupsV2_GroupMembership `json:"results"`
+
     // TotalResults.
     //
     // 
@@ -27,15 +32,10 @@ type GroupsV2_GroupMembershipSearchResponse struct {
     // Query.
     //
     // 
-    Query any `json:"query"`
+    Query Queries_PagedQuery `json:"query"`
 
     // ReplacementContinuationToken.
     //
     // 
     ReplacementContinuationToken string `json:"replacementContinuationToken"`
-
-    // Results.
-    //
-    // 
-    Results []GroupsV2_GroupMembership `json:"results"`
 }

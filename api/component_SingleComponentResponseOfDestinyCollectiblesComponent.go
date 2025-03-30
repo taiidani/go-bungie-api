@@ -3,6 +3,11 @@
 package api
 
 type SingleComponentResponseOfDestinyCollectiblesComponent struct {
+    // Disabled.
+    //
+    // If true, this component is disabled.
+    Disabled bool `json:"disabled"`
+
     // Privacy.
     //
     // 
@@ -11,10 +16,5 @@ type SingleComponentResponseOfDestinyCollectiblesComponent struct {
     // Data.
     //
     // 
-    Data any `json:"data"`
-
-    // Disabled.
-    //
-    // If true, this component is disabled.
-    Disabled bool `json:"disabled"`
+    Data Destiny_Components_Collectibles_DestinyCollectiblesComponent `json:"data"`
 }

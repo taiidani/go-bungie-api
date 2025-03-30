@@ -3,11 +3,6 @@
 package api
 
 type Destiny_Reporting_Requests_DestinyReportOffensePgcrRequest struct {
-    // ReasonHashes.
-    //
-    // If applicable, provide a more specific reason(s) within the general category of problems provided by the reasonHash. This is also an identifier for a reason. All reasonHashes provided must be children of at least one the reasonCategoryHashes provided.
-    ReasonHashes []any `json:"reasonHashes"`
-
     // OffendingCharacterId.
     //
     // Within the PGCR provided when calling the Reporting endpoint, this should be the character ID of the user that you thought was violating terms of use. They must exist in the PGCR provided.
@@ -16,5 +11,10 @@ type Destiny_Reporting_Requests_DestinyReportOffensePgcrRequest struct {
     // ReasonCategoryHashes.
     //
     // So you've decided to report someone instead of cursing them and their descendants. Well, okay then. This is the category or categorie(s) of infractions for which you are reporting the user. These are hash identifiers that map to DestinyReportReasonCategoryDefinition entries.
-    ReasonCategoryHashes []any `json:"reasonCategoryHashes"`
+    ReasonCategoryHashes []uint32 `json:"reasonCategoryHashes"`
+
+    // ReasonHashes.
+    //
+    // If applicable, provide a more specific reason(s) within the general category of problems provided by the reasonHash. This is also an identifier for a reason. All reasonHashes provided must be children of at least one the reasonCategoryHashes provided.
+    ReasonHashes []uint32 `json:"reasonHashes"`
 }

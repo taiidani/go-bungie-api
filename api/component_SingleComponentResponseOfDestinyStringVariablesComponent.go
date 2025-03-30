@@ -6,7 +6,7 @@ type SingleComponentResponseOfDestinyStringVariablesComponent struct {
     // Data.
     //
     // 
-    Data any `json:"data"`
+    Data Destiny_Components_StringVariables_DestinyStringVariablesComponent `json:"data"`
 
     // Disabled.
     //

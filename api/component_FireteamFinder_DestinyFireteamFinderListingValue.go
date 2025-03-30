@@ -3,13 +3,13 @@
 package api
 
 type FireteamFinder_DestinyFireteamFinderListingValue struct {
+    // Values.
+    //
+    // 
+    Values []uint32 `json:"values"`
+
     // ValueType.
     //
     // 
     ValueType uint32 `json:"valueType"`
-
-    // Values.
-    //
-    // 
-    Values []any `json:"values"`
 }

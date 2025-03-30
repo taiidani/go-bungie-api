@@ -3,13 +3,13 @@
 package api
 
 type GroupsV2_GroupApplicationListRequest struct {
-    // Message.
-    //
-    // 
-    Message string `json:"message"`
-
     // Memberships.
     //
     // 
     Memberships []User_UserMembership `json:"memberships"`
+
+    // Message.
+    //
+    // 
+    Message string `json:"message"`
 }

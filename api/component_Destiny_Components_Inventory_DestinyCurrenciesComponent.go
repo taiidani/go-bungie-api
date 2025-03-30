@@ -3,15 +3,15 @@
 package api
 
 type Destiny_Components_Inventory_DestinyCurrenciesComponent struct {
-    // MaterialRequirementSetStates.
-    //
-    // A map of material requirement hashes and their status information.
-    MaterialRequirementSetStates any `json:"materialRequirementSetStates"`
-
     // ItemQuantities.
     //
     // A dictionary - keyed by the item's hash identifier (DestinyInventoryItemDefinition), and whose value is the amount of that item you have across all available inventory buckets for purchasing.
     //
     // This allows you to see whether the requesting character can afford any given purchase/action without having to re-create this list itself.
     ItemQuantities any `json:"itemQuantities"`
+
+    // MaterialRequirementSetStates.
+    //
+    // A map of material requirement hashes and their status information.
+    MaterialRequirementSetStates any `json:"materialRequirementSetStates"`
 }

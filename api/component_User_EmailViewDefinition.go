@@ -3,13 +3,13 @@
 package api
 
 type User_EmailViewDefinition struct {
-    // ViewSettings.
-    //
-    // The ordered list of settings to show in this view.
-    ViewSettings []User_EmailViewDefinitionSetting `json:"viewSettings"`
-
     // Name.
     //
     // The identifier for this view.
     Name string `json:"name"`
+
+    // ViewSettings.
+    //
+    // The ordered list of settings to show in this view.
+    ViewSettings []User_EmailViewDefinitionSetting `json:"viewSettings"`
 }

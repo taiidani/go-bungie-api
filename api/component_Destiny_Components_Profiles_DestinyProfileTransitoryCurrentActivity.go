@@ -3,16 +3,6 @@
 package api
 
 type Destiny_Components_Profiles_DestinyProfileTransitoryCurrentActivity struct {
-    // Score.
-    //
-    // This is what our non-authoritative source thought the score was.
-    Score float32 `json:"score"`
-
-    // StartTime.
-    //
-    // When the activity started.
-    StartTime string `json:"startTime"`
-
     // EndTime.
     //
     // If you're still in it but it "ended" (like when folks are dancing around the loot after they beat a boss), this is when the activity ended.
@@ -32,4 +22,14 @@ type Destiny_Components_Profiles_DestinyProfileTransitoryCurrentActivity struct 
     //
     // This is how many human or poorly crafted aimbots are on your team.
     NumberOfPlayers int32 `json:"numberOfPlayers"`
+
+    // Score.
+    //
+    // This is what our non-authoritative source thought the score was.
+    Score float32 `json:"score"`
+
+    // StartTime.
+    //
+    // When the activity started.
+    StartTime string `json:"startTime"`
 }

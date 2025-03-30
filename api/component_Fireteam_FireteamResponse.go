@@ -3,11 +3,6 @@
 package api
 
 type Fireteam_FireteamResponse struct {
-    // Alternates.
-    //
-    // 
-    Alternates []Fireteam_FireteamMember `json:"Alternates"`
-
     // Members.
     //
     // 
@@ -16,5 +11,10 @@ type Fireteam_FireteamResponse struct {
     // Summary.
     //
     // 
-    Summary any `json:"Summary"`
+    Summary Fireteam_FireteamSummary `json:"Summary"`
+
+    // Alternates.
+    //
+    // 
+    Alternates []Fireteam_FireteamMember `json:"Alternates"`
 }

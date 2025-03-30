@@ -3,6 +3,21 @@
 package api
 
 type Destiny_Vendors_DestinyVendorReceipt struct {
+    // SequenceNumber.
+    //
+    // The identifier of this receipt.
+    SequenceNumber int32 `json:"sequenceNumber"`
+
+    // TimeToExpiration.
+    //
+    // The seconds since epoch at which this receipt is rendered invalid.
+    TimeToExpiration int64 `json:"timeToExpiration"`
+
+    // CurrencyPaid.
+    //
+    // The amount paid for the item, in terms of items that were consumed in the purchase and their quantity.
+    CurrencyPaid []Destiny_DestinyItemQuantity `json:"currencyPaid"`
+
     // ExpiresOn.
     //
     // The date at which this receipt is rendered invalid.
@@ -27,19 +42,4 @@ type Destiny_Vendors_DestinyVendorReceipt struct {
     //
     // Whether you can get a refund, and what happens in order for the refund to be received. See the DestinyVendorItemRefundPolicy enum for details.
     RefundPolicy int32 `json:"refundPolicy"`
-
-    // SequenceNumber.
-    //
-    // The identifier of this receipt.
-    SequenceNumber int32 `json:"sequenceNumber"`
-
-    // TimeToExpiration.
-    //
-    // The seconds since epoch at which this receipt is rendered invalid.
-    TimeToExpiration int64 `json:"timeToExpiration"`
-
-    // CurrencyPaid.
-    //
-    // The amount paid for the item, in terms of items that were consumed in the purchase and their quantity.
-    CurrencyPaid []Destiny_DestinyItemQuantity `json:"currencyPaid"`
 }

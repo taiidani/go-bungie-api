@@ -6,7 +6,7 @@ type Destiny_Definitions_DestinyItemGearsetBlockDefinition struct {
     // ItemList.
     //
     // The list of hashes for items in the gearset. Use them to look up DestinyInventoryItemDefinition entries for the items in the set.
-    ItemList []any `json:"itemList"`
+    ItemList []uint32 `json:"itemList"`
 
     // TrackingValueMax.
     //

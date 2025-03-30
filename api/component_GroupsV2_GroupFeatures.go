@@ -3,10 +3,32 @@
 package api
 
 type GroupsV2_GroupFeatures struct {
-    // MembershipTypes.
+    // HostGuidedGamePermissionOverride.
     //
-    // 
-    MembershipTypes []any `json:"membershipTypes"`
+    // Minimum Member Level allowed to host guided games
+    //
+    // Always Allowed: Founder, Acting Founder, Admin
+    //
+    // Allowed Overrides: None, Member, Beginner
+    //
+    // Default is Member for clans, None for groups, although this means nothing for groups.
+    HostGuidedGamePermissionOverride int32 `json:"hostGuidedGamePermissionOverride"`
+
+    // InvitePermissionOverride.
+    //
+    // Minimum Member Level allowed to invite new members to group
+    //
+    // Always Allowed: Founder, Acting Founder
+    //
+    // True means admins have this power, false means they don't
+    //
+    // Default is false for clans, true for groups.
+    InvitePermissionOverride bool `json:"invitePermissionOverride"`
+
+    // MaximumMembershipsOfGroupType.
+    //
+    // Maximum number of groups of this type a typical membership may join. For example, a user may join about 50 General groups with their Bungie.net account. They may join one clan per Destiny membership.
+    MaximumMembershipsOfGroupType int32 `json:"maximumMembershipsOfGroupType"`
 
     // UpdateBannerPermissionOverride.
     //
@@ -24,33 +46,6 @@ type GroupsV2_GroupFeatures struct {
     // 
     Capabilities int32 `json:"capabilities"`
 
-    // MaximumMembershipsOfGroupType.
-    //
-    // Maximum number of groups of this type a typical membership may join. For example, a user may join about 50 General groups with their Bungie.net account. They may join one clan per Destiny membership.
-    MaximumMembershipsOfGroupType int32 `json:"maximumMembershipsOfGroupType"`
-
-    // UpdateCulturePermissionOverride.
-    //
-    // Minimum Member Level allowed to update group culture
-    //
-    // Always Allowed: Founder, Acting Founder
-    //
-    // True means admins have this power, false means they don't
-    //
-    // Default is false for clans, true for groups.
-    UpdateCulturePermissionOverride bool `json:"updateCulturePermissionOverride"`
-
-    // InvitePermissionOverride.
-    //
-    // Minimum Member Level allowed to invite new members to group
-    //
-    // Always Allowed: Founder, Acting Founder
-    //
-    // True means admins have this power, false means they don't
-    //
-    // Default is false for clans, true for groups.
-    InvitePermissionOverride bool `json:"invitePermissionOverride"`
-
     // JoinLevel.
     //
     // Level to join a member at when accepting an invite, application, or joining an open clan
@@ -63,14 +58,19 @@ type GroupsV2_GroupFeatures struct {
     // 
     MaximumMembers int32 `json:"maximumMembers"`
 
-    // HostGuidedGamePermissionOverride.
+    // UpdateCulturePermissionOverride.
     //
-    // Minimum Member Level allowed to host guided games
+    // Minimum Member Level allowed to update group culture
     //
-    // Always Allowed: Founder, Acting Founder, Admin
+    // Always Allowed: Founder, Acting Founder
     //
-    // Allowed Overrides: None, Member, Beginner
+    // True means admins have this power, false means they don't
     //
-    // Default is Member for clans, None for groups, although this means nothing for groups.
-    HostGuidedGamePermissionOverride int32 `json:"hostGuidedGamePermissionOverride"`
+    // Default is false for clans, true for groups.
+    UpdateCulturePermissionOverride bool `json:"updateCulturePermissionOverride"`
+
+    // MembershipTypes.
+    //
+    // 
+    MembershipTypes []int32 `json:"membershipTypes"`
 }

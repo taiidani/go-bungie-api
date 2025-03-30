@@ -3,6 +3,11 @@
 package api
 
 type Destiny_Definitions_Records_SchemaRecordStateBlock struct {
+    // FeaturedPriority.
+    //
+    // 
+    FeaturedPriority int32 `json:"featuredPriority"`
+
     // ObscuredDescription.
     //
     // A display description override to show when this record is 'obscured' instead of the default obscured display description.
@@ -12,9 +17,4 @@ type Destiny_Definitions_Records_SchemaRecordStateBlock struct {
     //
     // A display name override to show when this record is 'obscured' instead of the default obscured display name.
     ObscuredName string `json:"obscuredName"`
-
-    // FeaturedPriority.
-    //
-    // 
-    FeaturedPriority int32 `json:"featuredPriority"`
 }

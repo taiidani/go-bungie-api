@@ -3,13 +3,13 @@
 package api
 
 type Destiny_Definitions_DestinyNodeSocketReplaceResponse struct {
-    // SocketTypeHash.
-    //
-    // The hash identifier of the socket type to find amidst the item's sockets (the item to which this talent grid is attached). See DestinyInventoryItemDefinition.sockets.socketEntries to find the socket type of sockets on the item in question.
-    SocketTypeHash uint32 `json:"socketTypeHash"`
-
     // PlugItemHash.
     //
     // The hash identifier of the plug item that will be inserted into the socket found.
     PlugItemHash uint32 `json:"plugItemHash"`
+
+    // SocketTypeHash.
+    //
+    // The hash identifier of the socket type to find amidst the item's sockets (the item to which this talent grid is attached). See DestinyInventoryItemDefinition.sockets.socketEntries to find the socket type of sockets on the item in question.
+    SocketTypeHash uint32 `json:"socketTypeHash"`
 }

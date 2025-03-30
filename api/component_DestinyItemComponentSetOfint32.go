@@ -3,53 +3,53 @@
 package api
 
 type DestinyItemComponentSetOfint32 struct {
-    // Sockets.
-    //
-    // 
-    Sockets any `json:"sockets"`
-
-    // Instances.
-    //
-    // 
-    Instances any `json:"instances"`
-
-    // Stats.
-    //
-    // 
-    Stats any `json:"stats"`
-
-    // TalentGrids.
-    //
-    // 
-    TalentGrids any `json:"talentGrids"`
-
-    // PlugStates.
-    //
-    // 
-    PlugStates any `json:"plugStates"`
-
-    // Objectives.
-    //
-    // 
-    Objectives any `json:"objectives"`
-
-    // PlugObjectives.
-    //
-    // 
-    PlugObjectives any `json:"plugObjectives"`
-
     // RenderData.
     //
     // 
-    RenderData any `json:"renderData"`
-
-    // Perks.
-    //
-    // 
-    Perks any `json:"perks"`
+    RenderData DictionaryComponentResponseOfint32AndDestinyItemRenderComponent `json:"renderData"`
 
     // ReusablePlugs.
     //
     // 
-    ReusablePlugs any `json:"reusablePlugs"`
+    ReusablePlugs DictionaryComponentResponseOfint32AndDestinyItemReusablePlugsComponent `json:"reusablePlugs"`
+
+    // Sockets.
+    //
+    // 
+    Sockets DictionaryComponentResponseOfint32AndDestinyItemSocketsComponent `json:"sockets"`
+
+    // Objectives.
+    //
+    // 
+    Objectives DictionaryComponentResponseOfint32AndDestinyItemObjectivesComponent `json:"objectives"`
+
+    // TalentGrids.
+    //
+    // 
+    TalentGrids DictionaryComponentResponseOfint32AndDestinyItemTalentGridComponent `json:"talentGrids"`
+
+    // Instances.
+    //
+    // 
+    Instances DictionaryComponentResponseOfint32AndDestinyItemInstanceComponent `json:"instances"`
+
+    // PlugObjectives.
+    //
+    // 
+    PlugObjectives DictionaryComponentResponseOfint32AndDestinyItemPlugObjectivesComponent `json:"plugObjectives"`
+
+    // Perks.
+    //
+    // 
+    Perks DictionaryComponentResponseOfint32AndDestinyItemPerksComponent `json:"perks"`
+
+    // PlugStates.
+    //
+    // 
+    PlugStates DictionaryComponentResponseOfuint32AndDestinyItemPlugComponent `json:"plugStates"`
+
+    // Stats.
+    //
+    // 
+    Stats DictionaryComponentResponseOfint32AndDestinyItemStatsComponent `json:"stats"`
 }

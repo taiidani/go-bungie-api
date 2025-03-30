@@ -3,28 +3,6 @@
 package api
 
 type Destiny_Milestones_DestinyMilestoneChallengeActivity struct {
-    // Challenges.
-    //
-    // 
-    Challenges []Destiny_Challenges_DestinyChallengeStatus `json:"challenges"`
-
-    // LoadoutRequirementIndex.
-    //
-    // If returned, this is the index into the DestinyActivityDefinition's "loadouts" property, indicating the currently active loadout requirements.
-    LoadoutRequirementIndex int32 `json:"loadoutRequirementIndex"`
-
-    // ModifierHashes.
-    //
-    // If the activity has modifiers, this will be the list of modifiers that all variants have in common. Perform lookups against DestinyActivityModifierDefinition which defines the modifier being applied to get at the modifier data.
-    //
-    // Note that, in the DestiyActivityDefinition, you will see many more modifiers than this being referred to: those are all *possible* modifiers for the activity, not the active ones. Use only the active ones to match what's really live.
-    ModifierHashes []any `json:"modifierHashes"`
-
-    // Phases.
-    //
-    // If the Activity has discrete "phases" that we can track, that info will be here. Otherwise, this value will be NULL. Note that this is a list and not a dictionary: the order implies the ascending order of phases or progression in this activity.
-    Phases []Destiny_Milestones_DestinyMilestoneActivityPhase `json:"phases"`
-
     // ActivityHash.
     //
     // 
@@ -40,4 +18,26 @@ type Destiny_Milestones_DestinyMilestoneChallengeActivity struct {
     //
     // On our side, we don't necessarily even know what these are used for (the game designers know, but we don't), and we have no human readable data for them. In order to use them, you will have to do some experimentation.
     BooleanActivityOptions any `json:"booleanActivityOptions"`
+
+    // Challenges.
+    //
+    // 
+    Challenges []Destiny_Challenges_DestinyChallengeStatus `json:"challenges"`
+
+    // LoadoutRequirementIndex.
+    //
+    // If returned, this is the index into the DestinyActivityDefinition's "loadouts" property, indicating the currently active loadout requirements.
+    LoadoutRequirementIndex int32 `json:"loadoutRequirementIndex"`
+
+    // ModifierHashes.
+    //
+    // If the activity has modifiers, this will be the list of modifiers that all variants have in common. Perform lookups against DestinyActivityModifierDefinition which defines the modifier being applied to get at the modifier data.
+    //
+    // Note that, in the DestiyActivityDefinition, you will see many more modifiers than this being referred to: those are all *possible* modifiers for the activity, not the active ones. Use only the active ones to match what's really live.
+    ModifierHashes []uint32 `json:"modifierHashes"`
+
+    // Phases.
+    //
+    // If the Activity has discrete "phases" that we can track, that info will be here. Otherwise, this value will be NULL. Note that this is a list and not a dictionary: the order implies the ascending order of phases or progression in this activity.
+    Phases []Destiny_Milestones_DestinyMilestoneActivityPhase `json:"phases"`
 }

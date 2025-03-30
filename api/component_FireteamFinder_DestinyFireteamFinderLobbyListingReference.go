@@ -3,13 +3,13 @@
 package api
 
 type FireteamFinder_DestinyFireteamFinderLobbyListingReference struct {
-    // LobbyId.
-    //
-    // 
-    LobbyId int64 `json:"lobbyId"`
-
     // ListingId.
     //
     // 
     ListingId int64 `json:"listingId"`
+
+    // LobbyId.
+    //
+    // 
+    LobbyId int64 `json:"lobbyId"`
 }

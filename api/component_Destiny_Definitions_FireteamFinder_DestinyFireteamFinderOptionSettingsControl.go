@@ -3,11 +3,6 @@
 package api
 
 type Destiny_Definitions_FireteamFinder_DestinyFireteamFinderOptionSettingsControl struct {
-    // MaxSelectedItems.
-    //
-    // 
-    MaxSelectedItems int32 `json:"maxSelectedItems"`
-
     // MinSelectedItems.
     //
     // 
@@ -17,4 +12,9 @@ type Destiny_Definitions_FireteamFinder_DestinyFireteamFinderOptionSettingsContr
     //
     // 
     Type int32 `json:"type"`
+
+    // MaxSelectedItems.
+    //
+    // 
+    MaxSelectedItems int32 `json:"maxSelectedItems"`
 }

@@ -3,10 +3,15 @@
 package api
 
 type Destiny_Definitions_DestinyFactionDefinition struct {
-    // DisplayProperties.
+    // RewardItemHash.
     //
-    // Many Destiny*Definition contracts - the "first order" entities of Destiny that have their own tables in the Manifest Database - also have displayable information. This is the base class for that display information.
-    DisplayProperties any `json:"displayProperties"`
+    // The faction reward item hash, usually an engram.
+    RewardItemHash uint32 `json:"rewardItemHash"`
+
+    // TokenValues.
+    //
+    // The faction token item hashes, and their respective progression values.
+    TokenValues any `json:"tokenValues"`
 
     // Hash.
     //
@@ -25,11 +30,6 @@ type Destiny_Definitions_DestinyFactionDefinition struct {
     // The faction reward vendor hash, used for faction engram previews.
     RewardVendorHash uint32 `json:"rewardVendorHash"`
 
-    // TokenValues.
-    //
-    // The faction token item hashes, and their respective progression values.
-    TokenValues any `json:"tokenValues"`
-
     // Vendors.
     //
     // List of vendors that are associated with this faction. The last vendor that passes the unlock flag checks is the one that should be shown.
@@ -40,13 +40,13 @@ type Destiny_Definitions_DestinyFactionDefinition struct {
     // The hash identifier for the DestinyProgressionDefinition that indicates the character's relationship with this faction in terms of experience and levels.
     ProgressionHash uint32 `json:"progressionHash"`
 
+    // DisplayProperties.
+    //
+    // Many Destiny*Definition contracts - the "first order" entities of Destiny that have their own tables in the Manifest Database - also have displayable information. This is the base class for that display information.
+    DisplayProperties Destiny_Definitions_Common_DestinyDisplayPropertiesDefinition `json:"displayProperties"`
+
     // Redacted.
     //
     // If this is true, then there is an entity with this identifier/type combination, but BNet is not yet allowed to show it. Sorry!
     Redacted bool `json:"redacted"`
-
-    // RewardItemHash.
-    //
-    // The faction reward item hash, usually an engram.
-    RewardItemHash uint32 `json:"rewardItemHash"`
 }

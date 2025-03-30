@@ -3,6 +3,11 @@
 package api
 
 type Destiny_HistoricalStats_DestinyLeaderboardEntry struct {
+    // Player.
+    //
+    // Identity details of the player
+    Player any `json:"player"`
+
     // Rank.
     //
     // Where this player ranks on the leaderboard. A value of 1 is the top rank.
@@ -17,9 +22,4 @@ type Destiny_HistoricalStats_DestinyLeaderboardEntry struct {
     //
     // ID of the player's best character for the reported stat.
     CharacterId int64 `json:"characterId"`
-
-    // Player.
-    //
-    // Identity details of the player
-    Player any `json:"player"`
 }

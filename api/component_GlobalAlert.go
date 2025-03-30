@@ -3,26 +3,6 @@
 package api
 
 type GlobalAlert struct {
-    // AlertTimestamp.
-    //
-    // 
-    AlertTimestamp string `json:"AlertTimestamp"`
-
-    // AlertType.
-    //
-    // 
-    AlertType int32 `json:"AlertType"`
-
-    // StreamInfo.
-    //
-    // 
-    StreamInfo any `json:"StreamInfo"`
-
-    // AlertHtml.
-    //
-    // 
-    AlertHtml string `json:"AlertHtml"`
-
     // AlertKey.
     //
     // 
@@ -37,4 +17,24 @@ type GlobalAlert struct {
     //
     // 
     AlertLink string `json:"AlertLink"`
+
+    // AlertTimestamp.
+    //
+    // 
+    AlertTimestamp string `json:"AlertTimestamp"`
+
+    // AlertType.
+    //
+    // 
+    AlertType int32 `json:"AlertType"`
+
+    // StreamInfo.
+    //
+    // 
+    StreamInfo StreamInfo `json:"StreamInfo"`
+
+    // AlertHtml.
+    //
+    // 
+    AlertHtml string `json:"AlertHtml"`
 }

@@ -3,13 +3,13 @@
 package api
 
 type GroupsV2_GroupV2ClanInfo struct {
+    // ClanBannerData.
+    //
+    // 
+    ClanBannerData GroupsV2_ClanBanner `json:"clanBannerData"`
+
     // ClanCallsign.
     //
     // 
     ClanCallsign string `json:"clanCallsign"`
-
-    // ClanBannerData.
-    //
-    // 
-    ClanBannerData any `json:"clanBannerData"`
 }

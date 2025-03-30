@@ -3,6 +3,11 @@
 package api
 
 type Destiny_Components_Records_DestinyRecordsComponent struct {
+    // RecordCategoriesRootNodeHash.
+    //
+    // The hash for the root presentation node definition of Triumph categories.
+    RecordCategoriesRootNodeHash uint32 `json:"recordCategoriesRootNodeHash"`
+
     // RecordSealsRootNodeHash.
     //
     // The hash for the root presentation node definition of Triumph Seals.
@@ -12,9 +17,4 @@ type Destiny_Components_Records_DestinyRecordsComponent struct {
     //
     // 
     Records any `json:"records"`
-
-    // RecordCategoriesRootNodeHash.
-    //
-    // The hash for the root presentation node definition of Triumph categories.
-    RecordCategoriesRootNodeHash uint32 `json:"recordCategoriesRootNodeHash"`
 }

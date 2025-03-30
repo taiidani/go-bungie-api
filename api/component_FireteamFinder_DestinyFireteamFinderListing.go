@@ -16,7 +16,7 @@ type FireteamFinder_DestinyFireteamFinderListing struct {
     // OwnerId.
     //
     // 
-    OwnerId any `json:"ownerId"`
+    OwnerId FireteamFinder_DestinyFireteamFinderPlayerId `json:"ownerId"`
 
     // Revision.
     //
@@ -26,7 +26,7 @@ type FireteamFinder_DestinyFireteamFinderListing struct {
     // Settings.
     //
     // 
-    Settings any `json:"settings"`
+    Settings FireteamFinder_DestinyFireteamFinderLobbySettings `json:"settings"`
 
     // AvailableSlots.
     //

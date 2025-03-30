@@ -3,6 +3,21 @@
 package api
 
 type Tokens_PartnerOfferHistoryResponse struct {
+    // LocalizedName.
+    //
+    // 
+    LocalizedName string `json:"LocalizedName"`
+
+    // MembershipId.
+    //
+    // 
+    MembershipId int64 `json:"MembershipId"`
+
+    // MembershipType.
+    //
+    // 
+    MembershipType int32 `json:"MembershipType"`
+
     // PartnerOfferKey.
     //
     // 
@@ -27,19 +42,4 @@ type Tokens_PartnerOfferHistoryResponse struct {
     //
     // 
     LocalizedDescription string `json:"LocalizedDescription"`
-
-    // LocalizedName.
-    //
-    // 
-    LocalizedName string `json:"LocalizedName"`
-
-    // MembershipId.
-    //
-    // 
-    MembershipId int64 `json:"MembershipId"`
-
-    // MembershipType.
-    //
-    // 
-    MembershipType int32 `json:"MembershipType"`
 }

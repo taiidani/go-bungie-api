@@ -3,45 +3,35 @@
 package api
 
 type Common_Models_CoreSettingsConfiguration struct {
+    // DefaultGroupTheme.
+    //
+    // 
+    DefaultGroupTheme Common_Models_CoreSetting `json:"defaultGroupTheme"`
+
     // Environment.
     //
     // 
     Environment string `json:"environment"`
 
-    // FireteamActivities.
+    // ClanBannerDecals.
     //
     // 
-    FireteamActivities []Common_Models_CoreSetting `json:"fireteamActivities"`
-
-    // ForumCategories.
-    //
-    // 
-    ForumCategories []Common_Models_CoreSetting `json:"forumCategories"`
+    ClanBannerDecals []Common_Models_CoreSetting `json:"clanBannerDecals"`
 
     // RecruitmentMiscTags.
     //
     // 
     RecruitmentMiscTags []Common_Models_CoreSetting `json:"recruitmentMiscTags"`
 
+    // EmailSettings.
+    //
+    // The set of all email subscription/opt-in settings and definitions.
+    EmailSettings User_EmailSettings `json:"emailSettings"`
+
     // GroupAvatars.
     //
     // 
     GroupAvatars []Common_Models_CoreSetting `json:"groupAvatars"`
-
-    // RecruitmentActivities.
-    //
-    // 
-    RecruitmentActivities []Common_Models_CoreSetting `json:"recruitmentActivities"`
-
-    // IgnoreReasons.
-    //
-    // 
-    IgnoreReasons []Common_Models_CoreSetting `json:"ignoreReasons"`
-
-    // ClanBannerGonfalonDetails.
-    //
-    // 
-    ClanBannerGonfalonDetails []Common_Models_CoreSetting `json:"clanBannerGonfalonDetails"`
 
     // RecruitmentPlatformTags.
     //
@@ -53,55 +43,45 @@ type Common_Models_CoreSettingsConfiguration struct {
     // 
     SystemContentLocales []Common_Models_CoreSetting `json:"systemContentLocales"`
 
-    // Systems.
+    // ForumCategories.
     //
     // 
-    Systems any `json:"systems"`
+    ForumCategories []Common_Models_CoreSetting `json:"forumCategories"`
 
-    // Destiny2CoreSettings.
+    // ClanBannerGonfalonDetails.
     //
     // 
-    Destiny2CoreSettings any `json:"destiny2CoreSettings"`
+    ClanBannerGonfalonDetails []Common_Models_CoreSetting `json:"clanBannerGonfalonDetails"`
 
-    // ClanBannerGonfalonDetailColors.
+    // IgnoreReasons.
     //
     // 
-    ClanBannerGonfalonDetailColors []Common_Models_CoreSetting `json:"clanBannerGonfalonDetailColors"`
-
-    // EmailSettings.
-    //
-    // The set of all email subscription/opt-in settings and definitions.
-    EmailSettings any `json:"emailSettings"`
-
-    // DestinyMembershipTypes.
-    //
-    // 
-    DestinyMembershipTypes []Common_Models_CoreSetting `json:"destinyMembershipTypes"`
-
-    // UserContentLocales.
-    //
-    // 
-    UserContentLocales []Common_Models_CoreSetting `json:"userContentLocales"`
+    IgnoreReasons []Common_Models_CoreSetting `json:"ignoreReasons"`
 
     // ClanBannerGonfalonColors.
     //
     // 
     ClanBannerGonfalonColors []Common_Models_CoreSetting `json:"clanBannerGonfalonColors"`
 
-    // ClanBannerStandards.
+    // DestinyMembershipTypes.
     //
     // 
-    ClanBannerStandards []Common_Models_CoreSetting `json:"clanBannerStandards"`
+    DestinyMembershipTypes []Common_Models_CoreSetting `json:"destinyMembershipTypes"`
 
-    // ClanBannerDecals.
+    // FireteamActivities.
     //
     // 
-    ClanBannerDecals []Common_Models_CoreSetting `json:"clanBannerDecals"`
+    FireteamActivities []Common_Models_CoreSetting `json:"fireteamActivities"`
 
-    // DefaultGroupTheme.
+    // ClanBannerGonfalonDetailColors.
     //
     // 
-    DefaultGroupTheme any `json:"defaultGroupTheme"`
+    ClanBannerGonfalonDetailColors []Common_Models_CoreSetting `json:"clanBannerGonfalonDetailColors"`
+
+    // Systems.
+    //
+    // 
+    Systems any `json:"systems"`
 
     // ClanBannerDecalColors.
     //
@@ -112,4 +92,24 @@ type Common_Models_CoreSettingsConfiguration struct {
     //
     // 
     ClanBannerGonfalons []Common_Models_CoreSetting `json:"clanBannerGonfalons"`
+
+    // Destiny2CoreSettings.
+    //
+    // 
+    Destiny2CoreSettings Common_Models_Destiny2CoreSettings `json:"destiny2CoreSettings"`
+
+    // RecruitmentActivities.
+    //
+    // 
+    RecruitmentActivities []Common_Models_CoreSetting `json:"recruitmentActivities"`
+
+    // UserContentLocales.
+    //
+    // 
+    UserContentLocales []Common_Models_CoreSetting `json:"userContentLocales"`
+
+    // ClanBannerStandards.
+    //
+    // 
+    ClanBannerStandards []Common_Models_CoreSetting `json:"clanBannerStandards"`
 }

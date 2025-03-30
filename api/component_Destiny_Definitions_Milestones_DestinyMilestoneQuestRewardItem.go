@@ -3,11 +3,6 @@
 package api
 
 type Destiny_Definitions_Milestones_DestinyMilestoneQuestRewardItem struct {
-    // ItemInstanceId.
-    //
-    // If this quantity is referring to a specific instance of an item, this will have the item's instance ID. Normally, this will be null.
-    ItemInstanceId int64 `json:"itemInstanceId"`
-
     // Quantity.
     //
     // The amount of the item needed/available depending on the context of where DestinyItemQuantity is being used.
@@ -32,4 +27,9 @@ type Destiny_Definitions_Milestones_DestinyMilestoneQuestRewardItem struct {
     //
     // The hash identifier for the item in question. Use it to look up the item's DestinyInventoryItemDefinition.
     ItemHash uint32 `json:"itemHash"`
+
+    // ItemInstanceId.
+    //
+    // If this quantity is referring to a specific instance of an item, this will have the item's instance ID. Normally, this will be null.
+    ItemInstanceId int64 `json:"itemInstanceId"`
 }

@@ -3,13 +3,13 @@
 package api
 
 type Destiny_Definitions_DestinyProgressionSocketPlugOverride struct {
-    // SocketTypeHash.
-    //
-    // 
-    SocketTypeHash uint32 `json:"socketTypeHash"`
-
     // OverrideSingleItemHash.
     //
     // 
     OverrideSingleItemHash uint32 `json:"overrideSingleItemHash"`
+
+    // SocketTypeHash.
+    //
+    // 
+    SocketTypeHash uint32 `json:"socketTypeHash"`
 }

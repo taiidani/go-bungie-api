@@ -3,16 +3,6 @@
 package api
 
 type Destiny_Definitions_DestinyActivityMatchmakingBlockDefinition struct {
-    // MaxPlayers.
-    //
-    // The maximum # of people allowed across all teams in the activity.
-    MaxPlayers int32 `json:"maxPlayers"`
-
-    // MinParty.
-    //
-    // The minimum # of people in the fireteam for the activity to launch.
-    MinParty int32 `json:"minParty"`
-
     // RequiresGuardianOath.
     //
     // If true, you have to Solemnly Swear to be up to Nothing But Good(tm) to play.
@@ -27,4 +17,14 @@ type Destiny_Definitions_DestinyActivityMatchmakingBlockDefinition struct {
     //
     // The maximum # of people allowed in a Fireteam.
     MaxParty int32 `json:"maxParty"`
+
+    // MaxPlayers.
+    //
+    // The maximum # of people allowed across all teams in the activity.
+    MaxPlayers int32 `json:"maxPlayers"`
+
+    // MinParty.
+    //
+    // The minimum # of people in the fireteam for the activity to launch.
+    MinParty int32 `json:"minParty"`
 }

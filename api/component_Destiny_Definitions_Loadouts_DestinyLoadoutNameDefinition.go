@@ -3,11 +3,6 @@
 package api
 
 type Destiny_Definitions_Loadouts_DestinyLoadoutNameDefinition struct {
-    // Name.
-    //
-    // 
-    Name string `json:"name"`
-
     // Redacted.
     //
     // If this is true, then there is an entity with this identifier/type combination, but BNet is not yet allowed to show it. Sorry!
@@ -24,4 +19,9 @@ type Destiny_Definitions_Loadouts_DestinyLoadoutNameDefinition struct {
     //
     // The index of the entity as it was found in the investment tables.
     Index int32 `json:"index"`
+
+    // Name.
+    //
+    // 
+    Name string `json:"name"`
 }

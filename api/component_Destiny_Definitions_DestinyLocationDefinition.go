@@ -3,11 +3,6 @@
 package api
 
 type Destiny_Definitions_DestinyLocationDefinition struct {
-    // Redacted.
-    //
-    // If this is true, then there is an entity with this identifier/type combination, but BNet is not yet allowed to show it. Sorry!
-    Redacted bool `json:"redacted"`
-
     // VendorHash.
     //
     // If the location has a Vendor on it, this is the hash identifier for that Vendor. Look them up with DestinyVendorDefinition.
@@ -29,4 +24,9 @@ type Destiny_Definitions_DestinyLocationDefinition struct {
     //
     // A Location may refer to different specific spots in the world based on the world's current state. This is a list of those potential spots, and the data we can use at runtime to determine which one of the spots is the currently valid one.
     LocationReleases []Destiny_Definitions_DestinyLocationReleaseDefinition `json:"locationReleases"`
+
+    // Redacted.
+    //
+    // If this is true, then there is an entity with this identifier/type combination, but BNet is not yet allowed to show it. Sorry!
+    Redacted bool `json:"redacted"`
 }

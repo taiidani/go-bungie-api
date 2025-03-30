@@ -6,7 +6,7 @@ type SingleComponentResponseOfDestinyItemComponent struct {
     // Data.
     //
     // The base item component, filled with properties that are generally useful to know in any item request or that don't feel worthwhile to put in their own component.
-    Data any `json:"data"`
+    Data Destiny_Entities_Items_DestinyItemComponent `json:"data"`
 
     // Disabled.
     //

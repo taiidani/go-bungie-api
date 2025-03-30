@@ -3,11 +3,6 @@
 package api
 
 type Destiny_Milestones_DestinyMilestoneContent struct {
-    // Tips.
-    //
-    // A list of tips, provided by the Firehose.
-    Tips []any `json:"tips"`
-
     // About.
     //
     // The "About this Milestone" text from the Firehose.
@@ -22,4 +17,9 @@ type Destiny_Milestones_DestinyMilestoneContent struct {
     //
     // The Current Status of the Milestone, as driven by the Firehose.
     Status string `json:"status"`
+
+    // Tips.
+    //
+    // A list of tips, provided by the Firehose.
+    Tips []string `json:"tips"`
 }

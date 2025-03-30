@@ -3,6 +3,11 @@
 package api
 
 type FireteamFinder_DestinyFireteamFinderLobbySettings struct {
+    // ScheduledDateTime.
+    //
+    // 
+    ScheduledDateTime string `json:"scheduledDateTime"`
+
     // ActivityGraphHash.
     //
     // 
@@ -37,9 +42,4 @@ type FireteamFinder_DestinyFireteamFinderLobbySettings struct {
     //
     // 
     PrivacyScope int32 `json:"privacyScope"`
-
-    // ScheduledDateTime.
-    //
-    // 
-    ScheduledDateTime string `json:"scheduledDateTime"`
 }

@@ -3,6 +3,11 @@
 package api
 
 type Destiny_Definitions_DestinyPlugItemCraftingRequirements struct {
+    // RequiredLevel.
+    //
+    // If the plug has a known level requirement, it'll be available here.
+    RequiredLevel int32 `json:"requiredLevel"`
+
     // UnlockRequirements.
     //
     // 
@@ -11,10 +16,5 @@ type Destiny_Definitions_DestinyPlugItemCraftingRequirements struct {
     // MaterialRequirementHashes.
     //
     // 
-    MaterialRequirementHashes []any `json:"materialRequirementHashes"`
-
-    // RequiredLevel.
-    //
-    // If the plug has a known level requirement, it'll be available here.
-    RequiredLevel int32 `json:"requiredLevel"`
+    MaterialRequirementHashes []uint32 `json:"materialRequirementHashes"`
 }

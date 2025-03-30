@@ -3,23 +3,6 @@
 package api
 
 type Destiny_Definitions_Sockets_DestinySocketCategoryDefinition struct {
-    // CategoryStyle.
-    //
-    // Same as uiCategoryStyle, but in a more usable enumeration form.
-    CategoryStyle int32 `json:"categoryStyle"`
-
-    // DisplayProperties.
-    //
-    // Many Destiny*Definition contracts - the "first order" entities of Destiny that have their own tables in the Manifest Database - also have displayable information. This is the base class for that display information.
-    DisplayProperties any `json:"displayProperties"`
-
-    // Hash.
-    //
-    // The unique identifier for this entity. Guaranteed to be unique for the type of entity, but not globally.
-    //
-    // When entities refer to each other in Destiny content, it is this hash that they are referring to.
-    Hash uint32 `json:"hash"`
-
     // Index.
     //
     // The index of the entity as it was found in the investment tables.
@@ -36,4 +19,21 @@ type Destiny_Definitions_Sockets_DestinySocketCategoryDefinition struct {
     //
     // BNet doesn't use it: it's up to you to find valid values and make your own special UI if you want to honor this category style.
     UiCategoryStyle uint32 `json:"uiCategoryStyle"`
+
+    // CategoryStyle.
+    //
+    // Same as uiCategoryStyle, but in a more usable enumeration form.
+    CategoryStyle int32 `json:"categoryStyle"`
+
+    // DisplayProperties.
+    //
+    // Many Destiny*Definition contracts - the "first order" entities of Destiny that have their own tables in the Manifest Database - also have displayable information. This is the base class for that display information.
+    DisplayProperties Destiny_Definitions_Common_DestinyDisplayPropertiesDefinition `json:"displayProperties"`
+
+    // Hash.
+    //
+    // The unique identifier for this entity. Guaranteed to be unique for the type of entity, but not globally.
+    //
+    // When entities refer to each other in Destiny content, it is this hash that they are referring to.
+    Hash uint32 `json:"hash"`
 }

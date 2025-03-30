@@ -3,6 +3,16 @@
 package api
 
 type Destiny_HistoricalStats_DestinyPostGameCarnageReportData struct {
+    // Period.
+    //
+    // Date and time for the activity.
+    Period string `json:"period"`
+
+    // StartingPhaseIndex.
+    //
+    // If this activity has "phases", this is the phase at which the activity was started. This value is only valid for activities before the Beyond Light expansion shipped. Subsequent activities will not have a valid value here.
+    StartingPhaseIndex int32 `json:"startingPhaseIndex"`
+
     // Teams.
     //
     // Collection of stats for the player in this activity.
@@ -22,14 +32,4 @@ type Destiny_HistoricalStats_DestinyPostGameCarnageReportData struct {
     //
     // Collection of players and their data for this activity.
     Entries []Destiny_HistoricalStats_DestinyPostGameCarnageReportEntry `json:"entries"`
-
-    // Period.
-    //
-    // Date and time for the activity.
-    Period string `json:"period"`
-
-    // StartingPhaseIndex.
-    //
-    // If this activity has "phases", this is the phase at which the activity was started. This value is only valid for activities before the Beyond Light expansion shipped. Subsequent activities will not have a valid value here.
-    StartingPhaseIndex int32 `json:"startingPhaseIndex"`
 }

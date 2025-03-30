@@ -3,13 +3,13 @@
 package api
 
 type Destiny_Milestones_DestinyMilestoneContentItemCategory struct {
-    // ItemHashes.
-    //
-    // 
-    ItemHashes []any `json:"itemHashes"`
-
     // Title.
     //
     // 
     Title string `json:"title"`
+
+    // ItemHashes.
+    //
+    // 
+    ItemHashes []uint32 `json:"itemHashes"`
 }

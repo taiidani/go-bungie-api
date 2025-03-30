@@ -3,32 +3,35 @@
 package api
 
 type Destiny_Definitions_DestinyObjectiveDefinition struct {
+    // InProgressValueStyle.
+    //
+    // The style to use when the objective is still in progress.
+    InProgressValueStyle int32 `json:"inProgressValueStyle"`
+
+    // Index.
+    //
+    // The index of the entity as it was found in the investment tables.
+    Index int32 `json:"index"`
+
+    // ProgressDescription.
+    //
+    // Text to describe the progress bar.
+    ProgressDescription string `json:"progressDescription"`
+
     // DisplayProperties.
     //
     // Ideally, this should tell you what your task is. I'm not going to lie to you though. Sometimes this doesn't have useful information at all. Which sucks, but there's nothing either of us can do about it.
     DisplayProperties any `json:"displayProperties"`
 
-    // Hash.
+    // Perks.
     //
-    // The unique identifier for this entity. Guaranteed to be unique for the type of entity, but not globally.
-    //
-    // When entities refer to each other in Destiny content, it is this hash that they are referring to.
-    Hash uint32 `json:"hash"`
+    // If this objective enables Perks intrinsically, the conditions for that enabling are defined here.
+    Perks any `json:"perks"`
 
-    // UiLabel.
+    // Redacted.
     //
-    // Objectives can have arbitrary UI-defined identifiers that define the style applied to objectives. For convenience, known UI labels will be defined in the uiStyle enum value.
-    UiLabel string `json:"uiLabel"`
-
-    // MinimumVisibilityThreshold.
-    //
-    // If nonzero, this is the minimum value at which the objective's progression should be shown. Otherwise, don't show it yet.
-    MinimumVisibilityThreshold int32 `json:"minimumVisibilityThreshold"`
-
-    // UiStyle.
-    //
-    // If the objective has a known UI label value, this property will represent it.
-    UiStyle int32 `json:"uiStyle"`
+    // If this is true, then there is an entity with this identifier/type combination, but BNet is not yet allowed to show it. Sorry!
+    Redacted bool `json:"redacted"`
 
     // ValueStyle.
     //
@@ -37,46 +40,6 @@ type Destiny_Definitions_DestinyObjectiveDefinition struct {
     // DEPRECATED: This is no longer populated by Destiny 2 game content. Please use inProgressValueStyle and completedValueStyle instead.
     ValueStyle int32 `json:"valueStyle"`
 
-    // AllowNegativeValue.
-    //
-    // If true, the value is allowed to go negative.
-    AllowNegativeValue bool `json:"allowNegativeValue"`
-
-    // AllowOvercompletion.
-    //
-    // If True, the progress will continue even beyond the point where the objective met its minimum completion requirements. Your UI will have to accommodate it.
-    AllowOvercompletion bool `json:"allowOvercompletion"`
-
-    // InProgressValueStyle.
-    //
-    // The style to use when the objective is still in progress.
-    InProgressValueStyle int32 `json:"inProgressValueStyle"`
-
-    // Redacted.
-    //
-    // If this is true, then there is an entity with this identifier/type combination, but BNet is not yet allowed to show it. Sorry!
-    Redacted bool `json:"redacted"`
-
-    // CompletedValueStyle.
-    //
-    // The style to use when the objective is completed.
-    CompletedValueStyle int32 `json:"completedValueStyle"`
-
-    // CompletionValue.
-    //
-    // The value that the unlock value defined in unlockValueHash must reach in order for the objective to be considered Completed. Used in calculating progress and completion status.
-    CompletionValue int32 `json:"completionValue"`
-
-    // Scope.
-    //
-    // A shortcut for determining the most restrictive gating that this Objective is set to use. This includes both the dynamic determination of progress and of completion values. See the DestinyGatingScope enum's documentation for more details.
-    Scope int32 `json:"scope"`
-
-    // ShowValueOnComplete.
-    //
-    // If True, you should continue showing the progression value in the UI after it's complete. I mean, we already do that in BNet anyways, but if you want to be better behaved than us you could honor this flag.
-    ShowValueOnComplete bool `json:"showValueOnComplete"`
-
     // IsCountingDownward.
     //
     // If true, completion means having an unlock value less than or equal to the completionValue.
@@ -84,30 +47,57 @@ type Destiny_Definitions_DestinyObjectiveDefinition struct {
     // If False, completion means having an unlock value greater than or equal to the completionValue.
     IsCountingDownward bool `json:"isCountingDownward"`
 
-    // Index.
+    // MinimumVisibilityThreshold.
     //
-    // The index of the entity as it was found in the investment tables.
-    Index int32 `json:"index"`
+    // If nonzero, this is the minimum value at which the objective's progression should be shown. Otherwise, don't show it yet.
+    MinimumVisibilityThreshold int32 `json:"minimumVisibilityThreshold"`
 
-    // Perks.
+    // AllowOvercompletion.
     //
-    // If this objective enables Perks intrinsically, the conditions for that enabling are defined here.
-    Perks any `json:"perks"`
+    // If True, the progress will continue even beyond the point where the objective met its minimum completion requirements. Your UI will have to accommodate it.
+    AllowOvercompletion bool `json:"allowOvercompletion"`
 
-    // Stats.
+    // UiLabel.
     //
-    // If this objective enables modifications on a player's stats intrinsically, the conditions are defined here.
-    Stats any `json:"stats"`
+    // Objectives can have arbitrary UI-defined identifiers that define the style applied to objectives. For convenience, known UI labels will be defined in the uiStyle enum value.
+    UiLabel string `json:"uiLabel"`
 
     // LocationHash.
     //
     // OPTIONAL: a hash identifier for the location at which this objective must be accomplished, if there is a location defined. Look up the DestinyLocationDefinition for this hash for that additional location info.
     LocationHash uint32 `json:"locationHash"`
 
-    // ProgressDescription.
+    // ShowValueOnComplete.
     //
-    // Text to describe the progress bar.
-    ProgressDescription string `json:"progressDescription"`
+    // If True, you should continue showing the progression value in the UI after it's complete. I mean, we already do that in BNet anyways, but if you want to be better behaved than us you could honor this flag.
+    ShowValueOnComplete bool `json:"showValueOnComplete"`
+
+    // Stats.
+    //
+    // If this objective enables modifications on a player's stats intrinsically, the conditions are defined here.
+    Stats any `json:"stats"`
+
+    // UiStyle.
+    //
+    // If the objective has a known UI label value, this property will represent it.
+    UiStyle int32 `json:"uiStyle"`
+
+    // Scope.
+    //
+    // A shortcut for determining the most restrictive gating that this Objective is set to use. This includes both the dynamic determination of progress and of completion values. See the DestinyGatingScope enum's documentation for more details.
+    Scope int32 `json:"scope"`
+
+    // CompletedValueStyle.
+    //
+    // The style to use when the objective is completed.
+    CompletedValueStyle int32 `json:"completedValueStyle"`
+
+    // Hash.
+    //
+    // The unique identifier for this entity. Guaranteed to be unique for the type of entity, but not globally.
+    //
+    // When entities refer to each other in Destiny content, it is this hash that they are referring to.
+    Hash uint32 `json:"hash"`
 
     // AllowValueChangeWhenCompleted.
     //
@@ -115,4 +105,14 @@ type Destiny_Definitions_DestinyObjectiveDefinition struct {
     //
     // If False, once you complete the task it will remain completed forever by locking the value.
     AllowValueChangeWhenCompleted bool `json:"allowValueChangeWhenCompleted"`
+
+    // CompletionValue.
+    //
+    // The value that the unlock value defined in unlockValueHash must reach in order for the objective to be considered Completed. Used in calculating progress and completion status.
+    CompletionValue int32 `json:"completionValue"`
+
+    // AllowNegativeValue.
+    //
+    // If true, the value is allowed to go negative.
+    AllowNegativeValue bool `json:"allowNegativeValue"`
 }

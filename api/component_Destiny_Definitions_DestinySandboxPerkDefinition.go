@@ -3,18 +3,6 @@
 package api
 
 type Destiny_Definitions_DestinySandboxPerkDefinition struct {
-    // Redacted.
-    //
-    // If this is true, then there is an entity with this identifier/type combination, but BNet is not yet allowed to show it. Sorry!
-    Redacted bool `json:"redacted"`
-
-    // DamageType.
-    //
-    // If this perk grants a damage type to a weapon, the damage type will be defined here.
-    //
-    // Unless you have a compelling reason to use this enum value, use the damageTypeHash instead to look up the actual DestinyDamageTypeDefinition.
-    DamageType int32 `json:"damageType"`
-
     // DamageTypeHash.
     //
     // The hash identifier for looking up the DestinyDamageTypeDefinition, if this perk has a damage type.
@@ -48,4 +36,16 @@ type Destiny_Definitions_DestinySandboxPerkDefinition struct {
     //
     // The string identifier for the perk.
     PerkIdentifier string `json:"perkIdentifier"`
+
+    // Redacted.
+    //
+    // If this is true, then there is an entity with this identifier/type combination, but BNet is not yet allowed to show it. Sorry!
+    Redacted bool `json:"redacted"`
+
+    // DamageType.
+    //
+    // If this perk grants a damage type to a weapon, the damage type will be defined here.
+    //
+    // Unless you have a compelling reason to use this enum value, use the damageTypeHash instead to look up the actual DestinyDamageTypeDefinition.
+    DamageType int32 `json:"damageType"`
 }

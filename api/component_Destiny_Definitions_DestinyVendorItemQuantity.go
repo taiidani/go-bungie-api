@@ -3,11 +3,6 @@
 package api
 
 type Destiny_Definitions_DestinyVendorItemQuantity struct {
-    // HasConditionalVisibility.
-    //
-    // Indicates that this item quantity may be conditionally shown or hidden, based on various sources of state. For example: server flags, account state, or character progress.
-    HasConditionalVisibility bool `json:"hasConditionalVisibility"`
-
     // ItemHash.
     //
     // The hash identifier for the item in question. Use it to look up the item's DestinyInventoryItemDefinition.
@@ -22,4 +17,9 @@ type Destiny_Definitions_DestinyVendorItemQuantity struct {
     //
     // The amount of the item needed/available depending on the context of where DestinyItemQuantity is being used.
     Quantity int32 `json:"quantity"`
+
+    // HasConditionalVisibility.
+    //
+    // Indicates that this item quantity may be conditionally shown or hidden, based on various sources of state. For example: server flags, account state, or character progress.
+    HasConditionalVisibility bool `json:"hasConditionalVisibility"`
 }

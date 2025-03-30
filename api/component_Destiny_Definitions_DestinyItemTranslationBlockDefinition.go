@@ -3,6 +3,16 @@
 package api
 
 type Destiny_Definitions_DestinyItemTranslationBlockDefinition struct {
+    // WeaponPatternIdentifier.
+    //
+    // 
+    WeaponPatternIdentifier string `json:"weaponPatternIdentifier"`
+
+    // Arrangements.
+    //
+    // 
+    Arrangements []Destiny_Definitions_DestinyGearArtArrangementReference `json:"arrangements"`
+
     // CustomDyes.
     //
     // 
@@ -27,14 +37,4 @@ type Destiny_Definitions_DestinyItemTranslationBlockDefinition struct {
     //
     // 
     WeaponPatternHash uint32 `json:"weaponPatternHash"`
-
-    // WeaponPatternIdentifier.
-    //
-    // 
-    WeaponPatternIdentifier string `json:"weaponPatternIdentifier"`
-
-    // Arrangements.
-    //
-    // 
-    Arrangements []Destiny_Definitions_DestinyGearArtArrangementReference `json:"arrangements"`
 }

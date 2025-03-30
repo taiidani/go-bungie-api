@@ -3,11 +3,6 @@
 package api
 
 type Destiny_Definitions_DestinyVendorInteractionReplyDefinition struct {
-    // ItemRewardsSelection.
-    //
-    // The rewards granted upon responding to the vendor.
-    ItemRewardsSelection int32 `json:"itemRewardsSelection"`
-
     // Reply.
     //
     // The localized text for the reply.
@@ -17,4 +12,9 @@ type Destiny_Definitions_DestinyVendorInteractionReplyDefinition struct {
     //
     // An enum indicating the type of reply being made.
     ReplyType int32 `json:"replyType"`
+
+    // ItemRewardsSelection.
+    //
+    // The rewards granted upon responding to the vendor.
+    ItemRewardsSelection int32 `json:"itemRewardsSelection"`
 }

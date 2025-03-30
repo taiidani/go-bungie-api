@@ -3,16 +3,6 @@
 package api
 
 type Destiny_Requests_DestinyItemTransferRequest struct {
-    // StackSize.
-    //
-    // 
-    StackSize int32 `json:"stackSize"`
-
-    // TransferToVault.
-    //
-    // 
-    TransferToVault bool `json:"transferToVault"`
-
     // CharacterId.
     //
     // 
@@ -32,4 +22,14 @@ type Destiny_Requests_DestinyItemTransferRequest struct {
     //
     // 
     MembershipType int32 `json:"membershipType"`
+
+    // StackSize.
+    //
+    // 
+    StackSize int32 `json:"stackSize"`
+
+    // TransferToVault.
+    //
+    // 
+    TransferToVault bool `json:"transferToVault"`
 }

@@ -3,13 +3,13 @@
 package api
 
 type Destiny_Components_Loadouts_DestinyLoadoutItemComponent struct {
-    // PlugItemHashes.
-    //
-    // 
-    PlugItemHashes []any `json:"plugItemHashes"`
-
     // ItemInstanceId.
     //
     // 
     ItemInstanceId int64 `json:"itemInstanceId"`
+
+    // PlugItemHashes.
+    //
+    // 
+    PlugItemHashes []uint32 `json:"plugItemHashes"`
 }

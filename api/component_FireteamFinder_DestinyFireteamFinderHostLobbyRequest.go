@@ -3,6 +3,16 @@
 package api
 
 type FireteamFinder_DestinyFireteamFinderHostLobbyRequest struct {
+    // ActivityHash.
+    //
+    // 
+    ActivityHash uint32 `json:"activityHash"`
+
+    // ClanId.
+    //
+    // 
+    ClanId int64 `json:"clanId"`
+
     // ListingValues.
     //
     // 
@@ -32,14 +42,4 @@ type FireteamFinder_DestinyFireteamFinderHostLobbyRequest struct {
     //
     // 
     ActivityGraphHash uint32 `json:"activityGraphHash"`
-
-    // ActivityHash.
-    //
-    // 
-    ActivityHash uint32 `json:"activityHash"`
-
-    // ClanId.
-    //
-    // 
-    ClanId int64 `json:"clanId"`
 }

@@ -3,6 +3,16 @@
 package api
 
 type Destiny_Definitions_DestinyMaterialRequirement struct {
+    // HasVirtualStackSize.
+    //
+    // If true, this material requirement references a virtual item stack size value. You can get that value from a corresponding DestinyMaterialRequirementSetState.
+    HasVirtualStackSize bool `json:"hasVirtualStackSize"`
+
+    // ItemHash.
+    //
+    // The hash identifier of the material required. Use it to look up the material's DestinyInventoryItemDefinition.
+    ItemHash uint32 `json:"itemHash"`
+
     // OmitFromRequirements.
     //
     // If True, this requirement is "silent": don't bother showing it in a material requirements display. I mean, I'm not your mom: I'm not going to tell you you *can't* show it. But we won't show it in our UI.
@@ -22,14 +32,4 @@ type Destiny_Definitions_DestinyMaterialRequirement struct {
     //
     // If True, the material will be removed from the character's inventory when the action is performed.
     DeleteOnAction bool `json:"deleteOnAction"`
-
-    // HasVirtualStackSize.
-    //
-    // If true, this material requirement references a virtual item stack size value. You can get that value from a corresponding DestinyMaterialRequirementSetState.
-    HasVirtualStackSize bool `json:"hasVirtualStackSize"`
-
-    // ItemHash.
-    //
-    // The hash identifier of the material required. Use it to look up the material's DestinyInventoryItemDefinition.
-    ItemHash uint32 `json:"itemHash"`
 }

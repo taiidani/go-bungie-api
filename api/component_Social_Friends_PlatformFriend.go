@@ -3,6 +3,16 @@
 package api
 
 type Social_Friends_PlatformFriend struct {
+    // FriendPlatform.
+    //
+    // 
+    FriendPlatform int32 `json:"friendPlatform"`
+
+    // PlatformDisplayName.
+    //
+    // 
+    PlatformDisplayName string `json:"platformDisplayName"`
+
     // BungieGlobalDisplayName.
     //
     // 
@@ -27,14 +37,4 @@ type Social_Friends_PlatformFriend struct {
     //
     // 
     DestinyMembershipType int32 `json:"destinyMembershipType"`
-
-    // FriendPlatform.
-    //
-    // 
-    FriendPlatform int32 `json:"friendPlatform"`
-
-    // PlatformDisplayName.
-    //
-    // 
-    PlatformDisplayName string `json:"platformDisplayName"`
 }

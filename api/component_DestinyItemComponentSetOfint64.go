@@ -3,53 +3,53 @@
 package api
 
 type DestinyItemComponentSetOfint64 struct {
-    // Objectives.
-    //
-    // 
-    Objectives any `json:"objectives"`
-
     // Perks.
     //
     // 
-    Perks any `json:"perks"`
-
-    // Stats.
-    //
-    // 
-    Stats any `json:"stats"`
-
-    // PlugObjectives.
-    //
-    // 
-    PlugObjectives any `json:"plugObjectives"`
-
-    // PlugStates.
-    //
-    // 
-    PlugStates any `json:"plugStates"`
-
-    // Sockets.
-    //
-    // 
-    Sockets any `json:"sockets"`
-
-    // TalentGrids.
-    //
-    // 
-    TalentGrids any `json:"talentGrids"`
-
-    // Instances.
-    //
-    // 
-    Instances any `json:"instances"`
+    Perks DictionaryComponentResponseOfint64AndDestinyItemPerksComponent `json:"perks"`
 
     // RenderData.
     //
     // 
-    RenderData any `json:"renderData"`
+    RenderData DictionaryComponentResponseOfint64AndDestinyItemRenderComponent `json:"renderData"`
+
+    // Sockets.
+    //
+    // 
+    Sockets DictionaryComponentResponseOfint64AndDestinyItemSocketsComponent `json:"sockets"`
+
+    // Instances.
+    //
+    // 
+    Instances DictionaryComponentResponseOfint64AndDestinyItemInstanceComponent `json:"instances"`
+
+    // Objectives.
+    //
+    // 
+    Objectives DictionaryComponentResponseOfint64AndDestinyItemObjectivesComponent `json:"objectives"`
+
+    // Stats.
+    //
+    // 
+    Stats DictionaryComponentResponseOfint64AndDestinyItemStatsComponent `json:"stats"`
+
+    // PlugObjectives.
+    //
+    // 
+    PlugObjectives DictionaryComponentResponseOfint64AndDestinyItemPlugObjectivesComponent `json:"plugObjectives"`
+
+    // PlugStates.
+    //
+    // 
+    PlugStates DictionaryComponentResponseOfuint32AndDestinyItemPlugComponent `json:"plugStates"`
 
     // ReusablePlugs.
     //
     // 
-    ReusablePlugs any `json:"reusablePlugs"`
+    ReusablePlugs DictionaryComponentResponseOfint64AndDestinyItemReusablePlugsComponent `json:"reusablePlugs"`
+
+    // TalentGrids.
+    //
+    // 
+    TalentGrids DictionaryComponentResponseOfint64AndDestinyItemTalentGridComponent `json:"talentGrids"`
 }

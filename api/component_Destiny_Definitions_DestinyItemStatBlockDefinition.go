@@ -3,6 +3,13 @@
 package api
 
 type Destiny_Definitions_DestinyItemStatBlockDefinition struct {
+    // DisablePrimaryStatDisplay.
+    //
+    // If true, the game won't show the "primary" stat on this item when you inspect it.
+    //
+    // NOTE: This is being manually mapped, because I happen to want it in a block that isn't going to directly create this derivative block.
+    DisablePrimaryStatDisplay bool `json:"disablePrimaryStatDisplay"`
+
     // HasDisplayableStats.
     //
     // A quick and lazy way to determine whether any stat other than the "primary" stat is actually visible on the item. Items often have stats that we return in case people find them useful, but they're not part of the "Stat Group" and thus we wouldn't display them in our UI. If this is False, then we're not going to display any of these stats other than the primary one.
@@ -28,11 +35,4 @@ type Destiny_Definitions_DestinyItemStatBlockDefinition struct {
     //
     // These stats are keyed by the DestinyStatDefinition's hash identifier for the stat that's found on the item.
     Stats any `json:"stats"`
-
-    // DisablePrimaryStatDisplay.
-    //
-    // If true, the game won't show the "primary" stat on this item when you inspect it.
-    //
-    // NOTE: This is being manually mapped, because I happen to want it in a block that isn't going to directly create this derivative block.
-    DisablePrimaryStatDisplay bool `json:"disablePrimaryStatDisplay"`
 }

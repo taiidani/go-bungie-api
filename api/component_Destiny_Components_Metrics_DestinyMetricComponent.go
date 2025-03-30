@@ -11,5 +11,5 @@ type Destiny_Components_Metrics_DestinyMetricComponent struct {
     // ObjectiveProgress.
     //
     // Returns data about a character's status with a given Objective. Combine with DestinyObjectiveDefinition static data for display purposes.
-    ObjectiveProgress any `json:"objectiveProgress"`
+    ObjectiveProgress Destiny_Quests_DestinyObjectiveProgress `json:"objectiveProgress"`
 }

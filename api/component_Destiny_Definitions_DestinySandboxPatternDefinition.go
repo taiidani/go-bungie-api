@@ -3,41 +3,6 @@
 package api
 
 type Destiny_Definitions_DestinySandboxPatternDefinition struct {
-    // PatternHash.
-    //
-    // 
-    PatternHash uint32 `json:"patternHash"`
-
-    // WeaponTypeHash.
-    //
-    // 
-    WeaponTypeHash uint32 `json:"weaponTypeHash"`
-
-    // PatternGlobalTagIdHash.
-    //
-    // 
-    PatternGlobalTagIdHash uint32 `json:"patternGlobalTagIdHash"`
-
-    // WeaponContentGroupHash.
-    //
-    // 
-    WeaponContentGroupHash uint32 `json:"weaponContentGroupHash"`
-
-    // WeaponTranslationGroupHash.
-    //
-    // 
-    WeaponTranslationGroupHash uint32 `json:"weaponTranslationGroupHash"`
-
-    // WeaponType.
-    //
-    // 
-    WeaponType int32 `json:"weaponType"`
-
-    // Redacted.
-    //
-    // If this is true, then there is an entity with this identifier/type combination, but BNet is not yet allowed to show it. Sorry!
-    Redacted bool `json:"redacted"`
-
     // Hash.
     //
     // The unique identifier for this entity. Guaranteed to be unique for the type of entity, but not globally.
@@ -45,13 +10,48 @@ type Destiny_Definitions_DestinySandboxPatternDefinition struct {
     // When entities refer to each other in Destiny content, it is this hash that they are referring to.
     Hash uint32 `json:"hash"`
 
-    // Filters.
+    // WeaponContentGroupHash.
     //
     // 
-    Filters []Destiny_Definitions_DestinyArrangementRegionFilterDefinition `json:"filters"`
+    WeaponContentGroupHash uint32 `json:"weaponContentGroupHash"`
+
+    // WeaponTypeHash.
+    //
+    // 
+    WeaponTypeHash uint32 `json:"weaponTypeHash"`
+
+    // PatternHash.
+    //
+    // 
+    PatternHash uint32 `json:"patternHash"`
+
+    // WeaponTranslationGroupHash.
+    //
+    // 
+    WeaponTranslationGroupHash uint32 `json:"weaponTranslationGroupHash"`
 
     // Index.
     //
     // The index of the entity as it was found in the investment tables.
     Index int32 `json:"index"`
+
+    // PatternGlobalTagIdHash.
+    //
+    // 
+    PatternGlobalTagIdHash uint32 `json:"patternGlobalTagIdHash"`
+
+    // WeaponType.
+    //
+    // 
+    WeaponType int32 `json:"weaponType"`
+
+    // Filters.
+    //
+    // 
+    Filters []Destiny_Definitions_DestinyArrangementRegionFilterDefinition `json:"filters"`
+
+    // Redacted.
+    //
+    // If this is true, then there is an entity with this identifier/type combination, but BNet is not yet allowed to show it. Sorry!
+    Redacted bool `json:"redacted"`
 }

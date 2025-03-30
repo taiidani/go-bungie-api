@@ -27,7 +27,7 @@ type SearchResultOfGroupBan struct {
     // Query.
     //
     // 
-    Query any `json:"query"`
+    Query Queries_PagedQuery `json:"query"`
 
     // ReplacementContinuationToken.
     //

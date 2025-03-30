@@ -3,13 +3,13 @@
 package api
 
 type Destiny_Definitions_DestinyObjectivePerkEntryDefinition struct {
-    // Style.
-    //
-    // An enumeration indicating whether it will be applied as long as the Objective is active, when it's completed, or until it's completed.
-    Style int32 `json:"style"`
-
     // PerkHash.
     //
     // The hash identifier of the DestinySandboxPerkDefinition that will be applied to the character.
     PerkHash uint32 `json:"perkHash"`
+
+    // Style.
+    //
+    // An enumeration indicating whether it will be applied as long as the Objective is active, when it's completed, or until it's completed.
+    Style int32 `json:"style"`
 }

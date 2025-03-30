@@ -3,11 +3,6 @@
 package api
 
 type Destiny_Activities_DestinyPublicActivityStatus struct {
-    // ModifierHashes.
-    //
-    // The active modifiers on this activity, if any - represented as hashes for DestinyActivityModifierDefinitions.
-    ModifierHashes []any `json:"modifierHashes"`
-
     // RewardTooltipItems.
     //
     // If the activity itself provides any specific "mock" rewards, this will be the items and their quantity.
@@ -20,5 +15,10 @@ type Destiny_Activities_DestinyPublicActivityStatus struct {
     // ChallengeObjectiveHashes.
     //
     // Active Challenges for the activity, if any - represented as hashes for DestinyObjectiveDefinitions.
-    ChallengeObjectiveHashes []any `json:"challengeObjectiveHashes"`
+    ChallengeObjectiveHashes []uint32 `json:"challengeObjectiveHashes"`
+
+    // ModifierHashes.
+    //
+    // The active modifiers on this activity, if any - represented as hashes for DestinyActivityModifierDefinitions.
+    ModifierHashes []uint32 `json:"modifierHashes"`
 }

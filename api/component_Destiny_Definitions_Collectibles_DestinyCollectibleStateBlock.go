@@ -11,5 +11,5 @@ type Destiny_Definitions_Collectibles_DestinyCollectibleStateBlock struct {
     // Requirements.
     //
     // Presentation nodes can be restricted by various requirements. This defines the rules of those requirements, and the message(s) to be shown if these requirements aren't met.
-    Requirements any `json:"requirements"`
+    Requirements Destiny_Definitions_Presentation_DestinyPresentationNodeRequirementsBlock `json:"requirements"`
 }

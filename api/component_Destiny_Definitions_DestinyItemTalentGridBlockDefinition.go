@@ -3,6 +3,16 @@
 package api
 
 type Destiny_Definitions_DestinyItemTalentGridBlockDefinition struct {
+    // BuildName.
+    //
+    // A shortcut string identifier for the "build" in question, if this talent grid has an associated build. Doesn't map to anything we can expose at the moment.
+    BuildName string `json:"buildName"`
+
+    // HudDamageType.
+    //
+    // If the talent grid implies a damage type, this is the enum value for that damage type.
+    HudDamageType int32 `json:"hudDamageType"`
+
     // HudIcon.
     //
     // If the talent grid has a special icon that's shown in the game UI (like builds, funny that), this is the identifier for that icon. Sadly, we don't actually get that icon right now. I'll be looking to replace this with a path to the actual icon itself.
@@ -17,14 +27,4 @@ type Destiny_Definitions_DestinyItemTalentGridBlockDefinition struct {
     //
     // The hash identifier of the DestinyTalentGridDefinition attached to this item.
     TalentGridHash uint32 `json:"talentGridHash"`
-
-    // BuildName.
-    //
-    // A shortcut string identifier for the "build" in question, if this talent grid has an associated build. Doesn't map to anything we can expose at the moment.
-    BuildName string `json:"buildName"`
-
-    // HudDamageType.
-    //
-    // If the talent grid implies a damage type, this is the enum value for that damage type.
-    HudDamageType int32 `json:"hudDamageType"`
 }

@@ -11,5 +11,5 @@ type Destiny_Definitions_DestinyItemVendorSourceReference struct {
     // VendorItemIndexes.
     //
     // The Vendor sale item indexes that represent the sale information for this item. The same vendor may sell an item in multiple "ways", hence why this is a list. (for instance, a weapon may be "sold" as a reward in a quest, for Glimmer, and for Masterwork Cores: each of those ways would be represented by a different vendor sale item with a different index)
-    VendorItemIndexes []any `json:"vendorItemIndexes"`
+    VendorItemIndexes []int32 `json:"vendorItemIndexes"`
 }

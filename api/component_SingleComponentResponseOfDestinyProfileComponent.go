@@ -3,18 +3,18 @@
 package api
 
 type SingleComponentResponseOfDestinyProfileComponent struct {
+    // Privacy.
+    //
+    // 
+    Privacy int32 `json:"privacy"`
+
     // Data.
     //
     // The most essential summary information about a Profile (in Destiny 1, we called these "Accounts").
-    Data any `json:"data"`
+    Data Destiny_Entities_Profiles_DestinyProfileComponent `json:"data"`
 
     // Disabled.
     //
     // If true, this component is disabled.
     Disabled bool `json:"disabled"`
-
-    // Privacy.
-    //
-    // 
-    Privacy int32 `json:"privacy"`
 }

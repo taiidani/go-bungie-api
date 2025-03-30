@@ -3,15 +3,25 @@
 package api
 
 type Destiny_Definitions_FireteamFinder_DestinyFireteamFinderConstantsDefinition struct {
+    // AllFireteamFinderActivityHashes.
+    //
+    // 
+    AllFireteamFinderActivityHashes []uint32 `json:"allFireteamFinderActivityHashes"`
+
+    // DisplayProperties.
+    //
+    // Many Destiny*Definition contracts - the "first order" entities of Destiny that have their own tables in the Manifest Database - also have displayable information. This is the base class for that display information.
+    DisplayProperties Destiny_Definitions_Common_DestinyDisplayPropertiesDefinition `json:"displayProperties"`
+
     // FireteamFinderActivityGraphRootCategoryHashes.
     //
     // 
-    FireteamFinderActivityGraphRootCategoryHashes []any `json:"fireteamFinderActivityGraphRootCategoryHashes"`
+    FireteamFinderActivityGraphRootCategoryHashes []uint32 `json:"fireteamFinderActivityGraphRootCategoryHashes"`
 
     // GuardianOathDisplayProperties.
     //
     // Many Destiny*Definition contracts - the "first order" entities of Destiny that have their own tables in the Manifest Database - also have displayable information. This is the base class for that display information.
-    GuardianOathDisplayProperties any `json:"guardianOathDisplayProperties"`
+    GuardianOathDisplayProperties Destiny_Definitions_Common_DestinyDisplayPropertiesDefinition `json:"guardianOathDisplayProperties"`
 
     // GuardianOathTenets.
     //
@@ -34,14 +44,4 @@ type Destiny_Definitions_FireteamFinder_DestinyFireteamFinderConstantsDefinition
     //
     // If this is true, then there is an entity with this identifier/type combination, but BNet is not yet allowed to show it. Sorry!
     Redacted bool `json:"redacted"`
-
-    // AllFireteamFinderActivityHashes.
-    //
-    // 
-    AllFireteamFinderActivityHashes []any `json:"allFireteamFinderActivityHashes"`
-
-    // DisplayProperties.
-    //
-    // Many Destiny*Definition contracts - the "first order" entities of Destiny that have their own tables in the Manifest Database - also have displayable information. This is the base class for that display information.
-    DisplayProperties any `json:"displayProperties"`
 }

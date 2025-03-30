@@ -3,11 +3,6 @@
 package api
 
 type Destiny_HistoricalStats_DestinyHistoricalStatsByPeriod struct {
-    // AllTime.
-    //
-    // 
-    AllTime any `json:"allTime"`
-
     // AllTimeTier1.
     //
     // 
@@ -32,4 +27,9 @@ type Destiny_HistoricalStats_DestinyHistoricalStatsByPeriod struct {
     //
     // 
     Monthly []Destiny_HistoricalStats_DestinyHistoricalStatsPeriodGroup `json:"monthly"`
+
+    // AllTime.
+    //
+    // 
+    AllTime any `json:"allTime"`
 }

@@ -3,11 +3,6 @@
 package api
 
 type GroupsV2_ClanBanner struct {
-    // DecalId.
-    //
-    // 
-    DecalId uint32 `json:"decalId"`
-
     // GonfalonColorId.
     //
     // 
@@ -37,4 +32,9 @@ type GroupsV2_ClanBanner struct {
     //
     // 
     DecalColorId uint32 `json:"decalColorId"`
+
+    // DecalId.
+    //
+    // 
+    DecalId uint32 `json:"decalId"`
 }

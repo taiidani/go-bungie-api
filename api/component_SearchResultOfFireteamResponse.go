@@ -3,6 +3,16 @@
 package api
 
 type SearchResultOfFireteamResponse struct {
+    // Query.
+    //
+    // 
+    Query Queries_PagedQuery `json:"query"`
+
+    // ReplacementContinuationToken.
+    //
+    // 
+    ReplacementContinuationToken string `json:"replacementContinuationToken"`
+
     // Results.
     //
     // 
@@ -28,14 +38,4 @@ type SearchResultOfFireteamResponse struct {
     //
     // 
     HasMore bool `json:"hasMore"`
-
-    // Query.
-    //
-    // 
-    Query any `json:"query"`
-
-    // ReplacementContinuationToken.
-    //
-    // 
-    ReplacementContinuationToken string `json:"replacementContinuationToken"`
 }

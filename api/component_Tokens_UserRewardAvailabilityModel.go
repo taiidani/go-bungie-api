@@ -16,5 +16,5 @@ type Tokens_UserRewardAvailabilityModel struct {
     // AvailabilityModel.
     //
     // 
-    AvailabilityModel any `json:"AvailabilityModel"`
+    AvailabilityModel Tokens_RewardAvailabilityModel `json:"AvailabilityModel"`
 }

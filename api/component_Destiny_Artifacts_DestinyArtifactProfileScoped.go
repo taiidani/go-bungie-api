@@ -3,21 +3,6 @@
 package api
 
 type Destiny_Artifacts_DestinyArtifactProfileScoped struct {
-    // ArtifactHash.
-    //
-    // 
-    ArtifactHash uint32 `json:"artifactHash"`
-
-    // PointProgression.
-    //
-    // Information about a current character's status with a Progression. A progression is a value that can increase with activity and has levels. Think Character Level and Reputation Levels. Combine this "live" data with the related DestinyProgressionDefinition for a full picture of the Progression.
-    PointProgression any `json:"pointProgression"`
-
-    // PointsAcquired.
-    //
-    // 
-    PointsAcquired int32 `json:"pointsAcquired"`
-
     // PowerBonus.
     //
     // 
@@ -26,5 +11,20 @@ type Destiny_Artifacts_DestinyArtifactProfileScoped struct {
     // PowerBonusProgression.
     //
     // Information about a current character's status with a Progression. A progression is a value that can increase with activity and has levels. Think Character Level and Reputation Levels. Combine this "live" data with the related DestinyProgressionDefinition for a full picture of the Progression.
-    PowerBonusProgression any `json:"powerBonusProgression"`
+    PowerBonusProgression Destiny_DestinyProgression `json:"powerBonusProgression"`
+
+    // ArtifactHash.
+    //
+    // 
+    ArtifactHash uint32 `json:"artifactHash"`
+
+    // PointProgression.
+    //
+    // Information about a current character's status with a Progression. A progression is a value that can increase with activity and has levels. Think Character Level and Reputation Levels. Combine this "live" data with the related DestinyProgressionDefinition for a full picture of the Progression.
+    PointProgression Destiny_DestinyProgression `json:"pointProgression"`
+
+    // PointsAcquired.
+    //
+    // 
+    PointsAcquired int32 `json:"pointsAcquired"`
 }

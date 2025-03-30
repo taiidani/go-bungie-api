@@ -3,85 +3,25 @@
 package api
 
 type Content_Models_ContentTypeDescription struct {
-    // BulkUploadable.
-    //
-    // 
-    BulkUploadable bool `json:"bulkUploadable"`
-
-    // Priority.
-    //
-    // 
-    Priority int32 `json:"priority"`
-
-    // BindIdentifierToProperty.
-    //
-    // 
-    BindIdentifierToProperty string `json:"bindIdentifierToProperty"`
-
-    // PreviewImage.
-    //
-    // 
-    PreviewImage string `json:"previewImage"`
-
-    // TagMetadataItems.
-    //
-    // 
-    TagMetadataItems any `json:"tagMetadataItems"`
-
-    // PropertySections.
-    //
-    // 
-    PropertySections []Content_Models_ContentTypePropertySection `json:"propertySections"`
-
-    // SuppressCmsPath.
-    //
-    // 
-    SuppressCmsPath bool `json:"suppressCmsPath"`
-
-    // Reminder.
-    //
-    // 
-    Reminder string `json:"reminder"`
-
-    // AllowComments.
-    //
-    // 
-    AllowComments bool `json:"allowComments"`
-
     // BoundRegex.
     //
     // 
     BoundRegex string `json:"boundRegex"`
-
-    // CType.
-    //
-    // 
-    CType string `json:"cType"`
 
     // Properties.
     //
     // 
     Properties []Content_Models_ContentTypeProperty `json:"properties"`
 
-    // Previews.
+    // ForceIdentifierBinding.
     //
     // 
-    Previews []Content_Models_ContentPreview `json:"previews"`
-
-    // ShowInContentEditor.
-    //
-    // 
-    ShowInContentEditor bool `json:"showInContentEditor"`
-
-    // AutoEnglishPropertyFallback.
-    //
-    // 
-    AutoEnglishPropertyFallback bool `json:"autoEnglishPropertyFallback"`
+    ForceIdentifierBinding bool `json:"forceIdentifierBinding"`
 
     // UsageExamples.
     //
     // 
-    UsageExamples []any `json:"usageExamples"`
+    UsageExamples []string `json:"usageExamples"`
 
     // Name.
     //
@@ -93,18 +33,78 @@ type Content_Models_ContentTypeDescription struct {
     // 
     ContentDescription string `json:"contentDescription"`
 
-    // ForceIdentifierBinding.
+    // AutoEnglishPropertyFallback.
     //
     // 
-    ForceIdentifierBinding bool `json:"forceIdentifierBinding"`
+    AutoEnglishPropertyFallback bool `json:"autoEnglishPropertyFallback"`
+
+    // CType.
+    //
+    // 
+    CType string `json:"cType"`
+
+    // TypeOf.
+    //
+    // 
+    TypeOf string `json:"typeOf"`
+
+    // Previews.
+    //
+    // 
+    Previews []Content_Models_ContentPreview `json:"previews"`
+
+    // BulkUploadable.
+    //
+    // 
+    BulkUploadable bool `json:"bulkUploadable"`
+
+    // TagMetadataItems.
+    //
+    // 
+    TagMetadataItems any `json:"tagMetadataItems"`
+
+    // AllowComments.
+    //
+    // 
+    AllowComments bool `json:"allowComments"`
+
+    // SuppressCmsPath.
+    //
+    // 
+    SuppressCmsPath bool `json:"suppressCmsPath"`
+
+    // Priority.
+    //
+    // 
+    Priority int32 `json:"priority"`
 
     // TagMetadata.
     //
     // 
     TagMetadata []Content_Models_TagMetadataDefinition `json:"tagMetadata"`
 
-    // TypeOf.
+    // BindIdentifierToProperty.
     //
     // 
-    TypeOf string `json:"typeOf"`
+    BindIdentifierToProperty string `json:"bindIdentifierToProperty"`
+
+    // PreviewImage.
+    //
+    // 
+    PreviewImage string `json:"previewImage"`
+
+    // PropertySections.
+    //
+    // 
+    PropertySections []Content_Models_ContentTypePropertySection `json:"propertySections"`
+
+    // Reminder.
+    //
+    // 
+    Reminder string `json:"reminder"`
+
+    // ShowInContentEditor.
+    //
+    // 
+    ShowInContentEditor bool `json:"showInContentEditor"`
 }

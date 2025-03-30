@@ -6,5 +6,5 @@ type Trending_TrendingEntryNews struct {
     // Article.
     //
     // 
-    Article any `json:"article"`
+    Article Content_ContentItemPublicContract `json:"article"`
 }

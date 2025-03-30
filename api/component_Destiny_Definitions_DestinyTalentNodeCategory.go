@@ -11,7 +11,7 @@ type Destiny_Definitions_DestinyTalentNodeCategory struct {
     // NodeHashes.
     //
     // The set of all hash identifiers for Talent Nodes (DestinyTalentNodeDefinition) in this Talent Grid that are part of this Category.
-    NodeHashes []any `json:"nodeHashes"`
+    NodeHashes []uint32 `json:"nodeHashes"`
 
     // DisplayProperties.
     //

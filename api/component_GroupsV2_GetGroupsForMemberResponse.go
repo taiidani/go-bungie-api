@@ -3,6 +3,11 @@
 package api
 
 type GroupsV2_GetGroupsForMemberResponse struct {
+    // ReplacementContinuationToken.
+    //
+    // 
+    ReplacementContinuationToken string `json:"replacementContinuationToken"`
+
     // Results.
     //
     // 
@@ -39,10 +44,5 @@ type GroupsV2_GetGroupsForMemberResponse struct {
     // Query.
     //
     // 
-    Query any `json:"query"`
-
-    // ReplacementContinuationToken.
-    //
-    // 
-    ReplacementContinuationToken string `json:"replacementContinuationToken"`
+    Query Queries_PagedQuery `json:"query"`
 }

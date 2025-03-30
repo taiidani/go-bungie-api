@@ -3,16 +3,6 @@
 package api
 
 type User_Models_GetCredentialTypesForAccountResponse struct {
-    // CredentialType.
-    //
-    // 
-    CredentialType byte `json:"credentialType"`
-
-    // IsPublic.
-    //
-    // 
-    IsPublic bool `json:"isPublic"`
-
     // CredentialAsString.
     //
     // 
@@ -22,4 +12,14 @@ type User_Models_GetCredentialTypesForAccountResponse struct {
     //
     // 
     CredentialDisplayName string `json:"credentialDisplayName"`
+
+    // CredentialType.
+    //
+    // 
+    CredentialType byte `json:"credentialType"`
+
+    // IsPublic.
+    //
+    // 
+    IsPublic bool `json:"isPublic"`
 }

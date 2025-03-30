@@ -3,11 +3,6 @@
 package api
 
 type Forum_PollResult struct {
-    // RequestingUserVoted.
-    //
-    // 
-    RequestingUserVoted bool `json:"requestingUserVoted"`
-
     // Votes.
     //
     // 
@@ -27,4 +22,9 @@ type Forum_PollResult struct {
     //
     // 
     LastVoteDate string `json:"lastVoteDate"`
+
+    // RequestingUserVoted.
+    //
+    // 
+    RequestingUserVoted bool `json:"requestingUserVoted"`
 }

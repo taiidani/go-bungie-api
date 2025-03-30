@@ -3,6 +3,11 @@
 package api
 
 type Destiny_Components_Inventory_DestinyMaterialRequirementState struct {
+    // Count.
+    //
+    // The amount of the material required.
+    Count int32 `json:"count"`
+
     // ItemHash.
     //
     // The hash identifier of the material required. Use it to look up the material's DestinyInventoryItemDefinition.
@@ -12,9 +17,4 @@ type Destiny_Components_Inventory_DestinyMaterialRequirementState struct {
     //
     // A value for the amount of a (possibly virtual) material on some scope. For example: Dawning cookie baking material requirements.
     StackSize int32 `json:"stackSize"`
-
-    // Count.
-    //
-    // The amount of the material required.
-    Count int32 `json:"count"`
 }

@@ -3,6 +3,11 @@
 package api
 
 type Destiny_Definitions_FireteamFinder_DestinyFireteamFinderOptionValueDefinition struct {
+    // DisplayProperties.
+    //
+    // Many Destiny*Definition contracts - the "first order" entities of Destiny that have their own tables in the Manifest Database - also have displayable information. This is the base class for that display information.
+    DisplayProperties Destiny_Definitions_Common_DestinyDisplayPropertiesDefinition `json:"displayProperties"`
+
     // Flags.
     //
     // 
@@ -12,9 +17,4 @@ type Destiny_Definitions_FireteamFinder_DestinyFireteamFinderOptionValueDefiniti
     //
     // 
     Value uint32 `json:"value"`
-
-    // DisplayProperties.
-    //
-    // Many Destiny*Definition contracts - the "first order" entities of Destiny that have their own tables in the Manifest Database - also have displayable information. This is the base class for that display information.
-    DisplayProperties any `json:"displayProperties"`
 }

@@ -3,6 +3,16 @@
 package api
 
 type Destiny_Definitions_DestinyEquippingBlockDefinition struct {
+    // UniqueLabelHash.
+    //
+    // The hash of that unique label. Does not point to a specific definition.
+    UniqueLabelHash uint32 `json:"uniqueLabelHash"`
+
+    // AmmoType.
+    //
+    // Ammo type used by a weapon is no longer determined by the bucket in which it is contained. If the item has an ammo type - i.e. if it is a weapon - this will be the type of ammunition expected.
+    AmmoType int32 `json:"ammoType"`
+
     // Attributes.
     //
     // These are custom attributes on the equippability of the item.
@@ -13,7 +23,7 @@ type Destiny_Definitions_DestinyEquippingBlockDefinition struct {
     // DisplayStrings.
     //
     // These are strings that represent the possible Game/Account/Character state failure conditions that can occur when trying to equip the item. They match up one-to-one with requiredUnlockExpressions.
-    DisplayStrings []any `json:"displayStrings"`
+    DisplayStrings []string `json:"displayStrings"`
 
     // EquipmentSlotTypeHash.
     //
@@ -31,14 +41,4 @@ type Destiny_Definitions_DestinyEquippingBlockDefinition struct {
     //
     // For instance, when you aren't allowed to equip more than one Exotic Weapon, that's because all exotic weapons have identical uniqueLabels and the game checks the to-be-equipped item's uniqueLabel vs. all other already equipped items (other than the item in the slot that's about to be occupied).
     UniqueLabel string `json:"uniqueLabel"`
-
-    // UniqueLabelHash.
-    //
-    // The hash of that unique label. Does not point to a specific definition.
-    UniqueLabelHash uint32 `json:"uniqueLabelHash"`
-
-    // AmmoType.
-    //
-    // Ammo type used by a weapon is no longer determined by the bucket in which it is contained. If the item has an ammo type - i.e. if it is a weapon - this will be the type of ammunition expected.
-    AmmoType int32 `json:"ammoType"`
 }

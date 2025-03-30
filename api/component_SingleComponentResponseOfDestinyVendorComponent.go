@@ -11,7 +11,7 @@ type SingleComponentResponseOfDestinyVendorComponent struct {
     // Data.
     //
     // This component contains essential/summary information about the vendor.
-    Data any `json:"data"`
+    Data Destiny_Entities_Vendors_DestinyVendorComponent `json:"data"`
 
     // Disabled.
     //

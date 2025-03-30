@@ -3,6 +3,11 @@
 package api
 
 type Destiny_Components_Vendors_DestinyVendorBaseComponent struct {
+    // VendorHash.
+    //
+    // The unique identifier for the vendor. Use it to look up their DestinyVendorDefinition.
+    VendorHash uint32 `json:"vendorHash"`
+
     // Enabled.
     //
     // If True, the Vendor is currently accessible. 
@@ -18,9 +23,4 @@ type Destiny_Components_Vendors_DestinyVendorBaseComponent struct {
     //
     // Issue https://github.com/Bungie-net/api/issues/353 is tracking a fix to start providing visibility date ranges where possible in addition to this refresh date, so that all important dates for vendors are available for use.
     NextRefreshDate string `json:"nextRefreshDate"`
-
-    // VendorHash.
-    //
-    // The unique identifier for the vendor. Use it to look up their DestinyVendorDefinition.
-    VendorHash uint32 `json:"vendorHash"`
 }

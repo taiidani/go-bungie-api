@@ -3,6 +3,15 @@
 package api
 
 type Destiny_Responses_DestinyVendorsResponse struct {
+    // Sales.
+    //
+    // Sales, keyed by the vendorItemIndex of the item being sold. These are keyed by the Vendor Hash, so you will get one Sale Item Set Component per vendor returned.
+    //
+    // Note that within the Sale Item Set component, the sales are themselves keyed by the vendorSaleIndex, so you can relate it to the current sale item definition within the Vendor's definition.
+    //
+    // COMPONENT TYPE: VendorSales
+    Sales any `json:"sales"`
+
     // StringVariables.
     //
     // A map of string variable values by hash for this character context.
@@ -44,13 +53,4 @@ type Destiny_Responses_DestinyVendorsResponse struct {
     //
     // The components contained inside are themselves keyed by the vendorSaleIndex, and will have whatever item-level components you requested (Sockets, Stats, Instance data etc...) per item being sold by the vendor.
     ItemComponents any `json:"itemComponents"`
-
-    // Sales.
-    //
-    // Sales, keyed by the vendorItemIndex of the item being sold. These are keyed by the Vendor Hash, so you will get one Sale Item Set Component per vendor returned.
-    //
-    // Note that within the Sale Item Set component, the sales are themselves keyed by the vendorSaleIndex, so you can relate it to the current sale item definition within the Vendor's definition.
-    //
-    // COMPONENT TYPE: VendorSales
-    Sales any `json:"sales"`
 }

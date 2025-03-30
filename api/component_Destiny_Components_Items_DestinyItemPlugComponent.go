@@ -8,7 +8,7 @@ type Destiny_Components_Items_DestinyItemPlugComponent struct {
     // If the plug cannot be inserted for some reason, this will have the indexes into the plug item definition's plug.insertionRules property, so you can show the reasons why it can't be inserted.
     //
     // This list will be empty if the plug can be inserted.
-    InsertFailIndexes []any `json:"insertFailIndexes"`
+    InsertFailIndexes []int32 `json:"insertFailIndexes"`
 
     // MaxStackSize.
     //
@@ -40,7 +40,7 @@ type Destiny_Components_Items_DestinyItemPlugComponent struct {
     // If a plug is not enabled, this will be populated with indexes into the plug item definition's plug.enabledRules property, so that you can show the reasons why it is not enabled.
     //
     // This list will be empty if the plug is enabled.
-    EnableFailIndexes []any `json:"enableFailIndexes"`
+    EnableFailIndexes []int32 `json:"enableFailIndexes"`
 
     // Enabled.
     //

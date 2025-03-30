@@ -6,7 +6,7 @@ type SingleComponentResponseOfDestinyProfileCollectiblesComponent struct {
     // Data.
     //
     // 
-    Data any `json:"data"`
+    Data Destiny_Components_Collectibles_DestinyProfileCollectiblesComponent `json:"data"`
 
     // Disabled.
     //

@@ -3,11 +3,6 @@
 package api
 
 type FireteamFinder_DestinyFireteamFinderPlayerId struct {
-    // MembershipId.
-    //
-    // 
-    MembershipId int64 `json:"membershipId"`
-
     // MembershipType.
     //
     // 
@@ -17,4 +12,9 @@ type FireteamFinder_DestinyFireteamFinderPlayerId struct {
     //
     // 
     CharacterId int64 `json:"characterId"`
+
+    // MembershipId.
+    //
+    // 
+    MembershipId int64 `json:"membershipId"`
 }

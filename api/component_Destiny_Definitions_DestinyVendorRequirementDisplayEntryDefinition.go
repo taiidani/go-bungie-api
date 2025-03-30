@@ -3,16 +3,6 @@
 package api
 
 type Destiny_Definitions_DestinyVendorRequirementDisplayEntryDefinition struct {
-    // Source.
-    //
-    // 
-    Source string `json:"source"`
-
-    // Type.
-    //
-    // 
-    Type string `json:"type"`
-
     // Icon.
     //
     // 
@@ -22,4 +12,14 @@ type Destiny_Definitions_DestinyVendorRequirementDisplayEntryDefinition struct {
     //
     // 
     Name string `json:"name"`
+
+    // Source.
+    //
+    // 
+    Source string `json:"source"`
+
+    // Type.
+    //
+    // 
+    Type string `json:"type"`
 }

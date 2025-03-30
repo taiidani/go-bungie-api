@@ -6,12 +6,12 @@ type Destiny_Definitions_DestinyActivityLoadoutRequirement struct {
     // AllowedEquippedItemHashes.
     //
     // 
-    AllowedEquippedItemHashes []any `json:"allowedEquippedItemHashes"`
+    AllowedEquippedItemHashes []uint32 `json:"allowedEquippedItemHashes"`
 
     // AllowedWeaponSubTypes.
     //
     // 
-    AllowedWeaponSubTypes []any `json:"allowedWeaponSubTypes"`
+    AllowedWeaponSubTypes []int32 `json:"allowedWeaponSubTypes"`
 
     // EquipmentSlotHash.
     //

@@ -3,11 +3,6 @@
 package api
 
 type Content_Models_ContentTypeDefaultValue struct {
-    // DefaultValue.
-    //
-    // 
-    DefaultValue string `json:"defaultValue"`
-
     // WhenClause.
     //
     // 
@@ -17,4 +12,9 @@ type Content_Models_ContentTypeDefaultValue struct {
     //
     // 
     WhenValue string `json:"whenValue"`
+
+    // DefaultValue.
+    //
+    // 
+    DefaultValue string `json:"defaultValue"`
 }

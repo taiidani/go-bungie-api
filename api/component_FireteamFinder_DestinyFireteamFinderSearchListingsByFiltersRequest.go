@@ -3,16 +3,6 @@
 package api
 
 type FireteamFinder_DestinyFireteamFinderSearchListingsByFiltersRequest struct {
-    // PageSize.
-    //
-    // 
-    PageSize int32 `json:"pageSize"`
-
-    // PageToken.
-    //
-    // 
-    PageToken string `json:"pageToken"`
-
     // Filters.
     //
     // 
@@ -22,4 +12,14 @@ type FireteamFinder_DestinyFireteamFinderSearchListingsByFiltersRequest struct {
     //
     // 
     LobbyState int32 `json:"lobbyState"`
+
+    // PageSize.
+    //
+    // 
+    PageSize int32 `json:"pageSize"`
+
+    // PageToken.
+    //
+    // 
+    PageToken string `json:"pageToken"`
 }

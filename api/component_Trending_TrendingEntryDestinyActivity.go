@@ -3,13 +3,13 @@
 package api
 
 type Trending_TrendingEntryDestinyActivity struct {
-    // Status.
-    //
-    // Represents the public-facing status of an activity: any data about what is currently active in the Activity, regardless of an individual character's progress in it.
-    Status any `json:"status"`
-
     // ActivityHash.
     //
     // 
     ActivityHash uint32 `json:"activityHash"`
+
+    // Status.
+    //
+    // Represents the public-facing status of an activity: any data about what is currently active in the Activity, regardless of an individual character's progress in it.
+    Status Destiny_Activities_DestinyPublicActivityStatus `json:"status"`
 }

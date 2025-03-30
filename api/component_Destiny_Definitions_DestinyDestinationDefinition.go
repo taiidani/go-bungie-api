@@ -3,11 +3,6 @@
 package api
 
 type Destiny_Definitions_DestinyDestinationDefinition struct {
-    // PlaceHash.
-    //
-    // The place that "owns" this Destination. Use this hash to look up the DestinyPlaceDefinition.
-    PlaceHash uint32 `json:"placeHash"`
-
     // BubbleSettings.
     //
     // A Destination may have many "Bubbles" zones with human readable properties.
@@ -17,10 +12,32 @@ type Destiny_Definitions_DestinyDestinationDefinition struct {
     // DEPRECATED - Just use bubbles, it now has this data.
     BubbleSettings []Destiny_Definitions_DestinyDestinationBubbleSettingDefinition `json:"bubbleSettings"`
 
-    // DefaultFreeroamActivityHash.
+    // Index.
     //
-    // If this Destination has a default Free-Roam activity, this is the hash for that Activity. Use it to look up the DestinyActivityDefintion.
-    DefaultFreeroamActivityHash uint32 `json:"defaultFreeroamActivityHash"`
+    // The index of the entity as it was found in the investment tables.
+    Index int32 `json:"index"`
+
+    // PlaceHash.
+    //
+    // The place that "owns" this Destination. Use this hash to look up the DestinyPlaceDefinition.
+    PlaceHash uint32 `json:"placeHash"`
+
+    // DisplayProperties.
+    //
+    // Many Destiny*Definition contracts - the "first order" entities of Destiny that have their own tables in the Manifest Database - also have displayable information. This is the base class for that display information.
+    DisplayProperties Destiny_Definitions_Common_DestinyDisplayPropertiesDefinition `json:"displayProperties"`
+
+    // Redacted.
+    //
+    // If this is true, then there is an entity with this identifier/type combination, but BNet is not yet allowed to show it. Sorry!
+    Redacted bool `json:"redacted"`
+
+    // Bubbles.
+    //
+    // This provides the unique identifiers for every bubble in the destination (only guaranteed unique within the destination), and any intrinsic properties of the bubble.
+    //
+    // bubbleSettings and bubbles both have the identical number of entries, and you should match up their indexes to provide matching bubble and bubbleSettings data.
+    Bubbles []Destiny_Definitions_DestinyBubbleDefinition `json:"bubbles"`
 
     // Hash.
     //
@@ -29,30 +46,13 @@ type Destiny_Definitions_DestinyDestinationDefinition struct {
     // When entities refer to each other in Destiny content, it is this hash that they are referring to.
     Hash uint32 `json:"hash"`
 
-    // Redacted.
+    // DefaultFreeroamActivityHash.
     //
-    // If this is true, then there is an entity with this identifier/type combination, but BNet is not yet allowed to show it. Sorry!
-    Redacted bool `json:"redacted"`
+    // If this Destination has a default Free-Roam activity, this is the hash for that Activity. Use it to look up the DestinyActivityDefintion.
+    DefaultFreeroamActivityHash uint32 `json:"defaultFreeroamActivityHash"`
 
     // ActivityGraphEntries.
     //
     // If the Destination has default Activity Graphs (i.e. "Map") that should be shown in the director, this is the list of those Graphs. At most, only one should be active at any given time for a Destination: these would represent, for example, different variants on a Map if the Destination is changing on a macro level based on game state.
     ActivityGraphEntries []Destiny_Definitions_DestinyActivityGraphListEntryDefinition `json:"activityGraphEntries"`
-
-    // DisplayProperties.
-    //
-    // Many Destiny*Definition contracts - the "first order" entities of Destiny that have their own tables in the Manifest Database - also have displayable information. This is the base class for that display information.
-    DisplayProperties any `json:"displayProperties"`
-
-    // Index.
-    //
-    // The index of the entity as it was found in the investment tables.
-    Index int32 `json:"index"`
-
-    // Bubbles.
-    //
-    // This provides the unique identifiers for every bubble in the destination (only guaranteed unique within the destination), and any intrinsic properties of the bubble.
-    //
-    // bubbleSettings and bubbles both have the identical number of entries, and you should match up their indexes to provide matching bubble and bubbleSettings data.
-    Bubbles []Destiny_Definitions_DestinyBubbleDefinition `json:"bubbles"`
 }

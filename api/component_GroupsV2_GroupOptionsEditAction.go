@@ -3,13 +3,6 @@
 package api
 
 type GroupsV2_GroupOptionsEditAction struct {
-    // JoinLevel.
-    //
-    // Level to join a member at when accepting an invite, application, or joining an open clan
-    //
-    // Default is Beginner.
-    JoinLevel int32 `json:"JoinLevel"`
-
     // UpdateBannerPermissionOverride.
     //
     // Minimum Member Level allowed to update banner
@@ -53,4 +46,11 @@ type GroupsV2_GroupOptionsEditAction struct {
     //
     // Default is false for clans, true for groups.
     InvitePermissionOverride bool `json:"InvitePermissionOverride"`
+
+    // JoinLevel.
+    //
+    // Level to join a member at when accepting an invite, application, or joining an open clan
+    //
+    // Default is Beginner.
+    JoinLevel int32 `json:"JoinLevel"`
 }

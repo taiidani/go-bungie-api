@@ -3,11 +3,6 @@
 package api
 
 type Destiny_Entities_Vendors_DestinyVendorComponent struct {
-    // VendorLocationIndex.
-    //
-    // An index into the vendor definition's "locations" property array, indicating which location they are at currently. If -1, then the vendor has no known location (and you may choose not to show them in your UI as a result. I mean, it's your bag honey)
-    VendorLocationIndex int32 `json:"vendorLocationIndex"`
-
     // CanPurchase.
     //
     // If True, you can purchase from the Vendor.
@@ -43,4 +38,9 @@ type Destiny_Entities_Vendors_DestinyVendorComponent struct {
     //
     // The unique identifier for the vendor. Use it to look up their DestinyVendorDefinition.
     VendorHash uint32 `json:"vendorHash"`
+
+    // VendorLocationIndex.
+    //
+    // An index into the vendor definition's "locations" property array, indicating which location they are at currently. If -1, then the vendor has no known location (and you may choose not to show them in your UI as a result. I mean, it's your bag honey)
+    VendorLocationIndex int32 `json:"vendorLocationIndex"`
 }

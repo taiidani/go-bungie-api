@@ -3,183 +3,183 @@
 package api
 
 type User_GeneralUser struct {
-    // UniqueName.
-    //
-    // 
-    UniqueName string `json:"uniqueName"`
-
-    // ShowActivity.
-    //
-    // 
-    ShowActivity bool `json:"showActivity"`
-
-    // XboxDisplayName.
-    //
-    // 
-    XboxDisplayName string `json:"xboxDisplayName"`
-
-    // ProfileBanExpire.
-    //
-    // 
-    ProfileBanExpire string `json:"profileBanExpire"`
-
-    // UserTitleDisplay.
-    //
-    // 
-    UserTitleDisplay string `json:"userTitleDisplay"`
-
-    // FbDisplayName.
-    //
-    // 
-    FbDisplayName string `json:"fbDisplayName"`
-
-    // NormalizedName.
-    //
-    // 
-    NormalizedName string `json:"normalizedName"`
-
-    // StatusDate.
-    //
-    // 
-    StatusDate string `json:"statusDate"`
-
-    // SuccessMessageFlags.
-    //
-    // 
-    SuccessMessageFlags int64 `json:"successMessageFlags"`
-
-    // LegacyPortalUID.
-    //
-    // 
-    LegacyPortalUID int64 `json:"legacyPortalUID"`
-
-    // ProfilePictureWidePath.
-    //
-    // 
-    ProfilePictureWidePath string `json:"profilePictureWidePath"`
-
-    // UserTitle.
-    //
-    // 
-    UserTitle int32 `json:"userTitle"`
-
-    // TwitchDisplayName.
-    //
-    // 
-    TwitchDisplayName string `json:"twitchDisplayName"`
-
-    // ProfileTheme.
-    //
-    // 
-    ProfileTheme int32 `json:"profileTheme"`
-
-    // SteamDisplayName.
-    //
-    // 
-    SteamDisplayName string `json:"steamDisplayName"`
-
-    // About.
-    //
-    // 
-    About string `json:"about"`
-
     // LastUpdate.
     //
     // 
     LastUpdate string `json:"lastUpdate"`
 
-    // IsDeleted.
+    // Context.
     //
     // 
-    IsDeleted bool `json:"isDeleted"`
+    Context User_UserToUserContext `json:"context"`
 
     // ShowGroupMessaging.
     //
     // 
     ShowGroupMessaging bool `json:"showGroupMessaging"`
 
-    // Context.
+    // BlizzardDisplayName.
     //
     // 
-    Context any `json:"context"`
+    BlizzardDisplayName string `json:"blizzardDisplayName"`
 
-    // ProfileThemeName.
+    // NormalizedName.
     //
     // 
-    ProfileThemeName string `json:"profileThemeName"`
+    NormalizedName string `json:"normalizedName"`
 
-    // MembershipId.
+    // ProfileBanExpire.
     //
     // 
-    MembershipId int64 `json:"membershipId"`
-
-    // CachedBungieGlobalDisplayName.
-    //
-    // 
-    CachedBungieGlobalDisplayName string `json:"cachedBungieGlobalDisplayName"`
-
-    // StatusText.
-    //
-    // 
-    StatusText string `json:"statusText"`
-
-    // FirstAccess.
-    //
-    // 
-    FirstAccess string `json:"firstAccess"`
-
-    // Locale.
-    //
-    // 
-    Locale string `json:"locale"`
-
-    // LocaleInheritDefault.
-    //
-    // 
-    LocaleInheritDefault bool `json:"localeInheritDefault"`
+    ProfileBanExpire string `json:"profileBanExpire"`
 
     // ProfilePicture.
     //
     // 
     ProfilePicture int32 `json:"profilePicture"`
 
-    // PsnDisplayName.
+    // LocaleInheritDefault.
     //
     // 
-    PsnDisplayName string `json:"psnDisplayName"`
+    LocaleInheritDefault bool `json:"localeInheritDefault"`
 
-    // ProfilePicturePath.
+    // TwitchDisplayName.
     //
     // 
-    ProfilePicturePath string `json:"profilePicturePath"`
+    TwitchDisplayName string `json:"twitchDisplayName"`
 
-    // CachedBungieGlobalDisplayNameCode.
+    // UserTitle.
     //
     // 
-    CachedBungieGlobalDisplayNameCode int16 `json:"cachedBungieGlobalDisplayNameCode"`
+    UserTitle int32 `json:"userTitle"`
+
+    // SuccessMessageFlags.
+    //
+    // 
+    SuccessMessageFlags int64 `json:"successMessageFlags"`
+
+    // SteamDisplayName.
+    //
+    // 
+    SteamDisplayName string `json:"steamDisplayName"`
+
+    // UniqueName.
+    //
+    // 
+    UniqueName string `json:"uniqueName"`
+
+    // XboxDisplayName.
+    //
+    // 
+    XboxDisplayName string `json:"xboxDisplayName"`
+
+    // ProfileTheme.
+    //
+    // 
+    ProfileTheme int32 `json:"profileTheme"`
+
+    // UserTitleDisplay.
+    //
+    // 
+    UserTitleDisplay string `json:"userTitleDisplay"`
+
+    // CachedBungieGlobalDisplayName.
+    //
+    // 
+    CachedBungieGlobalDisplayName string `json:"cachedBungieGlobalDisplayName"`
 
     // DisplayName.
     //
     // 
     DisplayName string `json:"displayName"`
 
+    // FirstAccess.
+    //
+    // 
+    FirstAccess string `json:"firstAccess"`
+
+    // StatusText.
+    //
+    // 
+    StatusText string `json:"statusText"`
+
+    // CachedBungieGlobalDisplayNameCode.
+    //
+    // 
+    CachedBungieGlobalDisplayNameCode int16 `json:"cachedBungieGlobalDisplayNameCode"`
+
+    // MembershipId.
+    //
+    // 
+    MembershipId int64 `json:"membershipId"`
+
+    // StadiaDisplayName.
+    //
+    // 
+    StadiaDisplayName string `json:"stadiaDisplayName"`
+
+    // LegacyPortalUID.
+    //
+    // 
+    LegacyPortalUID int64 `json:"legacyPortalUID"`
+
+    // ProfilePicturePath.
+    //
+    // 
+    ProfilePicturePath string `json:"profilePicturePath"`
+
+    // PsnDisplayName.
+    //
+    // 
+    PsnDisplayName string `json:"psnDisplayName"`
+
+    // FbDisplayName.
+    //
+    // 
+    FbDisplayName string `json:"fbDisplayName"`
+
     // EgsDisplayName.
     //
     // 
     EgsDisplayName string `json:"egsDisplayName"`
 
-    // BlizzardDisplayName.
+    // ShowActivity.
     //
     // 
-    BlizzardDisplayName string `json:"blizzardDisplayName"`
+    ShowActivity bool `json:"showActivity"`
+
+    // StatusDate.
+    //
+    // 
+    StatusDate string `json:"statusDate"`
+
+    // IsDeleted.
+    //
+    // 
+    IsDeleted bool `json:"isDeleted"`
 
     // LastBanReportId.
     //
     // 
     LastBanReportId int64 `json:"lastBanReportId"`
 
-    // StadiaDisplayName.
+    // About.
     //
     // 
-    StadiaDisplayName string `json:"stadiaDisplayName"`
+    About string `json:"about"`
+
+    // Locale.
+    //
+    // 
+    Locale string `json:"locale"`
+
+    // ProfilePictureWidePath.
+    //
+    // 
+    ProfilePictureWidePath string `json:"profilePictureWidePath"`
+
+    // ProfileThemeName.
+    //
+    // 
+    ProfileThemeName string `json:"profileThemeName"`
 }

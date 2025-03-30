@@ -3,6 +3,16 @@
 package api
 
 type Destiny_Milestones_DestinyPublicMilestoneActivity struct {
+    // ModifierHashes.
+    //
+    // The activity may have 0-to-many modifiers: if it does, this will contain the hashes to the DestinyActivityModifierDefinition that defines the modifier being applied.
+    ModifierHashes []uint32 `json:"modifierHashes"`
+
+    // Variants.
+    //
+    // Every relevant variation of this conceptual activity, including the conceptual activity itself, have variants defined here.
+    Variants []Destiny_Milestones_DestinyPublicMilestoneActivityVariant `json:"variants"`
+
     // ActivityHash.
     //
     // The hash identifier of the activity that's been chosen to be considered the canonical "conceptual" activity definition. This may have many variants, defined herein.
@@ -17,14 +27,4 @@ type Destiny_Milestones_DestinyPublicMilestoneActivity struct {
     //
     // The enumeration equivalent of the most specific Activity Mode under which this activity is played.
     ActivityModeType int32 `json:"activityModeType"`
-
-    // ModifierHashes.
-    //
-    // The activity may have 0-to-many modifiers: if it does, this will contain the hashes to the DestinyActivityModifierDefinition that defines the modifier being applied.
-    ModifierHashes []any `json:"modifierHashes"`
-
-    // Variants.
-    //
-    // Every relevant variation of this conceptual activity, including the conceptual activity itself, have variants defined here.
-    Variants []Destiny_Milestones_DestinyPublicMilestoneActivityVariant `json:"variants"`
 }

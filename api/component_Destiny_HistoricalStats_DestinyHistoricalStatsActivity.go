@@ -3,11 +3,6 @@
 package api
 
 type Destiny_HistoricalStats_DestinyHistoricalStatsActivity struct {
-    // Modes.
-    //
-    // The list of all Activity Modes to which this activity applies, including aggregates. This will let you see, for example, whether the activity was both Clash and part of the Trials of the Nine event.
-    Modes []any `json:"modes"`
-
     // ReferenceId.
     //
     // The unique hash identifier of the DestinyActivityDefinition that was played. If I had this to do over, it'd be named activityHash. Too late now.
@@ -39,4 +34,9 @@ type Destiny_HistoricalStats_DestinyHistoricalStatsActivity struct {
     //
     // Indicates the most specific game mode of the activity that we could find.
     Mode int32 `json:"mode"`
+
+    // Modes.
+    //
+    // The list of all Activity Modes to which this activity applies, including aggregates. This will let you see, for example, whether the activity was both Clash and part of the Trials of the Nine event.
+    Modes []int32 `json:"modes"`
 }

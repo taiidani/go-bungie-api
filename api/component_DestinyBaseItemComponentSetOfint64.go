@@ -3,13 +3,13 @@
 package api
 
 type DestinyBaseItemComponentSetOfint64 struct {
-    // Perks.
-    //
-    // 
-    Perks any `json:"perks"`
-
     // Objectives.
     //
     // 
-    Objectives any `json:"objectives"`
+    Objectives DictionaryComponentResponseOfint64AndDestinyItemObjectivesComponent `json:"objectives"`
+
+    // Perks.
+    //
+    // 
+    Perks DictionaryComponentResponseOfint64AndDestinyItemPerksComponent `json:"perks"`
 }

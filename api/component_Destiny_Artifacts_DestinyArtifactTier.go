@@ -3,16 +3,6 @@
 package api
 
 type Destiny_Artifacts_DestinyArtifactTier struct {
-    // IsUnlocked.
-    //
-    // 
-    IsUnlocked bool `json:"isUnlocked"`
-
-    // Items.
-    //
-    // 
-    Items []Destiny_Artifacts_DestinyArtifactTierItem `json:"items"`
-
     // PointsToUnlock.
     //
     // 
@@ -22,4 +12,14 @@ type Destiny_Artifacts_DestinyArtifactTier struct {
     //
     // 
     TierHash uint32 `json:"tierHash"`
+
+    // IsUnlocked.
+    //
+    // 
+    IsUnlocked bool `json:"isUnlocked"`
+
+    // Items.
+    //
+    // 
+    Items []Destiny_Artifacts_DestinyArtifactTierItem `json:"items"`
 }

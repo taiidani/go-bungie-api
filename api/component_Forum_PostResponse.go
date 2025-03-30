@@ -3,65 +3,30 @@
 package api
 
 type Forum_PostResponse struct {
-    // IsAnnouncement.
-    //
-    // 
-    IsAnnouncement bool `json:"isAnnouncement"`
-
-    // UserHasRated.
-    //
-    // 
-    UserHasRated bool `json:"userHasRated"`
-
     // LatestReplyAuthorId.
     //
     // 
     LatestReplyAuthorId int64 `json:"latestReplyAuthorId"`
-
-    // LatestReplyPostId.
-    //
-    // 
-    LatestReplyPostId int64 `json:"latestReplyPostId"`
-
-    // Locale.
-    //
-    // 
-    Locale string `json:"locale"`
-
-    // UrlMediaType.
-    //
-    // 
-    UrlMediaType int32 `json:"urlMediaType"`
-
-    // IsActive.
-    //
-    // 
-    IsActive bool `json:"isActive"`
-
-    // UserRating.
-    //
-    // 
-    UserRating int32 `json:"userRating"`
-
-    // LastReplyTimestamp.
-    //
-    // 
-    LastReplyTimestamp string `json:"lastReplyTimestamp"`
 
     // Popularity.
     //
     // 
     Popularity int32 `json:"popularity"`
 
-    // Thumbnail.
+    // UrlMediaType.
     //
     // 
-    Thumbnail string `json:"thumbnail"`
+    UrlMediaType int32 `json:"urlMediaType"`
 
-    // UserHasMutedPost.
+    // UserHasRated.
     //
     // 
-    UserHasMutedPost bool `json:"userHasMutedPost"`
+    UserHasRated bool `json:"userHasRated"`
+
+    // UserRating.
+    //
+    // 
+    UserRating int32 `json:"userRating"`
 
     // IsPinned.
     //
@@ -71,5 +36,40 @@ type Forum_PostResponse struct {
     // IgnoreStatus.
     //
     // 
-    IgnoreStatus any `json:"ignoreStatus"`
+    IgnoreStatus Ignores_IgnoreResponse `json:"ignoreStatus"`
+
+    // LatestReplyPostId.
+    //
+    // 
+    LatestReplyPostId int64 `json:"latestReplyPostId"`
+
+    // Thumbnail.
+    //
+    // 
+    Thumbnail string `json:"thumbnail"`
+
+    // IsActive.
+    //
+    // 
+    IsActive bool `json:"isActive"`
+
+    // IsAnnouncement.
+    //
+    // 
+    IsAnnouncement bool `json:"isAnnouncement"`
+
+    // Locale.
+    //
+    // 
+    Locale string `json:"locale"`
+
+    // UserHasMutedPost.
+    //
+    // 
+    UserHasMutedPost bool `json:"userHasMutedPost"`
+
+    // LastReplyTimestamp.
+    //
+    // 
+    LastReplyTimestamp string `json:"lastReplyTimestamp"`
 }

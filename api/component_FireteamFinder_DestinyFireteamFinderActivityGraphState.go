@@ -3,13 +3,13 @@
 package api
 
 type FireteamFinder_DestinyFireteamFinderActivityGraphState struct {
-    // IsAvailable.
-    //
-    // Indicates if this fireteam finder activity graph node is available to select for this character.
-    IsAvailable bool `json:"isAvailable"`
-
     // IsVisible.
     //
     // Indicates if this fireteam finder activity graph node is visible for this character.
     IsVisible bool `json:"isVisible"`
+
+    // IsAvailable.
+    //
+    // Indicates if this fireteam finder activity graph node is available to select for this character.
+    IsAvailable bool `json:"isAvailable"`
 }

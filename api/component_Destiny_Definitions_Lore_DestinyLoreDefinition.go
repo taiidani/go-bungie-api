@@ -6,7 +6,7 @@ type Destiny_Definitions_Lore_DestinyLoreDefinition struct {
     // DisplayProperties.
     //
     // Many Destiny*Definition contracts - the "first order" entities of Destiny that have their own tables in the Manifest Database - also have displayable information. This is the base class for that display information.
-    DisplayProperties any `json:"displayProperties"`
+    DisplayProperties Destiny_Definitions_Common_DestinyDisplayPropertiesDefinition `json:"displayProperties"`
 
     // Hash.
     //

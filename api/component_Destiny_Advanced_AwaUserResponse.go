@@ -6,7 +6,7 @@ type Destiny_Advanced_AwaUserResponse struct {
     // Nonce.
     //
     // Secret nonce received via the PUSH notification.
-    Nonce []any `json:"nonce"`
+    Nonce []byte `json:"nonce"`
 
     // Selection.
     //

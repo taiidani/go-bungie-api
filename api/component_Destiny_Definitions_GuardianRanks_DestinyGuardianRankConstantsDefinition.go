@@ -3,10 +3,20 @@
 package api
 
 type Destiny_Definitions_GuardianRanks_DestinyGuardianRankConstantsDefinition struct {
+    // RootNodeHash.
+    //
+    // 
+    RootNodeHash uint32 `json:"rootNodeHash"`
+
+    // DisplayProperties.
+    //
+    // Many Destiny*Definition contracts - the "first order" entities of Destiny that have their own tables in the Manifest Database - also have displayable information. This is the base class for that display information.
+    DisplayProperties Destiny_Definitions_Common_DestinyDisplayPropertiesDefinition `json:"displayProperties"`
+
     // GuardianRankHashes.
     //
     // 
-    GuardianRankHashes []any `json:"guardianRankHashes"`
+    GuardianRankHashes []uint32 `json:"guardianRankHashes"`
 
     // Hash.
     //
@@ -18,7 +28,7 @@ type Destiny_Definitions_GuardianRanks_DestinyGuardianRankConstantsDefinition st
     // IconBackgrounds.
     //
     // 
-    IconBackgrounds any `json:"iconBackgrounds"`
+    IconBackgrounds Destiny_Definitions_GuardianRanks_DestinyGuardianRankIconBackgroundsDefinition `json:"iconBackgrounds"`
 
     // Index.
     //
@@ -34,14 +44,4 @@ type Destiny_Definitions_GuardianRanks_DestinyGuardianRankConstantsDefinition st
     //
     // If this is true, then there is an entity with this identifier/type combination, but BNet is not yet allowed to show it. Sorry!
     Redacted bool `json:"redacted"`
-
-    // RootNodeHash.
-    //
-    // 
-    RootNodeHash uint32 `json:"rootNodeHash"`
-
-    // DisplayProperties.
-    //
-    // Many Destiny*Definition contracts - the "first order" entities of Destiny that have their own tables in the Manifest Database - also have displayable information. This is the base class for that display information.
-    DisplayProperties any `json:"displayProperties"`
 }

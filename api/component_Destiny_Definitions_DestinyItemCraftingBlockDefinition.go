@@ -6,7 +6,7 @@ type Destiny_Definitions_DestinyItemCraftingBlockDefinition struct {
     // RequiredSocketTypeHashes.
     //
     // A list of socket type hashes that describes which sockets are required for crafting with this recipe.
-    RequiredSocketTypeHashes []any `json:"requiredSocketTypeHashes"`
+    RequiredSocketTypeHashes []uint32 `json:"requiredSocketTypeHashes"`
 
     // BaseMaterialRequirements.
     //
@@ -21,7 +21,7 @@ type Destiny_Definitions_DestinyItemCraftingBlockDefinition struct {
     // FailedRequirementStrings.
     //
     // 
-    FailedRequirementStrings []any `json:"failedRequirementStrings"`
+    FailedRequirementStrings []string `json:"failedRequirementStrings"`
 
     // OutputItemHash.
     //

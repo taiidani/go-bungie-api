@@ -3,16 +3,6 @@
 package api
 
 type SearchResultOfGroupV2Card struct {
-    // ReplacementContinuationToken.
-    //
-    // 
-    ReplacementContinuationToken string `json:"replacementContinuationToken"`
-
-    // Results.
-    //
-    // 
-    Results []GroupsV2_GroupV2Card `json:"results"`
-
     // TotalResults.
     //
     // 
@@ -37,5 +27,15 @@ type SearchResultOfGroupV2Card struct {
     // Query.
     //
     // 
-    Query any `json:"query"`
+    Query Queries_PagedQuery `json:"query"`
+
+    // ReplacementContinuationToken.
+    //
+    // 
+    ReplacementContinuationToken string `json:"replacementContinuationToken"`
+
+    // Results.
+    //
+    // 
+    Results []GroupsV2_GroupV2Card `json:"results"`
 }

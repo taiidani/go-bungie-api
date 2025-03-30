@@ -3,6 +3,13 @@
 package api
 
 type Destiny_Responses_DestinyPublicVendorsResponse struct {
+    // VendorGroups.
+    //
+    // For Vendors being returned, this will give you the information you need to group them and order them in the same way that the Bungie Companion app performs grouping. It will automatically be returned if you request the Vendors component.
+    //
+    // COMPONENT TYPE: Vendors
+    VendorGroups any `json:"vendorGroups"`
+
     // Vendors.
     //
     // The base properties of the vendor. These are keyed by the Vendor Hash, so you will get one Vendor Component per vendor returned.
@@ -32,11 +39,4 @@ type Destiny_Responses_DestinyPublicVendorsResponse struct {
     //
     // COMPONENT TYPE: StringVariables
     StringVariables any `json:"stringVariables"`
-
-    // VendorGroups.
-    //
-    // For Vendors being returned, this will give you the information you need to group them and order them in the same way that the Bungie Companion app performs grouping. It will automatically be returned if you request the Vendors component.
-    //
-    // COMPONENT TYPE: Vendors
-    VendorGroups any `json:"vendorGroups"`
 }

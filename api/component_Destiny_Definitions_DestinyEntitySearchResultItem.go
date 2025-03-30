@@ -3,6 +3,11 @@
 package api
 
 type Destiny_Definitions_DestinyEntitySearchResultItem struct {
+    // DisplayProperties.
+    //
+    // Basic display properties on the entity, so you don't have to look up the definition to show basic results for the item.
+    DisplayProperties any `json:"displayProperties"`
+
     // EntityType.
     //
     // The type of entity, returned as a string matching the DestinyDefinition's contract class name. You'll have to have your own mapping from class names to actually looking up those definitions in the manifest databases.
@@ -17,9 +22,4 @@ type Destiny_Definitions_DestinyEntitySearchResultItem struct {
     //
     // The ranking value for sorting that we calculated using our relevance formula. This will hopefully get better with time and iteration.
     Weight float64 `json:"weight"`
-
-    // DisplayProperties.
-    //
-    // Basic display properties on the entity, so you don't have to look up the definition to show basic results for the item.
-    DisplayProperties any `json:"displayProperties"`
 }

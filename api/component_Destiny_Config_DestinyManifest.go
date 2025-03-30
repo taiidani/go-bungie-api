@@ -3,48 +3,48 @@
 package api
 
 type Destiny_Config_DestinyManifest struct {
-    // MobileAssetContentPath.
-    //
-    // 
-    MobileAssetContentPath string `json:"mobileAssetContentPath"`
-
-    // MobileGearCDN.
-    //
-    // 
-    MobileGearCDN any `json:"mobileGearCDN"`
-
-    // Version.
-    //
-    // 
-    Version string `json:"version"`
-
     // MobileClanBannerDatabasePath.
     //
     // 
     MobileClanBannerDatabasePath string `json:"mobileClanBannerDatabasePath"`
-
-    // MobileGearAssetDataBases.
-    //
-    // 
-    MobileGearAssetDataBases []Destiny_Config_GearAssetDataBaseDefinition `json:"mobileGearAssetDataBases"`
-
-    // MobileWorldContentPaths.
-    //
-    // 
-    MobileWorldContentPaths any `json:"mobileWorldContentPaths"`
-
-    // JsonWorldContentPaths.
-    //
-    // This points to the generated JSON that contains all the Definitions. Each key is a locale. The value is a path to the aggregated world definitions (warning: large file!)
-    JsonWorldContentPaths any `json:"jsonWorldContentPaths"`
 
     // IconImagePyramidInfo.
     //
     // Information about the "Image Pyramid" for Destiny icons. Where possible, we create smaller versions of Destiny icons. These are found as subfolders under the location of the "original/full size" Destiny images, with the same file name and extension as the original image itself. (this lets us avoid sending largely redundant path info with every entity, at the expense of the smaller versions of the image being less discoverable)
     IconImagePyramidInfo []Destiny_Config_ImagePyramidEntry `json:"iconImagePyramidInfo"`
 
+    // JsonWorldContentPaths.
+    //
+    // This points to the generated JSON that contains all the Definitions. Each key is a locale. The value is a path to the aggregated world definitions (warning: large file!)
+    JsonWorldContentPaths any `json:"jsonWorldContentPaths"`
+
     // JsonWorldComponentContentPaths.
     //
     // This points to the generated JSON that contains all the Definitions. Each key is a locale. The value is a dictionary, where the key is a definition type by name, and the value is the path to the file for that definition. WARNING: This is unsafe and subject to change - do not depend on data in these files staying around long-term.
     JsonWorldComponentContentPaths any `json:"jsonWorldComponentContentPaths"`
+
+    // MobileGearCDN.
+    //
+    // 
+    MobileGearCDN any `json:"mobileGearCDN"`
+
+    // MobileWorldContentPaths.
+    //
+    // 
+    MobileWorldContentPaths any `json:"mobileWorldContentPaths"`
+
+    // MobileGearAssetDataBases.
+    //
+    // 
+    MobileGearAssetDataBases []Destiny_Config_GearAssetDataBaseDefinition `json:"mobileGearAssetDataBases"`
+
+    // Version.
+    //
+    // 
+    Version string `json:"version"`
+
+    // MobileAssetContentPath.
+    //
+    // 
+    MobileAssetContentPath string `json:"mobileAssetContentPath"`
 }

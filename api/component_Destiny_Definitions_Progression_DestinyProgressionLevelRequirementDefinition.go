@@ -3,6 +3,13 @@
 package api
 
 type Destiny_Definitions_Progression_DestinyProgressionLevelRequirementDefinition struct {
+    // Hash.
+    //
+    // The unique identifier for this entity. Guaranteed to be unique for the type of entity, but not globally.
+    //
+    // When entities refer to each other in Destiny content, it is this hash that they are referring to.
+    Hash uint32 `json:"hash"`
+
     // Index.
     //
     // The index of the entity as it was found in the investment tables.
@@ -26,11 +33,4 @@ type Destiny_Definitions_Progression_DestinyProgressionLevelRequirementDefinitio
     //
     // Interpolate against this curve with the character's progression level to determine what the level requirement of the generated item that is using this data will be.
     RequirementCurve []Interpolation_InterpolationPointFloat `json:"requirementCurve"`
-
-    // Hash.
-    //
-    // The unique identifier for this entity. Guaranteed to be unique for the type of entity, but not globally.
-    //
-    // When entities refer to each other in Destiny content, it is this hash that they are referring to.
-    Hash uint32 `json:"hash"`
 }

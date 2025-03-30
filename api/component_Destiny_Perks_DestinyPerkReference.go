@@ -3,6 +3,11 @@
 package api
 
 type Destiny_Perks_DestinyPerkReference struct {
+    // IsActive.
+    //
+    // Whether this perk is currently active. (We may return perks that you have not actually activated yet: these represent perks that you should show in the item's tooltip, but that the user has not yet activated.)
+    IsActive bool `json:"isActive"`
+
     // PerkHash.
     //
     // The hash identifier for the perk, which can be used to look up DestinySandboxPerkDefinition if it exists. Be warned, perks frequently do not have user-viewable information. You should examine whether you actually found a name/description in the perk's definition before you show it to the user.
@@ -17,9 +22,4 @@ type Destiny_Perks_DestinyPerkReference struct {
     //
     // The icon for the perk.
     IconPath string `json:"iconPath"`
-
-    // IsActive.
-    //
-    // Whether this perk is currently active. (We may return perks that you have not actually activated yet: these represent perks that you should show in the item's tooltip, but that the user has not yet activated.)
-    IsActive bool `json:"isActive"`
 }

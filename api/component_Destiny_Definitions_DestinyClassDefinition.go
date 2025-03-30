@@ -3,6 +3,11 @@
 package api
 
 type Destiny_Definitions_DestinyClassDefinition struct {
+    // GenderedClassNamesByGenderHash.
+    //
+    // 
+    GenderedClassNamesByGenderHash any `json:"genderedClassNamesByGenderHash"`
+
     // Hash.
     //
     // The unique identifier for this entity. Guaranteed to be unique for the type of entity, but not globally.
@@ -33,15 +38,10 @@ type Destiny_Definitions_DestinyClassDefinition struct {
     // DisplayProperties.
     //
     // Many Destiny*Definition contracts - the "first order" entities of Destiny that have their own tables in the Manifest Database - also have displayable information. This is the base class for that display information.
-    DisplayProperties any `json:"displayProperties"`
+    DisplayProperties Destiny_Definitions_Common_DestinyDisplayPropertiesDefinition `json:"displayProperties"`
 
     // GenderedClassNames.
     //
     // A localized string referring to the singular form of the Class's name when referred to in gendered form. Keyed by the DestinyGender.
     GenderedClassNames any `json:"genderedClassNames"`
-
-    // GenderedClassNamesByGenderHash.
-    //
-    // 
-    GenderedClassNamesByGenderHash any `json:"genderedClassNamesByGenderHash"`
 }

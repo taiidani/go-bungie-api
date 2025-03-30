@@ -3,11 +3,6 @@
 package api
 
 type Destiny_Definitions_DestinyTalentNodeStepGroups struct {
-    // LightAbilities.
-    //
-    // 
-    LightAbilities int32 `json:"lightAbilities"`
-
     // WeaponPerformance.
     //
     // 
@@ -27,4 +22,9 @@ type Destiny_Definitions_DestinyTalentNodeStepGroups struct {
     //
     // 
     ImpactEffects int32 `json:"impactEffects"`
+
+    // LightAbilities.
+    //
+    // 
+    LightAbilities int32 `json:"lightAbilities"`
 }

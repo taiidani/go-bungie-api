@@ -3,6 +3,11 @@
 package api
 
 type Destiny_Definitions_DestinyItemSocketEntryPlugItemRandomizedDefinition struct {
+    // CraftingRequirements.
+    //
+    // 
+    CraftingRequirements Destiny_Definitions_DestinyPlugItemCraftingRequirements `json:"craftingRequirements"`
+
     // CurrentlyCanRoll.
     //
     // Indicates if the plug can be rolled on the current version of the item. For example, older versions of weapons may have plug rolls that are no longer possible on the current versions.
@@ -12,9 +17,4 @@ type Destiny_Definitions_DestinyItemSocketEntryPlugItemRandomizedDefinition stru
     //
     // The hash identifier of a DestinyInventoryItemDefinition representing the plug that can be inserted.
     PlugItemHash uint32 `json:"plugItemHash"`
-
-    // CraftingRequirements.
-    //
-    // 
-    CraftingRequirements any `json:"craftingRequirements"`
 }

@@ -3,11 +3,6 @@
 package api
 
 type Destiny_Artifacts_DestinyArtifactTierItem struct {
-    // ItemHash.
-    //
-    // 
-    ItemHash uint32 `json:"itemHash"`
-
     // IsActive.
     //
     // 
@@ -17,4 +12,9 @@ type Destiny_Artifacts_DestinyArtifactTierItem struct {
     //
     // 
     IsVisible bool `json:"isVisible"`
+
+    // ItemHash.
+    //
+    // 
+    ItemHash uint32 `json:"itemHash"`
 }

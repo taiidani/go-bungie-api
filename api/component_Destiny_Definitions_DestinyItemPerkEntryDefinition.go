@@ -3,11 +3,6 @@
 package api
 
 type Destiny_Definitions_DestinyItemPerkEntryDefinition struct {
-    // PerkHash.
-    //
-    // A hash identifier for the DestinySandboxPerkDefinition being provided on the item.
-    PerkHash uint32 `json:"perkHash"`
-
     // PerkVisibility.
     //
     // Indicates whether this perk should be shown, or if it should be shown disabled.
@@ -17,4 +12,9 @@ type Destiny_Definitions_DestinyItemPerkEntryDefinition struct {
     //
     // If this perk is not active, this is the string to show for why it's not providing its benefits.
     RequirementDisplayString string `json:"requirementDisplayString"`
+
+    // PerkHash.
+    //
+    // A hash identifier for the DestinySandboxPerkDefinition being provided on the item.
+    PerkHash uint32 `json:"perkHash"`
 }

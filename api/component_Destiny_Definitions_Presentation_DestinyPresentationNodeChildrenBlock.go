@@ -3,6 +3,16 @@
 package api
 
 type Destiny_Definitions_Presentation_DestinyPresentationNodeChildrenBlock struct {
+    // Collectibles.
+    //
+    // 
+    Collectibles []Destiny_Definitions_Presentation_DestinyPresentationNodeCollectibleChildEntry `json:"collectibles"`
+
+    // Craftables.
+    //
+    // 
+    Craftables []Destiny_Definitions_Presentation_DestinyPresentationNodeCraftableChildEntry `json:"craftables"`
+
     // Metrics.
     //
     // 
@@ -17,14 +27,4 @@ type Destiny_Definitions_Presentation_DestinyPresentationNodeChildrenBlock struc
     //
     // 
     Records []Destiny_Definitions_Presentation_DestinyPresentationNodeRecordChildEntry `json:"records"`
-
-    // Collectibles.
-    //
-    // 
-    Collectibles []Destiny_Definitions_Presentation_DestinyPresentationNodeCollectibleChildEntry `json:"collectibles"`
-
-    // Craftables.
-    //
-    // 
-    Craftables []Destiny_Definitions_Presentation_DestinyPresentationNodeCraftableChildEntry `json:"craftables"`
 }

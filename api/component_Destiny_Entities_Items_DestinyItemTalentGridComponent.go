@@ -3,6 +3,11 @@
 package api
 
 type Destiny_Entities_Items_DestinyItemTalentGridComponent struct {
+    // GridProgression.
+    //
+    // If the item has a progression, it will be detailed here. A progression means that the item can gain experience. Thresholds of experience are what determines whether and when a talent node can be activated.
+    GridProgression any `json:"gridProgression"`
+
     // IsGridComplete.
     //
     // Indicates whether the talent grid on this item is completed, and thus whether it should have a gold border around it.
@@ -23,9 +28,4 @@ type Destiny_Entities_Items_DestinyItemTalentGridComponent struct {
     //
     // You can use this hash to lookup the DestinyTalentGridDefinition attached to this item, which will be crucial for understanding the node values on the item.
     TalentGridHash uint32 `json:"talentGridHash"`
-
-    // GridProgression.
-    //
-    // If the item has a progression, it will be detailed here. A progression means that the item can gain experience. Thresholds of experience are what determines whether and when a talent node can be activated.
-    GridProgression any `json:"gridProgression"`
 }

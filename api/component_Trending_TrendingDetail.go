@@ -3,10 +3,20 @@
 package api
 
 type Trending_TrendingDetail struct {
+    // DestinyActivity.
+    //
+    // 
+    DestinyActivity Trending_TrendingEntryDestinyActivity `json:"destinyActivity"`
+
+    // DestinyItem.
+    //
+    // 
+    DestinyItem Trending_TrendingEntryDestinyItem `json:"destinyItem"`
+
     // DestinyRitual.
     //
     // 
-    DestinyRitual any `json:"destinyRitual"`
+    DestinyRitual Trending_TrendingEntryDestinyRitual `json:"destinyRitual"`
 
     // EntityType.
     //
@@ -21,25 +31,15 @@ type Trending_TrendingDetail struct {
     // News.
     //
     // 
-    News any `json:"news"`
+    News Trending_TrendingEntryNews `json:"news"`
 
     // Support.
     //
     // 
-    Support any `json:"support"`
+    Support Trending_TrendingEntrySupportArticle `json:"support"`
 
     // Creation.
     //
     // 
-    Creation any `json:"creation"`
-
-    // DestinyActivity.
-    //
-    // 
-    DestinyActivity any `json:"destinyActivity"`
-
-    // DestinyItem.
-    //
-    // 
-    DestinyItem any `json:"destinyItem"`
+    Creation Trending_TrendingEntryCommunityCreation `json:"creation"`
 }

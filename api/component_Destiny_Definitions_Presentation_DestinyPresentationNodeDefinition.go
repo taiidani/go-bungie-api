@@ -3,85 +3,35 @@
 package api
 
 type Destiny_Definitions_Presentation_DestinyPresentationNodeDefinition struct {
-    // OriginalIcon.
+    // Children.
     //
-    // The original icon for this presentation node, before we futzed with it.
-    OriginalIcon string `json:"originalIcon"`
-
-    // TraitIds.
-    //
-    // 
-    TraitIds []any `json:"traitIds"`
-
-    // NodeType.
-    //
-    // 
-    NodeType int32 `json:"nodeType"`
-
-    // Requirements.
-    //
-    // The requirements for being able to interact with this presentation node and its children.
-    Requirements any `json:"requirements"`
-
-    // MaxCategoryRecordScore.
-    //
-    // 
-    MaxCategoryRecordScore int32 `json:"maxCategoryRecordScore"`
-
-    // ParentNodeHashes.
-    //
-    // A quick reference to presentation nodes that have this node as a child. Presentation nodes can be parented under multiple parents.
-    ParentNodeHashes []any `json:"parentNodeHashes"`
-
-    // Redacted.
-    //
-    // If this is true, then there is an entity with this identifier/type combination, but BNet is not yet allowed to show it. Sorry!
-    Redacted bool `json:"redacted"`
-
-    // PresentationNodeType.
-    //
-    // 
-    PresentationNodeType int32 `json:"presentationNodeType"`
-
-    // TraitHashes.
-    //
-    // 
-    TraitHashes []any `json:"traitHashes"`
+    // The child entities contained by this presentation node.
+    Children any `json:"children"`
 
     // DisplayStyle.
     //
     // A hint for how to display this presentation node when it's shown in a list.
     DisplayStyle int32 `json:"displayStyle"`
 
-    // IsSeasonal.
+    // Index.
     //
-    // Primarily for Guardian Ranks, this property if the contents of this node are tied to the current season. These nodes are shown with a different color for the in-game Guardian Ranks display.
-    IsSeasonal bool `json:"isSeasonal"`
+    // The index of the entity as it was found in the investment tables.
+    Index int32 `json:"index"`
+
+    // ObjectiveHash.
+    //
+    // If this presentation node shows a related objective (for instance, if it tracks the progress of its children), the objective being tracked is indicated here.
+    ObjectiveHash uint32 `json:"objectiveHash"`
+
+    // ParentNodeHashes.
+    //
+    // A quick reference to presentation nodes that have this node as a child. Presentation nodes can be parented under multiple parents.
+    ParentNodeHashes []uint32 `json:"parentNodeHashes"`
 
     // DisableChildSubscreenNavigation.
     //
     // If this presentation node has children, but the game doesn't let you inspect the details of those children, that is indicated here.
     DisableChildSubscreenNavigation bool `json:"disableChildSubscreenNavigation"`
-
-    // DisplayProperties.
-    //
-    // Many Destiny*Definition contracts - the "first order" entities of Destiny that have their own tables in the Manifest Database - also have displayable information. This is the base class for that display information.
-    DisplayProperties any `json:"displayProperties"`
-
-    // RootViewIcon.
-    //
-    // Some presentation nodes are meant to be explicitly shown on the "root" or "entry" screens for the feature to which they are related. You should use this icon when showing them on such a view, if you have a similar "entry point" view in your UI. If you don't have a UI, then I guess it doesn't matter either way does it?
-    RootViewIcon string `json:"rootViewIcon"`
-
-    // Children.
-    //
-    // The child entities contained by this presentation node.
-    Children any `json:"children"`
-
-    // Index.
-    //
-    // The index of the entity as it was found in the investment tables.
-    Index int32 `json:"index"`
 
     // Hash.
     //
@@ -90,23 +40,73 @@ type Destiny_Definitions_Presentation_DestinyPresentationNodeDefinition struct {
     // When entities refer to each other in Destiny content, it is this hash that they are referring to.
     Hash uint32 `json:"hash"`
 
-    // ObjectiveHash.
+    // RootViewIcon.
     //
-    // If this presentation node shows a related objective (for instance, if it tracks the progress of its children), the objective being tracked is indicated here.
-    ObjectiveHash uint32 `json:"objectiveHash"`
+    // Some presentation nodes are meant to be explicitly shown on the "root" or "entry" screens for the feature to which they are related. You should use this icon when showing them on such a view, if you have a similar "entry point" view in your UI. If you don't have a UI, then I guess it doesn't matter either way does it?
+    RootViewIcon string `json:"rootViewIcon"`
 
     // Scope.
     //
     // Indicates whether this presentation node's state is determined on a per-character or on an account-wide basis.
     Scope int32 `json:"scope"`
 
-    // ScreenStyle.
+    // OriginalIcon.
     //
-    // A hint for how to display this presentation node when it's shown in its own detail screen.
-    ScreenStyle int32 `json:"screenStyle"`
+    // The original icon for this presentation node, before we futzed with it.
+    OriginalIcon string `json:"originalIcon"`
+
+    // TraitIds.
+    //
+    // 
+    TraitIds []string `json:"traitIds"`
+
+    // DisplayProperties.
+    //
+    // Many Destiny*Definition contracts - the "first order" entities of Destiny that have their own tables in the Manifest Database - also have displayable information. This is the base class for that display information.
+    DisplayProperties Destiny_Definitions_Common_DestinyDisplayPropertiesDefinition `json:"displayProperties"`
+
+    // PresentationNodeType.
+    //
+    // 
+    PresentationNodeType int32 `json:"presentationNodeType"`
+
+    // Redacted.
+    //
+    // If this is true, then there is an entity with this identifier/type combination, but BNet is not yet allowed to show it. Sorry!
+    Redacted bool `json:"redacted"`
 
     // CompletionRecordHash.
     //
     // If this presentation node has an associated "Record" that you can accomplish for completing its children, this is the identifier of that Record.
     CompletionRecordHash uint32 `json:"completionRecordHash"`
+
+    // Requirements.
+    //
+    // The requirements for being able to interact with this presentation node and its children.
+    Requirements any `json:"requirements"`
+
+    // TraitHashes.
+    //
+    // 
+    TraitHashes []uint32 `json:"traitHashes"`
+
+    // NodeType.
+    //
+    // 
+    NodeType int32 `json:"nodeType"`
+
+    // IsSeasonal.
+    //
+    // Primarily for Guardian Ranks, this property if the contents of this node are tied to the current season. These nodes are shown with a different color for the in-game Guardian Ranks display.
+    IsSeasonal bool `json:"isSeasonal"`
+
+    // MaxCategoryRecordScore.
+    //
+    // 
+    MaxCategoryRecordScore int32 `json:"maxCategoryRecordScore"`
+
+    // ScreenStyle.
+    //
+    // A hint for how to display this presentation node when it's shown in its own detail screen.
+    ScreenStyle int32 `json:"screenStyle"`
 }

@@ -3,40 +3,70 @@
 package api
 
 type Destiny_Definitions_Seasons_DestinySeasonDefinition struct {
-    // StartDate.
-    //
-    // 
-    StartDate string `json:"startDate"`
-
     // BackgroundImagePath.
     //
     // 
     BackgroundImagePath string `json:"backgroundImagePath"`
 
-    // SealPresentationNodeHash.
+    // Index.
+    //
+    // The index of the entity as it was found in the investment tables.
+    Index int32 `json:"index"`
+
+    // DisplayProperties.
+    //
+    // Many Destiny*Definition contracts - the "first order" entities of Destiny that have their own tables in the Manifest Database - also have displayable information. This is the base class for that display information.
+    DisplayProperties Destiny_Definitions_Common_DestinyDisplayPropertiesDefinition `json:"displayProperties"`
+
+    // Redacted.
+    //
+    // If this is true, then there is an entity with this identifier/type combination, but BNet is not yet allowed to show it. Sorry!
+    Redacted bool `json:"redacted"`
+
+    // EndDate.
     //
     // 
-    SealPresentationNodeHash uint32 `json:"sealPresentationNodeHash"`
+    EndDate string `json:"endDate"`
 
     // SeasonalChallengesPresentationNodeHash.
     //
     // 
     SeasonalChallengesPresentationNodeHash uint32 `json:"seasonalChallengesPresentationNodeHash"`
 
-    // DisplayProperties.
-    //
-    // Many Destiny*Definition contracts - the "first order" entities of Destiny that have their own tables in the Manifest Database - also have displayable information. This is the base class for that display information.
-    DisplayProperties any `json:"displayProperties"`
-
-    // SeasonNumber.
-    //
-    // 
-    SeasonNumber int32 `json:"seasonNumber"`
-
     // Acts.
     //
     // A list of Acts for the Episode
     Acts []Destiny_Definitions_Seasons_DestinySeasonActDefinition `json:"acts"`
+
+    // Preview.
+    //
+    // Optional - Defines the promotional text, images, and links to preview this season.
+    Preview any `json:"preview"`
+
+    // SeasonPassHash.
+    //
+    // 
+    SeasonPassHash uint32 `json:"seasonPassHash"`
+
+    // ArtifactItemHash.
+    //
+    // 
+    ArtifactItemHash uint32 `json:"artifactItemHash"`
+
+    // SealPresentationNodeHash.
+    //
+    // 
+    SealPresentationNodeHash uint32 `json:"sealPresentationNodeHash"`
+
+    // SeasonPassProgressionHash.
+    //
+    // 
+    SeasonPassProgressionHash uint32 `json:"seasonPassProgressionHash"`
+
+    // StartDate.
+    //
+    // 
+    StartDate string `json:"startDate"`
 
     // Hash.
     //
@@ -45,38 +75,8 @@ type Destiny_Definitions_Seasons_DestinySeasonDefinition struct {
     // When entities refer to each other in Destiny content, it is this hash that they are referring to.
     Hash uint32 `json:"hash"`
 
-    // Preview.
-    //
-    // Optional - Defines the promotional text, images, and links to preview this season.
-    Preview any `json:"preview"`
-
-    // Redacted.
-    //
-    // If this is true, then there is an entity with this identifier/type combination, but BNet is not yet allowed to show it. Sorry!
-    Redacted bool `json:"redacted"`
-
-    // Index.
-    //
-    // The index of the entity as it was found in the investment tables.
-    Index int32 `json:"index"`
-
-    // SeasonPassHash.
+    // SeasonNumber.
     //
     // 
-    SeasonPassHash uint32 `json:"seasonPassHash"`
-
-    // EndDate.
-    //
-    // 
-    EndDate string `json:"endDate"`
-
-    // SeasonPassProgressionHash.
-    //
-    // 
-    SeasonPassProgressionHash uint32 `json:"seasonPassProgressionHash"`
-
-    // ArtifactItemHash.
-    //
-    // 
-    ArtifactItemHash uint32 `json:"artifactItemHash"`
+    SeasonNumber int32 `json:"seasonNumber"`
 }

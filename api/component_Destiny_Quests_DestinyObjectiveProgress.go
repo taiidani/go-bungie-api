@@ -3,6 +3,15 @@
 package api
 
 type Destiny_Quests_DestinyObjectiveProgress struct {
+    // CompletionValue.
+    //
+    // As of Forsaken, objectives' completion value is determined dynamically at runtime.
+    //
+    // This value represents the threshold of progress you need to surpass in order for this objective to be considered "complete".
+    //
+    // If you were using objective data, switch from using the DestinyObjectiveDefinition's "completionValue" to this value.
+    CompletionValue int32 `json:"completionValue"`
+
     // DestinationHash.
     //
     // If the Objective has a Destination associated with it, this is the unique identifier of the Destination being referred to. Use to look up the DestinyDestinationDefinition in static data. This will give localized data about *where* in the universe the objective should be achieved.
@@ -32,13 +41,4 @@ type Destiny_Quests_DestinyObjectiveProgress struct {
     //
     // Whether or not the Objective is completed.
     Complete bool `json:"complete"`
-
-    // CompletionValue.
-    //
-    // As of Forsaken, objectives' completion value is determined dynamically at runtime.
-    //
-    // This value represents the threshold of progress you need to surpass in order for this objective to be considered "complete".
-    //
-    // If you were using objective data, switch from using the DestinyObjectiveDefinition's "completionValue" to this value.
-    CompletionValue int32 `json:"completionValue"`
 }

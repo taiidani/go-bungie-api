@@ -3,15 +3,10 @@
 package api
 
 type Destiny_Definitions_DestinyEquipmentSlotDefinition struct {
-    // BucketTypeHash.
-    //
-    // The inventory bucket that owns this equipment slot.
-    BucketTypeHash uint32 `json:"bucketTypeHash"`
-
     // DisplayProperties.
     //
     // Many Destiny*Definition contracts - the "first order" entities of Destiny that have their own tables in the Manifest Database - also have displayable information. This is the base class for that display information.
-    DisplayProperties any `json:"displayProperties"`
+    DisplayProperties Destiny_Definitions_Common_DestinyDisplayPropertiesDefinition `json:"displayProperties"`
 
     // EquipmentCategoryHash.
     //
@@ -44,4 +39,9 @@ type Destiny_Definitions_DestinyEquipmentSlotDefinition struct {
     //
     // The Art Dye Channels that apply to this equipment slot.
     ArtDyeChannels []Destiny_Definitions_DestinyArtDyeReference `json:"artDyeChannels"`
+
+    // BucketTypeHash.
+    //
+    // The inventory bucket that owns this equipment slot.
+    BucketTypeHash uint32 `json:"bucketTypeHash"`
 }

@@ -3,13 +3,13 @@
 package api
 
 type Destiny_Config_GearAssetDataBaseDefinition struct {
-    // Path.
-    //
-    // 
-    Path string `json:"path"`
-
     // Version.
     //
     // 
     Version int32 `json:"version"`
+
+    // Path.
+    //
+    // 
+    Path string `json:"path"`
 }

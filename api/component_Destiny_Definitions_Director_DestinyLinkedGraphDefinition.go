@@ -3,11 +3,6 @@
 package api
 
 type Destiny_Definitions_Director_DestinyLinkedGraphDefinition struct {
-    // Description.
-    //
-    // 
-    Description string `json:"description"`
-
     // LinkedGraphId.
     //
     // 
@@ -33,5 +28,10 @@ type Destiny_Definitions_Director_DestinyLinkedGraphDefinition struct {
     // Where the sausage gets made. Unlock Expressions are the foundation of the game's gating mechanics and investment-related restrictions. They can test Unlock Flags and Unlock Values for certain states, using a sufficient amount of logical operators such that unlock expressions are effectively Turing complete.
     //
     // Use UnlockExpressionParser to evaluate expressions using an IUnlockContext parsed from Babel.
-    UnlockExpression any `json:"unlockExpression"`
+    UnlockExpression Destiny_Definitions_DestinyUnlockExpressionDefinition `json:"unlockExpression"`
+
+    // Description.
+    //
+    // 
+    Description string `json:"description"`
 }

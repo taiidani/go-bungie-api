@@ -3,6 +3,11 @@
 package api
 
 type Destiny_Definitions_Records_DestinyRecordIntervalBlock struct {
+    // IntervalObjectives.
+    //
+    // 
+    IntervalObjectives []Destiny_Definitions_Records_DestinyRecordIntervalObjective `json:"intervalObjectives"`
+
     // IntervalRewards.
     //
     // 
@@ -12,9 +17,4 @@ type Destiny_Definitions_Records_DestinyRecordIntervalBlock struct {
     //
     // 
     OriginalObjectiveArrayInsertionIndex int32 `json:"originalObjectiveArrayInsertionIndex"`
-
-    // IntervalObjectives.
-    //
-    // 
-    IntervalObjectives []Destiny_Definitions_Records_DestinyRecordIntervalObjective `json:"intervalObjectives"`
 }

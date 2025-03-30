@@ -26,5 +26,5 @@ type Content_Models_TagMetadataItem struct {
     // Groups.
     //
     // 
-    Groups []any `json:"groups"`
+    Groups []string `json:"groups"`
 }

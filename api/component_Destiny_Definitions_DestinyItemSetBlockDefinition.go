@@ -3,16 +3,6 @@
 package api
 
 type Destiny_Definitions_DestinyItemSetBlockDefinition struct {
-    // QuestStepSummary.
-    //
-    // An additional summary of this step in the quest line.
-    QuestStepSummary string `json:"questStepSummary"`
-
-    // RequireOrderedSetItemAdd.
-    //
-    // If true, items in the set can only be added in increasing order, and adding an item will remove any previous item. For Quests, this is by necessity true. Only one quest step is present at a time, and previous steps are removed as you advance in the quest.
-    RequireOrderedSetItemAdd bool `json:"requireOrderedSetItemAdd"`
-
     // SetIsFeatured.
     //
     // If true, the UI should treat this quest as "featured"
@@ -37,4 +27,14 @@ type Destiny_Definitions_DestinyItemSetBlockDefinition struct {
     //
     // The name of the quest line that this quest step is a part of.
     QuestLineName string `json:"questLineName"`
+
+    // QuestStepSummary.
+    //
+    // An additional summary of this step in the quest line.
+    QuestStepSummary string `json:"questStepSummary"`
+
+    // RequireOrderedSetItemAdd.
+    //
+    // If true, items in the set can only be added in increasing order, and adding an item will remove any previous item. For Quests, this is by necessity true. Only one quest step is present at a time, and previous steps are removed as you advance in the quest.
+    RequireOrderedSetItemAdd bool `json:"requireOrderedSetItemAdd"`
 }

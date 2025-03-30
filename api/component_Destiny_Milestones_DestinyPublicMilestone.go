@@ -43,5 +43,5 @@ type Destiny_Milestones_DestinyPublicMilestone struct {
     // Sometimes milestones - or activities active in milestones - will have relevant vendors. These are the vendors that are currently relevant.
     //
     // Deprecated, already, for the sake of the new "vendors" property that has more data. What was I thinking.
-    VendorHashes []any `json:"vendorHashes"`
+    VendorHashes []uint32 `json:"vendorHashes"`
 }

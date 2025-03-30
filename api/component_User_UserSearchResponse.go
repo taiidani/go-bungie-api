@@ -3,11 +3,6 @@
 package api
 
 type User_UserSearchResponse struct {
-    // HasMore.
-    //
-    // 
-    HasMore bool `json:"hasMore"`
-
     // Page.
     //
     // 
@@ -17,4 +12,9 @@ type User_UserSearchResponse struct {
     //
     // 
     SearchResults []User_UserSearchResponseDetail `json:"searchResults"`
+
+    // HasMore.
+    //
+    // 
+    HasMore bool `json:"hasMore"`
 }

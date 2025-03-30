@@ -3,58 +3,58 @@
 package api
 
 type DestinyVendorItemComponentSetOfint32 struct {
-    // ReusablePlugs.
-    //
-    // 
-    ReusablePlugs any `json:"reusablePlugs"`
-
-    // TalentGrids.
-    //
-    // 
-    TalentGrids any `json:"talentGrids"`
-
-    // Objectives.
-    //
-    // 
-    Objectives any `json:"objectives"`
-
-    // PlugStates.
-    //
-    // 
-    PlugStates any `json:"plugStates"`
-
     // Instances.
     //
     // 
-    Instances any `json:"instances"`
+    Instances DictionaryComponentResponseOfint32AndDestinyItemInstanceComponent `json:"instances"`
 
     // ItemComponents.
     //
     // 
-    ItemComponents any `json:"itemComponents"`
+    ItemComponents DictionaryComponentResponseOfint32AndDestinyItemComponent `json:"itemComponents"`
 
-    // Stats.
+    // Objectives.
     //
     // 
-    Stats any `json:"stats"`
-
-    // PlugObjectives.
-    //
-    // 
-    PlugObjectives any `json:"plugObjectives"`
-
-    // RenderData.
-    //
-    // 
-    RenderData any `json:"renderData"`
-
-    // Sockets.
-    //
-    // 
-    Sockets any `json:"sockets"`
+    Objectives DictionaryComponentResponseOfint32AndDestinyItemObjectivesComponent `json:"objectives"`
 
     // Perks.
     //
     // 
-    Perks any `json:"perks"`
+    Perks DictionaryComponentResponseOfint32AndDestinyItemPerksComponent `json:"perks"`
+
+    // PlugStates.
+    //
+    // 
+    PlugStates DictionaryComponentResponseOfuint32AndDestinyItemPlugComponent `json:"plugStates"`
+
+    // Sockets.
+    //
+    // 
+    Sockets DictionaryComponentResponseOfint32AndDestinyItemSocketsComponent `json:"sockets"`
+
+    // Stats.
+    //
+    // 
+    Stats DictionaryComponentResponseOfint32AndDestinyItemStatsComponent `json:"stats"`
+
+    // PlugObjectives.
+    //
+    // 
+    PlugObjectives DictionaryComponentResponseOfint32AndDestinyItemPlugObjectivesComponent `json:"plugObjectives"`
+
+    // RenderData.
+    //
+    // 
+    RenderData DictionaryComponentResponseOfint32AndDestinyItemRenderComponent `json:"renderData"`
+
+    // ReusablePlugs.
+    //
+    // 
+    ReusablePlugs DictionaryComponentResponseOfint32AndDestinyItemReusablePlugsComponent `json:"reusablePlugs"`
+
+    // TalentGrids.
+    //
+    // 
+    TalentGrids DictionaryComponentResponseOfint32AndDestinyItemTalentGridComponent `json:"talentGrids"`
 }

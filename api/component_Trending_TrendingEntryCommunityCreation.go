@@ -3,16 +3,6 @@
 package api
 
 type Trending_TrendingEntryCommunityCreation struct {
-    // PostId.
-    //
-    // 
-    PostId int64 `json:"postId"`
-
-    // Title.
-    //
-    // 
-    Title string `json:"title"`
-
     // Upvotes.
     //
     // 
@@ -37,4 +27,14 @@ type Trending_TrendingEntryCommunityCreation struct {
     //
     // 
     Media string `json:"media"`
+
+    // PostId.
+    //
+    // 
+    PostId int64 `json:"postId"`
+
+    // Title.
+    //
+    // 
+    Title string `json:"title"`
 }

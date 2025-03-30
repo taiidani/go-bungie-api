@@ -6,5 +6,5 @@ type Destiny_Definitions_DestinyTalentNodeExclusiveSetDefinition struct {
     // NodeIndexes.
     //
     // The list of node indexes for the exclusive set. Historically, these were indexes. I would have liked to replace this with nodeHashes for consistency, but it's way too late for that. (9:09 PM, he's right!)
-    NodeIndexes []any `json:"nodeIndexes"`
+    NodeIndexes []int32 `json:"nodeIndexes"`
 }

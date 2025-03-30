@@ -3,18 +3,6 @@
 package api
 
 type Destiny_Components_Collectibles_DestinyProfileCollectiblesComponent struct {
-    // NewnessFlaggedCollectibleHashes.
-    //
-    // The list of collectibles determined by the game as having been "recently" acquired.
-    //
-    // The game client itself actually controls this data, so I personally question whether anyone will get much use out of this: because we can't edit this value through the API. But in case anyone finds it useful, here it is.
-    NewnessFlaggedCollectibleHashes []any `json:"newnessFlaggedCollectibleHashes"`
-
-    // RecentCollectibleHashes.
-    //
-    // The list of collectibles determined by the game as having been "recently" acquired.
-    RecentCollectibleHashes []any `json:"recentCollectibleHashes"`
-
     // Collectibles.
     //
     // 
@@ -29,4 +17,16 @@ type Destiny_Components_Collectibles_DestinyProfileCollectiblesComponent struct 
     //
     // The hash for the root presentation node definition of Collection categories.
     CollectionCategoriesRootNodeHash uint32 `json:"collectionCategoriesRootNodeHash"`
+
+    // NewnessFlaggedCollectibleHashes.
+    //
+    // The list of collectibles determined by the game as having been "recently" acquired.
+    //
+    // The game client itself actually controls this data, so I personally question whether anyone will get much use out of this: because we can't edit this value through the API. But in case anyone finds it useful, here it is.
+    NewnessFlaggedCollectibleHashes []uint32 `json:"newnessFlaggedCollectibleHashes"`
+
+    // RecentCollectibleHashes.
+    //
+    // The list of collectibles determined by the game as having been "recently" acquired.
+    RecentCollectibleHashes []uint32 `json:"recentCollectibleHashes"`
 }

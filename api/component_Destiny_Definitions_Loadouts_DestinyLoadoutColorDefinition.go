@@ -3,6 +3,11 @@
 package api
 
 type Destiny_Definitions_Loadouts_DestinyLoadoutColorDefinition struct {
+    // Index.
+    //
+    // The index of the entity as it was found in the investment tables.
+    Index int32 `json:"index"`
+
     // Redacted.
     //
     // If this is true, then there is an entity with this identifier/type combination, but BNet is not yet allowed to show it. Sorry!
@@ -19,9 +24,4 @@ type Destiny_Definitions_Loadouts_DestinyLoadoutColorDefinition struct {
     //
     // When entities refer to each other in Destiny content, it is this hash that they are referring to.
     Hash uint32 `json:"hash"`
-
-    // Index.
-    //
-    // The index of the entity as it was found in the investment tables.
-    Index int32 `json:"index"`
 }

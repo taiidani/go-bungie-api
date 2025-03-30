@@ -3,16 +3,6 @@
 package api
 
 type FireteamFinder_DestinyFireteamFinderLobbyPlayer struct {
-    // OfferId.
-    //
-    // 
-    OfferId int64 `json:"offerId"`
-
-    // PlayerId.
-    //
-    // 
-    PlayerId any `json:"playerId"`
-
     // ReferralToken.
     //
     // 
@@ -22,4 +12,14 @@ type FireteamFinder_DestinyFireteamFinderLobbyPlayer struct {
     //
     // 
     State int32 `json:"state"`
+
+    // OfferId.
+    //
+    // 
+    OfferId int64 `json:"offerId"`
+
+    // PlayerId.
+    //
+    // 
+    PlayerId FireteamFinder_DestinyFireteamFinderPlayerId `json:"playerId"`
 }

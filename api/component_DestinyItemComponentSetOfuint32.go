@@ -3,53 +3,53 @@
 package api
 
 type DestinyItemComponentSetOfuint32 struct {
-    // Objectives.
-    //
-    // 
-    Objectives any `json:"objectives"`
-
-    // RenderData.
-    //
-    // 
-    RenderData any `json:"renderData"`
-
-    // ReusablePlugs.
-    //
-    // 
-    ReusablePlugs any `json:"reusablePlugs"`
-
     // TalentGrids.
     //
     // 
-    TalentGrids any `json:"talentGrids"`
+    TalentGrids DictionaryComponentResponseOfuint32AndDestinyItemTalentGridComponent `json:"talentGrids"`
 
     // Instances.
     //
     // 
-    Instances any `json:"instances"`
+    Instances DictionaryComponentResponseOfuint32AndDestinyItemInstanceComponent `json:"instances"`
 
-    // Perks.
+    // Objectives.
     //
     // 
-    Perks any `json:"perks"`
-
-    // PlugObjectives.
-    //
-    // 
-    PlugObjectives any `json:"plugObjectives"`
-
-    // PlugStates.
-    //
-    // 
-    PlugStates any `json:"plugStates"`
+    Objectives DictionaryComponentResponseOfuint32AndDestinyItemObjectivesComponent `json:"objectives"`
 
     // Sockets.
     //
     // 
-    Sockets any `json:"sockets"`
+    Sockets DictionaryComponentResponseOfuint32AndDestinyItemSocketsComponent `json:"sockets"`
+
+    // PlugObjectives.
+    //
+    // 
+    PlugObjectives DictionaryComponentResponseOfuint32AndDestinyItemPlugObjectivesComponent `json:"plugObjectives"`
+
+    // RenderData.
+    //
+    // 
+    RenderData DictionaryComponentResponseOfuint32AndDestinyItemRenderComponent `json:"renderData"`
 
     // Stats.
     //
     // 
-    Stats any `json:"stats"`
+    Stats DictionaryComponentResponseOfuint32AndDestinyItemStatsComponent `json:"stats"`
+
+    // ReusablePlugs.
+    //
+    // 
+    ReusablePlugs DictionaryComponentResponseOfuint32AndDestinyItemReusablePlugsComponent `json:"reusablePlugs"`
+
+    // Perks.
+    //
+    // 
+    Perks DictionaryComponentResponseOfuint32AndDestinyItemPerksComponent `json:"perks"`
+
+    // PlugStates.
+    //
+    // 
+    PlugStates DictionaryComponentResponseOfuint32AndDestinyItemPlugComponent `json:"plugStates"`
 }

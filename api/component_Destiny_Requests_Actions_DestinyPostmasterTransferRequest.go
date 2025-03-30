@@ -3,16 +3,6 @@
 package api
 
 type Destiny_Requests_Actions_DestinyPostmasterTransferRequest struct {
-    // CharacterId.
-    //
-    // 
-    CharacterId int64 `json:"characterId"`
-
-    // ItemId.
-    //
-    // The instance ID of the item for this action request.
-    ItemId int64 `json:"itemId"`
-
     // ItemReferenceHash.
     //
     // 
@@ -27,4 +17,14 @@ type Destiny_Requests_Actions_DestinyPostmasterTransferRequest struct {
     //
     // 
     StackSize int32 `json:"stackSize"`
+
+    // CharacterId.
+    //
+    // 
+    CharacterId int64 `json:"characterId"`
+
+    // ItemId.
+    //
+    // The instance ID of the item for this action request.
+    ItemId int64 `json:"itemId"`
 }

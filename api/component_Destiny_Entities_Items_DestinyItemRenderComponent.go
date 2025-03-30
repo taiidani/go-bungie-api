@@ -3,11 +3,6 @@
 package api
 
 type Destiny_Entities_Items_DestinyItemRenderComponent struct {
-    // UseCustomDyes.
-    //
-    // If you should use custom dyes on this item, it will be indicated here.
-    UseCustomDyes bool `json:"useCustomDyes"`
-
     // ArtRegions.
     //
     // A dictionary for rendering gear components, with:
@@ -16,4 +11,9 @@ type Destiny_Entities_Items_DestinyItemRenderComponent struct {
     //
     // value = The chosen Arrangement Index for the Region, based on the value of a stat on the item used for making the choice.
     ArtRegions any `json:"artRegions"`
+
+    // UseCustomDyes.
+    //
+    // If you should use custom dyes on this item, it will be indicated here.
+    UseCustomDyes bool `json:"useCustomDyes"`
 }
