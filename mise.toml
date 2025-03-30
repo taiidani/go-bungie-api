@@ -1,0 +1,15 @@
+[env]
+_.file = ".env"
+
+[tools]
+go = "1.24"
+staticcheck = "latest"
+
+[tasks.test]
+description = "Run the test suite"
+run = ["go test -race -covermode=atomic ./..."]
+
+[tasks.generate]
+dir = "generate/"
+description = "Regenerate the spec from the latest Bungie API"
+run = ["go run main.go"]

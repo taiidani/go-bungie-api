@@ -1,0 +1,25 @@
+name: build
+
+on: [push]
+
+jobs:
+  test:
+    strategy:
+      matrix:
+        dir: ["", "generate"]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: jdx/mise-action@v2
+
+      - name: Vet
+        working-directory: ${{ matrix.dir }}
+        run: go vet ./...
+
+      - name: Staticcheck
+        working-directory: ${{ matrix.dir }}
+        run: staticcheck ./...
+
+      - name: Test
+        working-directory: ${{ matrix.dir }}
+        run: go test -race -covermode=atomic ./...
