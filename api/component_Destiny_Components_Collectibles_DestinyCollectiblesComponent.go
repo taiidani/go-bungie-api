@@ -6,7 +6,7 @@ type Destiny_Components_Collectibles_DestinyCollectiblesComponent struct {
     // Collectibles.
     //
     // 
-    Collectibles any `json:"collectibles"`
+    Collectibles map[uint32]Destiny_Components_Collectibles_DestinyCollectibleComponent `json:"collectibles"`
 
     // CollectionBadgesRootNodeHash.
     //

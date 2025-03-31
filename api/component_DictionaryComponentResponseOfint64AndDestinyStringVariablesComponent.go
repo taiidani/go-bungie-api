@@ -6,7 +6,7 @@ type DictionaryComponentResponseOfint64AndDestinyStringVariablesComponent struct
     // Data.
     //
     // 
-    Data any `json:"data"`
+    Data map[int64]Destiny_Components_StringVariables_DestinyStringVariablesComponent `json:"data"`
 
     // Disabled.
     //

@@ -6,5 +6,5 @@ type Destiny_Components_Presentation_DestinyPresentationNodesComponent struct {
     // Nodes.
     //
     // 
-    Nodes any `json:"nodes"`
+    Nodes map[uint32]Destiny_Components_Presentation_DestinyPresentationNodeComponent `json:"nodes"`
 }

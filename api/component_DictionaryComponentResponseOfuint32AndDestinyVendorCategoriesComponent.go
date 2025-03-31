@@ -6,7 +6,7 @@ type DictionaryComponentResponseOfuint32AndDestinyVendorCategoriesComponent stru
     // Data.
     //
     // 
-    Data any `json:"data"`
+    Data map[uint32]Destiny_Entities_Vendors_DestinyVendorCategoriesComponent `json:"data"`
 
     // Disabled.
     //

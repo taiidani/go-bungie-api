@@ -34,5 +34,5 @@ type Destiny_Definitions_DestinyItemStatBlockDefinition struct {
     // If you are looking for precomputed values for the stats on a weapon, this is where they are stored. Technically these are the "Display" stat values. Please see DestinyStatsDefinition for what Display Stat Values means, it's a very long story... but essentially these are the closest values BNet can get to the item stats that you see in-game.
     //
     // These stats are keyed by the DestinyStatDefinition's hash identifier for the stat that's found on the item.
-    Stats any `json:"stats"`
+    Stats map[uint32]Destiny_Definitions_DestinyInventoryItemStatDefinition `json:"stats"`
 }

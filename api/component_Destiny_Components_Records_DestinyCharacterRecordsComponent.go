@@ -21,5 +21,5 @@ type Destiny_Components_Records_DestinyCharacterRecordsComponent struct {
     // Records.
     //
     // 
-    Records any `json:"records"`
+    Records map[uint32]Destiny_Components_Records_DestinyRecordComponent `json:"records"`
 }

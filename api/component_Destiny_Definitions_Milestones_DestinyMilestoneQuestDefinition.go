@@ -6,7 +6,7 @@ type Destiny_Definitions_Milestones_DestinyMilestoneQuestDefinition struct {
     // Activities.
     //
     // The full set of all possible "conceptual activities" that are related to this Milestone. Tiers or alternative modes of play within these conceptual activities will be defined as sub-entities. Keyed by the Conceptual Activity Hash. Use the key to look up DestinyActivityDefinition.
-    Activities any `json:"activities"`
+    Activities map[uint32]Destiny_Definitions_Milestones_DestinyMilestoneActivityDefinition `json:"activities"`
 
     // DestinationHash.
     //

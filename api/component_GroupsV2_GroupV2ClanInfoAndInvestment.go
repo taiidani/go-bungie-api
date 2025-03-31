@@ -16,5 +16,5 @@ type GroupsV2_GroupV2ClanInfoAndInvestment struct {
     // D2ClanProgressions.
     //
     // 
-    D2ClanProgressions any `json:"d2ClanProgressions"`
+    D2ClanProgressions map[uint32]Destiny_DestinyProgression `json:"d2ClanProgressions"`
 }

@@ -6,7 +6,7 @@ type Destiny_Components_Craftables_DestinyCraftablesComponent struct {
     // Craftables.
     //
     // A map of craftable item hashes to craftable item state components.
-    Craftables any `json:"craftables"`
+    Craftables map[uint32]Destiny_Components_Craftables_DestinyCraftableComponent `json:"craftables"`
 
     // CraftingRootNodeHash.
     //

@@ -6,7 +6,7 @@ type DictionaryComponentResponseOfuint32AndDestinyItemPlugObjectivesComponent st
     // Data.
     //
     // 
-    Data any `json:"data"`
+    Data map[uint32]Destiny_Components_Items_DestinyItemPlugObjectivesComponent `json:"data"`
 
     // Disabled.
     //

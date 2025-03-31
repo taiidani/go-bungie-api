@@ -6,5 +6,5 @@ type Destiny_Components_StringVariables_DestinyStringVariablesComponent struct {
     // IntegerValuesByHash.
     //
     // 
-    IntegerValuesByHash any `json:"integerValuesByHash"`
+    IntegerValuesByHash map[uint32]int32 `json:"integerValuesByHash"`
 }

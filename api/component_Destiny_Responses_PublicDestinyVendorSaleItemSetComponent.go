@@ -6,5 +6,5 @@ type Destiny_Responses_PublicDestinyVendorSaleItemSetComponent struct {
     // SaleItems.
     //
     // 
-    SaleItems any `json:"saleItems"`
+    SaleItems map[int32]Destiny_Components_Vendors_DestinyPublicVendorSaleItemComponent `json:"saleItems"`
 }

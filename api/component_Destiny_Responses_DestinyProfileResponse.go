@@ -110,7 +110,7 @@ type Destiny_Responses_DestinyProfileResponse struct {
     // To give a concrete example, look at a Moments of Triumph bounty. They exist in a character's inventory, and show/care about a character's progression toward completing the bounty. But the bounty itself is a non-instanced item, like a mod or a currency. This returns that data for the characters who have the bounty in their inventory.
     //
     // I'm not crying, you're crying Okay we're both crying but it's going to be okay I promise Actually I shouldn't promise that, I don't know if it's going to be okay
-    CharacterUninstancedItemComponents any `json:"characterUninstancedItemComponents"`
+    CharacterUninstancedItemComponents map[int64]DestinyBaseItemComponentSetOfuint32 `json:"characterUninstancedItemComponents"`
 
     // Characters.
     //

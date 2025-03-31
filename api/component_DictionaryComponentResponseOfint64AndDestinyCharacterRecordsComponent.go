@@ -6,7 +6,7 @@ type DictionaryComponentResponseOfint64AndDestinyCharacterRecordsComponent struc
     // Data.
     //
     // 
-    Data any `json:"data"`
+    Data map[int64]Destiny_Components_Records_DestinyCharacterRecordsComponent `json:"data"`
 
     // Disabled.
     //

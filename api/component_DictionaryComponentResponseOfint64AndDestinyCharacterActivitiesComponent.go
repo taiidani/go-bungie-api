@@ -6,7 +6,7 @@ type DictionaryComponentResponseOfint64AndDestinyCharacterActivitiesComponent st
     // Data.
     //
     // 
-    Data any `json:"data"`
+    Data map[int64]Destiny_Entities_Characters_DestinyCharacterActivitiesComponent `json:"data"`
 
     // Disabled.
     //

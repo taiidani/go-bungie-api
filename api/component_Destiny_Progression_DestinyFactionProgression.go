@@ -61,7 +61,7 @@ type Destiny_Progression_DestinyFactionProgression struct {
     // RewardItemSocketOverrideStates.
     //
     // Information about items stats and states that have socket overrides, if there is any data for it.
-    RewardItemSocketOverrideStates any `json:"rewardItemSocketOverrideStates"`
+    RewardItemSocketOverrideStates map[int32]Destiny_DestinyProgressionRewardItemSocketOverrideState `json:"rewardItemSocketOverrideStates"`
 
     // RewardItemStates.
     //

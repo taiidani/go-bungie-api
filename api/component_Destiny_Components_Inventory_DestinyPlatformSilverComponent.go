@@ -6,5 +6,5 @@ type Destiny_Components_Inventory_DestinyPlatformSilverComponent struct {
     // PlatformSilver.
     //
     // If a Profile is played on multiple platforms, this is the silver they have for each platform, keyed by Membership Type.
-    PlatformSilver any `json:"platformSilver"`
+    PlatformSilver map[int32]Destiny_Entities_Items_DestinyItemComponent `json:"platformSilver"`
 }

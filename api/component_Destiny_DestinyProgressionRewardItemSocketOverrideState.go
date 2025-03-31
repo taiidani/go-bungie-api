@@ -11,5 +11,5 @@ type Destiny_DestinyProgressionRewardItemSocketOverrideState struct {
     // RewardItemStats.
     //
     // Information about the computed stats from socket and plug overrides for this progression, if there is any data for it.
-    RewardItemStats any `json:"rewardItemStats"`
+    RewardItemStats map[uint32]Destiny_DestinyStat `json:"rewardItemStats"`
 }

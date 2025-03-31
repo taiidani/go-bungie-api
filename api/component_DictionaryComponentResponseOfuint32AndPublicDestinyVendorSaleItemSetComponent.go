@@ -6,7 +6,7 @@ type DictionaryComponentResponseOfuint32AndPublicDestinyVendorSaleItemSetCompone
     // Data.
     //
     // 
-    Data any `json:"data"`
+    Data map[uint32]Destiny_Responses_PublicDestinyVendorSaleItemSetComponent `json:"data"`
 
     // Disabled.
     //

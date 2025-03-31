@@ -114,7 +114,7 @@ type Destiny_Entities_Characters_DestinyCharacterComponent struct {
     // Your character's stats, such as Agility, Resilience, etc... *not* historical stats.
     //
     // You'll have to call a different endpoint for those.
-    Stats any `json:"stats"`
+    Stats map[uint32]int32 `json:"stats"`
 
     // TitleRecordHash.
     //

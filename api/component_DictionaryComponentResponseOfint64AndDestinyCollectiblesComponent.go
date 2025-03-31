@@ -6,7 +6,7 @@ type DictionaryComponentResponseOfint64AndDestinyCollectiblesComponent struct {
     // Data.
     //
     // 
-    Data any `json:"data"`
+    Data map[int64]Destiny_Components_Collectibles_DestinyCollectiblesComponent `json:"data"`
 
     // Disabled.
     //

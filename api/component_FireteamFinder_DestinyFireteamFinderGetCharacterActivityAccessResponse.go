@@ -6,5 +6,5 @@ type FireteamFinder_DestinyFireteamFinderGetCharacterActivityAccessResponse stru
     // FireteamFinderActivityGraphStates.
     //
     // A map of fireteam finder activity graph hashes to visibility and availability states.
-    FireteamFinderActivityGraphStates any `json:"fireteamFinderActivityGraphStates"`
+    FireteamFinderActivityGraphStates map[uint32]FireteamFinder_DestinyFireteamFinderActivityGraphState `json:"fireteamFinderActivityGraphStates"`
 }

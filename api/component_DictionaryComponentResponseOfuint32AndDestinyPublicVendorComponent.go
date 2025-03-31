@@ -6,7 +6,7 @@ type DictionaryComponentResponseOfuint32AndDestinyPublicVendorComponent struct {
     // Data.
     //
     // 
-    Data any `json:"data"`
+    Data map[uint32]Destiny_Components_Vendors_DestinyPublicVendorComponent `json:"data"`
 
     // Disabled.
     //

@@ -17,7 +17,7 @@ type Destiny_DestinyActivity struct {
     // We don't have any human readable information for these, but saavy 3rd party app users could manually associate the key (a hash identifier for the "option" that is enabled/disabled) and the value (whether it's enabled or disabled presently)
     //
     // On our side, we don't necessarily even know what these are used for (the game designers know, but we don't), and we have no human readable data for them. In order to use them, you will have to do some experimentation.
-    BooleanActivityOptions any `json:"booleanActivityOptions"`
+    BooleanActivityOptions map[uint32]bool `json:"booleanActivityOptions"`
 
     // CanJoin.
     //

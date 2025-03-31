@@ -15,7 +15,7 @@ type Destiny_Milestones_DestinyPublicMilestoneChallengeActivity struct {
     // As a concrete example of this data, the hashes you get for Raids will correspond to the currently active "Challenge Mode".
     //
     // We have no human readable information for this data, so it's up to you if you want to associate it with such info to show it.
-    BooleanActivityOptions any `json:"booleanActivityOptions"`
+    BooleanActivityOptions map[uint32]bool `json:"booleanActivityOptions"`
 
     // ChallengeObjectiveHashes.
     //

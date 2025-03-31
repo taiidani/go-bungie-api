@@ -8,7 +8,7 @@ type Destiny_Components_Profiles_DestinyProfileProgressionComponent struct {
     // The set of checklists that can be examined on a profile-wide basis, keyed by the hash identifier of the Checklist (DestinyChecklistDefinition)
     //
     // For each checklist returned, its value is itself a Dictionary keyed by the checklist's hash identifier with the value being a boolean indicating if it's been discovered yet.
-    Checklists any `json:"checklists"`
+    Checklists map[uint32]map[uint32]bool `json:"checklists"`
 
     // SeasonalArtifact.
     //

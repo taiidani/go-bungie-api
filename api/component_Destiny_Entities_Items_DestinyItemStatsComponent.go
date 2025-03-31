@@ -6,5 +6,5 @@ type Destiny_Entities_Items_DestinyItemStatsComponent struct {
     // Stats.
     //
     // If the item has stats that it provides (damage, defense, etc...), it will be given here.
-    Stats any `json:"stats"`
+    Stats map[uint32]Destiny_DestinyStat `json:"stats"`
 }

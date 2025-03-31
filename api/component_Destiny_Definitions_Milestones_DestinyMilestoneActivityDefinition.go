@@ -19,5 +19,5 @@ type Destiny_Definitions_Milestones_DestinyMilestoneActivityDefinition struct {
     // It is assumed that, if this DestinyMilestoneActivityDefinition is active, then all variants should be active.
     //
     // If a Milestone could ever split the variants' active status conditionally, they should all have their own DestinyMilestoneActivityDefinition instead! The potential duplication will be worth it for the obviousness of processing and use.
-    Variants any `json:"variants"`
+    Variants map[uint32]Destiny_Definitions_Milestones_DestinyMilestoneActivityVariantDefinition `json:"variants"`
 }

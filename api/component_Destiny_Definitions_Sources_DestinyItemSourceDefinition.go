@@ -6,7 +6,7 @@ type Destiny_Definitions_Sources_DestinyItemSourceDefinition struct {
     // ComputedStats.
     //
     // The stats computed for this level/quality range.
-    ComputedStats any `json:"computedStats"`
+    ComputedStats map[uint32]Destiny_Definitions_DestinyInventoryItemStatDefinition `json:"computedStats"`
 
     // Level.
     //

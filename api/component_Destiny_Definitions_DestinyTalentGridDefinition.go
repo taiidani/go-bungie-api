@@ -22,7 +22,7 @@ type Destiny_Definitions_DestinyTalentGridDefinition struct {
     // Talent Nodes can have "Exclusive Groups". These are not to be confused with Exclusive Sets (see exclusiveSets property).
     //
     // Look at the definition of DestinyTalentExclusiveGroup for more information and how they work. These groups are keyed by the "groupHash" from DestinyTalentExclusiveGroup.
-    Groups any `json:"groups"`
+    Groups map[uint32]Destiny_Definitions_DestinyTalentExclusiveGroup `json:"groups"`
 
     // Hash.
     //

@@ -6,7 +6,7 @@ type DictionaryComponentResponseOfint32AndDestinyItemTalentGridComponent struct 
     // Data.
     //
     // 
-    Data any `json:"data"`
+    Data map[int32]Destiny_Entities_Items_DestinyItemTalentGridComponent `json:"data"`
 
     // Disabled.
     //

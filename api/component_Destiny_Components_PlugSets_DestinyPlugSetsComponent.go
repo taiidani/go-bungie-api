@@ -6,5 +6,5 @@ type Destiny_Components_PlugSets_DestinyPlugSetsComponent struct {
     // Plugs.
     //
     // The shared list of plugs for each relevant PlugSet, keyed by the hash identifier of the PlugSet (DestinyPlugSetDefinition).
-    Plugs any `json:"plugs"`
+    Plugs map[uint32][]Destiny_Sockets_DestinyItemPlug `json:"plugs"`
 }

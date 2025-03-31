@@ -16,12 +16,12 @@ type Destiny_Definitions_DestinyClassDefinition struct {
     // GenderedClassNames.
     //
     // A localized string referring to the singular form of the Class's name when referred to in gendered form. Keyed by the DestinyGender.
-    GenderedClassNames any `json:"genderedClassNames"`
+    GenderedClassNames map[int32]string `json:"genderedClassNames"`
 
     // GenderedClassNamesByGenderHash.
     //
     // 
-    GenderedClassNamesByGenderHash any `json:"genderedClassNamesByGenderHash"`
+    GenderedClassNamesByGenderHash map[uint32]string `json:"genderedClassNamesByGenderHash"`
 
     // Hash.
     //

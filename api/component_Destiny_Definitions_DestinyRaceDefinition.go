@@ -11,12 +11,12 @@ type Destiny_Definitions_DestinyRaceDefinition struct {
     // GenderedRaceNames.
     //
     // A localized string referring to the singular form of the Race's name when referred to in gendered form. Keyed by the DestinyGender.
-    GenderedRaceNames any `json:"genderedRaceNames"`
+    GenderedRaceNames map[int32]string `json:"genderedRaceNames"`
 
     // GenderedRaceNamesByGenderHash.
     //
     // 
-    GenderedRaceNamesByGenderHash any `json:"genderedRaceNamesByGenderHash"`
+    GenderedRaceNamesByGenderHash map[uint32]string `json:"genderedRaceNamesByGenderHash"`
 
     // Hash.
     //

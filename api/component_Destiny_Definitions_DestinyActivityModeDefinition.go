@@ -11,7 +11,7 @@ type Destiny_Definitions_DestinyActivityModeDefinition struct {
     // ActivityModeMappings.
     //
     // If this exists, the mode has specific Activities (referred to by the Key) that should instead map to other Activity Modes when they are played. This was useful in D1 for Private Matches, where we wanted to have Private Matches as an activity mode while still referring to the specific mode being played.
-    ActivityModeMappings any `json:"activityModeMappings"`
+    ActivityModeMappings map[uint32]int32 `json:"activityModeMappings"`
 
     // Display.
     //

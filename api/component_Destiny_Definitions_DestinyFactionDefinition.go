@@ -43,7 +43,7 @@ type Destiny_Definitions_DestinyFactionDefinition struct {
     // TokenValues.
     //
     // The faction token item hashes, and their respective progression values.
-    TokenValues any `json:"tokenValues"`
+    TokenValues map[uint32]uint32 `json:"tokenValues"`
 
     // Vendors.
     //

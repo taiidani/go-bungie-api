@@ -6,7 +6,7 @@ type DictionaryComponentResponseOfint64AndDestinyPresentationNodesComponent stru
     // Data.
     //
     // 
-    Data any `json:"data"`
+    Data map[int64]Destiny_Components_Presentation_DestinyPresentationNodesComponent `json:"data"`
 
     // Disabled.
     //

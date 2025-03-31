@@ -70,7 +70,7 @@ type Destiny_Definitions_Milestones_DestinyMilestoneDefinition struct {
     // The full set of possible Quests that give the overview of the Milestone event/activity in question. Only one of these can be active at a time for a given Conceptual Milestone, but many of them may be "available" for the user to choose from. (for instance, with Milestones you can choose from the three available Quests, but only one can be active at a time) Keyed by the quest item.
     //
     // As of Forsaken (~September 2018), Quest-style Milestones are being removed for many types of activities. There will likely be further revisions to the Milestone concept in the future.
-    Quests any `json:"quests"`
+    Quests map[uint32]Destiny_Definitions_Milestones_DestinyMilestoneQuestDefinition `json:"quests"`
 
     // Recruitable.
     //
@@ -87,7 +87,7 @@ type Destiny_Definitions_Milestones_DestinyMilestoneDefinition struct {
     // If this milestone can provide rewards, this will define the categories into which the individual reward entries are placed.
     //
     // This is keyed by the Category's hash, which is only guaranteed to be unique within a given Milestone.
-    Rewards any `json:"rewards"`
+    Rewards map[uint32]Destiny_Definitions_Milestones_DestinyMilestoneRewardCategoryDefinition `json:"rewards"`
 
     // ShowInExplorer.
     //

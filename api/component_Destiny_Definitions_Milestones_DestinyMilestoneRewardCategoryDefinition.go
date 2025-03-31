@@ -26,5 +26,5 @@ type Destiny_Definitions_Milestones_DestinyMilestoneRewardCategoryDefinition str
     // RewardEntries.
     //
     // If this milestone can provide rewards, this will define the sets of rewards that can be earned, the conditions under which they can be acquired, internal data that we'll use at runtime to determine whether you've already earned or redeemed this set of rewards, and the category that this reward should be placed under.
-    RewardEntries any `json:"rewardEntries"`
+    RewardEntries map[uint32]Destiny_Definitions_Milestones_DestinyMilestoneRewardEntryDefinition `json:"rewardEntries"`
 }

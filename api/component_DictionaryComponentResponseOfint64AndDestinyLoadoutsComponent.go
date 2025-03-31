@@ -6,7 +6,7 @@ type DictionaryComponentResponseOfint64AndDestinyLoadoutsComponent struct {
     // Data.
     //
     // 
-    Data any `json:"data"`
+    Data map[int64]Destiny_Components_Loadouts_DestinyLoadoutsComponent `json:"data"`
 
     // Disabled.
     //

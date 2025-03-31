@@ -10,7 +10,7 @@ type Destiny_Entities_Items_DestinyItemRenderComponent struct {
     // key = Art Arrangement Region Index
     //
     // value = The chosen Arrangement Index for the Region, based on the value of a stat on the item used for making the choice.
-    ArtRegions any `json:"artRegions"`
+    ArtRegions map[int32]int32 `json:"artRegions"`
 
     // UseCustomDyes.
     //

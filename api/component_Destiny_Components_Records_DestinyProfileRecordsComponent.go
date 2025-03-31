@@ -31,7 +31,7 @@ type Destiny_Components_Records_DestinyProfileRecordsComponent struct {
     // Records.
     //
     // 
-    Records any `json:"records"`
+    Records map[uint32]Destiny_Components_Records_DestinyRecordComponent `json:"records"`
 
     // Score.
     //

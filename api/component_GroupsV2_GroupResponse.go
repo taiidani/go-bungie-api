@@ -16,7 +16,7 @@ type GroupsV2_GroupResponse struct {
     // CurrentUserMemberMap.
     //
     // This property will be populated if the authenticated user is a member of the group. Note that because of account linking, a user can sometimes be part of a clan more than once. As such, this returns the highest member type available.
-    CurrentUserMemberMap any `json:"currentUserMemberMap"`
+    CurrentUserMemberMap map[int32]GroupsV2_GroupMember `json:"currentUserMemberMap"`
 
     // CurrentUserMembershipsInactiveForDestiny.
     //
@@ -26,7 +26,7 @@ type GroupsV2_GroupResponse struct {
     // CurrentUserPotentialMemberMap.
     //
     // This property will be populated if the authenticated user is an applicant or has an outstanding invitation to join. Note that because of account linking, a user can sometimes be part of a clan more than once.
-    CurrentUserPotentialMemberMap any `json:"currentUserPotentialMemberMap"`
+    CurrentUserPotentialMemberMap map[int32]GroupsV2_GroupPotentialMember `json:"currentUserPotentialMemberMap"`
 
     // Detail.
     //

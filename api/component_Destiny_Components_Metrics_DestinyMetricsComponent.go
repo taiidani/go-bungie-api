@@ -6,7 +6,7 @@ type Destiny_Components_Metrics_DestinyMetricsComponent struct {
     // Metrics.
     //
     // 
-    Metrics any `json:"metrics"`
+    Metrics map[uint32]Destiny_Components_Metrics_DestinyMetricComponent `json:"metrics"`
 
     // MetricsRootNodeHash.
     //

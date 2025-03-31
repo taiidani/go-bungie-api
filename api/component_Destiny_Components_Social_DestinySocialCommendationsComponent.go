@@ -6,17 +6,17 @@ type Destiny_Components_Social_DestinySocialCommendationsComponent struct {
     // CommendationNodePercentagesByHash.
     //
     // The percentage for each commendation type out of total received
-    CommendationNodePercentagesByHash any `json:"commendationNodePercentagesByHash"`
+    CommendationNodePercentagesByHash map[uint32]uint32 `json:"commendationNodePercentagesByHash"`
 
     // CommendationNodeScoresByHash.
     //
     // 
-    CommendationNodeScoresByHash any `json:"commendationNodeScoresByHash"`
+    CommendationNodeScoresByHash map[uint32]int32 `json:"commendationNodeScoresByHash"`
 
     // CommendationScoresByHash.
     //
     // 
-    CommendationScoresByHash any `json:"commendationScoresByHash"`
+    CommendationScoresByHash map[uint32]int32 `json:"commendationScoresByHash"`
 
     // ScoreDetailValues.
     //

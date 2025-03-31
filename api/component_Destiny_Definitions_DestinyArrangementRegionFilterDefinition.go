@@ -6,7 +6,7 @@ type Destiny_Definitions_DestinyArrangementRegionFilterDefinition struct {
     // ArrangementIndexByStatValue.
     //
     // 
-    ArrangementIndexByStatValue any `json:"arrangementIndexByStatValue"`
+    ArrangementIndexByStatValue map[int32]int32 `json:"arrangementIndexByStatValue"`
 
     // ArtArrangementRegionHash.
     //

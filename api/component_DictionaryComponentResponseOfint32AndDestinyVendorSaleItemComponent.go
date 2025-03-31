@@ -6,7 +6,7 @@ type DictionaryComponentResponseOfint32AndDestinyVendorSaleItemComponent struct 
     // Data.
     //
     // 
-    Data any `json:"data"`
+    Data map[int32]Destiny_Entities_Vendors_DestinyVendorSaleItemComponent `json:"data"`
 
     // Disabled.
     //

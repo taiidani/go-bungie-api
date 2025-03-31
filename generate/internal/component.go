@@ -6,6 +6,7 @@ import (
 	"log/slog"
 	"os"
 	"path/filepath"
+	"reflect"
 	"sort"
 	"strings"
 	"text/template"
@@ -174,15 +175,12 @@ func resolveTypeFormat(prop *openapi3.SchemaRef) string {
 		} else if prop.Value.Type.Is("array") {
 			ret = "[]" + resolveTypeFormat(prop.Value.Items)
 		} else if prop.Ref != "" {
-			// #/components/schemas/Destiny.Config.ImagePyramidEntry
-			ref := strings.TrimPrefix(prop.Ref, "#/components/schemas/")
-			ret = strings.ReplaceAll(ref, ".", "_")
+			ret = convertSchemaRef(prop.Ref)
 		} else if prop.Value.Type.Is("object") {
-			// TODO
-			ret = "any"
+			ret = resolveObject(prop)
 		} else {
 			slog.Error(fmt.Sprintf("'%q' property type and %q format not supported", prop.Value.Type, prop.Value.Format))
-			ret = ""
+			ret = "any"
 		}
 	}
 
@@ -191,4 +189,45 @@ func resolveTypeFormat(prop *openapi3.SchemaRef) string {
 	}
 
 	return ret
+}
+
+func resolveObject(prop *openapi3.SchemaRef) string {
+	xDictKey, ok := prop.Value.Extensions["x-dictionary-key"]
+	if !ok {
+		// TODO
+		return "any"
+	}
+
+	dictKey, ok := xDictKey.(map[string]any)
+	if !ok {
+		// TODO
+		fmt.Println(reflect.TypeOf(xDictKey).String())
+		slog.Error(fmt.Sprintf("'%q' property type and %q format not supported as map", prop.Value.Type, prop.Value.Format))
+		return "any"
+	}
+
+	format, ok := dictKey["format"]
+	if !ok {
+		// TODO
+		return "any"
+	}
+
+	value := "any"
+	additionalRef := prop.Value.AdditionalProperties.Schema.Ref
+	if additionalRef != "" {
+		value = convertSchemaRef(additionalRef)
+		if value == "" {
+			slog.Error(fmt.Sprintf("invalid value ref %q for ref %q", prop.Value.AdditionalProperties.Schema.Ref, prop.Ref))
+		}
+	} else {
+		value = resolveTypeFormat(prop.Value.AdditionalProperties.Schema)
+	}
+
+	return fmt.Sprintf("map[%s]%s", format.(string), value)
+}
+
+func convertSchemaRef(ref string) string {
+	// #/components/schemas/Destiny.Config.ImagePyramidEntry
+	ref = strings.TrimPrefix(ref, "#/components/schemas/")
+	return strings.ReplaceAll(ref, ".", "_")
 }

@@ -23,7 +23,7 @@ type Destiny_Definitions_Reporting_DestinyReportReasonCategoryDefinition struct 
     // Reasons.
     //
     // The specific reasons for the report under this category.
-    Reasons any `json:"reasons"`
+    Reasons map[uint32]Destiny_Definitions_Reporting_DestinyReportReasonDefinition `json:"reasons"`
 
     // Redacted.
     //

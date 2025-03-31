@@ -14,5 +14,5 @@ type Destiny_Components_Items_DestinyItemReusablePlugsComponent struct {
     //  KEY = The INDEX into the item's list of sockets. VALUE = The set of plugs for that socket.
     //
     //  If a socket doesn't have any reusable plugs defined at the item scope, there will be no entry for that socket.
-    Plugs any `json:"plugs"`
+    Plugs map[int32][]Destiny_Sockets_DestinyItemPlugBase `json:"plugs"`
 }

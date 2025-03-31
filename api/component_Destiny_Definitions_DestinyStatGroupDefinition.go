@@ -27,7 +27,7 @@ type Destiny_Definitions_DestinyStatGroupDefinition struct {
     // The game has the ability to override, based on the stat group, what the localized text is that is displayed for Stats being shown on the item.
     //
     // Mercifully, no Stat Groups use this feature currently. If they start using them, we'll all need to start using them (and those of you who are more prudent than I am can go ahead and start pre-checking for this.)
-    Overrides any `json:"overrides"`
+    Overrides map[uint32]Destiny_Definitions_DestinyStatOverrideDefinition `json:"overrides"`
 
     // Redacted.
     //
