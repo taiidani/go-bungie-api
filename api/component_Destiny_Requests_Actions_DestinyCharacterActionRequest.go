@@ -3,13 +3,13 @@
 package api
 
 type Destiny_Requests_Actions_DestinyCharacterActionRequest struct {
-    // MembershipType.
-    //
-    // 
-    MembershipType int32 `json:"membershipType"`
-
     // CharacterId.
     //
     // 
     CharacterId int64 `json:"characterId"`
+
+    // MembershipType.
+    //
+    // 
+    MembershipType int32 `json:"membershipType"`
 }

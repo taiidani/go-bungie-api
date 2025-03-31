@@ -3,10 +3,20 @@
 package api
 
 type Destiny_Constants_DestinyEnvironmentLocationMapping struct {
+    // ActivationSource.
+    //
+    // A hint that the UI uses to figure out how this location is activated by the player.
+    ActivationSource string `json:"activationSource"`
+
+    // ActivityHash.
+    //
+    // If this is populated, this is the activity you have to be playing in order to see this location appear because of this mapping. (theoretically, a location can have multiple mappings, and some might require you to be in a specific activity when others don't)
+    ActivityHash *uint32 `json:"activityHash"`
+
     // ItemHash.
     //
     // If this is populated, it is the item that you must possess for this location to be active because of this mapping. (theoretically, a location can have multiple mappings, and some might require an item while others don't)
-    ItemHash uint32 `json:"itemHash"`
+    ItemHash *uint32 `json:"itemHash"`
 
     // LocationHash.
     //
@@ -16,15 +26,5 @@ type Destiny_Constants_DestinyEnvironmentLocationMapping struct {
     // ObjectiveHash.
     //
     // If this is populated, this is an objective related to the location.
-    ObjectiveHash uint32 `json:"objectiveHash"`
-
-    // ActivationSource.
-    //
-    // A hint that the UI uses to figure out how this location is activated by the player.
-    ActivationSource string `json:"activationSource"`
-
-    // ActivityHash.
-    //
-    // If this is populated, this is the activity you have to be playing in order to see this location appear because of this mapping. (theoretically, a location can have multiple mappings, and some might require you to be in a specific activity when others don't)
-    ActivityHash uint32 `json:"activityHash"`
+    ObjectiveHash *uint32 `json:"objectiveHash"`
 }

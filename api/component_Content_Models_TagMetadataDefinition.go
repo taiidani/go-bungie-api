@@ -3,21 +3,6 @@
 package api
 
 type Content_Models_TagMetadataDefinition struct {
-    // Items.
-    //
-    // 
-    Items []Content_Models_TagMetadataItem `json:"items"`
-
-    // Name.
-    //
-    // 
-    Name string `json:"name"`
-
-    // Order.
-    //
-    // 
-    Order int32 `json:"order"`
-
     // Datatype.
     //
     // 
@@ -32,4 +17,19 @@ type Content_Models_TagMetadataDefinition struct {
     //
     // 
     IsRequired bool `json:"isRequired"`
+
+    // Items.
+    //
+    // 
+    Items []Content_Models_TagMetadataItem `json:"items"`
+
+    // Name.
+    //
+    // 
+    Name string `json:"name"`
+
+    // Order.
+    //
+    // 
+    Order int32 `json:"order"`
 }

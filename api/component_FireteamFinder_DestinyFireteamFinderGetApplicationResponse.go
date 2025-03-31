@@ -3,10 +3,30 @@
 package api
 
 type FireteamFinder_DestinyFireteamFinderGetApplicationResponse struct {
+    // ApplicantSet.
+    //
+    // 
+    ApplicantSet FireteamFinder_DestinyFireteamFinderApplicantSet `json:"applicantSet"`
+
+    // ApplicationId.
+    //
+    // 
+    ApplicationId int64 `json:"applicationId"`
+
     // ApplicationType.
     //
     // 
     ApplicationType int32 `json:"applicationType"`
+
+    // CreatedDateTime.
+    //
+    // 
+    CreatedDateTime string `json:"createdDateTime"`
+
+    // ListingId.
+    //
+    // 
+    ListingId int64 `json:"listingId"`
 
     // ReferralToken.
     //
@@ -18,33 +38,13 @@ type FireteamFinder_DestinyFireteamFinderGetApplicationResponse struct {
     // 
     Revision int32 `json:"revision"`
 
-    // CreatedDateTime.
-    //
-    // 
-    CreatedDateTime string `json:"createdDateTime"`
-
-    // ApplicationId.
-    //
-    // 
-    ApplicationId int64 `json:"applicationId"`
-
-    // ListingId.
-    //
-    // 
-    ListingId int64 `json:"listingId"`
-
-    // SubmitterId.
-    //
-    // 
-    SubmitterId FireteamFinder_DestinyFireteamFinderPlayerId `json:"submitterId"`
-
     // State.
     //
     // 
     State int32 `json:"state"`
 
-    // ApplicantSet.
+    // SubmitterId.
     //
     // 
-    ApplicantSet FireteamFinder_DestinyFireteamFinderApplicantSet `json:"applicantSet"`
+    SubmitterId FireteamFinder_DestinyFireteamFinderPlayerId `json:"submitterId"`
 }

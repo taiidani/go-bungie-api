@@ -3,6 +3,23 @@
 package api
 
 type Destiny_Definitions_Presentation_DestinyPresentationNodeBaseDefinition struct {
+    // Hash.
+    //
+    // The unique identifier for this entity. Guaranteed to be unique for the type of entity, but not globally.
+    //
+    // When entities refer to each other in Destiny content, it is this hash that they are referring to.
+    Hash uint32 `json:"hash"`
+
+    // Index.
+    //
+    // The index of the entity as it was found in the investment tables.
+    Index int32 `json:"index"`
+
+    // ParentNodeHashes.
+    //
+    // A quick reference to presentation nodes that have this node as a child. Presentation nodes can be parented under multiple parents.
+    ParentNodeHashes []uint32 `json:"parentNodeHashes"`
+
     // PresentationNodeType.
     //
     // 
@@ -22,21 +39,4 @@ type Destiny_Definitions_Presentation_DestinyPresentationNodeBaseDefinition stru
     //
     // 
     TraitIds []string `json:"traitIds"`
-
-    // Hash.
-    //
-    // The unique identifier for this entity. Guaranteed to be unique for the type of entity, but not globally.
-    //
-    // When entities refer to each other in Destiny content, it is this hash that they are referring to.
-    Hash uint32 `json:"hash"`
-
-    // Index.
-    //
-    // The index of the entity as it was found in the investment tables.
-    Index int32 `json:"index"`
-
-    // ParentNodeHashes.
-    //
-    // A quick reference to presentation nodes that have this node as a child. Presentation nodes can be parented under multiple parents.
-    ParentNodeHashes []uint32 `json:"parentNodeHashes"`
 }

@@ -3,6 +3,21 @@
 package api
 
 type Destiny_Definitions_FireteamFinder_DestinyFireteamFinderOptionDefinition struct {
+    // Availability.
+    //
+    // 
+    Availability int32 `json:"availability"`
+
+    // CodeOptionType.
+    //
+    // 
+    CodeOptionType int32 `json:"codeOptionType"`
+
+    // CreatorSettings.
+    //
+    // 
+    CreatorSettings Destiny_Definitions_FireteamFinder_DestinyFireteamFinderOptionCreatorSettings `json:"creatorSettings"`
+
     // DescendingSortPriority.
     //
     // 
@@ -13,20 +28,27 @@ type Destiny_Definitions_FireteamFinder_DestinyFireteamFinderOptionDefinition st
     // Many Destiny*Definition contracts - the "first order" entities of Destiny that have their own tables in the Manifest Database - also have displayable information. This is the base class for that display information.
     DisplayProperties Destiny_Definitions_Common_DestinyDisplayPropertiesDefinition `json:"displayProperties"`
 
+    // GroupHash.
+    //
+    // 
+    GroupHash uint32 `json:"groupHash"`
+
+    // Hash.
+    //
+    // The unique identifier for this entity. Guaranteed to be unique for the type of entity, but not globally.
+    //
+    // When entities refer to each other in Destiny content, it is this hash that they are referring to.
+    Hash uint32 `json:"hash"`
+
     // Index.
     //
     // The index of the entity as it was found in the investment tables.
     Index int32 `json:"index"`
 
-    // Visibility.
+    // Redacted.
     //
-    // 
-    Visibility int32 `json:"visibility"`
-
-    // Availability.
-    //
-    // 
-    Availability int32 `json:"availability"`
+    // If this is true, then there is an entity with this identifier/type combination, but BNet is not yet allowed to show it. Sorry!
+    Redacted bool `json:"redacted"`
 
     // SearcherSettings.
     //
@@ -43,30 +65,8 @@ type Destiny_Definitions_FireteamFinder_DestinyFireteamFinderOptionDefinition st
     // 
     Values Destiny_Definitions_FireteamFinder_DestinyFireteamFinderOptionValues `json:"values"`
 
-    // GroupHash.
+    // Visibility.
     //
     // 
-    GroupHash uint32 `json:"groupHash"`
-
-    // Hash.
-    //
-    // The unique identifier for this entity. Guaranteed to be unique for the type of entity, but not globally.
-    //
-    // When entities refer to each other in Destiny content, it is this hash that they are referring to.
-    Hash uint32 `json:"hash"`
-
-    // Redacted.
-    //
-    // If this is true, then there is an entity with this identifier/type combination, but BNet is not yet allowed to show it. Sorry!
-    Redacted bool `json:"redacted"`
-
-    // CodeOptionType.
-    //
-    // 
-    CodeOptionType int32 `json:"codeOptionType"`
-
-    // CreatorSettings.
-    //
-    // 
-    CreatorSettings Destiny_Definitions_FireteamFinder_DestinyFireteamFinderOptionCreatorSettings `json:"creatorSettings"`
+    Visibility int32 `json:"visibility"`
 }

@@ -3,15 +3,6 @@
 package api
 
 type Destiny_Activities_DestinyPublicActivityStatus struct {
-    // RewardTooltipItems.
-    //
-    // If the activity itself provides any specific "mock" rewards, this will be the items and their quantity.
-    //
-    // Why "mock", you ask? Because these are the rewards as they are represented in the tooltip of the Activity.
-    //
-    // These are often pointers to fake items that look good in a tooltip, but represent an abstract concept of what you will get for a reward rather than the specific items you may obtain.
-    RewardTooltipItems []Destiny_DestinyItemQuantity `json:"rewardTooltipItems"`
-
     // ChallengeObjectiveHashes.
     //
     // Active Challenges for the activity, if any - represented as hashes for DestinyObjectiveDefinitions.
@@ -21,4 +12,13 @@ type Destiny_Activities_DestinyPublicActivityStatus struct {
     //
     // The active modifiers on this activity, if any - represented as hashes for DestinyActivityModifierDefinitions.
     ModifierHashes []uint32 `json:"modifierHashes"`
+
+    // RewardTooltipItems.
+    //
+    // If the activity itself provides any specific "mock" rewards, this will be the items and their quantity.
+    //
+    // Why "mock", you ask? Because these are the rewards as they are represented in the tooltip of the Activity.
+    //
+    // These are often pointers to fake items that look good in a tooltip, but represent an abstract concept of what you will get for a reward rather than the specific items you may obtain.
+    RewardTooltipItems []Destiny_DestinyItemQuantity `json:"rewardTooltipItems"`
 }

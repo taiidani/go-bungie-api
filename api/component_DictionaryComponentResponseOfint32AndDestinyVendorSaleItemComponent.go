@@ -3,11 +3,6 @@
 package api
 
 type DictionaryComponentResponseOfint32AndDestinyVendorSaleItemComponent struct {
-    // Privacy.
-    //
-    // 
-    Privacy int32 `json:"privacy"`
-
     // Data.
     //
     // 
@@ -16,5 +11,10 @@ type DictionaryComponentResponseOfint32AndDestinyVendorSaleItemComponent struct 
     // Disabled.
     //
     // If true, this component is disabled.
-    Disabled bool `json:"disabled"`
+    Disabled *bool `json:"disabled"`
+
+    // Privacy.
+    //
+    // 
+    Privacy int32 `json:"privacy"`
 }

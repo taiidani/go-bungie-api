@@ -3,23 +3,23 @@
 package api
 
 type Tokens_TwitchDropHistoryResponse struct {
-    // Title.
-    //
-    // 
-    Title string `json:"Title"`
-
     // ClaimState.
     //
     // 
-    ClaimState byte `json:"ClaimState"`
+    ClaimState *byte `json:"ClaimState"`
 
     // CreatedAt.
     //
     // 
-    CreatedAt string `json:"CreatedAt"`
+    CreatedAt *string `json:"CreatedAt"`
 
     // Description.
     //
     // 
     Description string `json:"Description"`
+
+    // Title.
+    //
+    // 
+    Title string `json:"Title"`
 }

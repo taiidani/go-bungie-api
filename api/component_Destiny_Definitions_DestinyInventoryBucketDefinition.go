@@ -8,15 +8,30 @@ type Destiny_Definitions_DestinyInventoryBucketDefinition struct {
     // Use this property to provide a quick-and-dirty recommended ordering for buckets in the UI. Most UIs will likely want to forsake this for something more custom and manual.
     BucketOrder int32 `json:"bucketOrder"`
 
-    // Scope.
-    //
-    // Where the bucket is found. 0 = Character, 1 = Account
-    Scope int32 `json:"scope"`
-
     // Category.
     //
     // An enum value for what items can be found in the bucket. See the BucketCategory enum for more details.
     Category int32 `json:"category"`
+
+    // DisplayProperties.
+    //
+    // Many Destiny*Definition contracts - the "first order" entities of Destiny that have their own tables in the Manifest Database - also have displayable information. This is the base class for that display information.
+    DisplayProperties Destiny_Definitions_Common_DestinyDisplayPropertiesDefinition `json:"displayProperties"`
+
+    // Enabled.
+    //
+    // If True, this bucket is enabled. Disabled buckets may include buckets that were included for test purposes, or that were going to be used but then were abandoned but never removed from content *cough*.
+    Enabled bool `json:"enabled"`
+
+    // Fifo.
+    //
+    // if a FIFO bucket fills up, it will delete the oldest item from said bucket when a new item tries to be added to it. If this is FALSE, the bucket will not allow new items to be placed in it until room is made by the user manually deleting items from it. You can see an example of this with the Postmaster's bucket.
+    Fifo bool `json:"fifo"`
+
+    // HasTransferDestination.
+    //
+    // If TRUE, there is at least one Vendor that can transfer items to/from this bucket. See the DestinyVendorDefinition's acceptedItems property for more information on how transferring works.
+    HasTransferDestination bool `json:"hasTransferDestination"`
 
     // Hash.
     //
@@ -24,6 +39,11 @@ type Destiny_Definitions_DestinyInventoryBucketDefinition struct {
     //
     // When entities refer to each other in Destiny content, it is this hash that they are referring to.
     Hash uint32 `json:"hash"`
+
+    // Index.
+    //
+    // The index of the entity as it was found in the investment tables.
+    Index int32 `json:"index"`
 
     // ItemCount.
     //
@@ -41,33 +61,13 @@ type Destiny_Definitions_DestinyInventoryBucketDefinition struct {
     // Note that location includes the Vault and the Postmaster (both of whom being just inventory buckets with additional actions that can be performed on them through a Vendor)
     Location int32 `json:"location"`
 
-    // Enabled.
-    //
-    // If True, this bucket is enabled. Disabled buckets may include buckets that were included for test purposes, or that were going to be used but then were abandoned but never removed from content *cough*.
-    Enabled bool `json:"enabled"`
-
-    // Index.
-    //
-    // The index of the entity as it was found in the investment tables.
-    Index int32 `json:"index"`
-
-    // DisplayProperties.
-    //
-    // Many Destiny*Definition contracts - the "first order" entities of Destiny that have their own tables in the Manifest Database - also have displayable information. This is the base class for that display information.
-    DisplayProperties Destiny_Definitions_Common_DestinyDisplayPropertiesDefinition `json:"displayProperties"`
-
-    // Fifo.
-    //
-    // if a FIFO bucket fills up, it will delete the oldest item from said bucket when a new item tries to be added to it. If this is FALSE, the bucket will not allow new items to be placed in it until room is made by the user manually deleting items from it. You can see an example of this with the Postmaster's bucket.
-    Fifo bool `json:"fifo"`
-
-    // HasTransferDestination.
-    //
-    // If TRUE, there is at least one Vendor that can transfer items to/from this bucket. See the DestinyVendorDefinition's acceptedItems property for more information on how transferring works.
-    HasTransferDestination bool `json:"hasTransferDestination"`
-
     // Redacted.
     //
     // If this is true, then there is an entity with this identifier/type combination, but BNet is not yet allowed to show it. Sorry!
     Redacted bool `json:"redacted"`
+
+    // Scope.
+    //
+    // Where the bucket is found. 0 = Character, 1 = Account
+    Scope int32 `json:"scope"`
 }

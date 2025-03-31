@@ -3,11 +3,6 @@
 package api
 
 type SingleComponentResponseOfDestinyCharacterRenderComponent struct {
-    // Privacy.
-    //
-    // 
-    Privacy int32 `json:"privacy"`
-
     // Data.
     //
     // Only really useful if you're attempting to render the character's current appearance in 3D, this returns a bare minimum of information, pre-aggregated, that you'll need to perform that rendering. Note that you need to combine this with other 3D assets and data from our servers.
@@ -18,5 +13,10 @@ type SingleComponentResponseOfDestinyCharacterRenderComponent struct {
     // Disabled.
     //
     // If true, this component is disabled.
-    Disabled bool `json:"disabled"`
+    Disabled *bool `json:"disabled"`
+
+    // Privacy.
+    //
+    // 
+    Privacy int32 `json:"privacy"`
 }

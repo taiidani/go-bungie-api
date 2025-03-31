@@ -3,15 +3,10 @@
 package api
 
 type Destiny_Definitions_DestinyItemCraftingBlockDefinition struct {
-    // RequiredSocketTypeHashes.
-    //
-    // A list of socket type hashes that describes which sockets are required for crafting with this recipe.
-    RequiredSocketTypeHashes []uint32 `json:"requiredSocketTypeHashes"`
-
     // BaseMaterialRequirements.
     //
     // A reference to the base material requirements for crafting with this recipe.
-    BaseMaterialRequirements uint32 `json:"baseMaterialRequirements"`
+    BaseMaterialRequirements *uint32 `json:"baseMaterialRequirements"`
 
     // BonusPlugs.
     //
@@ -27,4 +22,9 @@ type Destiny_Definitions_DestinyItemCraftingBlockDefinition struct {
     //
     // A reference to the item definition that is created when crafting with this 'recipe' item.
     OutputItemHash uint32 `json:"outputItemHash"`
+
+    // RequiredSocketTypeHashes.
+    //
+    // A list of socket type hashes that describes which sockets are required for crafting with this recipe.
+    RequiredSocketTypeHashes []uint32 `json:"requiredSocketTypeHashes"`
 }

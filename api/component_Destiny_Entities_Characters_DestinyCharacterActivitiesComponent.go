@@ -3,31 +3,6 @@
 package api
 
 type Destiny_Entities_Characters_DestinyCharacterActivitiesComponent struct {
-    // CurrentActivityModeHashes.
-    //
-    // If the user is in an activity, this will be the hashes of the DestinyActivityModeDefinition being played. Combine with currentActivityHash to give a person a full picture of what they're doing right now.
-    CurrentActivityModeHashes []uint32 `json:"currentActivityModeHashes"`
-
-    // CurrentPlaylistActivityHash.
-    //
-    // If the user is in a playlist, this is the hash identifier for the playlist that they chose.
-    CurrentPlaylistActivityHash uint32 `json:"currentPlaylistActivityHash"`
-
-    // DateActivityStarted.
-    //
-    // The last date that the user started playing an activity.
-    DateActivityStarted string `json:"dateActivityStarted"`
-
-    // LastCompletedStoryHash.
-    //
-    // This will have the activity hash of the last completed story/campaign mission, in case you care about that.
-    LastCompletedStoryHash uint32 `json:"lastCompletedStoryHash"`
-
-    // CurrentActivityHash.
-    //
-    // If the user is in an activity, this will be the hash of the Activity being played. Note that you must combine this info with currentActivityModeHash to get a real picture of what the user is doing right now. For instance, PVP "Activities" are just maps: it's the ActivityMode that determines what type of PVP game they're playing.
-    CurrentActivityHash uint32 `json:"currentActivityHash"`
-
     // AvailableActivities.
     //
     // The list of activities that the user can play.
@@ -38,18 +13,43 @@ type Destiny_Entities_Characters_DestinyCharacterActivitiesComponent struct {
     // The list of activity interactables that the player can interact with.
     AvailableActivityInteractables []Destiny_Definitions_FireteamFinder_DestinyActivityInteractableReference `json:"availableActivityInteractables"`
 
+    // CurrentActivityHash.
+    //
+    // If the user is in an activity, this will be the hash of the Activity being played. Note that you must combine this info with currentActivityModeHash to get a real picture of what the user is doing right now. For instance, PVP "Activities" are just maps: it's the ActivityMode that determines what type of PVP game they're playing.
+    CurrentActivityHash uint32 `json:"currentActivityHash"`
+
+    // CurrentActivityModeHash.
+    //
+    // If the user is in an activity, this will be the hash of the activity mode being played. Combine with currentActivityHash to give a person a full picture of what they're doing right now.
+    CurrentActivityModeHash uint32 `json:"currentActivityModeHash"`
+
+    // CurrentActivityModeHashes.
+    //
+    // If the user is in an activity, this will be the hashes of the DestinyActivityModeDefinition being played. Combine with currentActivityHash to give a person a full picture of what they're doing right now.
+    CurrentActivityModeHashes []uint32 `json:"currentActivityModeHashes"`
+
     // CurrentActivityModeType.
     //
     // And the current activity's most specific mode type, if it can be found.
-    CurrentActivityModeType int32 `json:"currentActivityModeType"`
+    CurrentActivityModeType *int32 `json:"currentActivityModeType"`
 
     // CurrentActivityModeTypes.
     //
     // All Activity Modes that apply to the current activity being played, in enum form.
     CurrentActivityModeTypes []int32 `json:"currentActivityModeTypes"`
 
-    // CurrentActivityModeHash.
+    // CurrentPlaylistActivityHash.
     //
-    // If the user is in an activity, this will be the hash of the activity mode being played. Combine with currentActivityHash to give a person a full picture of what they're doing right now.
-    CurrentActivityModeHash uint32 `json:"currentActivityModeHash"`
+    // If the user is in a playlist, this is the hash identifier for the playlist that they chose.
+    CurrentPlaylistActivityHash *uint32 `json:"currentPlaylistActivityHash"`
+
+    // DateActivityStarted.
+    //
+    // The last date that the user started playing an activity.
+    DateActivityStarted string `json:"dateActivityStarted"`
+
+    // LastCompletedStoryHash.
+    //
+    // This will have the activity hash of the last completed story/campaign mission, in case you care about that.
+    LastCompletedStoryHash uint32 `json:"lastCompletedStoryHash"`
 }

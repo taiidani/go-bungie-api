@@ -3,6 +3,11 @@
 package api
 
 type FireteamFinder_DestinyFireteamFinderHostLobbyRequest struct {
+    // ActivityGraphHash.
+    //
+    // 
+    ActivityGraphHash uint32 `json:"activityGraphHash"`
+
     // ActivityHash.
     //
     // 
@@ -37,9 +42,4 @@ type FireteamFinder_DestinyFireteamFinderHostLobbyRequest struct {
     //
     // 
     ScheduledDateTime string `json:"scheduledDateTime"`
-
-    // ActivityGraphHash.
-    //
-    // 
-    ActivityGraphHash uint32 `json:"activityGraphHash"`
 }

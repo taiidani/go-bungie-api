@@ -3,16 +3,6 @@
 package api
 
 type FireteamFinder_DestinyFireteamFinderRespondToAuthenticationResponse struct {
-    // Listing.
-    //
-    // 
-    Listing FireteamFinder_DestinyFireteamFinderListing `json:"listing"`
-
-    // Offer.
-    //
-    // 
-    Offer FireteamFinder_DestinyFireteamFinderOffer `json:"offer"`
-
     // ApplicationId.
     //
     // 
@@ -22,4 +12,14 @@ type FireteamFinder_DestinyFireteamFinderRespondToAuthenticationResponse struct 
     //
     // 
     ApplicationRevision int32 `json:"applicationRevision"`
+
+    // Listing.
+    //
+    // 
+    Listing FireteamFinder_DestinyFireteamFinderListing `json:"listing"`
+
+    // Offer.
+    //
+    // 
+    Offer FireteamFinder_DestinyFireteamFinderOffer `json:"offer"`
 }

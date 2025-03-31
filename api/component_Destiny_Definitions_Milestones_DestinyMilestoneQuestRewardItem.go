@@ -3,21 +3,6 @@
 package api
 
 type Destiny_Definitions_Milestones_DestinyMilestoneQuestRewardItem struct {
-    // Quantity.
-    //
-    // The amount of the item needed/available depending on the context of where DestinyItemQuantity is being used.
-    Quantity int32 `json:"quantity"`
-
-    // VendorHash.
-    //
-    // The quest reward item *may* be associated with a vendor. If so, this is that vendor. Use this hash to look up the DestinyVendorDefinition.
-    VendorHash uint32 `json:"vendorHash"`
-
-    // VendorItemIndex.
-    //
-    // The quest reward item *may* be associated with a vendor. If so, this is the index of the item being sold, which we can use at runtime to find instanced item information for the reward item.
-    VendorItemIndex int32 `json:"vendorItemIndex"`
-
     // HasConditionalVisibility.
     //
     // Indicates that this item quantity may be conditionally shown or hidden, based on various sources of state. For example: server flags, account state, or character progress.
@@ -31,5 +16,20 @@ type Destiny_Definitions_Milestones_DestinyMilestoneQuestRewardItem struct {
     // ItemInstanceId.
     //
     // If this quantity is referring to a specific instance of an item, this will have the item's instance ID. Normally, this will be null.
-    ItemInstanceId int64 `json:"itemInstanceId"`
+    ItemInstanceId *int64 `json:"itemInstanceId"`
+
+    // Quantity.
+    //
+    // The amount of the item needed/available depending on the context of where DestinyItemQuantity is being used.
+    Quantity int32 `json:"quantity"`
+
+    // VendorHash.
+    //
+    // The quest reward item *may* be associated with a vendor. If so, this is that vendor. Use this hash to look up the DestinyVendorDefinition.
+    VendorHash *uint32 `json:"vendorHash"`
+
+    // VendorItemIndex.
+    //
+    // The quest reward item *may* be associated with a vendor. If so, this is the index of the item being sold, which we can use at runtime to find instanced item information for the reward item.
+    VendorItemIndex *int32 `json:"vendorItemIndex"`
 }

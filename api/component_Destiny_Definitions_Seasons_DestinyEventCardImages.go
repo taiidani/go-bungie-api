@@ -3,6 +3,11 @@
 package api
 
 type Destiny_Definitions_Seasons_DestinyEventCardImages struct {
+    // CardCompleteImagePath.
+    //
+    // 
+    CardCompleteImagePath string `json:"cardCompleteImagePath"`
+
     // CardCompleteWrapImagePath.
     //
     // 
@@ -32,9 +37,4 @@ type Destiny_Definitions_Seasons_DestinyEventCardImages struct {
     //
     // 
     UnownedCardSleeveWrapImagePath string `json:"unownedCardSleeveWrapImagePath"`
-
-    // CardCompleteImagePath.
-    //
-    // 
-    CardCompleteImagePath string `json:"cardCompleteImagePath"`
 }

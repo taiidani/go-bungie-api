@@ -3,6 +3,18 @@
 package api
 
 type Destiny_Responses_DestinyItemResponse struct {
+    // CharacterId.
+    //
+    // If the item is on a character, this will return the ID of the character that is holding the item.
+    CharacterId *int64 `json:"characterId"`
+
+    // Instance.
+    //
+    // Basic instance data for the item.
+    //
+    // COMPONENT TYPE: ItemInstances
+    Instance any `json:"instance"`
+
     // Item.
     //
     // Common data for the item relevant to its non-instanced properties.
@@ -10,12 +22,33 @@ type Destiny_Responses_DestinyItemResponse struct {
     // COMPONENT TYPE: ItemCommonData
     Item any `json:"item"`
 
+    // Objectives.
+    //
+    // Information specifically about the item's objectives.
+    //
+    // COMPONENT TYPE: ItemObjectives
+    Objectives any `json:"objectives"`
+
+    // Perks.
+    //
+    // Information specifically about the perks currently active on the item.
+    //
+    // COMPONENT TYPE: ItemPerks
+    Perks any `json:"perks"`
+
     // PlugObjectives.
     //
     // Information about objectives on Plugs for a given item. See the component's documentation for more info.
     //
     // COMPONENT TYPE: ItemPlugObjectives
     PlugObjectives any `json:"plugObjectives"`
+
+    // RenderData.
+    //
+    // Information about how to render the item in 3D.
+    //
+    // COMPONENT TYPE: ItemRenderData
+    RenderData any `json:"renderData"`
 
     // ReusablePlugs.
     //
@@ -46,37 +79,4 @@ type Destiny_Responses_DestinyItemResponse struct {
     //
     // COMPONENT TYPE: ItemTalentGrids
     TalentGrid any `json:"talentGrid"`
-
-    // Instance.
-    //
-    // Basic instance data for the item.
-    //
-    // COMPONENT TYPE: ItemInstances
-    Instance any `json:"instance"`
-
-    // Objectives.
-    //
-    // Information specifically about the item's objectives.
-    //
-    // COMPONENT TYPE: ItemObjectives
-    Objectives any `json:"objectives"`
-
-    // CharacterId.
-    //
-    // If the item is on a character, this will return the ID of the character that is holding the item.
-    CharacterId int64 `json:"characterId"`
-
-    // Perks.
-    //
-    // Information specifically about the perks currently active on the item.
-    //
-    // COMPONENT TYPE: ItemPerks
-    Perks any `json:"perks"`
-
-    // RenderData.
-    //
-    // Information about how to render the item in 3D.
-    //
-    // COMPONENT TYPE: ItemRenderData
-    RenderData any `json:"renderData"`
 }

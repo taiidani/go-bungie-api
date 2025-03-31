@@ -3,60 +3,15 @@
 package api
 
 type Destiny_Definitions_GuardianRanks_DestinyGuardianRankIconBackgroundsDefinition struct {
-    // BackgroundFilledGrayMediumAlphaBorderedImagePath.
-    //
-    // 
-    BackgroundFilledGrayMediumAlphaBorderedImagePath string `json:"backgroundFilledGrayMediumAlphaBorderedImagePath"`
-
-    // BackgroundPlateBlackImagePath.
-    //
-    // 
-    BackgroundPlateBlackImagePath string `json:"backgroundPlateBlackImagePath"`
-
-    // BackgroundFilledBlueLowAlphaImagePath.
-    //
-    // 
-    BackgroundFilledBlueLowAlphaImagePath string `json:"backgroundFilledBlueLowAlphaImagePath"`
-
-    // BackgroundFilledGrayHeavyAlphaBorderedImagePath.
-    //
-    // 
-    BackgroundFilledGrayHeavyAlphaBorderedImagePath string `json:"backgroundFilledGrayHeavyAlphaBorderedImagePath"`
-
-    // BackgroundFilledWhiteMediumAlphaImagePath.
-    //
-    // 
-    BackgroundFilledWhiteMediumAlphaImagePath string `json:"backgroundFilledWhiteMediumAlphaImagePath"`
-
     // BackgroundEmptyBlueGradientBorderedImagePath.
     //
     // 
     BackgroundEmptyBlueGradientBorderedImagePath string `json:"backgroundEmptyBlueGradientBorderedImagePath"`
 
-    // BackgroundPlateWhiteImagePath.
-    //
-    // 
-    BackgroundPlateWhiteImagePath string `json:"backgroundPlateWhiteImagePath"`
-
     // BackgroundEmptyBorderedImagePath.
     //
     // 
     BackgroundEmptyBorderedImagePath string `json:"backgroundEmptyBorderedImagePath"`
-
-    // BackgroundFilledBlueMediumAlphaImagePath.
-    //
-    // 
-    BackgroundFilledBlueMediumAlphaImagePath string `json:"backgroundFilledBlueMediumAlphaImagePath"`
-
-    // BackgroundFilledWhiteImagePath.
-    //
-    // 
-    BackgroundFilledWhiteImagePath string `json:"backgroundFilledWhiteImagePath"`
-
-    // BackgroundPlateBlackAlphaImagePath.
-    //
-    // 
-    BackgroundPlateBlackAlphaImagePath string `json:"backgroundPlateBlackAlphaImagePath"`
 
     // BackgroundFilledBlueBorderedImagePath.
     //
@@ -67,4 +22,49 @@ type Destiny_Definitions_GuardianRanks_DestinyGuardianRankIconBackgroundsDefinit
     //
     // 
     BackgroundFilledBlueGradientBorderedImagePath string `json:"backgroundFilledBlueGradientBorderedImagePath"`
+
+    // BackgroundFilledBlueLowAlphaImagePath.
+    //
+    // 
+    BackgroundFilledBlueLowAlphaImagePath string `json:"backgroundFilledBlueLowAlphaImagePath"`
+
+    // BackgroundFilledBlueMediumAlphaImagePath.
+    //
+    // 
+    BackgroundFilledBlueMediumAlphaImagePath string `json:"backgroundFilledBlueMediumAlphaImagePath"`
+
+    // BackgroundFilledGrayHeavyAlphaBorderedImagePath.
+    //
+    // 
+    BackgroundFilledGrayHeavyAlphaBorderedImagePath string `json:"backgroundFilledGrayHeavyAlphaBorderedImagePath"`
+
+    // BackgroundFilledGrayMediumAlphaBorderedImagePath.
+    //
+    // 
+    BackgroundFilledGrayMediumAlphaBorderedImagePath string `json:"backgroundFilledGrayMediumAlphaBorderedImagePath"`
+
+    // BackgroundFilledWhiteImagePath.
+    //
+    // 
+    BackgroundFilledWhiteImagePath string `json:"backgroundFilledWhiteImagePath"`
+
+    // BackgroundFilledWhiteMediumAlphaImagePath.
+    //
+    // 
+    BackgroundFilledWhiteMediumAlphaImagePath string `json:"backgroundFilledWhiteMediumAlphaImagePath"`
+
+    // BackgroundPlateBlackAlphaImagePath.
+    //
+    // 
+    BackgroundPlateBlackAlphaImagePath string `json:"backgroundPlateBlackAlphaImagePath"`
+
+    // BackgroundPlateBlackImagePath.
+    //
+    // 
+    BackgroundPlateBlackImagePath string `json:"backgroundPlateBlackImagePath"`
+
+    // BackgroundPlateWhiteImagePath.
+    //
+    // 
+    BackgroundPlateWhiteImagePath string `json:"backgroundPlateWhiteImagePath"`
 }

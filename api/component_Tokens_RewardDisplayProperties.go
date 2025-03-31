@@ -3,11 +3,6 @@
 package api
 
 type Tokens_RewardDisplayProperties struct {
-    // Name.
-    //
-    // 
-    Name string `json:"Name"`
-
     // Description.
     //
     // 
@@ -17,4 +12,9 @@ type Tokens_RewardDisplayProperties struct {
     //
     // 
     ImagePath string `json:"ImagePath"`
+
+    // Name.
+    //
+    // 
+    Name string `json:"Name"`
 }

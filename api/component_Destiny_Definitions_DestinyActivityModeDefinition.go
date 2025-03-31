@@ -3,52 +3,15 @@
 package api
 
 type Destiny_Definitions_DestinyActivityModeDefinition struct {
-    // ModeType.
+    // ActivityModeCategory.
     //
-    // The Enumeration value for this Activity Mode. Pass this identifier into Stats endpoints to get aggregate stats for this mode.
-    ModeType int32 `json:"modeType"`
-
-    // Order.
-    //
-    // The relative ordering of activity modes.
-    Order int32 `json:"order"`
+    // The type of play being performed in broad terms (PVP, PVE)
+    ActivityModeCategory int32 `json:"activityModeCategory"`
 
     // ActivityModeMappings.
     //
     // If this exists, the mode has specific Activities (referred to by the Key) that should instead map to other Activity Modes when they are played. This was useful in D1 for Private Matches, where we wanted to have Private Matches as an activity mode while still referring to the specific mode being played.
     ActivityModeMappings any `json:"activityModeMappings"`
-
-    // IsAggregateMode.
-    //
-    // If true, this mode is an aggregation of other, more specific modes rather than being a mode in itself. This includes modes that group Features/Events rather than Gameplay, such as Trials of The Nine: Trials of the Nine being an Event that is interesting to see aggregate data for, but when you play the activities within Trials of the Nine they are more specific activity modes such as Clash.
-    IsAggregateMode bool `json:"isAggregateMode"`
-
-    // IsTeamBased.
-    //
-    // If True, this mode has oppositional teams fighting against each other rather than "Free-For-All" or Co-operative modes of play.
-    //
-    // Note that Aggregate modes are never marked as team based, even if they happen to be team based at the moment. At any time, an aggregate whose subordinates are only team based could be changed so that one or more aren't team based, and then this boolean won't make much sense (the aggregation would become "sometimes team based"). Let's not deal with that right now.
-    IsTeamBased bool `json:"isTeamBased"`
-
-    // ParentHashes.
-    //
-    // The hash identifiers of the DestinyActivityModeDefinitions that represent all of the "parent" modes for this mode. For instance, the Nightfall Mode is also a member of AllStrikes and AllPvE.
-    ParentHashes []uint32 `json:"parentHashes"`
-
-    // PgcrImage.
-    //
-    // If this activity mode has a related PGCR image, this will be the path to said image.
-    PgcrImage string `json:"pgcrImage"`
-
-    // Redacted.
-    //
-    // If this is true, then there is an entity with this identifier/type combination, but BNet is not yet allowed to show it. Sorry!
-    Redacted bool `json:"redacted"`
-
-    // ActivityModeCategory.
-    //
-    // The type of play being performed in broad terms (PVP, PVE)
-    ActivityModeCategory int32 `json:"activityModeCategory"`
 
     // Display.
     //
@@ -76,4 +39,41 @@ type Destiny_Definitions_DestinyActivityModeDefinition struct {
     //
     // The index of the entity as it was found in the investment tables.
     Index int32 `json:"index"`
+
+    // IsAggregateMode.
+    //
+    // If true, this mode is an aggregation of other, more specific modes rather than being a mode in itself. This includes modes that group Features/Events rather than Gameplay, such as Trials of The Nine: Trials of the Nine being an Event that is interesting to see aggregate data for, but when you play the activities within Trials of the Nine they are more specific activity modes such as Clash.
+    IsAggregateMode bool `json:"isAggregateMode"`
+
+    // IsTeamBased.
+    //
+    // If True, this mode has oppositional teams fighting against each other rather than "Free-For-All" or Co-operative modes of play.
+    //
+    // Note that Aggregate modes are never marked as team based, even if they happen to be team based at the moment. At any time, an aggregate whose subordinates are only team based could be changed so that one or more aren't team based, and then this boolean won't make much sense (the aggregation would become "sometimes team based"). Let's not deal with that right now.
+    IsTeamBased bool `json:"isTeamBased"`
+
+    // ModeType.
+    //
+    // The Enumeration value for this Activity Mode. Pass this identifier into Stats endpoints to get aggregate stats for this mode.
+    ModeType int32 `json:"modeType"`
+
+    // Order.
+    //
+    // The relative ordering of activity modes.
+    Order int32 `json:"order"`
+
+    // ParentHashes.
+    //
+    // The hash identifiers of the DestinyActivityModeDefinitions that represent all of the "parent" modes for this mode. For instance, the Nightfall Mode is also a member of AllStrikes and AllPvE.
+    ParentHashes []uint32 `json:"parentHashes"`
+
+    // PgcrImage.
+    //
+    // If this activity mode has a related PGCR image, this will be the path to said image.
+    PgcrImage string `json:"pgcrImage"`
+
+    // Redacted.
+    //
+    // If this is true, then there is an entity with this identifier/type combination, but BNet is not yet allowed to show it. Sorry!
+    Redacted bool `json:"redacted"`
 }

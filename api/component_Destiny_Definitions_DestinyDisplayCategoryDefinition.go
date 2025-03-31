@@ -3,27 +3,25 @@
 package api
 
 type Destiny_Definitions_DestinyDisplayCategoryDefinition struct {
-    // DisplayStyleHash.
+    // DisplayCategoryHash.
     //
-    // An indicator of how the category will be displayed in the UI. It's up to you to do something cool or interesting in response to this, or just to treat it as a normal category.
-    DisplayStyleHash uint32 `json:"displayStyleHash"`
+    // 
+    DisplayCategoryHash uint32 `json:"displayCategoryHash"`
 
-    // ProgressionHash.
+    // DisplayInBanner.
     //
-    // If it exists, this is the hash identifier of a DestinyProgressionDefinition that represents the progression to show on this display category.
-    //
-    // Specific categories can now have thier own distinct progression, apparently. So that's cool.
-    ProgressionHash uint32 `json:"progressionHash"`
-
-    // SortOrder.
-    //
-    // If this category sorts items in a nonstandard way, this will be the way we sort.
-    SortOrder int32 `json:"sortOrder"`
+    // If true, this category should be displayed in the "Banner" section of the vendor's UI.
+    DisplayInBanner bool `json:"displayInBanner"`
 
     // DisplayProperties.
     //
     // Many Destiny*Definition contracts - the "first order" entities of Destiny that have their own tables in the Manifest Database - also have displayable information. This is the base class for that display information.
     DisplayProperties Destiny_Definitions_Common_DestinyDisplayPropertiesDefinition `json:"displayProperties"`
+
+    // DisplayStyleHash.
+    //
+    // An indicator of how the category will be displayed in the UI. It's up to you to do something cool or interesting in response to this, or just to treat it as a normal category.
+    DisplayStyleHash *uint32 `json:"displayStyleHash"`
 
     // DisplayStyleIdentifier.
     //
@@ -40,13 +38,15 @@ type Destiny_Definitions_DestinyDisplayCategoryDefinition struct {
     // 
     Index int32 `json:"index"`
 
-    // DisplayCategoryHash.
+    // ProgressionHash.
     //
-    // 
-    DisplayCategoryHash uint32 `json:"displayCategoryHash"`
+    // If it exists, this is the hash identifier of a DestinyProgressionDefinition that represents the progression to show on this display category.
+    //
+    // Specific categories can now have thier own distinct progression, apparently. So that's cool.
+    ProgressionHash *uint32 `json:"progressionHash"`
 
-    // DisplayInBanner.
+    // SortOrder.
     //
-    // If true, this category should be displayed in the "Banner" section of the vendor's UI.
-    DisplayInBanner bool `json:"displayInBanner"`
+    // If this category sorts items in a nonstandard way, this will be the way we sort.
+    SortOrder int32 `json:"sortOrder"`
 }

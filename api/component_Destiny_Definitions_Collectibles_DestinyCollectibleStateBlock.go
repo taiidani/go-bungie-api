@@ -6,7 +6,7 @@ type Destiny_Definitions_Collectibles_DestinyCollectibleStateBlock struct {
     // ObscuredOverrideItemHash.
     //
     // 
-    ObscuredOverrideItemHash uint32 `json:"obscuredOverrideItemHash"`
+    ObscuredOverrideItemHash *uint32 `json:"obscuredOverrideItemHash"`
 
     // Requirements.
     //

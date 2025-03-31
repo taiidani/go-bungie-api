@@ -6,10 +6,10 @@ type Destiny_Definitions_Collectibles_DestinyCollectibleAcquisitionBlock struct 
     // AcquireMaterialRequirementHash.
     //
     // 
-    AcquireMaterialRequirementHash uint32 `json:"acquireMaterialRequirementHash"`
+    AcquireMaterialRequirementHash *uint32 `json:"acquireMaterialRequirementHash"`
 
     // AcquireTimestampUnlockValueHash.
     //
     // 
-    AcquireTimestampUnlockValueHash uint32 `json:"acquireTimestampUnlockValueHash"`
+    AcquireTimestampUnlockValueHash *uint32 `json:"acquireTimestampUnlockValueHash"`
 }

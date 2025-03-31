@@ -3,23 +3,6 @@
 package api
 
 type Destiny_Definitions_DestinyStatGroupDefinition struct {
-    // Redacted.
-    //
-    // If this is true, then there is an entity with this identifier/type combination, but BNet is not yet allowed to show it. Sorry!
-    Redacted bool `json:"redacted"`
-
-    // ScaledStats.
-    //
-    // Any stat that requires scaling to be transformed from an "Investment" stat to a "Display" stat will have an entry in this list. For more information on what those types of stats mean and the transformation process, see DestinyStatDefinition.
-    //
-    // In retrospect, I wouldn't mind if this was a dictionary keyed by the stat hash instead. But I'm going to leave it be because [[After Apple Picking]].
-    ScaledStats []Destiny_Definitions_DestinyStatDisplayDefinition `json:"scaledStats"`
-
-    // UiPosition.
-    //
-    // This apparently indicates the position of the stats in the UI? I've returned it in case anyone can use it, but it's not of any use to us on BNet. Something's being lost in translation with this value.
-    UiPosition int32 `json:"uiPosition"`
-
     // Hash.
     //
     // The unique identifier for this entity. Guaranteed to be unique for the type of entity, but not globally.
@@ -45,4 +28,21 @@ type Destiny_Definitions_DestinyStatGroupDefinition struct {
     //
     // Mercifully, no Stat Groups use this feature currently. If they start using them, we'll all need to start using them (and those of you who are more prudent than I am can go ahead and start pre-checking for this.)
     Overrides any `json:"overrides"`
+
+    // Redacted.
+    //
+    // If this is true, then there is an entity with this identifier/type combination, but BNet is not yet allowed to show it. Sorry!
+    Redacted bool `json:"redacted"`
+
+    // ScaledStats.
+    //
+    // Any stat that requires scaling to be transformed from an "Investment" stat to a "Display" stat will have an entry in this list. For more information on what those types of stats mean and the transformation process, see DestinyStatDefinition.
+    //
+    // In retrospect, I wouldn't mind if this was a dictionary keyed by the stat hash instead. But I'm going to leave it be because [[After Apple Picking]].
+    ScaledStats []Destiny_Definitions_DestinyStatDisplayDefinition `json:"scaledStats"`
+
+    // UiPosition.
+    //
+    // This apparently indicates the position of the stats in the UI? I've returned it in case anyone can use it, but it's not of any use to us on BNet. Something's being lost in translation with this value.
+    UiPosition int32 `json:"uiPosition"`
 }

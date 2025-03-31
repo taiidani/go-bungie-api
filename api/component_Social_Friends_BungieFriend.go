@@ -3,21 +3,6 @@
 package api
 
 type Social_Friends_BungieFriend struct {
-    // OnlineStatus.
-    //
-    // 
-    OnlineStatus int32 `json:"onlineStatus"`
-
-    // OnlineTitle.
-    //
-    // 
-    OnlineTitle int32 `json:"onlineTitle"`
-
-    // Relationship.
-    //
-    // 
-    Relationship int32 `json:"relationship"`
-
     // BungieGlobalDisplayName.
     //
     // 
@@ -26,7 +11,7 @@ type Social_Friends_BungieFriend struct {
     // BungieGlobalDisplayNameCode.
     //
     // 
-    BungieGlobalDisplayNameCode int16 `json:"bungieGlobalDisplayNameCode"`
+    BungieGlobalDisplayNameCode *int16 `json:"bungieGlobalDisplayNameCode"`
 
     // BungieNetUser.
     //
@@ -42,4 +27,19 @@ type Social_Friends_BungieFriend struct {
     //
     // 
     LastSeenAsMembershipId int64 `json:"lastSeenAsMembershipId"`
+
+    // OnlineStatus.
+    //
+    // 
+    OnlineStatus int32 `json:"onlineStatus"`
+
+    // OnlineTitle.
+    //
+    // 
+    OnlineTitle int32 `json:"onlineTitle"`
+
+    // Relationship.
+    //
+    // 
+    Relationship int32 `json:"relationship"`
 }

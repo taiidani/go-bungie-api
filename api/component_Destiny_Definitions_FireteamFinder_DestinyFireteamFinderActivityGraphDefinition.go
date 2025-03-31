@@ -8,25 +8,42 @@ type Destiny_Definitions_FireteamFinder_DestinyFireteamFinderActivityGraphDefini
     // 
     Children []uint32 `json:"children"`
 
-    // ParentHash.
+    // Color.
     //
-    // 
-    ParentHash uint32 `json:"parentHash"`
+    // Represents a color whose RGBA values are all represented as values between 0 and 255.
+    Color Destiny_Misc_DestinyColor `json:"color"`
 
-    // RelatedInteractableActivities.
+    // DisplayProperties.
     //
-    // 
-    RelatedInteractableActivities []Destiny_Definitions_FireteamFinder_DestinyActivityInteractableReference `json:"relatedInteractableActivities"`
+    // Many Destiny*Definition contracts - the "first order" entities of Destiny that have their own tables in the Manifest Database - also have displayable information. This is the base class for that display information.
+    DisplayProperties Destiny_Definitions_Common_DestinyDisplayPropertiesDefinition `json:"displayProperties"`
+
+    // Hash.
+    //
+    // The unique identifier for this entity. Guaranteed to be unique for the type of entity, but not globally.
+    //
+    // When entities refer to each other in Destiny content, it is this hash that they are referring to.
+    Hash uint32 `json:"hash"`
+
+    // Index.
+    //
+    // The index of the entity as it was found in the investment tables.
+    Index int32 `json:"index"`
 
     // IsPlayerElectedDifficultyNode.
     //
     // 
     IsPlayerElectedDifficultyNode bool `json:"isPlayerElectedDifficultyNode"`
 
-    // DisplayProperties.
+    // ParentHash.
     //
-    // Many Destiny*Definition contracts - the "first order" entities of Destiny that have their own tables in the Manifest Database - also have displayable information. This is the base class for that display information.
-    DisplayProperties Destiny_Definitions_Common_DestinyDisplayPropertiesDefinition `json:"displayProperties"`
+    // 
+    ParentHash *uint32 `json:"parentHash"`
+
+    // Redacted.
+    //
+    // If this is true, then there is an entity with this identifier/type combination, but BNet is not yet allowed to show it. Sorry!
+    Redacted bool `json:"redacted"`
 
     // RelatedActivityHashes.
     //
@@ -43,40 +60,23 @@ type Destiny_Definitions_FireteamFinder_DestinyFireteamFinderActivityGraphDefini
     // 
     RelatedDirectorNodes []Destiny_Definitions_FireteamFinder_DestinyActivityGraphReference `json:"relatedDirectorNodes"`
 
-    // SelfAndAllDescendantHashes.
+    // RelatedInteractableActivities.
     //
     // 
-    SelfAndAllDescendantHashes []uint32 `json:"selfAndAllDescendantHashes"`
+    RelatedInteractableActivities []Destiny_Definitions_FireteamFinder_DestinyActivityInteractableReference `json:"relatedInteractableActivities"`
 
     // RelatedLocationHashes.
     //
     // 
     RelatedLocationHashes []uint32 `json:"relatedLocationHashes"`
 
-    // Index.
+    // SelfAndAllDescendantHashes.
     //
-    // The index of the entity as it was found in the investment tables.
-    Index int32 `json:"index"`
-
-    // Redacted.
-    //
-    // If this is true, then there is an entity with this identifier/type combination, but BNet is not yet allowed to show it. Sorry!
-    Redacted bool `json:"redacted"`
-
-    // Hash.
-    //
-    // The unique identifier for this entity. Guaranteed to be unique for the type of entity, but not globally.
-    //
-    // When entities refer to each other in Destiny content, it is this hash that they are referring to.
-    Hash uint32 `json:"hash"`
-
-    // Color.
-    //
-    // Represents a color whose RGBA values are all represented as values between 0 and 255.
-    Color Destiny_Misc_DestinyColor `json:"color"`
+    // 
+    SelfAndAllDescendantHashes []uint32 `json:"selfAndAllDescendantHashes"`
 
     // SpecificActivitySetHash.
     //
     // 
-    SpecificActivitySetHash uint32 `json:"specificActivitySetHash"`
+    SpecificActivitySetHash *uint32 `json:"specificActivitySetHash"`
 }

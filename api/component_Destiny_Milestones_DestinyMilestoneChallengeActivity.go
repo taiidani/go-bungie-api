@@ -27,7 +27,7 @@ type Destiny_Milestones_DestinyMilestoneChallengeActivity struct {
     // LoadoutRequirementIndex.
     //
     // If returned, this is the index into the DestinyActivityDefinition's "loadouts" property, indicating the currently active loadout requirements.
-    LoadoutRequirementIndex int32 `json:"loadoutRequirementIndex"`
+    LoadoutRequirementIndex *int32 `json:"loadoutRequirementIndex"`
 
     // ModifierHashes.
     //

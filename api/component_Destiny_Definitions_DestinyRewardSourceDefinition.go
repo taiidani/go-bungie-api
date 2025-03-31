@@ -3,11 +3,6 @@
 package api
 
 type Destiny_Definitions_DestinyRewardSourceDefinition struct {
-    // Redacted.
-    //
-    // If this is true, then there is an entity with this identifier/type combination, but BNet is not yet allowed to show it. Sorry!
-    Redacted bool `json:"redacted"`
-
     // Category.
     //
     // Sources are grouped into categories: common ways that items are provided. I hope to see this expand in Destiny 2 once we have time to generate accurate reward source data.
@@ -29,4 +24,9 @@ type Destiny_Definitions_DestinyRewardSourceDefinition struct {
     //
     // The index of the entity as it was found in the investment tables.
     Index int32 `json:"index"`
+
+    // Redacted.
+    //
+    // If this is true, then there is an entity with this identifier/type combination, but BNet is not yet allowed to show it. Sorry!
+    Redacted bool `json:"redacted"`
 }

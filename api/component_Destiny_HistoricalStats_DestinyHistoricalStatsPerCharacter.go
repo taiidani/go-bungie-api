@@ -3,6 +3,11 @@
 package api
 
 type Destiny_HistoricalStats_DestinyHistoricalStatsPerCharacter struct {
+    // CharacterId.
+    //
+    // 
+    CharacterId int64 `json:"characterId"`
+
     // Deleted.
     //
     // 
@@ -17,9 +22,4 @@ type Destiny_HistoricalStats_DestinyHistoricalStatsPerCharacter struct {
     //
     // 
     Results any `json:"results"`
-
-    // CharacterId.
-    //
-    // 
-    CharacterId int64 `json:"characterId"`
 }

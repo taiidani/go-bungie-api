@@ -3,6 +3,31 @@
 package api
 
 type DestinyItemComponentSetOfint32 struct {
+    // Instances.
+    //
+    // 
+    Instances DictionaryComponentResponseOfint32AndDestinyItemInstanceComponent `json:"instances"`
+
+    // Objectives.
+    //
+    // 
+    Objectives DictionaryComponentResponseOfint32AndDestinyItemObjectivesComponent `json:"objectives"`
+
+    // Perks.
+    //
+    // 
+    Perks DictionaryComponentResponseOfint32AndDestinyItemPerksComponent `json:"perks"`
+
+    // PlugObjectives.
+    //
+    // 
+    PlugObjectives DictionaryComponentResponseOfint32AndDestinyItemPlugObjectivesComponent `json:"plugObjectives"`
+
+    // PlugStates.
+    //
+    // 
+    PlugStates DictionaryComponentResponseOfuint32AndDestinyItemPlugComponent `json:"plugStates"`
+
     // RenderData.
     //
     // 
@@ -18,38 +43,13 @@ type DestinyItemComponentSetOfint32 struct {
     // 
     Sockets DictionaryComponentResponseOfint32AndDestinyItemSocketsComponent `json:"sockets"`
 
-    // Objectives.
+    // Stats.
     //
     // 
-    Objectives DictionaryComponentResponseOfint32AndDestinyItemObjectivesComponent `json:"objectives"`
+    Stats DictionaryComponentResponseOfint32AndDestinyItemStatsComponent `json:"stats"`
 
     // TalentGrids.
     //
     // 
     TalentGrids DictionaryComponentResponseOfint32AndDestinyItemTalentGridComponent `json:"talentGrids"`
-
-    // Instances.
-    //
-    // 
-    Instances DictionaryComponentResponseOfint32AndDestinyItemInstanceComponent `json:"instances"`
-
-    // PlugObjectives.
-    //
-    // 
-    PlugObjectives DictionaryComponentResponseOfint32AndDestinyItemPlugObjectivesComponent `json:"plugObjectives"`
-
-    // Perks.
-    //
-    // 
-    Perks DictionaryComponentResponseOfint32AndDestinyItemPerksComponent `json:"perks"`
-
-    // PlugStates.
-    //
-    // 
-    PlugStates DictionaryComponentResponseOfuint32AndDestinyItemPlugComponent `json:"plugStates"`
-
-    // Stats.
-    //
-    // 
-    Stats DictionaryComponentResponseOfint32AndDestinyItemStatsComponent `json:"stats"`
 }

@@ -3,11 +3,6 @@
 package api
 
 type Queries_PagedQuery struct {
-    // RequestContinuationToken.
-    //
-    // 
-    RequestContinuationToken string `json:"requestContinuationToken"`
-
     // CurrentPage.
     //
     // 
@@ -17,4 +12,9 @@ type Queries_PagedQuery struct {
     //
     // 
     ItemsPerPage int32 `json:"itemsPerPage"`
+
+    // RequestContinuationToken.
+    //
+    // 
+    RequestContinuationToken string `json:"requestContinuationToken"`
 }

@@ -3,11 +3,6 @@
 package api
 
 type SingleComponentResponseOfDestinyVendorGroupComponent struct {
-    // Privacy.
-    //
-    // 
-    Privacy int32 `json:"privacy"`
-
     // Data.
     //
     // This component returns references to all of the Vendors in the response, grouped by categorizations that Bungie has deemed to be interesting, in the order in which both the groups and the vendors within that group should be rendered.
@@ -16,5 +11,10 @@ type SingleComponentResponseOfDestinyVendorGroupComponent struct {
     // Disabled.
     //
     // If true, this component is disabled.
-    Disabled bool `json:"disabled"`
+    Disabled *bool `json:"disabled"`
+
+    // Privacy.
+    //
+    // 
+    Privacy int32 `json:"privacy"`
 }

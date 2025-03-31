@@ -3,6 +3,13 @@
 package api
 
 type Destiny_Definitions_DestinyMedalTierDefinition struct {
+    // Hash.
+    //
+    // The unique identifier for this entity. Guaranteed to be unique for the type of entity, but not globally.
+    //
+    // When entities refer to each other in Destiny content, it is this hash that they are referring to.
+    Hash uint32 `json:"hash"`
+
     // Index.
     //
     // The index of the entity as it was found in the investment tables.
@@ -22,11 +29,4 @@ type Destiny_Definitions_DestinyMedalTierDefinition struct {
     //
     // The name of the tier.
     TierName string `json:"tierName"`
-
-    // Hash.
-    //
-    // The unique identifier for this entity. Guaranteed to be unique for the type of entity, but not globally.
-    //
-    // When entities refer to each other in Destiny content, it is this hash that they are referring to.
-    Hash uint32 `json:"hash"`
 }

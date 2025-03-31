@@ -3,6 +3,11 @@
 package api
 
 type Config_GroupTheme struct {
+    // Description.
+    //
+    // 
+    Description string `json:"description"`
+
     // Folder.
     //
     // 
@@ -12,9 +17,4 @@ type Config_GroupTheme struct {
     //
     // 
     Name string `json:"name"`
-
-    // Description.
-    //
-    // 
-    Description string `json:"description"`
 }

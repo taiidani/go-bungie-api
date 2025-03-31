@@ -3,16 +3,6 @@
 package api
 
 type Destiny_Definitions_DestinyItemSackBlockDefinition struct {
-    // SelectItemCount.
-    //
-    // 
-    SelectItemCount int32 `json:"selectItemCount"`
-
-    // VendorSackType.
-    //
-    // 
-    VendorSackType string `json:"vendorSackType"`
-
     // DetailAction.
     //
     // A description of what will happen when you open the sack. As far as I can tell, this is blank currently. Unknown whether it will eventually be populated with useful info.
@@ -27,4 +17,14 @@ type Destiny_Definitions_DestinyItemSackBlockDefinition struct {
     //
     // 
     OpenOnAcquire bool `json:"openOnAcquire"`
+
+    // SelectItemCount.
+    //
+    // 
+    SelectItemCount int32 `json:"selectItemCount"`
+
+    // VendorSackType.
+    //
+    // 
+    VendorSackType string `json:"vendorSackType"`
 }

@@ -3,10 +3,45 @@
 package api
 
 type GroupsV2_GroupQuery struct {
+    // CreationDate.
+    //
+    // 
+    CreationDate int32 `json:"creationDate"`
+
+    // CurrentPage.
+    //
+    // 
+    CurrentPage int32 `json:"currentPage"`
+
+    // GroupMemberCountFilter.
+    //
+    // 
+    GroupMemberCountFilter *int32 `json:"groupMemberCountFilter"`
+
+    // GroupType.
+    //
+    // 
+    GroupType int32 `json:"groupType"`
+
+    // ItemsPerPage.
+    //
+    // 
+    ItemsPerPage int32 `json:"itemsPerPage"`
+
+    // LocaleFilter.
+    //
+    // 
+    LocaleFilter string `json:"localeFilter"`
+
     // Name.
     //
     // 
     Name string `json:"name"`
+
+    // RequestContinuationToken.
+    //
+    // 
+    RequestContinuationToken string `json:"requestContinuationToken"`
 
     // SortBy.
     //
@@ -17,39 +52,4 @@ type GroupsV2_GroupQuery struct {
     //
     // 
     TagText string `json:"tagText"`
-
-    // CreationDate.
-    //
-    // 
-    CreationDate int32 `json:"creationDate"`
-
-    // GroupMemberCountFilter.
-    //
-    // 
-    GroupMemberCountFilter int32 `json:"groupMemberCountFilter"`
-
-    // ItemsPerPage.
-    //
-    // 
-    ItemsPerPage int32 `json:"itemsPerPage"`
-
-    // RequestContinuationToken.
-    //
-    // 
-    RequestContinuationToken string `json:"requestContinuationToken"`
-
-    // LocaleFilter.
-    //
-    // 
-    LocaleFilter string `json:"localeFilter"`
-
-    // CurrentPage.
-    //
-    // 
-    CurrentPage int32 `json:"currentPage"`
-
-    // GroupType.
-    //
-    // 
-    GroupType int32 `json:"groupType"`
 }

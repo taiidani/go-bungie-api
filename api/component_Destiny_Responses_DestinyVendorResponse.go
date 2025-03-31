@@ -3,20 +3,6 @@
 package api
 
 type Destiny_Responses_DestinyVendorResponse struct {
-    // StringVariables.
-    //
-    // A map of string variable values by hash for this character context.
-    //
-    // COMPONENT TYPE: StringVariables
-    StringVariables any `json:"stringVariables"`
-
-    // Vendor.
-    //
-    // The base properties of the vendor.
-    //
-    // COMPONENT TYPE: Vendors
-    Vendor any `json:"vendor"`
-
     // Categories.
     //
     // Categories that the vendor has available, and references to the sales therein.
@@ -44,4 +30,18 @@ type Destiny_Responses_DestinyVendorResponse struct {
     //
     // COMPONENT TYPE: VendorSales
     Sales any `json:"sales"`
+
+    // StringVariables.
+    //
+    // A map of string variable values by hash for this character context.
+    //
+    // COMPONENT TYPE: StringVariables
+    StringVariables any `json:"stringVariables"`
+
+    // Vendor.
+    //
+    // The base properties of the vendor.
+    //
+    // COMPONENT TYPE: Vendors
+    Vendor any `json:"vendor"`
 }

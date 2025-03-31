@@ -3,15 +3,10 @@
 package api
 
 type Destiny_Definitions_Records_DestinyRecordTitleBlock struct {
-    // TitlesByGenderHash.
-    //
-    // For those who prefer to use the definitions.
-    TitlesByGenderHash any `json:"titlesByGenderHash"`
-
     // GildingTrackingRecordHash.
     //
     // 
-    GildingTrackingRecordHash uint32 `json:"gildingTrackingRecordHash"`
+    GildingTrackingRecordHash *uint32 `json:"gildingTrackingRecordHash"`
 
     // HasTitle.
     //
@@ -22,4 +17,9 @@ type Destiny_Definitions_Records_DestinyRecordTitleBlock struct {
     //
     // 
     TitlesByGender any `json:"titlesByGender"`
+
+    // TitlesByGenderHash.
+    //
+    // For those who prefer to use the definitions.
+    TitlesByGenderHash any `json:"titlesByGenderHash"`
 }

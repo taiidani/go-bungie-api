@@ -3,13 +3,13 @@
 package api
 
 type Destiny_Definitions_DestinyEntitySearchResult struct {
-    // SuggestedWords.
-    //
-    // A list of suggested words that might make for better search results, based on the text searched for.
-    SuggestedWords []string `json:"suggestedWords"`
-
     // Results.
     //
     // The items found that are matches/near matches for the searched-for term, sorted by something vaguely resembling "relevance". Hopefully this will get better in the future.
     Results any `json:"results"`
+
+    // SuggestedWords.
+    //
+    // A list of suggested words that might make for better search results, based on the text searched for.
+    SuggestedWords []string `json:"suggestedWords"`
 }

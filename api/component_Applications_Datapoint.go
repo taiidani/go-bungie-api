@@ -6,7 +6,7 @@ type Applications_Datapoint struct {
     // Count.
     //
     // Count associated with timestamp
-    Count float64 `json:"count"`
+    Count *float64 `json:"count"`
 
     // Time.
     //

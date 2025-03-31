@@ -3,11 +3,6 @@
 package api
 
 type GroupsV2_GroupV2Card struct {
-    // Theme.
-    //
-    // 
-    Theme string `json:"theme"`
-
     // About.
     //
     // 
@@ -23,20 +18,30 @@ type GroupsV2_GroupV2Card struct {
     // 
     Capabilities int32 `json:"capabilities"`
 
+    // ClanInfo.
+    //
+    // This contract contains clan-specific group information. It does not include any investment data.
+    ClanInfo GroupsV2_GroupV2ClanInfo `json:"clanInfo"`
+
+    // CreationDate.
+    //
+    // 
+    CreationDate string `json:"creationDate"`
+
     // GroupId.
     //
     // 
     GroupId int64 `json:"groupId"`
 
+    // GroupType.
+    //
+    // 
+    GroupType int32 `json:"groupType"`
+
     // Locale.
     //
     // 
     Locale string `json:"locale"`
-
-    // Name.
-    //
-    // 
-    Name string `json:"name"`
 
     // MemberCount.
     //
@@ -48,28 +53,23 @@ type GroupsV2_GroupV2Card struct {
     // 
     MembershipOption int32 `json:"membershipOption"`
 
-    // RemoteGroupId.
-    //
-    // 
-    RemoteGroupId int64 `json:"remoteGroupId"`
-
-    // GroupType.
-    //
-    // 
-    GroupType int32 `json:"groupType"`
-
     // Motto.
     //
     // 
     Motto string `json:"motto"`
 
-    // ClanInfo.
-    //
-    // This contract contains clan-specific group information. It does not include any investment data.
-    ClanInfo GroupsV2_GroupV2ClanInfo `json:"clanInfo"`
-
-    // CreationDate.
+    // Name.
     //
     // 
-    CreationDate string `json:"creationDate"`
+    Name string `json:"name"`
+
+    // RemoteGroupId.
+    //
+    // 
+    RemoteGroupId *int64 `json:"remoteGroupId"`
+
+    // Theme.
+    //
+    // 
+    Theme string `json:"theme"`
 }

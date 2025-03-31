@@ -16,7 +16,7 @@ type Destiny_DestinyItemQuantity struct {
     // ItemInstanceId.
     //
     // If this quantity is referring to a specific instance of an item, this will have the item's instance ID. Normally, this will be null.
-    ItemInstanceId int64 `json:"itemInstanceId"`
+    ItemInstanceId *int64 `json:"itemInstanceId"`
 
     // Quantity.
     //

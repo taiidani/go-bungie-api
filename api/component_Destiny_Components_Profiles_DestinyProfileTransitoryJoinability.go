@@ -3,11 +3,6 @@
 package api
 
 type Destiny_Components_Profiles_DestinyProfileTransitoryJoinability struct {
-    // PrivacySetting.
-    //
-    // Who the person is currently allowing invites from.
-    PrivacySetting int32 `json:"privacySetting"`
-
     // ClosedReasons.
     //
     // Reasons why a person can't join this person's fireteam.
@@ -17,4 +12,9 @@ type Destiny_Components_Profiles_DestinyProfileTransitoryJoinability struct {
     //
     // The number of slots still available on this person's fireteam.
     OpenSlots int32 `json:"openSlots"`
+
+    // PrivacySetting.
+    //
+    // Who the person is currently allowing invites from.
+    PrivacySetting int32 `json:"privacySetting"`
 }

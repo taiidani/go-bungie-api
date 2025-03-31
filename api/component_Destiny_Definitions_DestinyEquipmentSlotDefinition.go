@@ -3,6 +3,21 @@
 package api
 
 type Destiny_Definitions_DestinyEquipmentSlotDefinition struct {
+    // ApplyCustomArtDyes.
+    //
+    // If True, equipped items should have their custom art dyes applied when rendering the item. Otherwise, custom art dyes on an item should be ignored if the item is equipped in this slot.
+    ApplyCustomArtDyes bool `json:"applyCustomArtDyes"`
+
+    // ArtDyeChannels.
+    //
+    // The Art Dye Channels that apply to this equipment slot.
+    ArtDyeChannels []Destiny_Definitions_DestinyArtDyeReference `json:"artDyeChannels"`
+
+    // BucketTypeHash.
+    //
+    // The inventory bucket that owns this equipment slot.
+    BucketTypeHash uint32 `json:"bucketTypeHash"`
+
     // DisplayProperties.
     //
     // Many Destiny*Definition contracts - the "first order" entities of Destiny that have their own tables in the Manifest Database - also have displayable information. This is the base class for that display information.
@@ -29,19 +44,4 @@ type Destiny_Definitions_DestinyEquipmentSlotDefinition struct {
     //
     // If this is true, then there is an entity with this identifier/type combination, but BNet is not yet allowed to show it. Sorry!
     Redacted bool `json:"redacted"`
-
-    // ApplyCustomArtDyes.
-    //
-    // If True, equipped items should have their custom art dyes applied when rendering the item. Otherwise, custom art dyes on an item should be ignored if the item is equipped in this slot.
-    ApplyCustomArtDyes bool `json:"applyCustomArtDyes"`
-
-    // ArtDyeChannels.
-    //
-    // The Art Dye Channels that apply to this equipment slot.
-    ArtDyeChannels []Destiny_Definitions_DestinyArtDyeReference `json:"artDyeChannels"`
-
-    // BucketTypeHash.
-    //
-    // The inventory bucket that owns this equipment slot.
-    BucketTypeHash uint32 `json:"bucketTypeHash"`
 }

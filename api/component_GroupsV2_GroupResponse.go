@@ -3,30 +3,35 @@
 package api
 
 type GroupsV2_GroupResponse struct {
-    // CurrentUserMembershipsInactiveForDestiny.
-    //
-    // A convenience property that indicates if every membership you (the current user) have that is a part of this group are part of an account that is considered inactive - for example, overridden accounts in Cross Save.
-    CurrentUserMembershipsInactiveForDestiny bool `json:"currentUserMembershipsInactiveForDestiny"`
-
-    // ParentGroup.
-    //
-    // 
-    ParentGroup GroupsV2_GroupV2 `json:"parentGroup"`
-
     // AllianceStatus.
     //
     // 
     AllianceStatus int32 `json:"allianceStatus"`
+
+    // AlliedIds.
+    //
+    // 
+    AlliedIds []int64 `json:"alliedIds"`
 
     // CurrentUserMemberMap.
     //
     // This property will be populated if the authenticated user is a member of the group. Note that because of account linking, a user can sometimes be part of a clan more than once. As such, this returns the highest member type available.
     CurrentUserMemberMap any `json:"currentUserMemberMap"`
 
+    // CurrentUserMembershipsInactiveForDestiny.
+    //
+    // A convenience property that indicates if every membership you (the current user) have that is a part of this group are part of an account that is considered inactive - for example, overridden accounts in Cross Save.
+    CurrentUserMembershipsInactiveForDestiny bool `json:"currentUserMembershipsInactiveForDestiny"`
+
     // CurrentUserPotentialMemberMap.
     //
     // This property will be populated if the authenticated user is an applicant or has an outstanding invitation to join. Note that because of account linking, a user can sometimes be part of a clan more than once.
     CurrentUserPotentialMemberMap any `json:"currentUserPotentialMemberMap"`
+
+    // Detail.
+    //
+    // 
+    Detail GroupsV2_GroupV2 `json:"detail"`
 
     // Founder.
     //
@@ -38,13 +43,8 @@ type GroupsV2_GroupResponse struct {
     // 
     GroupJoinInviteCount int32 `json:"groupJoinInviteCount"`
 
-    // AlliedIds.
+    // ParentGroup.
     //
     // 
-    AlliedIds []int64 `json:"alliedIds"`
-
-    // Detail.
-    //
-    // 
-    Detail GroupsV2_GroupV2 `json:"detail"`
+    ParentGroup GroupsV2_GroupV2 `json:"parentGroup"`
 }

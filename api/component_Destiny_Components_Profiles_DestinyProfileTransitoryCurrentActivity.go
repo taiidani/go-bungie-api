@@ -6,7 +6,7 @@ type Destiny_Components_Profiles_DestinyProfileTransitoryCurrentActivity struct 
     // EndTime.
     //
     // If you're still in it but it "ended" (like when folks are dancing around the loot after they beat a boss), this is when the activity ended.
-    EndTime string `json:"endTime"`
+    EndTime *string `json:"endTime"`
 
     // HighestOpposingFactionScore.
     //
@@ -31,5 +31,5 @@ type Destiny_Components_Profiles_DestinyProfileTransitoryCurrentActivity struct 
     // StartTime.
     //
     // When the activity started.
-    StartTime string `json:"startTime"`
+    StartTime *string `json:"startTime"`
 }

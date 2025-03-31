@@ -3,16 +3,6 @@
 package api
 
 type Destiny_HistoricalStats_DestinyPostGameCarnageReportTeamEntry struct {
-    // TeamId.
-    //
-    // Integer ID for the team.
-    TeamId int32 `json:"teamId"`
-
-    // TeamName.
-    //
-    // Alpha or Bravo
-    TeamName string `json:"teamName"`
-
     // Score.
     //
     // Score earned by the team
@@ -22,4 +12,14 @@ type Destiny_HistoricalStats_DestinyPostGameCarnageReportTeamEntry struct {
     //
     // Team's standing relative to other teams.
     Standing any `json:"standing"`
+
+    // TeamId.
+    //
+    // Integer ID for the team.
+    TeamId int32 `json:"teamId"`
+
+    // TeamName.
+    //
+    // Alpha or Bravo
+    TeamName string `json:"teamName"`
 }

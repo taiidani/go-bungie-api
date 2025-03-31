@@ -3,83 +3,83 @@
 package api
 
 type GroupsV2_GroupEditAction struct {
-    // IsPublicTopicAdminOnly.
-    //
-    // 
-    IsPublicTopicAdminOnly bool `json:"isPublicTopicAdminOnly"`
-
-    // Theme.
-    //
-    // 
-    Theme string `json:"theme"`
-
-    // AllowChat.
-    //
-    // 
-    AllowChat bool `json:"allowChat"`
-
-    // MembershipOption.
-    //
-    // 
-    MembershipOption int32 `json:"membershipOption"`
-
-    // Tags.
-    //
-    // 
-    Tags string `json:"tags"`
-
-    // Homepage.
-    //
-    // 
-    Homepage int32 `json:"homepage"`
-
-    // EnableInvitationMessagingForAdmins.
-    //
-    // 
-    EnableInvitationMessagingForAdmins bool `json:"enableInvitationMessagingForAdmins"`
-
-    // Locale.
-    //
-    // 
-    Locale string `json:"locale"`
-
     // About.
     //
     // 
     About string `json:"about"`
 
+    // AllowChat.
+    //
+    // 
+    AllowChat *bool `json:"allowChat"`
+
     // AvatarImageIndex.
     //
     // 
-    AvatarImageIndex int32 `json:"avatarImageIndex"`
-
-    // DefaultPublicity.
-    //
-    // 
-    DefaultPublicity int32 `json:"defaultPublicity"`
-
-    // Name.
-    //
-    // 
-    Name string `json:"name"`
+    AvatarImageIndex *int32 `json:"avatarImageIndex"`
 
     // Callsign.
     //
     // 
     Callsign string `json:"callsign"`
 
+    // ChatSecurity.
+    //
+    // 
+    ChatSecurity *int32 `json:"chatSecurity"`
+
+    // DefaultPublicity.
+    //
+    // 
+    DefaultPublicity *int32 `json:"defaultPublicity"`
+
+    // EnableInvitationMessagingForAdmins.
+    //
+    // 
+    EnableInvitationMessagingForAdmins *bool `json:"enableInvitationMessagingForAdmins"`
+
+    // Homepage.
+    //
+    // 
+    Homepage *int32 `json:"homepage"`
+
+    // IsPublic.
+    //
+    // 
+    IsPublic *bool `json:"isPublic"`
+
+    // IsPublicTopicAdminOnly.
+    //
+    // 
+    IsPublicTopicAdminOnly *bool `json:"isPublicTopicAdminOnly"`
+
+    // Locale.
+    //
+    // 
+    Locale string `json:"locale"`
+
+    // MembershipOption.
+    //
+    // 
+    MembershipOption *int32 `json:"membershipOption"`
+
     // Motto.
     //
     // 
     Motto string `json:"motto"`
 
-    // IsPublic.
+    // Name.
     //
     // 
-    IsPublic bool `json:"isPublic"`
+    Name string `json:"name"`
 
-    // ChatSecurity.
+    // Tags.
     //
     // 
-    ChatSecurity int32 `json:"chatSecurity"`
+    Tags string `json:"tags"`
+
+    // Theme.
+    //
+    // 
+    Theme string `json:"theme"`
 }

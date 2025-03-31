@@ -6,7 +6,7 @@ type GroupsV2_GroupOptionalConversationEditRequest struct {
     // ChatEnabled.
     //
     // 
-    ChatEnabled bool `json:"chatEnabled"`
+    ChatEnabled *bool `json:"chatEnabled"`
 
     // ChatName.
     //
@@ -16,5 +16,5 @@ type GroupsV2_GroupOptionalConversationEditRequest struct {
     // ChatSecurity.
     //
     // 
-    ChatSecurity int32 `json:"chatSecurity"`
+    ChatSecurity *int32 `json:"chatSecurity"`
 }

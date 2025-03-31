@@ -11,7 +11,7 @@ type SingleComponentResponseOfDestinySocialCommendationsComponent struct {
     // Disabled.
     //
     // If true, this component is disabled.
-    Disabled bool `json:"disabled"`
+    Disabled *bool `json:"disabled"`
 
     // Privacy.
     //

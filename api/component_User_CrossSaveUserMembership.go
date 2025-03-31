@@ -18,7 +18,7 @@ type User_CrossSaveUserMembership struct {
     // BungieGlobalDisplayNameCode.
     //
     // The bungie global display name code, if set.
-    BungieGlobalDisplayNameCode int16 `json:"bungieGlobalDisplayNameCode"`
+    BungieGlobalDisplayNameCode *int16 `json:"bungieGlobalDisplayNameCode"`
 
     // CrossSaveOverride.
     //

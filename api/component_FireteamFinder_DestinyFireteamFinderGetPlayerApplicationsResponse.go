@@ -3,13 +3,13 @@
 package api
 
 type FireteamFinder_DestinyFireteamFinderGetPlayerApplicationsResponse struct {
-    // NextPageToken.
-    //
-    // String token to request next page of results.
-    NextPageToken string `json:"nextPageToken"`
-
     // Applications.
     //
     // All applications that this player has sent.
     Applications []FireteamFinder_DestinyFireteamFinderApplication `json:"applications"`
+
+    // NextPageToken.
+    //
+    // String token to request next page of results.
+    NextPageToken string `json:"nextPageToken"`
 }

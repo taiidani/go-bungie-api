@@ -3,11 +3,6 @@
 package api
 
 type User_EmailOptInDefinition struct {
-    // Value.
-    //
-    // The flag value for this opt-in category. For historical reasons, this is defined as a flags enum.
-    Value int64 `json:"value"`
-
     // DependentSubscriptions.
     //
     // Information about the dependent subscriptions for this opt-in.
@@ -22,4 +17,9 @@ type User_EmailOptInDefinition struct {
     //
     // If true, this opt-in setting should be set by default in situations where accounts are created without explicit choices about what they're opting into.
     SetByDefault bool `json:"setByDefault"`
+
+    // Value.
+    //
+    // The flag value for this opt-in category. For historical reasons, this is defined as a flags enum.
+    Value int64 `json:"value"`
 }

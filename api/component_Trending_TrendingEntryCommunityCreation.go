@@ -3,11 +3,6 @@
 package api
 
 type Trending_TrendingEntryCommunityCreation struct {
-    // Upvotes.
-    //
-    // 
-    Upvotes int32 `json:"upvotes"`
-
     // Author.
     //
     // 
@@ -37,4 +32,9 @@ type Trending_TrendingEntryCommunityCreation struct {
     //
     // 
     Title string `json:"title"`
+
+    // Upvotes.
+    //
+    // 
+    Upvotes int32 `json:"upvotes"`
 }

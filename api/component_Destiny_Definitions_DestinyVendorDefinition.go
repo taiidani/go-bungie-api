@@ -3,15 +3,20 @@
 package api
 
 type Destiny_Definitions_DestinyVendorDefinition struct {
-    // SellString.
+    // AcceptedItems.
     //
-    // Ditto for selling. Not that you can sell items to a vendor anymore. Will it come back? Who knows. The string's still there.
-    SellString string `json:"sellString"`
+    // If the Vendor is actually a vehicle for the transferring of items (like the Vault and Postmaster vendors), this defines the list of source->destination buckets for transferring.
+    AcceptedItems []Destiny_Definitions_DestinyVendorAcceptedItemDefinition `json:"acceptedItems"`
 
-    // InhibitSelling.
+    // Actions.
     //
-    // If this is true, you're not allowed to sell whatever the vendor is buying.
-    InhibitSelling bool `json:"inhibitSelling"`
+    // Describes "actions" that can be performed on a vendor. Currently, none of these exist. But theoretically a Vendor could let you interact with it by performing actions. We'll see what these end up looking like if they ever get used.
+    Actions []Destiny_Definitions_DestinyVendorActionDefinition `json:"actions"`
+
+    // BuyString.
+    //
+    // If the vendor has a custom localized string describing the "buy" action, that is returned here.
+    BuyString string `json:"buyString"`
 
     // Categories.
     //
@@ -22,72 +27,10 @@ type Destiny_Definitions_DestinyVendorDefinition struct {
     // These are the categories post-concatenation, if the vendor had concatenation applied. If you want the pre-aggregated category data, use originalCategories.
     Categories []Destiny_Definitions_DestinyVendorCategoryEntryDefinition `json:"categories"`
 
-    // VendorPortrait.
-    //
-    // A portrait of the Vendor's smiling mug. Or frothing tentacles.
-    VendorPortrait string `json:"vendorPortrait"`
-
-    // VendorIdentifier.
-    //
-    // The internal identifier for the Vendor. A holdover from the old days of Vendors, but we don't have time to refactor it away.
-    VendorIdentifier string `json:"vendorIdentifier"`
-
-    // Locations.
-    //
-    // A vendor can be at different places in the world depending on the game/character/account state. This is the list of possible locations for the vendor, along with conditions we use to determine which one is currently active.
-    Locations []Destiny_Definitions_Vendors_DestinyVendorLocationDefinition `json:"locations"`
-
-    // ReturnWithVendorRequest.
-    //
-    // As many of you know, Vendor data has historically been pretty brutal on the BNet servers. In an effort to reduce this workload, only Vendors with this flag set will be returned on Vendor requests. This allows us to filter out Vendors that don't dynamic data that's particularly useful: things like "Preview/Sack" vendors, for example, that you can usually suss out the details for using just the definitions themselves.
-    ReturnWithVendorRequest bool `json:"returnWithVendorRequest"`
-
     // ConsolidateCategories.
     //
     // If TRUE, consolidate categories that only differ by trivial properties (such as having minor differences in name)
     ConsolidateCategories bool `json:"consolidateCategories"`
-
-    // FactionHash.
-    //
-    // If the Vendor has a faction, this hash will be valid and point to a DestinyFactionDefinition.
-    //
-    // The game UI and BNet often mine the faction definition for additional elements and details to place on the screen, such as the faction's Progression status (aka "Reputation").
-    FactionHash uint32 `json:"factionHash"`
-
-    // VendorBanner.
-    //
-    // If the vendor has a custom banner image, that can be found here.
-    VendorBanner string `json:"vendorBanner"`
-
-    // VendorProgressionType.
-    //
-    // The type of reward progression that this vendor has. Default - The original rank progression from token redemption. Ritual - Progression from ranks in ritual content. For example: Crucible (Shaxx), Gambit (Drifter), and Battlegrounds (War Table).
-    VendorProgressionType int32 `json:"vendorProgressionType"`
-
-    // Visible.
-    //
-    // If a vendor is not visible, we still have and will give vendor definition info, but we won't use them for things like Advisors or UI.
-    Visible bool `json:"visible"`
-
-    // ResetOffsetMinutes.
-    //
-    // Again, used for reset/refreshing of inventory. Don't worry too much about it. Unless you want to.
-    ResetOffsetMinutes int32 `json:"resetOffsetMinutes"`
-
-    // Index.
-    //
-    // The index of the entity as it was found in the investment tables.
-    Index int32 `json:"index"`
-
-    // AcceptedItems.
-    //
-    // If the Vendor is actually a vehicle for the transferring of items (like the Vault and Postmaster vendors), this defines the list of source->destination buckets for transferring.
-    AcceptedItems []Destiny_Definitions_DestinyVendorAcceptedItemDefinition `json:"acceptedItems"`
-
-    // Enabled.
-    //
-    // If a vendor is not enabled, we won't even save the vendor's definition, and we won't return any items or info about them. It's as if they don't exist.
-    Enabled bool `json:"enabled"`
 
     // DisplayCategories.
     //
@@ -96,22 +39,36 @@ type Destiny_Definitions_DestinyVendorDefinition struct {
     // The "categories" structure is for validation of the contained items, and can be categorized entirely separately from "Display Categories", there need be and often will be no meaningful relationship between the two.
     DisplayCategories []Destiny_Definitions_DestinyDisplayCategoryDefinition `json:"displayCategories"`
 
+    // DisplayItemHash.
+    //
+    // If the vendor has an item that should be displayed as the "featured" item, this is the hash identifier for that DestinyVendorItemDefinition.
+    //
+    // Apparently this is usually a related currency, like a reputation token. But it need not be restricted to that.
+    DisplayItemHash uint32 `json:"displayItemHash"`
+
+    // DisplayProperties.
+    //
+    // 
+    DisplayProperties Destiny_Definitions_DestinyVendorDisplayPropertiesDefinition `json:"displayProperties"`
+
+    // Enabled.
+    //
+    // If a vendor is not enabled, we won't even save the vendor's definition, and we won't return any items or info about them. It's as if they don't exist.
+    Enabled bool `json:"enabled"`
+
+    // FactionHash.
+    //
+    // If the Vendor has a faction, this hash will be valid and point to a DestinyFactionDefinition.
+    //
+    // The game UI and BNet often mine the faction definition for additional elements and details to place on the screen, such as the faction's Progression status (aka "Reputation").
+    FactionHash uint32 `json:"factionHash"`
+
     // FailureStrings.
     //
     // If an item can't be purchased from the vendor, there may be many "custom"/game state specific reasons why not.
     //
     // This is a list of localized strings with messages for those custom failures. The live BNet data will return a failureIndexes property for items that can't be purchased: using those values to index into this array, you can show the user the appropriate failure message for the item that can't be bought.
     FailureStrings []string `json:"failureStrings"`
-
-    // Services.
-    //
-    // BNet doesn't use this data yet, but it appears to be an optional list of flavor text about services that the Vendor can provide.
-    Services []Destiny_Definitions_DestinyVendorServiceDefinition `json:"services"`
-
-    // InventoryFlyouts.
-    //
-    // If the vendor shows you items from your own inventory - such as the Vault vendor does - this data describes the UI around showing those inventory buckets and which ones get shown.
-    InventoryFlyouts []Destiny_Definitions_DestinyVendorInventoryFlyoutDefinition `json:"inventoryFlyouts"`
 
     // Groups.
     //
@@ -125,52 +82,35 @@ type Destiny_Definitions_DestinyVendorDefinition struct {
     // When entities refer to each other in Destiny content, it is this hash that they are referring to.
     Hash uint32 `json:"hash"`
 
-    // BuyString.
-    //
-    // If the vendor has a custom localized string describing the "buy" action, that is returned here.
-    BuyString string `json:"buyString"`
-
-    // UnlockRanges.
-    //
-    // If we were able to predict the dates when this Vendor will be visible/available, this will be the list of those date ranges. Sadly, we're not able to predict this very frequently, so this will often be useless data.
-    UnlockRanges []Dates_DateRange `json:"unlockRanges"`
-
-    // DisplayItemHash.
-    //
-    // If the vendor has an item that should be displayed as the "featured" item, this is the hash identifier for that DestinyVendorItemDefinition.
-    //
-    // Apparently this is usually a related currency, like a reputation token. But it need not be restricted to that.
-    DisplayItemHash uint32 `json:"displayItemHash"`
-
-    // OriginalCategories.
-    //
-    // See the categories property for a description of categories and why originalCategories exists.
-    OriginalCategories []Destiny_Definitions_DestinyVendorCategoryEntryDefinition `json:"originalCategories"`
-
-    // DisplayProperties.
-    //
-    // 
-    DisplayProperties Destiny_Definitions_DestinyVendorDisplayPropertiesDefinition `json:"displayProperties"`
-
     // IgnoreSaleItemHashes.
     //
     // Some items don't make sense to return in the API, for example because they represent an action to be performed rather than an item being sold. I'd rather we not do this, but at least in the short term this is a workable workaround.
     IgnoreSaleItemHashes []uint32 `json:"ignoreSaleItemHashes"`
 
-    // Actions.
+    // Index.
     //
-    // Describes "actions" that can be performed on a vendor. Currently, none of these exist. But theoretically a Vendor could let you interact with it by performing actions. We'll see what these end up looking like if they ever get used.
-    Actions []Destiny_Definitions_DestinyVendorActionDefinition `json:"actions"`
+    // The index of the entity as it was found in the investment tables.
+    Index int32 `json:"index"`
 
     // InhibitBuying.
     //
     // If this is true, you aren't allowed to buy whatever the vendor is selling.
     InhibitBuying bool `json:"inhibitBuying"`
 
-    // Redacted.
+    // InhibitSelling.
     //
-    // If this is true, then there is an entity with this identifier/type combination, but BNet is not yet allowed to show it. Sorry!
-    Redacted bool `json:"redacted"`
+    // If this is true, you're not allowed to sell whatever the vendor is buying.
+    InhibitSelling bool `json:"inhibitSelling"`
+
+    // Interactions.
+    //
+    // In addition to selling items, vendors can have "interactions": UI where you "talk" with the vendor and they offer you a reward, some item, or merely acknowledge via dialog that you did something cool.
+    Interactions []Destiny_Definitions_DestinyVendorInteractionDefinition `json:"interactions"`
+
+    // InventoryFlyouts.
+    //
+    // If the vendor shows you items from your own inventory - such as the Vault vendor does - this data describes the UI around showing those inventory buckets and which ones get shown.
+    InventoryFlyouts []Destiny_Definitions_DestinyVendorInventoryFlyoutDefinition `json:"inventoryFlyouts"`
 
     // ItemList.
     //
@@ -179,6 +119,21 @@ type Destiny_Definitions_DestinyVendorDefinition struct {
     // Note that a vendor can sell the same item multiple ways: for instance, nothing stops a vendor from selling you some specific weapon but using two different currencies, or the same weapon at multiple "item levels".
     ItemList []Destiny_Definitions_DestinyVendorItemDefinition `json:"itemList"`
 
+    // Locations.
+    //
+    // A vendor can be at different places in the world depending on the game/character/account state. This is the list of possible locations for the vendor, along with conditions we use to determine which one is currently active.
+    Locations []Destiny_Definitions_Vendors_DestinyVendorLocationDefinition `json:"locations"`
+
+    // OriginalCategories.
+    //
+    // See the categories property for a description of categories and why originalCategories exists.
+    OriginalCategories []Destiny_Definitions_DestinyVendorCategoryEntryDefinition `json:"originalCategories"`
+
+    // Redacted.
+    //
+    // If this is true, then there is an entity with this identifier/type combination, but BNet is not yet allowed to show it. Sorry!
+    Redacted bool `json:"redacted"`
+
     // ResetIntervalMinutes.
     //
     // A number used for calculating the frequency of a vendor's inventory resetting/refreshing.
@@ -186,13 +141,58 @@ type Destiny_Definitions_DestinyVendorDefinition struct {
     // Don't worry about calculating this - we do it on the server side and send you the next refresh date with the live data.
     ResetIntervalMinutes int32 `json:"resetIntervalMinutes"`
 
+    // ResetOffsetMinutes.
+    //
+    // Again, used for reset/refreshing of inventory. Don't worry too much about it. Unless you want to.
+    ResetOffsetMinutes int32 `json:"resetOffsetMinutes"`
+
+    // ReturnWithVendorRequest.
+    //
+    // As many of you know, Vendor data has historically been pretty brutal on the BNet servers. In an effort to reduce this workload, only Vendors with this flag set will be returned on Vendor requests. This allows us to filter out Vendors that don't dynamic data that's particularly useful: things like "Preview/Sack" vendors, for example, that you can usually suss out the details for using just the definitions themselves.
+    ReturnWithVendorRequest bool `json:"returnWithVendorRequest"`
+
+    // SellString.
+    //
+    // Ditto for selling. Not that you can sell items to a vendor anymore. Will it come back? Who knows. The string's still there.
+    SellString string `json:"sellString"`
+
+    // Services.
+    //
+    // BNet doesn't use this data yet, but it appears to be an optional list of flavor text about services that the Vendor can provide.
+    Services []Destiny_Definitions_DestinyVendorServiceDefinition `json:"services"`
+
+    // UnlockRanges.
+    //
+    // If we were able to predict the dates when this Vendor will be visible/available, this will be the list of those date ranges. Sadly, we're not able to predict this very frequently, so this will often be useless data.
+    UnlockRanges []Dates_DateRange `json:"unlockRanges"`
+
+    // VendorBanner.
+    //
+    // If the vendor has a custom banner image, that can be found here.
+    VendorBanner string `json:"vendorBanner"`
+
+    // VendorIdentifier.
+    //
+    // The internal identifier for the Vendor. A holdover from the old days of Vendors, but we don't have time to refactor it away.
+    VendorIdentifier string `json:"vendorIdentifier"`
+
+    // VendorPortrait.
+    //
+    // A portrait of the Vendor's smiling mug. Or frothing tentacles.
+    VendorPortrait string `json:"vendorPortrait"`
+
+    // VendorProgressionType.
+    //
+    // The type of reward progression that this vendor has. Default - The original rank progression from token redemption. Ritual - Progression from ranks in ritual content. For example: Crucible (Shaxx), Gambit (Drifter), and Battlegrounds (War Table).
+    VendorProgressionType int32 `json:"vendorProgressionType"`
+
     // VendorSubcategoryIdentifier.
     //
     // The identifier of the VendorCategoryDefinition for this vendor's subcategory.
     VendorSubcategoryIdentifier string `json:"vendorSubcategoryIdentifier"`
 
-    // Interactions.
+    // Visible.
     //
-    // In addition to selling items, vendors can have "interactions": UI where you "talk" with the vendor and they offer you a reward, some item, or merely acknowledge via dialog that you did something cool.
-    Interactions []Destiny_Definitions_DestinyVendorInteractionDefinition `json:"interactions"`
+    // If a vendor is not visible, we still have and will give vendor definition info, but we won't use them for things like Advisors or UI.
+    Visible bool `json:"visible"`
 }

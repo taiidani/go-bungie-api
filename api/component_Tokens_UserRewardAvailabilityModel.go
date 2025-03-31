@@ -3,6 +3,11 @@
 package api
 
 type Tokens_UserRewardAvailabilityModel struct {
+    // AvailabilityModel.
+    //
+    // 
+    AvailabilityModel Tokens_RewardAvailabilityModel `json:"AvailabilityModel"`
+
     // IsAvailableForUser.
     //
     // 
@@ -12,9 +17,4 @@ type Tokens_UserRewardAvailabilityModel struct {
     //
     // 
     IsUnlockedForUser bool `json:"IsUnlockedForUser"`
-
-    // AvailabilityModel.
-    //
-    // 
-    AvailabilityModel Tokens_RewardAvailabilityModel `json:"AvailabilityModel"`
 }

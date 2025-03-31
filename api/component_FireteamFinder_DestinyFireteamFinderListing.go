@@ -3,6 +3,21 @@
 package api
 
 type FireteamFinder_DestinyFireteamFinderListing struct {
+    // AvailableSlots.
+    //
+    // 
+    AvailableSlots int32 `json:"availableSlots"`
+
+    // CreatedDateTime.
+    //
+    // 
+    CreatedDateTime string `json:"createdDateTime"`
+
+    // ListingId.
+    //
+    // 
+    ListingId int64 `json:"listingId"`
+
     // LobbyId.
     //
     // 
@@ -27,19 +42,4 @@ type FireteamFinder_DestinyFireteamFinderListing struct {
     //
     // 
     Settings FireteamFinder_DestinyFireteamFinderLobbySettings `json:"settings"`
-
-    // AvailableSlots.
-    //
-    // 
-    AvailableSlots int32 `json:"availableSlots"`
-
-    // CreatedDateTime.
-    //
-    // 
-    CreatedDateTime string `json:"createdDateTime"`
-
-    // ListingId.
-    //
-    // 
-    ListingId int64 `json:"listingId"`
 }

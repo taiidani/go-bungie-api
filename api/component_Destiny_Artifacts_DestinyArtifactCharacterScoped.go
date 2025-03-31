@@ -3,11 +3,6 @@
 package api
 
 type Destiny_Artifacts_DestinyArtifactCharacterScoped struct {
-    // Tiers.
-    //
-    // 
-    Tiers []Destiny_Artifacts_DestinyArtifactTier `json:"tiers"`
-
     // ArtifactHash.
     //
     // 
@@ -22,4 +17,9 @@ type Destiny_Artifacts_DestinyArtifactCharacterScoped struct {
     //
     // 
     ResetCount int32 `json:"resetCount"`
+
+    // Tiers.
+    //
+    // 
+    Tiers []Destiny_Artifacts_DestinyArtifactTier `json:"tiers"`
 }

@@ -3,6 +3,11 @@
 package api
 
 type Common_Models_CoreSetting struct {
+    // ChildSettings.
+    //
+    // 
+    ChildSettings []Common_Models_CoreSetting `json:"childSettings"`
+
     // DisplayName.
     //
     // 
@@ -27,9 +32,4 @@ type Common_Models_CoreSetting struct {
     //
     // 
     Summary string `json:"summary"`
-
-    // ChildSettings.
-    //
-    // 
-    ChildSettings []Common_Models_CoreSetting `json:"childSettings"`
 }

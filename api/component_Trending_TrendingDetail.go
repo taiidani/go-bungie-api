@@ -3,6 +3,11 @@
 package api
 
 type Trending_TrendingDetail struct {
+    // Creation.
+    //
+    // 
+    Creation Trending_TrendingEntryCommunityCreation `json:"creation"`
+
     // DestinyActivity.
     //
     // 
@@ -37,9 +42,4 @@ type Trending_TrendingDetail struct {
     //
     // 
     Support Trending_TrendingEntrySupportArticle `json:"support"`
-
-    // Creation.
-    //
-    // 
-    Creation Trending_TrendingEntryCommunityCreation `json:"creation"`
 }

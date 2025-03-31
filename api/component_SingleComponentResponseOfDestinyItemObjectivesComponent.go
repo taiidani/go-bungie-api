@@ -3,11 +3,6 @@
 package api
 
 type SingleComponentResponseOfDestinyItemObjectivesComponent struct {
-    // Privacy.
-    //
-    // 
-    Privacy int32 `json:"privacy"`
-
     // Data.
     //
     // Items can have objectives and progression. When you request this block, you will obtain information about any Objectives and progression tied to this item.
@@ -16,5 +11,10 @@ type SingleComponentResponseOfDestinyItemObjectivesComponent struct {
     // Disabled.
     //
     // If true, this component is disabled.
-    Disabled bool `json:"disabled"`
+    Disabled *bool `json:"disabled"`
+
+    // Privacy.
+    //
+    // 
+    Privacy int32 `json:"privacy"`
 }

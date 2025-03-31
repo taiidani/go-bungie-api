@@ -3,18 +3,18 @@
 package api
 
 type SingleComponentResponseOfDestinyItemPlugObjectivesComponent struct {
+    // Data.
+    //
+    // 
+    Data Destiny_Components_Items_DestinyItemPlugObjectivesComponent `json:"data"`
+
     // Disabled.
     //
     // If true, this component is disabled.
-    Disabled bool `json:"disabled"`
+    Disabled *bool `json:"disabled"`
 
     // Privacy.
     //
     // 
     Privacy int32 `json:"privacy"`
-
-    // Data.
-    //
-    // 
-    Data Destiny_Components_Items_DestinyItemPlugObjectivesComponent `json:"data"`
 }

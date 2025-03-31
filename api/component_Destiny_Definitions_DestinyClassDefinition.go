@@ -3,6 +3,21 @@
 package api
 
 type Destiny_Definitions_DestinyClassDefinition struct {
+    // ClassType.
+    //
+    // In Destiny 1, we added a convenience Enumeration for referring to classes. We've kept it, though mostly for posterity. This is the enum value for this definition's class.
+    ClassType int32 `json:"classType"`
+
+    // DisplayProperties.
+    //
+    // Many Destiny*Definition contracts - the "first order" entities of Destiny that have their own tables in the Manifest Database - also have displayable information. This is the base class for that display information.
+    DisplayProperties Destiny_Definitions_Common_DestinyDisplayPropertiesDefinition `json:"displayProperties"`
+
+    // GenderedClassNames.
+    //
+    // A localized string referring to the singular form of the Class's name when referred to in gendered form. Keyed by the DestinyGender.
+    GenderedClassNames any `json:"genderedClassNames"`
+
     // GenderedClassNamesByGenderHash.
     //
     // 
@@ -23,25 +38,10 @@ type Destiny_Definitions_DestinyClassDefinition struct {
     // MentorVendorHash.
     //
     // Mentors don't really mean anything anymore. Don't expect this to be populated.
-    MentorVendorHash uint32 `json:"mentorVendorHash"`
+    MentorVendorHash *uint32 `json:"mentorVendorHash"`
 
     // Redacted.
     //
     // If this is true, then there is an entity with this identifier/type combination, but BNet is not yet allowed to show it. Sorry!
     Redacted bool `json:"redacted"`
-
-    // ClassType.
-    //
-    // In Destiny 1, we added a convenience Enumeration for referring to classes. We've kept it, though mostly for posterity. This is the enum value for this definition's class.
-    ClassType int32 `json:"classType"`
-
-    // DisplayProperties.
-    //
-    // Many Destiny*Definition contracts - the "first order" entities of Destiny that have their own tables in the Manifest Database - also have displayable information. This is the base class for that display information.
-    DisplayProperties Destiny_Definitions_Common_DestinyDisplayPropertiesDefinition `json:"displayProperties"`
-
-    // GenderedClassNames.
-    //
-    // A localized string referring to the singular form of the Class's name when referred to in gendered form. Keyed by the DestinyGender.
-    GenderedClassNames any `json:"genderedClassNames"`
 }

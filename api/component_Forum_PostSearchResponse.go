@@ -3,6 +3,56 @@
 package api
 
 type Forum_PostSearchResponse struct {
+    // Authors.
+    //
+    // 
+    Authors []User_GeneralUser `json:"authors"`
+
+    // AvailablePages.
+    //
+    // 
+    AvailablePages *int32 `json:"availablePages"`
+
+    // Groups.
+    //
+    // 
+    Groups []GroupsV2_GroupResponse `json:"groups"`
+
+    // HasMore.
+    //
+    // 
+    HasMore bool `json:"hasMore"`
+
+    // Polls.
+    //
+    // 
+    Polls []Forum_PollResponse `json:"polls"`
+
+    // Query.
+    //
+    // 
+    Query Queries_PagedQuery `json:"query"`
+
+    // RecruitmentDetails.
+    //
+    // 
+    RecruitmentDetails []Forum_ForumRecruitmentDetail `json:"recruitmentDetails"`
+
+    // RelatedPosts.
+    //
+    // 
+    RelatedPosts []Forum_PostResponse `json:"relatedPosts"`
+
+    // ReplacementContinuationToken.
+    //
+    // 
+    ReplacementContinuationToken string `json:"replacementContinuationToken"`
+
+    // Results.
+    //
+    // 
+    Results []Forum_PostResponse `json:"results"`
+
     // SearchedTags.
     //
     // 
@@ -23,54 +73,4 @@ type Forum_PostSearchResponse struct {
     //
     // This is a long-held historical throwback to when we used to do paging with known total results. Those queries toasted our database, and we were left to hastily alter our endpoints and create backward- compatible shims, of which useTotalResults is one.
     UseTotalResults bool `json:"useTotalResults"`
-
-    // HasMore.
-    //
-    // 
-    HasMore bool `json:"hasMore"`
-
-    // Query.
-    //
-    // 
-    Query Queries_PagedQuery `json:"query"`
-
-    // ReplacementContinuationToken.
-    //
-    // 
-    ReplacementContinuationToken string `json:"replacementContinuationToken"`
-
-    // AvailablePages.
-    //
-    // 
-    AvailablePages int32 `json:"availablePages"`
-
-    // Results.
-    //
-    // 
-    Results []Forum_PostResponse `json:"results"`
-
-    // Polls.
-    //
-    // 
-    Polls []Forum_PollResponse `json:"polls"`
-
-    // RecruitmentDetails.
-    //
-    // 
-    RecruitmentDetails []Forum_ForumRecruitmentDetail `json:"recruitmentDetails"`
-
-    // Authors.
-    //
-    // 
-    Authors []User_GeneralUser `json:"authors"`
-
-    // Groups.
-    //
-    // 
-    Groups []GroupsV2_GroupResponse `json:"groups"`
-
-    // RelatedPosts.
-    //
-    // 
-    RelatedPosts []Forum_PostResponse `json:"relatedPosts"`
 }

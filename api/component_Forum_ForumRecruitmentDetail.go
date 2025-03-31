@@ -3,35 +3,35 @@
 package api
 
 type Forum_ForumRecruitmentDetail struct {
-    // Tone.
+    // Approved.
     //
     // 
-    Tone byte `json:"tone"`
+    Approved bool `json:"approved"`
 
-    // TopicId.
+    // ConversationId.
     //
     // 
-    TopicId int64 `json:"topicId"`
+    ConversationId *int64 `json:"conversationId"`
+
+    // Fireteam.
+    //
+    // 
+    Fireteam []User_GeneralUser `json:"Fireteam"`
 
     // Intensity.
     //
     // 
     Intensity byte `json:"intensity"`
 
-    // MicrophoneRequired.
-    //
-    // 
-    MicrophoneRequired bool `json:"microphoneRequired"`
-
-    // Approved.
-    //
-    // 
-    Approved bool `json:"approved"`
-
     // KickedPlayerIds.
     //
     // 
     KickedPlayerIds []int64 `json:"kickedPlayerIds"`
+
+    // MicrophoneRequired.
+    //
+    // 
+    MicrophoneRequired bool `json:"microphoneRequired"`
 
     // PlayerSlotsRemaining.
     //
@@ -43,13 +43,13 @@ type Forum_ForumRecruitmentDetail struct {
     // 
     PlayerSlotsTotal int32 `json:"playerSlotsTotal"`
 
-    // Fireteam.
+    // Tone.
     //
     // 
-    Fireteam []User_GeneralUser `json:"Fireteam"`
+    Tone byte `json:"tone"`
 
-    // ConversationId.
+    // TopicId.
     //
     // 
-    ConversationId int64 `json:"conversationId"`
+    TopicId int64 `json:"topicId"`
 }

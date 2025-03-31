@@ -3,6 +3,11 @@
 package api
 
 type Tokens_PartnerOfferClaimRequest struct {
+    // BungieNetMembershipId.
+    //
+    // 
+    BungieNetMembershipId int64 `json:"BungieNetMembershipId"`
+
     // PartnerOfferId.
     //
     // 
@@ -12,9 +17,4 @@ type Tokens_PartnerOfferClaimRequest struct {
     //
     // 
     TransactionId string `json:"TransactionId"`
-
-    // BungieNetMembershipId.
-    //
-    // 
-    BungieNetMembershipId int64 `json:"BungieNetMembershipId"`
 }

@@ -3,11 +3,6 @@
 package api
 
 type Content_NewsArticleRssItem struct {
-    // UniqueIdentifier.
-    //
-    // 
-    UniqueIdentifier string `json:"UniqueIdentifier"`
-
     // Description.
     //
     // 
@@ -42,4 +37,9 @@ type Content_NewsArticleRssItem struct {
     //
     // 
     Title string `json:"Title"`
+
+    // UniqueIdentifier.
+    //
+    // 
+    UniqueIdentifier string `json:"UniqueIdentifier"`
 }

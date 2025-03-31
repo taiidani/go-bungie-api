@@ -3,21 +3,6 @@
 package api
 
 type Destiny_Definitions_Director_DestinyActivityGraphNodeDefinition struct {
-    // OverrideDisplay.
-    //
-    // The node *may* have display properties that override the active Activity's display properties.
-    OverrideDisplay any `json:"overrideDisplay"`
-
-    // Position.
-    //
-    // The position on the map for this node.
-    Position any `json:"position"`
-
-    // States.
-    //
-    // Represents possible states that the graph node can be in. These are combined with some checking that happens in the game client and server to determine which state is actually active at any given time.
-    States []Destiny_Definitions_Director_DestinyActivityGraphNodeStateEntry `json:"states"`
-
     // Activities.
     //
     // The node may have various possible activities that could be active for it, however only one may be active at a time. See the DestinyActivityGraphNodeActivityDefinition for details.
@@ -32,4 +17,19 @@ type Destiny_Definitions_Director_DestinyActivityGraphNodeDefinition struct {
     //
     // An identifier for the Activity Graph Node, only guaranteed to be unique within its parent Activity Graph.
     NodeId uint32 `json:"nodeId"`
+
+    // OverrideDisplay.
+    //
+    // The node *may* have display properties that override the active Activity's display properties.
+    OverrideDisplay any `json:"overrideDisplay"`
+
+    // Position.
+    //
+    // The position on the map for this node.
+    Position any `json:"position"`
+
+    // States.
+    //
+    // Represents possible states that the graph node can be in. These are combined with some checking that happens in the game client and server to determine which state is actually active at any given time.
+    States []Destiny_Definitions_Director_DestinyActivityGraphNodeStateEntry `json:"states"`
 }

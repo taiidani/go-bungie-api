@@ -3,21 +3,6 @@
 package api
 
 type DestinyItemComponentSetOfint64 struct {
-    // Perks.
-    //
-    // 
-    Perks DictionaryComponentResponseOfint64AndDestinyItemPerksComponent `json:"perks"`
-
-    // RenderData.
-    //
-    // 
-    RenderData DictionaryComponentResponseOfint64AndDestinyItemRenderComponent `json:"renderData"`
-
-    // Sockets.
-    //
-    // 
-    Sockets DictionaryComponentResponseOfint64AndDestinyItemSocketsComponent `json:"sockets"`
-
     // Instances.
     //
     // 
@@ -28,10 +13,10 @@ type DestinyItemComponentSetOfint64 struct {
     // 
     Objectives DictionaryComponentResponseOfint64AndDestinyItemObjectivesComponent `json:"objectives"`
 
-    // Stats.
+    // Perks.
     //
     // 
-    Stats DictionaryComponentResponseOfint64AndDestinyItemStatsComponent `json:"stats"`
+    Perks DictionaryComponentResponseOfint64AndDestinyItemPerksComponent `json:"perks"`
 
     // PlugObjectives.
     //
@@ -43,10 +28,25 @@ type DestinyItemComponentSetOfint64 struct {
     // 
     PlugStates DictionaryComponentResponseOfuint32AndDestinyItemPlugComponent `json:"plugStates"`
 
+    // RenderData.
+    //
+    // 
+    RenderData DictionaryComponentResponseOfint64AndDestinyItemRenderComponent `json:"renderData"`
+
     // ReusablePlugs.
     //
     // 
     ReusablePlugs DictionaryComponentResponseOfint64AndDestinyItemReusablePlugsComponent `json:"reusablePlugs"`
+
+    // Sockets.
+    //
+    // 
+    Sockets DictionaryComponentResponseOfint64AndDestinyItemSocketsComponent `json:"sockets"`
+
+    // Stats.
+    //
+    // 
+    Stats DictionaryComponentResponseOfint64AndDestinyItemStatsComponent `json:"stats"`
 
     // TalentGrids.
     //

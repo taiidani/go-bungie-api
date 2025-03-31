@@ -3,15 +3,10 @@
 package api
 
 type Destiny_Definitions_DestinyFactionDefinition struct {
-    // RewardItemHash.
+    // DisplayProperties.
     //
-    // The faction reward item hash, usually an engram.
-    RewardItemHash uint32 `json:"rewardItemHash"`
-
-    // TokenValues.
-    //
-    // The faction token item hashes, and their respective progression values.
-    TokenValues any `json:"tokenValues"`
+    // Many Destiny*Definition contracts - the "first order" entities of Destiny that have their own tables in the Manifest Database - also have displayable information. This is the base class for that display information.
+    DisplayProperties Destiny_Definitions_Common_DestinyDisplayPropertiesDefinition `json:"displayProperties"`
 
     // Hash.
     //
@@ -25,28 +20,33 @@ type Destiny_Definitions_DestinyFactionDefinition struct {
     // The index of the entity as it was found in the investment tables.
     Index int32 `json:"index"`
 
-    // RewardVendorHash.
-    //
-    // The faction reward vendor hash, used for faction engram previews.
-    RewardVendorHash uint32 `json:"rewardVendorHash"`
-
-    // Vendors.
-    //
-    // List of vendors that are associated with this faction. The last vendor that passes the unlock flag checks is the one that should be shown.
-    Vendors []Destiny_Definitions_DestinyFactionVendorDefinition `json:"vendors"`
-
     // ProgressionHash.
     //
     // The hash identifier for the DestinyProgressionDefinition that indicates the character's relationship with this faction in terms of experience and levels.
     ProgressionHash uint32 `json:"progressionHash"`
 
-    // DisplayProperties.
-    //
-    // Many Destiny*Definition contracts - the "first order" entities of Destiny that have their own tables in the Manifest Database - also have displayable information. This is the base class for that display information.
-    DisplayProperties Destiny_Definitions_Common_DestinyDisplayPropertiesDefinition `json:"displayProperties"`
-
     // Redacted.
     //
     // If this is true, then there is an entity with this identifier/type combination, but BNet is not yet allowed to show it. Sorry!
     Redacted bool `json:"redacted"`
+
+    // RewardItemHash.
+    //
+    // The faction reward item hash, usually an engram.
+    RewardItemHash uint32 `json:"rewardItemHash"`
+
+    // RewardVendorHash.
+    //
+    // The faction reward vendor hash, used for faction engram previews.
+    RewardVendorHash uint32 `json:"rewardVendorHash"`
+
+    // TokenValues.
+    //
+    // The faction token item hashes, and their respective progression values.
+    TokenValues any `json:"tokenValues"`
+
+    // Vendors.
+    //
+    // List of vendors that are associated with this faction. The last vendor that passes the unlock flag checks is the one that should be shown.
+    Vendors []Destiny_Definitions_DestinyFactionVendorDefinition `json:"vendors"`
 }

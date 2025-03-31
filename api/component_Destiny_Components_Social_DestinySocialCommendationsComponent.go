@@ -3,11 +3,6 @@
 package api
 
 type Destiny_Components_Social_DestinySocialCommendationsComponent struct {
-    // TotalScore.
-    //
-    // 
-    TotalScore int32 `json:"totalScore"`
-
     // CommendationNodePercentagesByHash.
     //
     // The percentage for each commendation type out of total received
@@ -27,4 +22,9 @@ type Destiny_Components_Social_DestinySocialCommendationsComponent struct {
     //
     // 
     ScoreDetailValues []int32 `json:"scoreDetailValues"`
+
+    // TotalScore.
+    //
+    // 
+    TotalScore int32 `json:"totalScore"`
 }

@@ -3,25 +3,30 @@
 package api
 
 type GroupsV2_GroupEditHistory struct {
-    // MottoEditors.
+    // About.
     //
     // 
-    MottoEditors int64 `json:"mottoEditors"`
+    About string `json:"about"`
 
-    // Motto.
+    // AboutEditors.
     //
     // 
-    Motto string `json:"motto"`
+    AboutEditors *int64 `json:"aboutEditors"`
 
-    // NameEditors.
+    // ClanCallsign.
     //
     // 
-    NameEditors int64 `json:"nameEditors"`
+    ClanCallsign string `json:"clanCallsign"`
 
     // ClanCallsignEditors.
     //
     // 
-    ClanCallsignEditors int64 `json:"clanCallsignEditors"`
+    ClanCallsignEditors *int64 `json:"clanCallsignEditors"`
+
+    // EditDate.
+    //
+    // 
+    EditDate *string `json:"editDate"`
 
     // GroupEditors.
     //
@@ -33,28 +38,23 @@ type GroupsV2_GroupEditHistory struct {
     // 
     GroupId int64 `json:"groupId"`
 
+    // Motto.
+    //
+    // 
+    Motto string `json:"motto"`
+
+    // MottoEditors.
+    //
+    // 
+    MottoEditors *int64 `json:"mottoEditors"`
+
     // Name.
     //
     // 
     Name string `json:"name"`
 
-    // AboutEditors.
+    // NameEditors.
     //
     // 
-    AboutEditors int64 `json:"aboutEditors"`
-
-    // ClanCallsign.
-    //
-    // 
-    ClanCallsign string `json:"clanCallsign"`
-
-    // About.
-    //
-    // 
-    About string `json:"about"`
-
-    // EditDate.
-    //
-    // 
-    EditDate string `json:"editDate"`
+    NameEditors *int64 `json:"nameEditors"`
 }

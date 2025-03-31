@@ -10,7 +10,7 @@ type Destiny_Definitions_DestinyInventoryItemStatDefinition struct {
     // This is pulled directly from the item's DestinyStatGroupDefinition, and placed here for convenience.
     //
     // If not returned, there is no maximum to use (and thus the stat should not be shown in a way that assumes there is a limit to the stat)
-    DisplayMaximum int32 `json:"displayMaximum"`
+    DisplayMaximum *int32 `json:"displayMaximum"`
 
     // Maximum.
     //

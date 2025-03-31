@@ -3,16 +3,6 @@
 package api
 
 type Destiny_Definitions_DestinyItemSetBlockDefinition struct {
-    // SetIsFeatured.
-    //
-    // If true, the UI should treat this quest as "featured"
-    SetIsFeatured bool `json:"setIsFeatured"`
-
-    // SetType.
-    //
-    // A string identifier we can use to attempt to identify the category of the Quest.
-    SetType string `json:"setType"`
-
     // ItemList.
     //
     // A collection of hashes of set items, for items such as Quest Metadata items that possess this data.
@@ -37,4 +27,14 @@ type Destiny_Definitions_DestinyItemSetBlockDefinition struct {
     //
     // If true, items in the set can only be added in increasing order, and adding an item will remove any previous item. For Quests, this is by necessity true. Only one quest step is present at a time, and previous steps are removed as you advance in the quest.
     RequireOrderedSetItemAdd bool `json:"requireOrderedSetItemAdd"`
+
+    // SetIsFeatured.
+    //
+    // If true, the UI should treat this quest as "featured"
+    SetIsFeatured bool `json:"setIsFeatured"`
+
+    // SetType.
+    //
+    // A string identifier we can use to attempt to identify the category of the Quest.
+    SetType string `json:"setType"`
 }

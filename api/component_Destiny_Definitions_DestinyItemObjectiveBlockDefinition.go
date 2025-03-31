@@ -3,11 +3,6 @@
 package api
 
 type Destiny_Definitions_DestinyItemObjectiveBlockDefinition struct {
-    // QuestlineItemHash.
-    //
-    // The hash for the DestinyInventoryItemDefinition representing the Quest to which this Quest Step belongs.
-    QuestlineItemHash uint32 `json:"questlineItemHash"`
-
     // DisplayActivityHashes.
     //
     // For every entry in objectiveHashes, there is a corresponding entry in this array at the same index. If the objective is meant to be associated with a specific DestinyActivityDefinition, there will be a valid hash at that index. Otherwise, it will be invalid (0).
@@ -35,16 +30,6 @@ type Destiny_Definitions_DestinyItemObjectiveBlockDefinition struct {
     // The localized string describing an action to be performed associated with the objectives, if any.
     ObjectiveVerbName string `json:"objectiveVerbName"`
 
-    // QuestTypeIdentifier.
-    //
-    // The identifier for the type of quest being performed, if any. Not associated with any fixed definition, yet.
-    QuestTypeIdentifier string `json:"questTypeIdentifier"`
-
-    // RequireFullObjectiveCompletion.
-    //
-    // If True, all objectives must be completed for the step to be completed. If False, any one objective can be completed for the step to be completed.
-    RequireFullObjectiveCompletion bool `json:"requireFullObjectiveCompletion"`
-
     // PerObjectiveDisplayProperties.
     //
     // One entry per Objective on the item, it will have related display information.
@@ -54,4 +39,19 @@ type Destiny_Definitions_DestinyItemObjectiveBlockDefinition struct {
     //
     // A hashed value for the questTypeIdentifier, because apparently I like to be redundant.
     QuestTypeHash uint32 `json:"questTypeHash"`
+
+    // QuestTypeIdentifier.
+    //
+    // The identifier for the type of quest being performed, if any. Not associated with any fixed definition, yet.
+    QuestTypeIdentifier string `json:"questTypeIdentifier"`
+
+    // QuestlineItemHash.
+    //
+    // The hash for the DestinyInventoryItemDefinition representing the Quest to which this Quest Step belongs.
+    QuestlineItemHash uint32 `json:"questlineItemHash"`
+
+    // RequireFullObjectiveCompletion.
+    //
+    // If True, all objectives must be completed for the step to be completed. If False, any one objective can be completed for the step to be completed.
+    RequireFullObjectiveCompletion bool `json:"requireFullObjectiveCompletion"`
 }

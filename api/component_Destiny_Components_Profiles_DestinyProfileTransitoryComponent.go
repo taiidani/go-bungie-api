@@ -3,11 +3,6 @@
 package api
 
 type Destiny_Components_Profiles_DestinyProfileTransitoryComponent struct {
-    // Tracking.
-    //
-    // Information about tracked entities.
-    Tracking []Destiny_Components_Profiles_DestinyProfileTransitoryTrackingEntry `json:"tracking"`
-
     // CurrentActivity.
     //
     // If you are in an activity, this is some transitory info about the activity currently being played.
@@ -21,10 +16,15 @@ type Destiny_Components_Profiles_DestinyProfileTransitoryComponent struct {
     // LastOrbitedDestinationHash.
     //
     // The hash identifier for the DestinyDestinationDefinition of the last location you were orbiting when in orbit.
-    LastOrbitedDestinationHash uint32 `json:"lastOrbitedDestinationHash"`
+    LastOrbitedDestinationHash *uint32 `json:"lastOrbitedDestinationHash"`
 
     // PartyMembers.
     //
     // If you have any members currently in your party, this is some (very) bare-bones information about those members.
     PartyMembers []Destiny_Components_Profiles_DestinyProfileTransitoryPartyMember `json:"partyMembers"`
+
+    // Tracking.
+    //
+    // Information about tracked entities.
+    Tracking []Destiny_Components_Profiles_DestinyProfileTransitoryTrackingEntry `json:"tracking"`
 }

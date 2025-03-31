@@ -3,13 +3,13 @@
 package api
 
 type Destiny_Definitions_Milestones_DestinyMilestoneValueDefinition struct {
-    // Key.
-    //
-    // 
-    Key string `json:"key"`
-
     // DisplayProperties.
     //
     // Many Destiny*Definition contracts - the "first order" entities of Destiny that have their own tables in the Manifest Database - also have displayable information. This is the base class for that display information.
     DisplayProperties Destiny_Definitions_Common_DestinyDisplayPropertiesDefinition `json:"displayProperties"`
+
+    // Key.
+    //
+    // 
+    Key string `json:"key"`
 }

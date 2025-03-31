@@ -3,11 +3,6 @@
 package api
 
 type SingleComponentResponseOfDestinyVendorComponent struct {
-    // Privacy.
-    //
-    // 
-    Privacy int32 `json:"privacy"`
-
     // Data.
     //
     // This component contains essential/summary information about the vendor.
@@ -16,5 +11,10 @@ type SingleComponentResponseOfDestinyVendorComponent struct {
     // Disabled.
     //
     // If true, this component is disabled.
-    Disabled bool `json:"disabled"`
+    Disabled *bool `json:"disabled"`
+
+    // Privacy.
+    //
+    // 
+    Privacy int32 `json:"privacy"`
 }

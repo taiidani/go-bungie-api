@@ -3,6 +3,11 @@
 package api
 
 type Destiny_Requests_Actions_DestinyItemStateRequest struct {
+    // CharacterId.
+    //
+    // 
+    CharacterId int64 `json:"characterId"`
+
     // ItemId.
     //
     // The instance ID of the item for this action request.
@@ -17,9 +22,4 @@ type Destiny_Requests_Actions_DestinyItemStateRequest struct {
     //
     // 
     State bool `json:"state"`
-
-    // CharacterId.
-    //
-    // 
-    CharacterId int64 `json:"characterId"`
 }

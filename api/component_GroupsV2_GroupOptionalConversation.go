@@ -3,6 +3,16 @@
 package api
 
 type GroupsV2_GroupOptionalConversation struct {
+    // ChatEnabled.
+    //
+    // 
+    ChatEnabled bool `json:"chatEnabled"`
+
+    // ChatName.
+    //
+    // 
+    ChatName string `json:"chatName"`
+
     // ChatSecurity.
     //
     // 
@@ -17,14 +27,4 @@ type GroupsV2_GroupOptionalConversation struct {
     //
     // 
     GroupId int64 `json:"groupId"`
-
-    // ChatEnabled.
-    //
-    // 
-    ChatEnabled bool `json:"chatEnabled"`
-
-    // ChatName.
-    //
-    // 
-    ChatName string `json:"chatName"`
 }

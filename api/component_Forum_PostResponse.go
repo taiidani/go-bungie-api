@@ -3,50 +3,10 @@
 package api
 
 type Forum_PostResponse struct {
-    // LatestReplyAuthorId.
-    //
-    // 
-    LatestReplyAuthorId int64 `json:"latestReplyAuthorId"`
-
-    // Popularity.
-    //
-    // 
-    Popularity int32 `json:"popularity"`
-
-    // UrlMediaType.
-    //
-    // 
-    UrlMediaType int32 `json:"urlMediaType"`
-
-    // UserHasRated.
-    //
-    // 
-    UserHasRated bool `json:"userHasRated"`
-
-    // UserRating.
-    //
-    // 
-    UserRating int32 `json:"userRating"`
-
-    // IsPinned.
-    //
-    // 
-    IsPinned bool `json:"IsPinned"`
-
     // IgnoreStatus.
     //
     // 
     IgnoreStatus Ignores_IgnoreResponse `json:"ignoreStatus"`
-
-    // LatestReplyPostId.
-    //
-    // 
-    LatestReplyPostId int64 `json:"latestReplyPostId"`
-
-    // Thumbnail.
-    //
-    // 
-    Thumbnail string `json:"thumbnail"`
 
     // IsActive.
     //
@@ -58,18 +18,58 @@ type Forum_PostResponse struct {
     // 
     IsAnnouncement bool `json:"isAnnouncement"`
 
+    // IsPinned.
+    //
+    // 
+    IsPinned bool `json:"IsPinned"`
+
+    // LastReplyTimestamp.
+    //
+    // 
+    LastReplyTimestamp string `json:"lastReplyTimestamp"`
+
+    // LatestReplyAuthorId.
+    //
+    // 
+    LatestReplyAuthorId int64 `json:"latestReplyAuthorId"`
+
+    // LatestReplyPostId.
+    //
+    // 
+    LatestReplyPostId int64 `json:"latestReplyPostId"`
+
     // Locale.
     //
     // 
     Locale string `json:"locale"`
+
+    // Popularity.
+    //
+    // 
+    Popularity int32 `json:"popularity"`
+
+    // Thumbnail.
+    //
+    // 
+    Thumbnail string `json:"thumbnail"`
+
+    // UrlMediaType.
+    //
+    // 
+    UrlMediaType int32 `json:"urlMediaType"`
 
     // UserHasMutedPost.
     //
     // 
     UserHasMutedPost bool `json:"userHasMutedPost"`
 
-    // LastReplyTimestamp.
+    // UserHasRated.
     //
     // 
-    LastReplyTimestamp string `json:"lastReplyTimestamp"`
+    UserHasRated bool `json:"userHasRated"`
+
+    // UserRating.
+    //
+    // 
+    UserRating int32 `json:"userRating"`
 }

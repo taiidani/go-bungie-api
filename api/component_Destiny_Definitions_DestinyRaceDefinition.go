@@ -3,16 +3,6 @@
 package api
 
 type Destiny_Definitions_DestinyRaceDefinition struct {
-    // RaceType.
-    //
-    // An enumeration defining the existing, known Races/Species for player characters. This value will be the enum value matching this definition.
-    RaceType int32 `json:"raceType"`
-
-    // Redacted.
-    //
-    // If this is true, then there is an entity with this identifier/type combination, but BNet is not yet allowed to show it. Sorry!
-    Redacted bool `json:"redacted"`
-
     // DisplayProperties.
     //
     // Many Destiny*Definition contracts - the "first order" entities of Destiny that have their own tables in the Manifest Database - also have displayable information. This is the base class for that display information.
@@ -39,4 +29,14 @@ type Destiny_Definitions_DestinyRaceDefinition struct {
     //
     // The index of the entity as it was found in the investment tables.
     Index int32 `json:"index"`
+
+    // RaceType.
+    //
+    // An enumeration defining the existing, known Races/Species for player characters. This value will be the enum value matching this definition.
+    RaceType int32 `json:"raceType"`
+
+    // Redacted.
+    //
+    // If this is true, then there is an entity with this identifier/type combination, but BNet is not yet allowed to show it. Sorry!
+    Redacted bool `json:"redacted"`
 }

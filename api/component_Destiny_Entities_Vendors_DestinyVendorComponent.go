@@ -32,7 +32,7 @@ type Destiny_Entities_Vendors_DestinyVendorComponent struct {
     // SeasonalRank.
     //
     // If this vendor has a seasonal rank, this will be the calculated value of that rank. How nice is that? I mean, that's pretty sweeet. It's a whole 32 bit integer.
-    SeasonalRank int32 `json:"seasonalRank"`
+    SeasonalRank *int32 `json:"seasonalRank"`
 
     // VendorHash.
     //

@@ -3,16 +3,6 @@
 package api
 
 type Destiny_Definitions_Checklists_DestinyChecklistDefinition struct {
-    // Scope.
-    //
-    // Indicates whether you will find this checklist on the Profile or Character components.
-    Scope int32 `json:"scope"`
-
-    // ViewActionString.
-    //
-    // A localized string prompting you to view the checklist.
-    ViewActionString string `json:"viewActionString"`
-
     // DisplayProperties.
     //
     // Many Destiny*Definition contracts - the "first order" entities of Destiny that have their own tables in the Manifest Database - also have displayable information. This is the base class for that display information.
@@ -39,4 +29,14 @@ type Destiny_Definitions_Checklists_DestinyChecklistDefinition struct {
     //
     // If this is true, then there is an entity with this identifier/type combination, but BNet is not yet allowed to show it. Sorry!
     Redacted bool `json:"redacted"`
+
+    // Scope.
+    //
+    // Indicates whether you will find this checklist on the Profile or Character components.
+    Scope int32 `json:"scope"`
+
+    // ViewActionString.
+    //
+    // A localized string prompting you to view the checklist.
+    ViewActionString string `json:"viewActionString"`
 }

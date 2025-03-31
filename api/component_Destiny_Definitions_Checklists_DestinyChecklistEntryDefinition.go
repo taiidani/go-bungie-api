@@ -3,55 +3,55 @@
 package api
 
 type Destiny_Definitions_Checklists_DestinyChecklistEntryDefinition struct {
-    // DisplayProperties.
-    //
-    // Even if no other associations exist, we will give you *something* for display properties. In cases where we have no associated entities, it may be as simple as a numerical identifier.
-    DisplayProperties any `json:"displayProperties"`
-
-    // Scope.
-    //
-    // The scope at which this specific entry can be computed.
-    Scope int32 `json:"scope"`
-
-    // VendorInteractionIndex.
-    //
-    // 
-    VendorInteractionIndex int32 `json:"vendorInteractionIndex"`
-
     // ActivityHash.
     //
     // 
-    ActivityHash uint32 `json:"activityHash"`
-
-    // ItemHash.
-    //
-    // 
-    ItemHash uint32 `json:"itemHash"`
-
-    // VendorHash.
-    //
-    // 
-    VendorHash uint32 `json:"vendorHash"`
-
-    // Hash.
-    //
-    // The identifier for this Checklist entry. Guaranteed unique only within this Checklist Definition, and not globally/for all checklists.
-    Hash uint32 `json:"hash"`
-
-    // LocationHash.
-    //
-    // 
-    LocationHash uint32 `json:"locationHash"`
+    ActivityHash *uint32 `json:"activityHash"`
 
     // BubbleHash.
     //
     // Note that a Bubble's hash doesn't uniquely identify a "top level" entity in Destiny. Only the combination of location and bubble can uniquely identify a place in the world of Destiny: so if bubbleHash is populated, locationHash must too be populated for it to have any meaning.
     //
     // You can use this property if it is populated to look up the DestinyLocationDefinition's associated .locationReleases[].activityBubbleName property.
-    BubbleHash uint32 `json:"bubbleHash"`
+    BubbleHash *uint32 `json:"bubbleHash"`
 
     // DestinationHash.
     //
     // 
-    DestinationHash uint32 `json:"destinationHash"`
+    DestinationHash *uint32 `json:"destinationHash"`
+
+    // DisplayProperties.
+    //
+    // Even if no other associations exist, we will give you *something* for display properties. In cases where we have no associated entities, it may be as simple as a numerical identifier.
+    DisplayProperties any `json:"displayProperties"`
+
+    // Hash.
+    //
+    // The identifier for this Checklist entry. Guaranteed unique only within this Checklist Definition, and not globally/for all checklists.
+    Hash uint32 `json:"hash"`
+
+    // ItemHash.
+    //
+    // 
+    ItemHash *uint32 `json:"itemHash"`
+
+    // LocationHash.
+    //
+    // 
+    LocationHash *uint32 `json:"locationHash"`
+
+    // Scope.
+    //
+    // The scope at which this specific entry can be computed.
+    Scope int32 `json:"scope"`
+
+    // VendorHash.
+    //
+    // 
+    VendorHash *uint32 `json:"vendorHash"`
+
+    // VendorInteractionIndex.
+    //
+    // 
+    VendorInteractionIndex *int32 `json:"vendorInteractionIndex"`
 }

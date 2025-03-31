@@ -3,6 +3,11 @@
 package api
 
 type User_EmailSubscriptionDefinition struct {
+    // Localization.
+    //
+    // A dictionary of localized text for the EMail Opt-in setting, keyed by the locale.
+    Localization any `json:"localization"`
+
     // Name.
     //
     // The unique identifier for this subscription.
@@ -12,9 +17,4 @@ type User_EmailSubscriptionDefinition struct {
     //
     // The bitflag value for this subscription. Should be a unique power of two value.
     Value int64 `json:"value"`
-
-    // Localization.
-    //
-    // A dictionary of localized text for the EMail Opt-in setting, keyed by the locale.
-    Localization any `json:"localization"`
 }

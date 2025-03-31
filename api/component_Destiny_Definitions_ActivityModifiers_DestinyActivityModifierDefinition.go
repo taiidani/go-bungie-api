@@ -3,6 +3,11 @@
 package api
 
 type Destiny_Definitions_ActivityModifiers_DestinyActivityModifierDefinition struct {
+    // DisplayInActivitySelection.
+    //
+    // 
+    DisplayInActivitySelection bool `json:"displayInActivitySelection"`
+
     // DisplayInNavMode.
     //
     // 
@@ -29,9 +34,4 @@ type Destiny_Definitions_ActivityModifiers_DestinyActivityModifierDefinition str
     //
     // If this is true, then there is an entity with this identifier/type combination, but BNet is not yet allowed to show it. Sorry!
     Redacted bool `json:"redacted"`
-
-    // DisplayInActivitySelection.
-    //
-    // 
-    DisplayInActivitySelection bool `json:"displayInActivitySelection"`
 }

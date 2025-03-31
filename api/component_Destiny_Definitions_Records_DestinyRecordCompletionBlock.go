@@ -3,6 +3,16 @@
 package api
 
 type Destiny_Definitions_Records_DestinyRecordCompletionBlock struct {
+    // PartialCompletionObjectiveCountThreshold.
+    //
+    // The number of objectives that must be completed before the objective is considered "complete"
+    PartialCompletionObjectiveCountThreshold int32 `json:"partialCompletionObjectiveCountThreshold"`
+
+    // ScoreValue.
+    //
+    // 
+    ScoreValue int32 `json:"ScoreValue"`
+
     // ShouldFireToast.
     //
     // 
@@ -12,14 +22,4 @@ type Destiny_Definitions_Records_DestinyRecordCompletionBlock struct {
     //
     // 
     ToastStyle int32 `json:"toastStyle"`
-
-    // ScoreValue.
-    //
-    // 
-    ScoreValue int32 `json:"ScoreValue"`
-
-    // PartialCompletionObjectiveCountThreshold.
-    //
-    // The number of objectives that must be completed before the objective is considered "complete"
-    PartialCompletionObjectiveCountThreshold int32 `json:"partialCompletionObjectiveCountThreshold"`
 }

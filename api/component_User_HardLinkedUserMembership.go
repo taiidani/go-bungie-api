@@ -6,7 +6,7 @@ type User_HardLinkedUserMembership struct {
     // CrossSaveOverriddenMembershipId.
     //
     // 
-    CrossSaveOverriddenMembershipId int64 `json:"CrossSaveOverriddenMembershipId"`
+    CrossSaveOverriddenMembershipId *int64 `json:"CrossSaveOverriddenMembershipId"`
 
     // CrossSaveOverriddenType.
     //

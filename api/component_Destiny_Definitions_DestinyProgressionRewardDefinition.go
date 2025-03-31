@@ -3,6 +3,11 @@
 package api
 
 type Destiny_Definitions_DestinyProgressionRewardDefinition struct {
+    // Amount.
+    //
+    // The amount of experience to give to each of the mapped progressions.
+    Amount int32 `json:"amount"`
+
     // ApplyThrottles.
     //
     // If true, the game's internal mechanisms to throttle progression should be applied.
@@ -12,9 +17,4 @@ type Destiny_Definitions_DestinyProgressionRewardDefinition struct {
     //
     // The hash identifier of the DestinyProgressionMappingDefinition that contains the progressions for which experience should be applied.
     ProgressionMappingHash uint32 `json:"progressionMappingHash"`
-
-    // Amount.
-    //
-    // The amount of experience to give to each of the mapped progressions.
-    Amount int32 `json:"amount"`
 }

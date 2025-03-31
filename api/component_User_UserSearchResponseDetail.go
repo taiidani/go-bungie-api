@@ -11,12 +11,12 @@ type User_UserSearchResponseDetail struct {
     // BungieGlobalDisplayNameCode.
     //
     // 
-    BungieGlobalDisplayNameCode int16 `json:"bungieGlobalDisplayNameCode"`
+    BungieGlobalDisplayNameCode *int16 `json:"bungieGlobalDisplayNameCode"`
 
     // BungieNetMembershipId.
     //
     // 
-    BungieNetMembershipId int64 `json:"bungieNetMembershipId"`
+    BungieNetMembershipId *int64 `json:"bungieNetMembershipId"`
 
     // DestinyMemberships.
     //

@@ -3,23 +3,6 @@
 package api
 
 type Destiny_Definitions_Sockets_DestinySocketCategoryDefinition struct {
-    // Index.
-    //
-    // The index of the entity as it was found in the investment tables.
-    Index int32 `json:"index"`
-
-    // Redacted.
-    //
-    // If this is true, then there is an entity with this identifier/type combination, but BNet is not yet allowed to show it. Sorry!
-    Redacted bool `json:"redacted"`
-
-    // UiCategoryStyle.
-    //
-    // A string hinting to the game's UI system about how the sockets in this category should be displayed.
-    //
-    // BNet doesn't use it: it's up to you to find valid values and make your own special UI if you want to honor this category style.
-    UiCategoryStyle uint32 `json:"uiCategoryStyle"`
-
     // CategoryStyle.
     //
     // Same as uiCategoryStyle, but in a more usable enumeration form.
@@ -36,4 +19,21 @@ type Destiny_Definitions_Sockets_DestinySocketCategoryDefinition struct {
     //
     // When entities refer to each other in Destiny content, it is this hash that they are referring to.
     Hash uint32 `json:"hash"`
+
+    // Index.
+    //
+    // The index of the entity as it was found in the investment tables.
+    Index int32 `json:"index"`
+
+    // Redacted.
+    //
+    // If this is true, then there is an entity with this identifier/type combination, but BNet is not yet allowed to show it. Sorry!
+    Redacted bool `json:"redacted"`
+
+    // UiCategoryStyle.
+    //
+    // A string hinting to the game's UI system about how the sockets in this category should be displayed.
+    //
+    // BNet doesn't use it: it's up to you to find valid values and make your own special UI if you want to honor this category style.
+    UiCategoryStyle uint32 `json:"uiCategoryStyle"`
 }

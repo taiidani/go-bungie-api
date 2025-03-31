@@ -3,6 +3,11 @@
 package api
 
 type FireteamFinder_DestinyFireteamFinderLobbyResponse struct {
+    // CreatedDateTime.
+    //
+    // 
+    CreatedDateTime string `json:"createdDateTime"`
+
     // ListingId.
     //
     // 
@@ -37,9 +42,4 @@ type FireteamFinder_DestinyFireteamFinderLobbyResponse struct {
     //
     // 
     State int32 `json:"state"`
-
-    // CreatedDateTime.
-    //
-    // 
-    CreatedDateTime string `json:"createdDateTime"`
 }

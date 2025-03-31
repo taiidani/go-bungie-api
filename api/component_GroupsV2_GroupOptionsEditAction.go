@@ -3,28 +3,6 @@
 package api
 
 type GroupsV2_GroupOptionsEditAction struct {
-    // UpdateBannerPermissionOverride.
-    //
-    // Minimum Member Level allowed to update banner
-    //
-    // Always Allowed: Founder, Acting Founder
-    //
-    // True means admins have this power, false means they don't
-    //
-    // Default is false for clans, true for groups.
-    UpdateBannerPermissionOverride bool `json:"UpdateBannerPermissionOverride"`
-
-    // UpdateCulturePermissionOverride.
-    //
-    // Minimum Member Level allowed to update group culture
-    //
-    // Always Allowed: Founder, Acting Founder
-    //
-    // True means admins have this power, false means they don't
-    //
-    // Default is false for clans, true for groups.
-    UpdateCulturePermissionOverride bool `json:"UpdateCulturePermissionOverride"`
-
     // HostGuidedGamePermissionOverride.
     //
     // Minimum Member Level allowed to host guided games
@@ -34,7 +12,7 @@ type GroupsV2_GroupOptionsEditAction struct {
     // Allowed Overrides: None, Member, Beginner
     //
     // Default is Member for clans, None for groups, although this means nothing for groups.
-    HostGuidedGamePermissionOverride int32 `json:"HostGuidedGamePermissionOverride"`
+    HostGuidedGamePermissionOverride *int32 `json:"HostGuidedGamePermissionOverride"`
 
     // InvitePermissionOverride.
     //
@@ -45,12 +23,34 @@ type GroupsV2_GroupOptionsEditAction struct {
     // True means admins have this power, false means they don't
     //
     // Default is false for clans, true for groups.
-    InvitePermissionOverride bool `json:"InvitePermissionOverride"`
+    InvitePermissionOverride *bool `json:"InvitePermissionOverride"`
 
     // JoinLevel.
     //
     // Level to join a member at when accepting an invite, application, or joining an open clan
     //
     // Default is Beginner.
-    JoinLevel int32 `json:"JoinLevel"`
+    JoinLevel *int32 `json:"JoinLevel"`
+
+    // UpdateBannerPermissionOverride.
+    //
+    // Minimum Member Level allowed to update banner
+    //
+    // Always Allowed: Founder, Acting Founder
+    //
+    // True means admins have this power, false means they don't
+    //
+    // Default is false for clans, true for groups.
+    UpdateBannerPermissionOverride *bool `json:"UpdateBannerPermissionOverride"`
+
+    // UpdateCulturePermissionOverride.
+    //
+    // Minimum Member Level allowed to update group culture
+    //
+    // Always Allowed: Founder, Acting Founder
+    //
+    // True means admins have this power, false means they don't
+    //
+    // Default is false for clans, true for groups.
+    UpdateCulturePermissionOverride *bool `json:"UpdateCulturePermissionOverride"`
 }

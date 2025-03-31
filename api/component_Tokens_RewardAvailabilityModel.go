@@ -3,15 +3,20 @@
 package api
 
 type Tokens_RewardAvailabilityModel struct {
-    // RedemptionEndDate.
+    // CollectibleDefinitions.
     //
     // 
-    RedemptionEndDate string `json:"RedemptionEndDate"`
+    CollectibleDefinitions []Tokens_CollectibleDefinitions `json:"CollectibleDefinitions"`
 
     // DecryptedToken.
     //
     // 
     DecryptedToken string `json:"DecryptedToken"`
+
+    // GameEarnByDate.
+    //
+    // 
+    GameEarnByDate string `json:"GameEarnByDate"`
 
     // HasExistingCode.
     //
@@ -23,6 +28,11 @@ type Tokens_RewardAvailabilityModel struct {
     // 
     HasOffer bool `json:"HasOffer"`
 
+    // IsLoyaltyReward.
+    //
+    // 
+    IsLoyaltyReward bool `json:"IsLoyaltyReward"`
+
     // IsOffer.
     //
     // 
@@ -33,28 +43,18 @@ type Tokens_RewardAvailabilityModel struct {
     // 
     OfferApplied bool `json:"OfferApplied"`
 
-    // CollectibleDefinitions.
-    //
-    // 
-    CollectibleDefinitions []Tokens_CollectibleDefinitions `json:"CollectibleDefinitions"`
-
-    // GameEarnByDate.
-    //
-    // 
-    GameEarnByDate string `json:"GameEarnByDate"`
-
     // RecordDefinitions.
     //
     // 
     RecordDefinitions []Destiny_Definitions_Records_DestinyRecordDefinition `json:"RecordDefinitions"`
 
-    // IsLoyaltyReward.
+    // RedemptionEndDate.
     //
     // 
-    IsLoyaltyReward bool `json:"IsLoyaltyReward"`
+    RedemptionEndDate string `json:"RedemptionEndDate"`
 
     // ShopifyEndDate.
     //
     // 
-    ShopifyEndDate string `json:"ShopifyEndDate"`
+    ShopifyEndDate *string `json:"ShopifyEndDate"`
 }

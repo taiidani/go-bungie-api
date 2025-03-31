@@ -3,6 +3,58 @@
 package api
 
 type Destiny_Definitions_Sockets_DestinySocketTypeDefinition struct {
+    // AlwaysRandomizeSockets.
+    //
+    // 
+    AlwaysRandomizeSockets bool `json:"alwaysRandomizeSockets"`
+
+    // AvoidDuplicatesOnInitialization.
+    //
+    // 
+    AvoidDuplicatesOnInitialization bool `json:"avoidDuplicatesOnInitialization"`
+
+    // CurrencyScalars.
+    //
+    // 
+    CurrencyScalars []Destiny_Definitions_Sockets_DestinySocketTypeScalarMaterialRequirementEntry `json:"currencyScalars"`
+
+    // DisplayProperties.
+    //
+    // There are fields for this display data, but they appear to be unpopulated as of now. I am not sure where in the UI these would show if they even were populated, but I will continue to return this data in case it becomes useful.
+    DisplayProperties any `json:"displayProperties"`
+
+    // Hash.
+    //
+    // The unique identifier for this entity. Guaranteed to be unique for the type of entity, but not globally.
+    //
+    // When entities refer to each other in Destiny content, it is this hash that they are referring to.
+    Hash uint32 `json:"hash"`
+
+    // HideDuplicateReusablePlugs.
+    //
+    // 
+    HideDuplicateReusablePlugs bool `json:"hideDuplicateReusablePlugs"`
+
+    // Index.
+    //
+    // The index of the entity as it was found in the investment tables.
+    Index int32 `json:"index"`
+
+    // InsertAction.
+    //
+    // Defines what happens when a plug is inserted into sockets of this type.
+    InsertAction any `json:"insertAction"`
+
+    // IsPreviewEnabled.
+    //
+    // 
+    IsPreviewEnabled bool `json:"isPreviewEnabled"`
+
+    // OverridesUiAppearance.
+    //
+    // This property indicates if the socket type determines whether Emblem icons and nameplates should be overridden by the inserted plug item's icon and nameplate.
+    OverridesUiAppearance bool `json:"overridesUiAppearance"`
+
     // PlugWhitelist.
     //
     // A list of Plug "Categories" that are allowed to be plugged into sockets of this type.
@@ -22,60 +74,8 @@ type Destiny_Definitions_Sockets_DestinySocketTypeDefinition struct {
     // 
     SocketCategoryHash uint32 `json:"socketCategoryHash"`
 
-    // AlwaysRandomizeSockets.
-    //
-    // 
-    AlwaysRandomizeSockets bool `json:"alwaysRandomizeSockets"`
-
-    // AvoidDuplicatesOnInitialization.
-    //
-    // 
-    AvoidDuplicatesOnInitialization bool `json:"avoidDuplicatesOnInitialization"`
-
-    // HideDuplicateReusablePlugs.
-    //
-    // 
-    HideDuplicateReusablePlugs bool `json:"hideDuplicateReusablePlugs"`
-
-    // Index.
-    //
-    // The index of the entity as it was found in the investment tables.
-    Index int32 `json:"index"`
-
-    // OverridesUiAppearance.
-    //
-    // This property indicates if the socket type determines whether Emblem icons and nameplates should be overridden by the inserted plug item's icon and nameplate.
-    OverridesUiAppearance bool `json:"overridesUiAppearance"`
-
     // Visibility.
     //
     // Sometimes a socket isn't visible. These are some of the conditions under which sockets of this type are not visible. Unfortunately, the truth of visibility is much, much more complex. Best to rely on the live data for whether the socket is visible and enabled.
     Visibility int32 `json:"visibility"`
-
-    // CurrencyScalars.
-    //
-    // 
-    CurrencyScalars []Destiny_Definitions_Sockets_DestinySocketTypeScalarMaterialRequirementEntry `json:"currencyScalars"`
-
-    // DisplayProperties.
-    //
-    // There are fields for this display data, but they appear to be unpopulated as of now. I am not sure where in the UI these would show if they even were populated, but I will continue to return this data in case it becomes useful.
-    DisplayProperties any `json:"displayProperties"`
-
-    // IsPreviewEnabled.
-    //
-    // 
-    IsPreviewEnabled bool `json:"isPreviewEnabled"`
-
-    // Hash.
-    //
-    // The unique identifier for this entity. Guaranteed to be unique for the type of entity, but not globally.
-    //
-    // When entities refer to each other in Destiny content, it is this hash that they are referring to.
-    Hash uint32 `json:"hash"`
-
-    // InsertAction.
-    //
-    // Defines what happens when a plug is inserted into sockets of this type.
-    InsertAction any `json:"insertAction"`
 }

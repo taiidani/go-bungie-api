@@ -3,35 +3,10 @@
 package api
 
 type Tokens_PartnerOfferHistoryResponse struct {
-    // LocalizedName.
-    //
-    // 
-    LocalizedName string `json:"LocalizedName"`
-
-    // MembershipId.
-    //
-    // 
-    MembershipId int64 `json:"MembershipId"`
-
-    // MembershipType.
-    //
-    // 
-    MembershipType int32 `json:"MembershipType"`
-
-    // PartnerOfferKey.
-    //
-    // 
-    PartnerOfferKey string `json:"PartnerOfferKey"`
-
-    // QuantityApplied.
-    //
-    // 
-    QuantityApplied int32 `json:"QuantityApplied"`
-
     // ApplyDate.
     //
     // 
-    ApplyDate string `json:"ApplyDate"`
+    ApplyDate *string `json:"ApplyDate"`
 
     // IsConsumable.
     //
@@ -42,4 +17,29 @@ type Tokens_PartnerOfferHistoryResponse struct {
     //
     // 
     LocalizedDescription string `json:"LocalizedDescription"`
+
+    // LocalizedName.
+    //
+    // 
+    LocalizedName string `json:"LocalizedName"`
+
+    // MembershipId.
+    //
+    // 
+    MembershipId *int64 `json:"MembershipId"`
+
+    // MembershipType.
+    //
+    // 
+    MembershipType *int32 `json:"MembershipType"`
+
+    // PartnerOfferKey.
+    //
+    // 
+    PartnerOfferKey string `json:"PartnerOfferKey"`
+
+    // QuantityApplied.
+    //
+    // 
+    QuantityApplied int32 `json:"QuantityApplied"`
 }

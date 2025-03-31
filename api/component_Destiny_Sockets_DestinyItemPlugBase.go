@@ -3,6 +3,18 @@
 package api
 
 type Destiny_Sockets_DestinyItemPlugBase struct {
+    // CanInsert.
+    //
+    // If true, this plug has met all of its insertion requirements. Big if true.
+    CanInsert bool `json:"canInsert"`
+
+    // EnableFailIndexes.
+    //
+    // If a plug is not enabled, this will be populated with indexes into the plug item definition's plug.enabledRules property, so that you can show the reasons why it is not enabled.
+    //
+    // This list will be empty if the plug is enabled.
+    EnableFailIndexes []int32 `json:"enableFailIndexes"`
+
     // Enabled.
     //
     // If true, this plug will provide its benefits while inserted.
@@ -18,7 +30,7 @@ type Destiny_Sockets_DestinyItemPlugBase struct {
     // MaxStackSize.
     //
     // If available, this is the maximum stack size to display for the socket plug item.
-    MaxStackSize int32 `json:"maxStackSize"`
+    MaxStackSize *int32 `json:"maxStackSize"`
 
     // PlugItemHash.
     //
@@ -28,17 +40,5 @@ type Destiny_Sockets_DestinyItemPlugBase struct {
     // StackSize.
     //
     // If available, this is the stack size to display for the socket plug item.
-    StackSize int32 `json:"stackSize"`
-
-    // CanInsert.
-    //
-    // If true, this plug has met all of its insertion requirements. Big if true.
-    CanInsert bool `json:"canInsert"`
-
-    // EnableFailIndexes.
-    //
-    // If a plug is not enabled, this will be populated with indexes into the plug item definition's plug.enabledRules property, so that you can show the reasons why it is not enabled.
-    //
-    // This list will be empty if the plug is enabled.
-    EnableFailIndexes []int32 `json:"enableFailIndexes"`
+    StackSize *int32 `json:"stackSize"`
 }

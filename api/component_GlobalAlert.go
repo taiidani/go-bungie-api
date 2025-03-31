@@ -3,6 +3,11 @@
 package api
 
 type GlobalAlert struct {
+    // AlertHtml.
+    //
+    // 
+    AlertHtml string `json:"AlertHtml"`
+
     // AlertKey.
     //
     // 
@@ -32,9 +37,4 @@ type GlobalAlert struct {
     //
     // 
     StreamInfo StreamInfo `json:"StreamInfo"`
-
-    // AlertHtml.
-    //
-    // 
-    AlertHtml string `json:"AlertHtml"`
 }

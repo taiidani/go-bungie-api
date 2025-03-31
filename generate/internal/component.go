@@ -6,6 +6,7 @@ import (
 	"log/slog"
 	"os"
 	"path/filepath"
+	"sort"
 	"strings"
 	"text/template"
 
@@ -142,40 +143,52 @@ func renderObject(_ context.Context, key string, schema openapi3.SchemaRef) (*Ob
 		ret.Properties = append(ret.Properties, add)
 	}
 
+	sort.Slice(ret.Properties, func(i, j int) bool {
+		return ret.Properties[i].Name < ret.Properties[j].Name
+	})
+
 	return ret, nil
 }
 
 func resolveTypeFormat(prop *openapi3.SchemaRef) string {
+	ret := ""
+
 	switch prop.Value.Format {
 	case "date-time":
 		// TODO Can we get more specific?
-		return "string"
+		ret = "string"
 	case "byte", "int16", "int32", "uint32", "int64":
-		return prop.Value.Format
+		ret = prop.Value.Format
 	case "float":
-		return "float32"
+		ret = "float32"
 	case "double":
-		return "float64"
+		ret = "float64"
 	default:
 		if prop.Value.Type.Is("string") {
-			return "string"
+			ret = "string"
 		} else if prop.Value.Type.Is("boolean") {
-			return "bool"
+			ret = "bool"
 		} else if prop.Value.Type.Is("integer") {
 			// We couldn't find a more specific type in either Type or Format
-			return "int"
+			ret = "int"
 		} else if prop.Value.Type.Is("array") {
-			return "[]" + resolveTypeFormat(prop.Value.Items)
+			ret = "[]" + resolveTypeFormat(prop.Value.Items)
 		} else if prop.Ref != "" {
 			// #/components/schemas/Destiny.Config.ImagePyramidEntry
 			ref := strings.TrimPrefix(prop.Ref, "#/components/schemas/")
-			return strings.ReplaceAll(ref, ".", "_")
+			ret = strings.ReplaceAll(ref, ".", "_")
 		} else if prop.Value.Type.Is("object") {
 			// TODO
-			return "any"
+			ret = "any"
 		} else {
 			slog.Error(fmt.Sprintf("'%q' property type and %q format not supported", prop.Value.Type, prop.Value.Format))
-			return ""
+			ret = ""
 		}
 	}
+
+	if prop.Value.Nullable {
+		ret = "*" + ret
+	}
+
+	return ret
 }

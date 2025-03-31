@@ -3,213 +3,213 @@
 package api
 
 type Content_Models_ContentTypeProperty struct {
-    // ValidateAs.
+    // Attributes.
     //
     // 
-    ValidateAs string `json:"validateAs"`
-
-    // RootPropertyName.
-    //
-    // 
-    RootPropertyName string `json:"rootPropertyName"`
-
-    // IsCombo.
-    //
-    // 
-    IsCombo bool `json:"isCombo"`
-
-    // Visible.
-    //
-    // 
-    Visible bool `json:"visible"`
-
-    // Localizable.
-    //
-    // 
-    Localizable bool `json:"localizable"`
-
-    // MinWidth.
-    //
-    // 
-    MinWidth int32 `json:"minWidth"`
-
-    // Fallback.
-    //
-    // 
-    Fallback bool `json:"fallback"`
-
-    // IsExternalAllowed.
-    //
-    // 
-    IsExternalAllowed bool `json:"isExternalAllowed"`
-
-    // RssAttribute.
-    //
-    // 
-    RssAttribute string `json:"rssAttribute"`
-
-    // PropertySection.
-    //
-    // 
-    PropertySection string `json:"propertySection"`
-
-    // DefaultValues.
-    //
-    // 
-    DefaultValues []Content_Models_ContentTypeDefaultValue `json:"defaultValues"`
-
-    // Name.
-    //
-    // 
-    Name string `json:"name"`
-
-    // Regexp.
-    //
-    // 
-    Regexp string `json:"regexp"`
-
-    // VisibleOn.
-    //
-    // 
-    VisibleOn string `json:"visibleOn"`
-
-    // ReadableName.
-    //
-    // 
-    ReadableName string `json:"readableName"`
-
-    // Enabled.
-    //
-    // 
-    Enabled bool `json:"enabled"`
-
-    // IsTitle.
-    //
-    // 
-    IsTitle bool `json:"isTitle"`
+    Attributes any `json:"attributes"`
 
     // BindToProperty.
     //
     // 
     BindToProperty string `json:"bindToProperty"`
 
-    // RepresentationValidationString.
+    // BoundRegex.
     //
     // 
-    RepresentationValidationString string `json:"representationValidationString"`
-
-    // ContentTypeAllowed.
-    //
-    // 
-    ContentTypeAllowed string `json:"contentTypeAllowed"`
-
-    // LegalContentTypes.
-    //
-    // 
-    LegalContentTypes []string `json:"legalContentTypes"`
-
-    // MaxWidth.
-    //
-    // 
-    MaxWidth int32 `json:"maxWidth"`
-
-    // Attributes.
-    //
-    // 
-    Attributes any `json:"attributes"`
-
-    // MaxFileSize.
-    //
-    // 
-    MaxFileSize int32 `json:"maxFileSize"`
+    BoundRegex string `json:"boundRegex"`
 
     // ChildProperties.
     //
     // 
     ChildProperties []Content_Models_ContentTypeProperty `json:"childProperties"`
 
-    // Weight.
+    // ContentTypeAllowed.
     //
     // 
-    Weight int32 `json:"weight"`
-
-    // IsVideo.
-    //
-    // 
-    IsVideo bool `json:"isVideo"`
-
-    // BoundRegex.
-    //
-    // 
-    BoundRegex string `json:"boundRegex"`
-
-    // Entitytype.
-    //
-    // 
-    Entitytype string `json:"entitytype"`
-
-    // MaxLength.
-    //
-    // 
-    MaxLength int32 `json:"maxLength"`
-
-    // MaxHeight.
-    //
-    // 
-    MaxHeight int32 `json:"maxHeight"`
-
-    // VisibleDependency.
-    //
-    // 
-    VisibleDependency string `json:"visibleDependency"`
-
-    // SuppressProperty.
-    //
-    // 
-    SuppressProperty bool `json:"suppressProperty"`
-
-    // Order.
-    //
-    // 
-    Order int32 `json:"order"`
-
-    // MinHeight.
-    //
-    // 
-    MinHeight int32 `json:"minHeight"`
-
-    // Required.
-    //
-    // 
-    Required bool `json:"required"`
-
-    // Value.
-    //
-    // 
-    Value string `json:"value"`
-
-    // IsImage.
-    //
-    // 
-    IsImage bool `json:"isImage"`
-
-    // RepresentationSelection.
-    //
-    // 
-    RepresentationSelection any `json:"representationSelection"`
-
-    // MaxByteLength.
-    //
-    // 
-    MaxByteLength int32 `json:"maxByteLength"`
+    ContentTypeAllowed string `json:"contentTypeAllowed"`
 
     // Datatype.
     //
     // 
     Datatype int32 `json:"datatype"`
 
+    // DefaultValues.
+    //
+    // 
+    DefaultValues []Content_Models_ContentTypeDefaultValue `json:"defaultValues"`
+
+    // Enabled.
+    //
+    // 
+    Enabled bool `json:"enabled"`
+
+    // Entitytype.
+    //
+    // 
+    Entitytype string `json:"entitytype"`
+
+    // Fallback.
+    //
+    // 
+    Fallback bool `json:"fallback"`
+
+    // IsCombo.
+    //
+    // 
+    IsCombo bool `json:"isCombo"`
+
+    // IsExternalAllowed.
+    //
+    // 
+    IsExternalAllowed bool `json:"isExternalAllowed"`
+
+    // IsImage.
+    //
+    // 
+    IsImage bool `json:"isImage"`
+
+    // IsTitle.
+    //
+    // 
+    IsTitle bool `json:"isTitle"`
+
+    // IsVideo.
+    //
+    // 
+    IsVideo bool `json:"isVideo"`
+
+    // LegalContentTypes.
+    //
+    // 
+    LegalContentTypes []string `json:"legalContentTypes"`
+
+    // Localizable.
+    //
+    // 
+    Localizable bool `json:"localizable"`
+
+    // MaxByteLength.
+    //
+    // 
+    MaxByteLength int32 `json:"maxByteLength"`
+
+    // MaxFileSize.
+    //
+    // 
+    MaxFileSize int32 `json:"maxFileSize"`
+
+    // MaxHeight.
+    //
+    // 
+    MaxHeight int32 `json:"maxHeight"`
+
+    // MaxLength.
+    //
+    // 
+    MaxLength int32 `json:"maxLength"`
+
+    // MaxWidth.
+    //
+    // 
+    MaxWidth int32 `json:"maxWidth"`
+
+    // MinHeight.
+    //
+    // 
+    MinHeight int32 `json:"minHeight"`
+
+    // MinWidth.
+    //
+    // 
+    MinWidth int32 `json:"minWidth"`
+
+    // Name.
+    //
+    // 
+    Name string `json:"name"`
+
+    // Order.
+    //
+    // 
+    Order int32 `json:"order"`
+
     // PropertyDescription.
     //
     // 
     PropertyDescription string `json:"propertyDescription"`
+
+    // PropertySection.
+    //
+    // 
+    PropertySection string `json:"propertySection"`
+
+    // ReadableName.
+    //
+    // 
+    ReadableName string `json:"readableName"`
+
+    // Regexp.
+    //
+    // 
+    Regexp string `json:"regexp"`
+
+    // RepresentationSelection.
+    //
+    // 
+    RepresentationSelection any `json:"representationSelection"`
+
+    // RepresentationValidationString.
+    //
+    // 
+    RepresentationValidationString string `json:"representationValidationString"`
+
+    // Required.
+    //
+    // 
+    Required bool `json:"required"`
+
+    // RootPropertyName.
+    //
+    // 
+    RootPropertyName string `json:"rootPropertyName"`
+
+    // RssAttribute.
+    //
+    // 
+    RssAttribute string `json:"rssAttribute"`
+
+    // SuppressProperty.
+    //
+    // 
+    SuppressProperty bool `json:"suppressProperty"`
+
+    // ValidateAs.
+    //
+    // 
+    ValidateAs string `json:"validateAs"`
+
+    // Value.
+    //
+    // 
+    Value string `json:"value"`
+
+    // Visible.
+    //
+    // 
+    Visible bool `json:"visible"`
+
+    // VisibleDependency.
+    //
+    // 
+    VisibleDependency string `json:"visibleDependency"`
+
+    // VisibleOn.
+    //
+    // 
+    VisibleOn string `json:"visibleOn"`
+
+    // Weight.
+    //
+    // 
+    Weight int32 `json:"weight"`
 }

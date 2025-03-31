@@ -3,20 +3,20 @@
 package api
 
 type Destiny_Definitions_DestinyProgressionRewardItemQuantity struct {
+    // AcquisitionBehavior.
+    //
+    // 
+    AcquisitionBehavior int32 `json:"acquisitionBehavior"`
+
+    // ClaimUnlockDisplayStrings.
+    //
+    // 
+    ClaimUnlockDisplayStrings []string `json:"claimUnlockDisplayStrings"`
+
     // HasConditionalVisibility.
     //
     // Indicates that this item quantity may be conditionally shown or hidden, based on various sources of state. For example: server flags, account state, or character progress.
     HasConditionalVisibility bool `json:"hasConditionalVisibility"`
-
-    // RewardItemIndex.
-    //
-    // 
-    RewardItemIndex int32 `json:"rewardItemIndex"`
-
-    // UiDisplayStyle.
-    //
-    // 
-    UiDisplayStyle string `json:"uiDisplayStyle"`
 
     // ItemHash.
     //
@@ -26,30 +26,30 @@ type Destiny_Definitions_DestinyProgressionRewardItemQuantity struct {
     // ItemInstanceId.
     //
     // If this quantity is referring to a specific instance of an item, this will have the item's instance ID. Normally, this will be null.
-    ItemInstanceId int64 `json:"itemInstanceId"`
-
-    // RewardedAtProgressionLevel.
-    //
-    // 
-    RewardedAtProgressionLevel int32 `json:"rewardedAtProgressionLevel"`
-
-    // AcquisitionBehavior.
-    //
-    // 
-    AcquisitionBehavior int32 `json:"acquisitionBehavior"`
+    ItemInstanceId *int64 `json:"itemInstanceId"`
 
     // Quantity.
     //
     // The amount of the item needed/available depending on the context of where DestinyItemQuantity is being used.
     Quantity int32 `json:"quantity"`
 
+    // RewardItemIndex.
+    //
+    // 
+    RewardItemIndex int32 `json:"rewardItemIndex"`
+
+    // RewardedAtProgressionLevel.
+    //
+    // 
+    RewardedAtProgressionLevel int32 `json:"rewardedAtProgressionLevel"`
+
     // SocketOverrides.
     //
     // 
     SocketOverrides []Destiny_Definitions_DestinyProgressionSocketPlugOverride `json:"socketOverrides"`
 
-    // ClaimUnlockDisplayStrings.
+    // UiDisplayStyle.
     //
     // 
-    ClaimUnlockDisplayStrings []string `json:"claimUnlockDisplayStrings"`
+    UiDisplayStyle string `json:"uiDisplayStyle"`
 }

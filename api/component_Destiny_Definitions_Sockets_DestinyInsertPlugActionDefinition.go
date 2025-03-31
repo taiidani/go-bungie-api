@@ -3,13 +3,13 @@
 package api
 
 type Destiny_Definitions_Sockets_DestinyInsertPlugActionDefinition struct {
-    // ActionType.
-    //
-    // The type of action being performed when you act on this Socket Type. The most common value is "insert plug", but there are others as well (for instance, a "Masterwork" socket may allow for Re-initialization, and an Infusion socket allows for items to be consumed to upgrade the item)
-    ActionType int32 `json:"actionType"`
-
     // ActionExecuteSeconds.
     //
     // How long it takes for the Plugging of the item to be completed once it is initiated, if you care.
     ActionExecuteSeconds int32 `json:"actionExecuteSeconds"`
+
+    // ActionType.
+    //
+    // The type of action being performed when you act on this Socket Type. The most common value is "insert plug", but there are others as well (for instance, a "Masterwork" socket may allow for Re-initialization, and an Infusion socket allows for items to be consumed to upgrade the item)
+    ActionType int32 `json:"actionType"`
 }

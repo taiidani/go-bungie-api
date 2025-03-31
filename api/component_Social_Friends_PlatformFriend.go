@@ -3,6 +3,31 @@
 package api
 
 type Social_Friends_PlatformFriend struct {
+    // BungieGlobalDisplayName.
+    //
+    // 
+    BungieGlobalDisplayName string `json:"bungieGlobalDisplayName"`
+
+    // BungieGlobalDisplayNameCode.
+    //
+    // 
+    BungieGlobalDisplayNameCode *int16 `json:"bungieGlobalDisplayNameCode"`
+
+    // BungieNetMembershipId.
+    //
+    // 
+    BungieNetMembershipId *int64 `json:"bungieNetMembershipId"`
+
+    // DestinyMembershipId.
+    //
+    // 
+    DestinyMembershipId *int64 `json:"destinyMembershipId"`
+
+    // DestinyMembershipType.
+    //
+    // 
+    DestinyMembershipType *int32 `json:"destinyMembershipType"`
+
     // FriendPlatform.
     //
     // 
@@ -12,29 +37,4 @@ type Social_Friends_PlatformFriend struct {
     //
     // 
     PlatformDisplayName string `json:"platformDisplayName"`
-
-    // BungieGlobalDisplayName.
-    //
-    // 
-    BungieGlobalDisplayName string `json:"bungieGlobalDisplayName"`
-
-    // BungieGlobalDisplayNameCode.
-    //
-    // 
-    BungieGlobalDisplayNameCode int16 `json:"bungieGlobalDisplayNameCode"`
-
-    // BungieNetMembershipId.
-    //
-    // 
-    BungieNetMembershipId int64 `json:"bungieNetMembershipId"`
-
-    // DestinyMembershipId.
-    //
-    // 
-    DestinyMembershipId int64 `json:"destinyMembershipId"`
-
-    // DestinyMembershipType.
-    //
-    // 
-    DestinyMembershipType int32 `json:"destinyMembershipType"`
 }

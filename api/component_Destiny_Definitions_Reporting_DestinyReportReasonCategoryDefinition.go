@@ -3,11 +3,6 @@
 package api
 
 type Destiny_Definitions_Reporting_DestinyReportReasonCategoryDefinition struct {
-    // Redacted.
-    //
-    // If this is true, then there is an entity with this identifier/type combination, but BNet is not yet allowed to show it. Sorry!
-    Redacted bool `json:"redacted"`
-
     // DisplayProperties.
     //
     // Many Destiny*Definition contracts - the "first order" entities of Destiny that have their own tables in the Manifest Database - also have displayable information. This is the base class for that display information.
@@ -29,4 +24,9 @@ type Destiny_Definitions_Reporting_DestinyReportReasonCategoryDefinition struct 
     //
     // The specific reasons for the report under this category.
     Reasons any `json:"reasons"`
+
+    // Redacted.
+    //
+    // If this is true, then there is an entity with this identifier/type combination, but BNet is not yet allowed to show it. Sorry!
+    Redacted bool `json:"redacted"`
 }

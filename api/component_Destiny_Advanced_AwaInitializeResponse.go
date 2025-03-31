@@ -3,13 +3,13 @@
 package api
 
 type Destiny_Advanced_AwaInitializeResponse struct {
-    // SentToSelf.
-    //
-    // True if the PUSH message will only be sent to the device that made this request.
-    SentToSelf bool `json:"sentToSelf"`
-
     // CorrelationId.
     //
     // ID used to get the token. Present this ID to the user as it will identify this specific request on their device.
     CorrelationId string `json:"correlationId"`
+
+    // SentToSelf.
+    //
+    // True if the PUSH message will only be sent to the device that made this request.
+    SentToSelf bool `json:"sentToSelf"`
 }

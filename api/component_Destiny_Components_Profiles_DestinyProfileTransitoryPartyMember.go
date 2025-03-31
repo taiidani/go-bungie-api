@@ -3,16 +3,6 @@
 package api
 
 type Destiny_Components_Profiles_DestinyProfileTransitoryPartyMember struct {
-    // MembershipId.
-    //
-    // The Membership ID that matches the party member.
-    MembershipId int64 `json:"membershipId"`
-
-    // Status.
-    //
-    // A Flags Enumeration value indicating the states that the player is in relevant to being on a fireteam.
-    Status int32 `json:"status"`
-
     // DisplayName.
     //
     // The player's last known display name.
@@ -22,4 +12,14 @@ type Destiny_Components_Profiles_DestinyProfileTransitoryPartyMember struct {
     //
     // The identifier for the DestinyInventoryItemDefinition of the player's emblem.
     EmblemHash uint32 `json:"emblemHash"`
+
+    // MembershipId.
+    //
+    // The Membership ID that matches the party member.
+    MembershipId int64 `json:"membershipId"`
+
+    // Status.
+    //
+    // A Flags Enumeration value indicating the states that the player is in relevant to being on a fireteam.
+    Status int32 `json:"status"`
 }

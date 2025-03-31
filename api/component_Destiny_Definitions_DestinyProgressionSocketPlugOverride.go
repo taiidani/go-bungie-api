@@ -6,7 +6,7 @@ type Destiny_Definitions_DestinyProgressionSocketPlugOverride struct {
     // OverrideSingleItemHash.
     //
     // 
-    OverrideSingleItemHash uint32 `json:"overrideSingleItemHash"`
+    OverrideSingleItemHash *uint32 `json:"overrideSingleItemHash"`
 
     // SocketTypeHash.
     //

@@ -3,6 +3,11 @@
 package api
 
 type User_EmailSettings struct {
+    // OptInDefinitions.
+    //
+    // Keyed by the name identifier of the opt-in definition.
+    OptInDefinitions any `json:"optInDefinitions"`
+
     // SubscriptionDefinitions.
     //
     // Keyed by the name identifier of the Subscription definition.
@@ -12,9 +17,4 @@ type User_EmailSettings struct {
     //
     // Keyed by the name identifier of the View definition.
     Views any `json:"views"`
-
-    // OptInDefinitions.
-    //
-    // Keyed by the name identifier of the opt-in definition.
-    OptInDefinitions any `json:"optInDefinitions"`
 }

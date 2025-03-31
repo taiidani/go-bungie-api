@@ -6,7 +6,7 @@ type Destiny_Entities_Items_DestinyItemObjectivesComponent struct {
     // DateCompleted.
     //
     // If we have any information on when these objectives were completed, this will be the date of that completion. This won't be on many items, but could be interesting for some items that do store this information.
-    DateCompleted string `json:"dateCompleted"`
+    DateCompleted *string `json:"dateCompleted"`
 
     // FlavorObjective.
     //

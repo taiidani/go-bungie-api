@@ -3,11 +3,6 @@
 package api
 
 type Destiny_HistoricalStats_DestinyHistoricalStatsAccountResult struct {
-    // MergedDeletedCharacters.
-    //
-    // 
-    MergedDeletedCharacters Destiny_HistoricalStats_DestinyHistoricalStatsWithMerged `json:"mergedDeletedCharacters"`
-
     // Characters.
     //
     // 
@@ -17,4 +12,9 @@ type Destiny_HistoricalStats_DestinyHistoricalStatsAccountResult struct {
     //
     // 
     MergedAllCharacters Destiny_HistoricalStats_DestinyHistoricalStatsWithMerged `json:"mergedAllCharacters"`
+
+    // MergedDeletedCharacters.
+    //
+    // 
+    MergedDeletedCharacters Destiny_HistoricalStats_DestinyHistoricalStatsWithMerged `json:"mergedDeletedCharacters"`
 }

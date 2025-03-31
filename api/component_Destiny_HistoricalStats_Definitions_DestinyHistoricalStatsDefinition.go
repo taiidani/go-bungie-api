@@ -3,73 +3,73 @@
 package api
 
 type Destiny_HistoricalStats_Definitions_DestinyHistoricalStatsDefinition struct {
-    // PeriodTypes.
-    //
-    // Time periods the statistic covers
-    PeriodTypes []int32 `json:"periodTypes"`
-
-    // StatNameAbbr.
-    //
-    // Display name abbreviated
-    StatNameAbbr string `json:"statNameAbbr"`
-
-    // StatDescription.
-    //
-    // Description of a stat if applicable.
-    StatDescription string `json:"statDescription"`
-
-    // UnitLabel.
-    //
-    // Localized Unit Name for the stat.
-    UnitLabel string `json:"unitLabel"`
-
     // Category.
     //
     // Category for the stat.
     Category int32 `json:"category"`
-
-    // IconImage.
-    //
-    // Optional URI to an icon for the statistic
-    IconImage string `json:"iconImage"`
-
-    // StatName.
-    //
-    // Display name
-    StatName string `json:"statName"`
-
-    // UnitType.
-    //
-    // Unit, if any, for the statistic
-    UnitType int32 `json:"unitType"`
-
-    // MedalTierHash.
-    //
-    // The tier associated with this medal - be it implicitly or explicitly.
-    MedalTierHash uint32 `json:"medalTierHash"`
-
-    // Modes.
-    //
-    // Game modes where this statistic can be reported.
-    Modes []int32 `json:"modes"`
-
-    // StatId.
-    //
-    // Unique programmer friendly ID for this stat
-    StatId string `json:"statId"`
-
-    // Weight.
-    //
-    // Weight assigned to this stat indicating its relative impressiveness.
-    Weight int32 `json:"weight"`
 
     // Group.
     //
     // Statistic group
     Group int32 `json:"group"`
 
+    // IconImage.
+    //
+    // Optional URI to an icon for the statistic
+    IconImage string `json:"iconImage"`
+
+    // MedalTierHash.
+    //
+    // The tier associated with this medal - be it implicitly or explicitly.
+    MedalTierHash *uint32 `json:"medalTierHash"`
+
     // MergeMethod.
     //
     // Optional icon for the statistic
-    MergeMethod int32 `json:"mergeMethod"`
+    MergeMethod *int32 `json:"mergeMethod"`
+
+    // Modes.
+    //
+    // Game modes where this statistic can be reported.
+    Modes []int32 `json:"modes"`
+
+    // PeriodTypes.
+    //
+    // Time periods the statistic covers
+    PeriodTypes []int32 `json:"periodTypes"`
+
+    // StatDescription.
+    //
+    // Description of a stat if applicable.
+    StatDescription string `json:"statDescription"`
+
+    // StatId.
+    //
+    // Unique programmer friendly ID for this stat
+    StatId string `json:"statId"`
+
+    // StatName.
+    //
+    // Display name
+    StatName string `json:"statName"`
+
+    // StatNameAbbr.
+    //
+    // Display name abbreviated
+    StatNameAbbr string `json:"statNameAbbr"`
+
+    // UnitLabel.
+    //
+    // Localized Unit Name for the stat.
+    UnitLabel string `json:"unitLabel"`
+
+    // UnitType.
+    //
+    // Unit, if any, for the statistic
+    UnitType int32 `json:"unitType"`
+
+    // Weight.
+    //
+    // Weight assigned to this stat indicating its relative impressiveness.
+    Weight int32 `json:"weight"`
 }

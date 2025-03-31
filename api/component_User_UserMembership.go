@@ -3,11 +3,6 @@
 package api
 
 type User_UserMembership struct {
-    // MembershipType.
-    //
-    // Type of the membership. Not necessarily the native type.
-    MembershipType int32 `json:"membershipType"`
-
     // BungieGlobalDisplayName.
     //
     // The bungie global display name, if set.
@@ -16,7 +11,7 @@ type User_UserMembership struct {
     // BungieGlobalDisplayNameCode.
     //
     // The bungie global display name code, if set.
-    BungieGlobalDisplayNameCode int16 `json:"bungieGlobalDisplayNameCode"`
+    BungieGlobalDisplayNameCode *int16 `json:"bungieGlobalDisplayNameCode"`
 
     // DisplayName.
     //
@@ -27,4 +22,9 @@ type User_UserMembership struct {
     //
     // Membership ID as they user is known in the Accounts service
     MembershipId int64 `json:"membershipId"`
+
+    // MembershipType.
+    //
+    // Type of the membership. Not necessarily the native type.
+    MembershipType int32 `json:"membershipType"`
 }

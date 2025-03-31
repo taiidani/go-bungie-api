@@ -3,95 +3,70 @@
 package api
 
 type Content_Models_ContentTypeDescription struct {
-    // BoundRegex.
+    // AllowComments.
     //
     // 
-    BoundRegex string `json:"boundRegex"`
-
-    // Properties.
-    //
-    // 
-    Properties []Content_Models_ContentTypeProperty `json:"properties"`
-
-    // ForceIdentifierBinding.
-    //
-    // 
-    ForceIdentifierBinding bool `json:"forceIdentifierBinding"`
-
-    // UsageExamples.
-    //
-    // 
-    UsageExamples []string `json:"usageExamples"`
-
-    // Name.
-    //
-    // 
-    Name string `json:"name"`
-
-    // ContentDescription.
-    //
-    // 
-    ContentDescription string `json:"contentDescription"`
+    AllowComments bool `json:"allowComments"`
 
     // AutoEnglishPropertyFallback.
     //
     // 
     AutoEnglishPropertyFallback bool `json:"autoEnglishPropertyFallback"`
 
-    // CType.
+    // BindIdentifierToProperty.
     //
     // 
-    CType string `json:"cType"`
+    BindIdentifierToProperty string `json:"bindIdentifierToProperty"`
 
-    // TypeOf.
+    // BoundRegex.
     //
     // 
-    TypeOf string `json:"typeOf"`
-
-    // Previews.
-    //
-    // 
-    Previews []Content_Models_ContentPreview `json:"previews"`
+    BoundRegex string `json:"boundRegex"`
 
     // BulkUploadable.
     //
     // 
     BulkUploadable bool `json:"bulkUploadable"`
 
-    // TagMetadataItems.
+    // CType.
     //
     // 
-    TagMetadataItems any `json:"tagMetadataItems"`
+    CType string `json:"cType"`
 
-    // AllowComments.
+    // ContentDescription.
     //
     // 
-    AllowComments bool `json:"allowComments"`
+    ContentDescription string `json:"contentDescription"`
 
-    // SuppressCmsPath.
+    // ForceIdentifierBinding.
     //
     // 
-    SuppressCmsPath bool `json:"suppressCmsPath"`
+    ForceIdentifierBinding bool `json:"forceIdentifierBinding"`
+
+    // Name.
+    //
+    // 
+    Name string `json:"name"`
+
+    // PreviewImage.
+    //
+    // 
+    PreviewImage string `json:"previewImage"`
+
+    // Previews.
+    //
+    // 
+    Previews []Content_Models_ContentPreview `json:"previews"`
 
     // Priority.
     //
     // 
     Priority int32 `json:"priority"`
 
-    // TagMetadata.
+    // Properties.
     //
     // 
-    TagMetadata []Content_Models_TagMetadataDefinition `json:"tagMetadata"`
-
-    // BindIdentifierToProperty.
-    //
-    // 
-    BindIdentifierToProperty string `json:"bindIdentifierToProperty"`
-
-    // PreviewImage.
-    //
-    // 
-    PreviewImage string `json:"previewImage"`
+    Properties []Content_Models_ContentTypeProperty `json:"properties"`
 
     // PropertySections.
     //
@@ -107,4 +82,29 @@ type Content_Models_ContentTypeDescription struct {
     //
     // 
     ShowInContentEditor bool `json:"showInContentEditor"`
+
+    // SuppressCmsPath.
+    //
+    // 
+    SuppressCmsPath bool `json:"suppressCmsPath"`
+
+    // TagMetadata.
+    //
+    // 
+    TagMetadata []Content_Models_TagMetadataDefinition `json:"tagMetadata"`
+
+    // TagMetadataItems.
+    //
+    // 
+    TagMetadataItems any `json:"tagMetadataItems"`
+
+    // TypeOf.
+    //
+    // 
+    TypeOf string `json:"typeOf"`
+
+    // UsageExamples.
+    //
+    // 
+    UsageExamples []string `json:"usageExamples"`
 }

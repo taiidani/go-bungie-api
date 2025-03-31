@@ -3,15 +3,45 @@
 package api
 
 type Destiny_Definitions_DestinyItemInventoryBlockDefinition struct {
-    // MaxStackSize.
+    // BucketTypeHash.
     //
-    // The maximum quantity of this item that can exist in a stack.
-    MaxStackSize int32 `json:"maxStackSize"`
+    // The hash identifier for the DestinyInventoryBucketDefinition to which this item belongs. I should have named this "bucketHash", but too many things refer to it now. Sigh.
+    BucketTypeHash uint32 `json:"bucketTypeHash"`
+
+    // ExpirationTooltip.
+    //
+    // The tooltip message to show, if any, when the item expires.
+    ExpirationTooltip string `json:"expirationTooltip"`
+
+    // ExpiredInActivityMessage.
+    //
+    // If the item expires while playing in an activity, we show a different message.
+    ExpiredInActivityMessage string `json:"expiredInActivityMessage"`
 
     // ExpiredInOrbitMessage.
     //
     // If the item expires in orbit, we show a... more different message. ("Consummate V's, consummate!")
     ExpiredInOrbitMessage string `json:"expiredInOrbitMessage"`
+
+    // IsInstanceItem.
+    //
+    // If TRUE, this item is instanced. Otherwise, it is a generic item that merely has a quantity in a stack (like Glimmer).
+    IsInstanceItem bool `json:"isInstanceItem"`
+
+    // MaxStackSize.
+    //
+    // The maximum quantity of this item that can exist in a stack.
+    MaxStackSize int32 `json:"maxStackSize"`
+
+    // RecipeItemHash.
+    //
+    // A reference to the associated crafting 'recipe' item definition, if this item can be crafted.
+    RecipeItemHash *uint32 `json:"recipeItemHash"`
+
+    // RecoveryBucketTypeHash.
+    //
+    // If the item is picked up by the lost loot queue, this is the hash identifier for the DestinyInventoryBucketDefinition into which it will be placed. Again, I should have named this recoveryBucketHash instead.
+    RecoveryBucketTypeHash uint32 `json:"recoveryBucketTypeHash"`
 
     // StackUniqueLabel.
     //
@@ -33,38 +63,8 @@ type Destiny_Definitions_DestinyItemInventoryBlockDefinition struct {
     // The hash identifier for the Tier Type of the item, use to look up its DestinyItemTierTypeDefinition if you need to show localized data for the item's tier.
     TierTypeHash uint32 `json:"tierTypeHash"`
 
-    // BucketTypeHash.
-    //
-    // The hash identifier for the DestinyInventoryBucketDefinition to which this item belongs. I should have named this "bucketHash", but too many things refer to it now. Sigh.
-    BucketTypeHash uint32 `json:"bucketTypeHash"`
-
     // TierTypeName.
     //
     // The localized name of the tier type, which is a useful shortcut so you don't have to look up the definition every time. However, it's mostly a holdover from days before we had a DestinyItemTierTypeDefinition to refer to.
     TierTypeName string `json:"tierTypeName"`
-
-    // ExpiredInActivityMessage.
-    //
-    // If the item expires while playing in an activity, we show a different message.
-    ExpiredInActivityMessage string `json:"expiredInActivityMessage"`
-
-    // RecipeItemHash.
-    //
-    // A reference to the associated crafting 'recipe' item definition, if this item can be crafted.
-    RecipeItemHash uint32 `json:"recipeItemHash"`
-
-    // RecoveryBucketTypeHash.
-    //
-    // If the item is picked up by the lost loot queue, this is the hash identifier for the DestinyInventoryBucketDefinition into which it will be placed. Again, I should have named this recoveryBucketHash instead.
-    RecoveryBucketTypeHash uint32 `json:"recoveryBucketTypeHash"`
-
-    // ExpirationTooltip.
-    //
-    // The tooltip message to show, if any, when the item expires.
-    ExpirationTooltip string `json:"expirationTooltip"`
-
-    // IsInstanceItem.
-    //
-    // If TRUE, this item is instanced. Otherwise, it is a generic item that merely has a quantity in a stack (like Glimmer).
-    IsInstanceItem bool `json:"isInstanceItem"`
 }

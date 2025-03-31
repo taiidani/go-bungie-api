@@ -3,20 +3,45 @@
 package api
 
 type Destiny_HistoricalStats_DestinyPlayer struct {
-    // RaceHash.
+    // BungieNetUserInfo.
     //
-    // 
-    RaceHash uint32 `json:"raceHash"`
+    // Details about the player as they are known on BungieNet. This will be undefined if the player has marked their credential private, or does not have a BungieNet account.
+    BungieNetUserInfo any `json:"bungieNetUserInfo"`
+
+    // CharacterClass.
+    //
+    // Class of the character if applicable and available.
+    CharacterClass string `json:"characterClass"`
 
     // CharacterLevel.
     //
     // Level of the character if available. Zero if it is not available.
     CharacterLevel int32 `json:"characterLevel"`
 
-    // CharacterClass.
+    // ClanName.
     //
-    // Class of the character if applicable and available.
-    CharacterClass string `json:"characterClass"`
+    // Current clan name for the player. This value may be null or an empty string if the user does not have a clan.
+    ClanName string `json:"clanName"`
+
+    // ClanTag.
+    //
+    // Current clan tag for the player. This value may be null or an empty string if the user does not have a clan.
+    ClanTag string `json:"clanTag"`
+
+    // ClassHash.
+    //
+    // 
+    ClassHash uint32 `json:"classHash"`
+
+    // DestinyUserInfo.
+    //
+    // Details about the player as they are known in game (platform display name, Destiny emblem)
+    DestinyUserInfo any `json:"destinyUserInfo"`
+
+    // EmblemHash.
+    //
+    // If we know the emblem's hash, this can be used to look up the player's emblem at the time of a match when receiving PGCR data, or otherwise their currently equipped emblem (if we are able to obtain it).
+    EmblemHash uint32 `json:"emblemHash"`
 
     // GenderHash.
     //
@@ -28,33 +53,8 @@ type Destiny_HistoricalStats_DestinyPlayer struct {
     // Light Level of the character if available. Zero if it is not available.
     LightLevel int32 `json:"lightLevel"`
 
-    // BungieNetUserInfo.
-    //
-    // Details about the player as they are known on BungieNet. This will be undefined if the player has marked their credential private, or does not have a BungieNet account.
-    BungieNetUserInfo any `json:"bungieNetUserInfo"`
-
-    // ClanName.
-    //
-    // Current clan name for the player. This value may be null or an empty string if the user does not have a clan.
-    ClanName string `json:"clanName"`
-
-    // ClassHash.
+    // RaceHash.
     //
     // 
-    ClassHash uint32 `json:"classHash"`
-
-    // EmblemHash.
-    //
-    // If we know the emblem's hash, this can be used to look up the player's emblem at the time of a match when receiving PGCR data, or otherwise their currently equipped emblem (if we are able to obtain it).
-    EmblemHash uint32 `json:"emblemHash"`
-
-    // ClanTag.
-    //
-    // Current clan tag for the player. This value may be null or an empty string if the user does not have a clan.
-    ClanTag string `json:"clanTag"`
-
-    // DestinyUserInfo.
-    //
-    // Details about the player as they are known in game (platform display name, Destiny emblem)
-    DestinyUserInfo any `json:"destinyUserInfo"`
+    RaceHash uint32 `json:"raceHash"`
 }

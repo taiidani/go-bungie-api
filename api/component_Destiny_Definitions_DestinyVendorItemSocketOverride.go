@@ -3,11 +3,6 @@
 package api
 
 type Destiny_Definitions_DestinyVendorItemSocketOverride struct {
-    // SocketTypeHash.
-    //
-    // This appears to be used to select which socket ultimately gets the override defined here.
-    SocketTypeHash uint32 `json:"socketTypeHash"`
-
     // RandomizedOptionsCount.
     //
     // If this is greater than -1, the number of randomized plugs on this socket will be set to this quantity instead of whatever it's set to by default.
@@ -18,5 +13,10 @@ type Destiny_Definitions_DestinyVendorItemSocketOverride struct {
     // If this is populated, the socket will be overridden with a specific plug.
     //
     // If this isn't populated, it's being overridden by something more complicated that is only known by the Game Server and God, which means we can't tell you in advance what it'll be.
-    SingleItemHash uint32 `json:"singleItemHash"`
+    SingleItemHash *uint32 `json:"singleItemHash"`
+
+    // SocketTypeHash.
+    //
+    // This appears to be used to select which socket ultimately gets the override defined here.
+    SocketTypeHash uint32 `json:"socketTypeHash"`
 }

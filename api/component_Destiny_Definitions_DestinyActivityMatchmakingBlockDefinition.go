@@ -3,11 +3,6 @@
 package api
 
 type Destiny_Definitions_DestinyActivityMatchmakingBlockDefinition struct {
-    // RequiresGuardianOath.
-    //
-    // If true, you have to Solemnly Swear to be up to Nothing But Good(tm) to play.
-    RequiresGuardianOath bool `json:"requiresGuardianOath"`
-
     // IsMatchmade.
     //
     // If TRUE, the activity is matchmade. Otherwise, it requires explicit forming of a party.
@@ -27,4 +22,9 @@ type Destiny_Definitions_DestinyActivityMatchmakingBlockDefinition struct {
     //
     // The minimum # of people in the fireteam for the activity to launch.
     MinParty int32 `json:"minParty"`
+
+    // RequiresGuardianOath.
+    //
+    // If true, you have to Solemnly Swear to be up to Nothing But Good(tm) to play.
+    RequiresGuardianOath bool `json:"requiresGuardianOath"`
 }

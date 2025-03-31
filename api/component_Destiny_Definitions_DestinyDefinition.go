@@ -3,11 +3,6 @@
 package api
 
 type Destiny_Definitions_DestinyDefinition struct {
-    // Redacted.
-    //
-    // If this is true, then there is an entity with this identifier/type combination, but BNet is not yet allowed to show it. Sorry!
-    Redacted bool `json:"redacted"`
-
     // Hash.
     //
     // The unique identifier for this entity. Guaranteed to be unique for the type of entity, but not globally.
@@ -19,4 +14,9 @@ type Destiny_Definitions_DestinyDefinition struct {
     //
     // The index of the entity as it was found in the investment tables.
     Index int32 `json:"index"`
+
+    // Redacted.
+    //
+    // If this is true, then there is an entity with this identifier/type combination, but BNet is not yet allowed to show it. Sorry!
+    Redacted bool `json:"redacted"`
 }

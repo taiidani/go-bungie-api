@@ -3,11 +3,6 @@
 package api
 
 type Content_Models_ContentPreview struct {
-    // UseSetId.
-    //
-    // 
-    UseSetId int32 `json:"useSetId"`
-
     // ItemInSet.
     //
     // 
@@ -32,4 +27,9 @@ type Content_Models_ContentPreview struct {
     //
     // 
     SetTag string `json:"setTag"`
+
+    // UseSetId.
+    //
+    // 
+    UseSetId int32 `json:"useSetId"`
 }

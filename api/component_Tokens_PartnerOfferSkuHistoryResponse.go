@@ -3,6 +3,21 @@
 package api
 
 type Tokens_PartnerOfferSkuHistoryResponse struct {
+    // AllOffersApplied.
+    //
+    // 
+    AllOffersApplied bool `json:"AllOffersApplied"`
+
+    // ClaimDate.
+    //
+    // 
+    ClaimDate string `json:"ClaimDate"`
+
+    // LocalizedDescription.
+    //
+    // 
+    LocalizedDescription string `json:"LocalizedDescription"`
+
     // LocalizedName.
     //
     // 
@@ -22,19 +37,4 @@ type Tokens_PartnerOfferSkuHistoryResponse struct {
     //
     // 
     TransactionId string `json:"TransactionId"`
-
-    // AllOffersApplied.
-    //
-    // 
-    AllOffersApplied bool `json:"AllOffersApplied"`
-
-    // ClaimDate.
-    //
-    // 
-    ClaimDate string `json:"ClaimDate"`
-
-    // LocalizedDescription.
-    //
-    // 
-    LocalizedDescription string `json:"LocalizedDescription"`
 }

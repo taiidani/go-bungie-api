@@ -21,10 +21,10 @@ type Destiny_Definitions_DestinyActivityPlaylistItemDefinition struct {
     // DirectActivityModeHash.
     //
     // If this playlist entry had an activity mode directly defined on it, this will be the hash of that mode.
-    DirectActivityModeHash uint32 `json:"directActivityModeHash"`
+    DirectActivityModeHash *uint32 `json:"directActivityModeHash"`
 
     // DirectActivityModeType.
     //
     // If the playlist entry had an activity mode directly defined on it, this will be the enum value of that mode.
-    DirectActivityModeType int32 `json:"directActivityModeType"`
+    DirectActivityModeType *int32 `json:"directActivityModeType"`
 }

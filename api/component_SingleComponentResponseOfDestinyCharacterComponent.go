@@ -3,11 +3,6 @@
 package api
 
 type SingleComponentResponseOfDestinyCharacterComponent struct {
-    // Privacy.
-    //
-    // 
-    Privacy int32 `json:"privacy"`
-
     // Data.
     //
     // This component contains base properties of the character. You'll probably want to always request this component, but hey you do you.
@@ -16,5 +11,10 @@ type SingleComponentResponseOfDestinyCharacterComponent struct {
     // Disabled.
     //
     // If true, this component is disabled.
-    Disabled bool `json:"disabled"`
+    Disabled *bool `json:"disabled"`
+
+    // Privacy.
+    //
+    // 
+    Privacy int32 `json:"privacy"`
 }

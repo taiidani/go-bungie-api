@@ -3,6 +3,11 @@
 package api
 
 type GroupsV2_GroupFeatures struct {
+    // Capabilities.
+    //
+    // 
+    Capabilities int32 `json:"capabilities"`
+
     // HostGuidedGamePermissionOverride.
     //
     // Minimum Member Level allowed to host guided games
@@ -25,27 +30,6 @@ type GroupsV2_GroupFeatures struct {
     // Default is false for clans, true for groups.
     InvitePermissionOverride bool `json:"invitePermissionOverride"`
 
-    // MaximumMembershipsOfGroupType.
-    //
-    // Maximum number of groups of this type a typical membership may join. For example, a user may join about 50 General groups with their Bungie.net account. They may join one clan per Destiny membership.
-    MaximumMembershipsOfGroupType int32 `json:"maximumMembershipsOfGroupType"`
-
-    // UpdateBannerPermissionOverride.
-    //
-    // Minimum Member Level allowed to update banner
-    //
-    // Always Allowed: Founder, Acting Founder
-    //
-    // True means admins have this power, false means they don't
-    //
-    // Default is false for clans, true for groups.
-    UpdateBannerPermissionOverride bool `json:"updateBannerPermissionOverride"`
-
-    // Capabilities.
-    //
-    // 
-    Capabilities int32 `json:"capabilities"`
-
     // JoinLevel.
     //
     // Level to join a member at when accepting an invite, application, or joining an open clan
@@ -58,6 +42,27 @@ type GroupsV2_GroupFeatures struct {
     // 
     MaximumMembers int32 `json:"maximumMembers"`
 
+    // MaximumMembershipsOfGroupType.
+    //
+    // Maximum number of groups of this type a typical membership may join. For example, a user may join about 50 General groups with their Bungie.net account. They may join one clan per Destiny membership.
+    MaximumMembershipsOfGroupType int32 `json:"maximumMembershipsOfGroupType"`
+
+    // MembershipTypes.
+    //
+    // 
+    MembershipTypes []int32 `json:"membershipTypes"`
+
+    // UpdateBannerPermissionOverride.
+    //
+    // Minimum Member Level allowed to update banner
+    //
+    // Always Allowed: Founder, Acting Founder
+    //
+    // True means admins have this power, false means they don't
+    //
+    // Default is false for clans, true for groups.
+    UpdateBannerPermissionOverride bool `json:"updateBannerPermissionOverride"`
+
     // UpdateCulturePermissionOverride.
     //
     // Minimum Member Level allowed to update group culture
@@ -68,9 +73,4 @@ type GroupsV2_GroupFeatures struct {
     //
     // Default is false for clans, true for groups.
     UpdateCulturePermissionOverride bool `json:"updateCulturePermissionOverride"`
-
-    // MembershipTypes.
-    //
-    // 
-    MembershipTypes []int32 `json:"membershipTypes"`
 }

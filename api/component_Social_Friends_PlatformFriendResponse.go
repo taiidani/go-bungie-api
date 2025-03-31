@@ -3,6 +3,11 @@
 package api
 
 type Social_Friends_PlatformFriendResponse struct {
+    // CurrentPage.
+    //
+    // 
+    CurrentPage int32 `json:"currentPage"`
+
     // HasMore.
     //
     // 
@@ -17,9 +22,4 @@ type Social_Friends_PlatformFriendResponse struct {
     //
     // 
     PlatformFriends []Social_Friends_PlatformFriend `json:"platformFriends"`
-
-    // CurrentPage.
-    //
-    // 
-    CurrentPage int32 `json:"currentPage"`
 }

@@ -3,11 +3,6 @@
 package api
 
 type Destiny_Definitions_FireteamFinder_DestinyFireteamFinderOptionGroupDefinition struct {
-    // Redacted.
-    //
-    // If this is true, then there is an entity with this identifier/type combination, but BNet is not yet allowed to show it. Sorry!
-    Redacted bool `json:"redacted"`
-
     // DescendingSortPriority.
     //
     // 
@@ -29,4 +24,9 @@ type Destiny_Definitions_FireteamFinder_DestinyFireteamFinderOptionGroupDefiniti
     //
     // The index of the entity as it was found in the investment tables.
     Index int32 `json:"index"`
+
+    // Redacted.
+    //
+    // If this is true, then there is an entity with this identifier/type combination, but BNet is not yet allowed to show it. Sorry!
+    Redacted bool `json:"redacted"`
 }

@@ -3,20 +3,20 @@
 package api
 
 type Destiny_Definitions_DestinyItemCategoryDefinition struct {
+    // Deprecated.
+    //
+    // If True, this category has been deprecated: it may have no items left, or there may be only legacy items that remain in it which are no longer relevant to the game.
+    Deprecated bool `json:"deprecated"`
+
+    // DisplayProperties.
+    //
+    // Many Destiny*Definition contracts - the "first order" entities of Destiny that have their own tables in the Manifest Database - also have displayable information. This is the base class for that display information.
+    DisplayProperties Destiny_Definitions_Common_DestinyDisplayPropertiesDefinition `json:"displayProperties"`
+
     // GrantDestinyBreakerType.
     //
     // If the item in question has this category, it also should have this breaker type.
     GrantDestinyBreakerType int32 `json:"grantDestinyBreakerType"`
-
-    // OriginBucketIdentifier.
-    //
-    // If the item belongs to this bucket, it does belong to this category.
-    OriginBucketIdentifier string `json:"originBucketIdentifier"`
-
-    // Redacted.
-    //
-    // If this is true, then there is an entity with this identifier/type combination, but BNet is not yet allowed to show it. Sorry!
-    Redacted bool `json:"redacted"`
 
     // GrantDestinyClass.
     //
@@ -25,32 +25,19 @@ type Destiny_Definitions_DestinyItemCategoryDefinition struct {
     // See the other "grant"-prefixed properties on this definition for my color commentary.
     GrantDestinyClass int32 `json:"grantDestinyClass"`
 
-    // DisplayProperties.
+    // GrantDestinyItemType.
     //
-    // Many Destiny*Definition contracts - the "first order" entities of Destiny that have their own tables in the Manifest Database - also have displayable information. This is the base class for that display information.
-    DisplayProperties Destiny_Definitions_Common_DestinyDisplayPropertiesDefinition `json:"displayProperties"`
+    // If an item belongs to this category, it will also receive this item type. This is now how DestinyItemType is populated for items: it used to be an even jankier process, but that's a story that requires more alcohol.
+    GrantDestinyItemType int32 `json:"grantDestinyItemType"`
 
-    // Hash.
+    // GrantDestinySubType.
     //
-    // The unique identifier for this entity. Guaranteed to be unique for the type of entity, but not globally.
+    // If an item belongs to this category, it will also receive this subtype enum value.
     //
-    // When entities refer to each other in Destiny content, it is this hash that they are referring to.
-    Hash uint32 `json:"hash"`
-
-    // ParentCategoryHashes.
+    // I know what you're thinking - what if it belongs to multiple categories that provide sub-types?
     //
-    // All item category hashes of "parent" categories: categories that contain this as a child through the hierarchy of groupedCategoryHashes. It's a bit redundant, but having this child-centric list speeds up some calculations.
-    ParentCategoryHashes []uint32 `json:"parentCategoryHashes"`
-
-    // Index.
-    //
-    // The index of the entity as it was found in the investment tables.
-    Index int32 `json:"index"`
-
-    // TraitId.
-    //
-    // The traitId that can be found on items that belong to this category.
-    TraitId string `json:"traitId"`
+    // The last one processed wins, as is the case with all of these "grant" enums. Now you can see one reason why we moved away from these enums... but they're so convenient when they work, aren't they?
+    GrantDestinySubType int32 `json:"grantDestinySubType"`
 
     // GroupCategoryOnly.
     //
@@ -66,47 +53,60 @@ type Destiny_Definitions_DestinyItemCategoryDefinition struct {
     // (I hope someone named Carl reads this someday)
     GroupedCategoryHashes []uint32 `json:"groupedCategoryHashes"`
 
-    // ShortTitle.
+    // Hash.
     //
-    // A shortened version of the title. The reason why we have this is because the Armory in German had titles that were too long to display in our UI, so these were localized abbreviated versions of those categories. The property still exists today, even though the Armory doesn't exist for D2... yet.
-    ShortTitle string `json:"shortTitle"`
+    // The unique identifier for this entity. Guaranteed to be unique for the type of entity, but not globally.
+    //
+    // When entities refer to each other in Destiny content, it is this hash that they are referring to.
+    Hash uint32 `json:"hash"`
 
-    // ItemTypeRegexNot.
+    // Index.
     //
-    // If the item type matches this janky regex, it does *not* belong to this category.
-    ItemTypeRegexNot string `json:"itemTypeRegexNot"`
-
-    // Deprecated.
-    //
-    // If True, this category has been deprecated: it may have no items left, or there may be only legacy items that remain in it which are no longer relevant to the game.
-    Deprecated bool `json:"deprecated"`
-
-    // GrantDestinySubType.
-    //
-    // If an item belongs to this category, it will also receive this subtype enum value.
-    //
-    // I know what you're thinking - what if it belongs to multiple categories that provide sub-types?
-    //
-    // The last one processed wins, as is the case with all of these "grant" enums. Now you can see one reason why we moved away from these enums... but they're so convenient when they work, aren't they?
-    GrantDestinySubType int32 `json:"grantDestinySubType"`
+    // The index of the entity as it was found in the investment tables.
+    Index int32 `json:"index"`
 
     // ItemTypeRegex.
     //
     // The janky regular expression we used against the item type to try and discern whether the item belongs to this category.
     ItemTypeRegex string `json:"itemTypeRegex"`
 
-    // Visible.
+    // ItemTypeRegexNot.
     //
-    // If True, this category should be visible in UI. Sometimes we make categories that we don't think are interesting externally. It's up to you if you want to skip on showing them.
-    Visible bool `json:"visible"`
+    // If the item type matches this janky regex, it does *not* belong to this category.
+    ItemTypeRegexNot string `json:"itemTypeRegexNot"`
 
-    // GrantDestinyItemType.
+    // OriginBucketIdentifier.
     //
-    // If an item belongs to this category, it will also receive this item type. This is now how DestinyItemType is populated for items: it used to be an even jankier process, but that's a story that requires more alcohol.
-    GrantDestinyItemType int32 `json:"grantDestinyItemType"`
+    // If the item belongs to this bucket, it does belong to this category.
+    OriginBucketIdentifier string `json:"originBucketIdentifier"`
+
+    // ParentCategoryHashes.
+    //
+    // All item category hashes of "parent" categories: categories that contain this as a child through the hierarchy of groupedCategoryHashes. It's a bit redundant, but having this child-centric list speeds up some calculations.
+    ParentCategoryHashes []uint32 `json:"parentCategoryHashes"`
 
     // PlugCategoryIdentifier.
     //
     // If the item is a plug, this is the identifier we expect to find associated with it if it is in this category.
     PlugCategoryIdentifier string `json:"plugCategoryIdentifier"`
+
+    // Redacted.
+    //
+    // If this is true, then there is an entity with this identifier/type combination, but BNet is not yet allowed to show it. Sorry!
+    Redacted bool `json:"redacted"`
+
+    // ShortTitle.
+    //
+    // A shortened version of the title. The reason why we have this is because the Armory in German had titles that were too long to display in our UI, so these were localized abbreviated versions of those categories. The property still exists today, even though the Armory doesn't exist for D2... yet.
+    ShortTitle string `json:"shortTitle"`
+
+    // TraitId.
+    //
+    // The traitId that can be found on items that belong to this category.
+    TraitId string `json:"traitId"`
+
+    // Visible.
+    //
+    // If True, this category should be visible in UI. Sometimes we make categories that we don't think are interesting externally. It's up to you if you want to skip on showing them.
+    Visible bool `json:"visible"`
 }

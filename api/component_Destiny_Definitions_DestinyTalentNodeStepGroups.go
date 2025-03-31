@@ -3,11 +3,6 @@
 package api
 
 type Destiny_Definitions_DestinyTalentNodeStepGroups struct {
-    // WeaponPerformance.
-    //
-    // 
-    WeaponPerformance int32 `json:"weaponPerformance"`
-
     // DamageTypes.
     //
     // 
@@ -27,4 +22,9 @@ type Destiny_Definitions_DestinyTalentNodeStepGroups struct {
     //
     // 
     LightAbilities int32 `json:"lightAbilities"`
+
+    // WeaponPerformance.
+    //
+    // 
+    WeaponPerformance int32 `json:"weaponPerformance"`
 }

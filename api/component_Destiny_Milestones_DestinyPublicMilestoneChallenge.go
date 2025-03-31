@@ -6,7 +6,7 @@ type Destiny_Milestones_DestinyPublicMilestoneChallenge struct {
     // ActivityHash.
     //
     // IF the Objective is related to a specific Activity, this will be that activity's hash. Use it to look up the DestinyActivityDefinition for additional data to show.
-    ActivityHash uint32 `json:"activityHash"`
+    ActivityHash *uint32 `json:"activityHash"`
 
     // ObjectiveHash.
     //

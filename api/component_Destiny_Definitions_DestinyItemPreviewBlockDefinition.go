@@ -3,15 +3,10 @@
 package api
 
 type Destiny_Definitions_DestinyItemPreviewBlockDefinition struct {
-    // ScreenStyle.
-    //
-    // A string that the game UI uses as a hint for which detail screen to show for the item. You, too, can leverage this for your own custom screen detail views. Note, however, that these are arbitrarily defined by designers: there's no guarantees of a fixed, known number of these - so fall back to something reasonable if you don't recognize it.
-    ScreenStyle string `json:"screenStyle"`
-
     // ArtifactHash.
     //
     // If this item should show you Artifact information when you preview it, this is the hash identifier of the DestinyArtifactDefinition for the artifact whose data should be shown.
-    ArtifactHash uint32 `json:"artifactHash"`
+    ArtifactHash *uint32 `json:"artifactHash"`
 
     // DerivedItemCategories.
     //
@@ -27,4 +22,9 @@ type Destiny_Definitions_DestinyItemPreviewBlockDefinition struct {
     //
     // If the preview data is derived from a fake "Preview" Vendor, this will be the hash identifier for the DestinyVendorDefinition of that fake vendor.
     PreviewVendorHash uint32 `json:"previewVendorHash"`
+
+    // ScreenStyle.
+    //
+    // A string that the game UI uses as a hint for which detail screen to show for the item. You, too, can leverage this for your own custom screen detail views. Note, however, that these are arbitrarily defined by designers: there's no guarantees of a fixed, known number of these - so fall back to something reasonable if you don't recognize it.
+    ScreenStyle string `json:"screenStyle"`
 }

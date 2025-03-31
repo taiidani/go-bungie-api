@@ -3,11 +3,6 @@
 package api
 
 type FireteamFinder_DestinyFireteamFinderApplyToListingResponse struct {
-    // Listing.
-    //
-    // 
-    Listing FireteamFinder_DestinyFireteamFinderListing `json:"listing"`
-
     // Application.
     //
     // 
@@ -17,4 +12,9 @@ type FireteamFinder_DestinyFireteamFinderApplyToListingResponse struct {
     //
     // 
     IsApplied bool `json:"isApplied"`
+
+    // Listing.
+    //
+    // 
+    Listing FireteamFinder_DestinyFireteamFinderListing `json:"listing"`
 }

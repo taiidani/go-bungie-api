@@ -3,6 +3,16 @@
 package api
 
 type Destiny_Definitions_DestinyProgressionDisplayPropertiesDefinition struct {
+    // Description.
+    //
+    // 
+    Description string `json:"description"`
+
+    // DisplayUnitsName.
+    //
+    // When progressions show your "experience" gained, that bar has units (i.e. "Experience", "Bad Dudes Snuffed Out", whatever). This is the localized string for that unit of measurement.
+    DisplayUnitsName string `json:"displayUnitsName"`
+
     // HasIcon.
     //
     // 
@@ -31,14 +41,4 @@ type Destiny_Definitions_DestinyProgressionDisplayPropertiesDefinition struct {
     //
     // 
     Name string `json:"name"`
-
-    // Description.
-    //
-    // 
-    Description string `json:"description"`
-
-    // DisplayUnitsName.
-    //
-    // When progressions show your "experience" gained, that bar has units (i.e. "Experience", "Bad Dudes Snuffed Out", whatever). This is the localized string for that unit of measurement.
-    DisplayUnitsName string `json:"displayUnitsName"`
 }

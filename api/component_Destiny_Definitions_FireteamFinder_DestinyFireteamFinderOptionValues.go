@@ -3,11 +3,6 @@
 package api
 
 type Destiny_Definitions_FireteamFinder_DestinyFireteamFinderOptionValues struct {
-    // ValueDefinitions.
-    //
-    // 
-    ValueDefinitions []Destiny_Definitions_FireteamFinder_DestinyFireteamFinderOptionValueDefinition `json:"valueDefinitions"`
-
     // DisplayFormatType.
     //
     // 
@@ -27,4 +22,9 @@ type Destiny_Definitions_FireteamFinder_DestinyFireteamFinderOptionValues struct
     //
     // 
     Type int32 `json:"type"`
+
+    // ValueDefinitions.
+    //
+    // 
+    ValueDefinitions []Destiny_Definitions_FireteamFinder_DestinyFireteamFinderOptionValueDefinition `json:"valueDefinitions"`
 }

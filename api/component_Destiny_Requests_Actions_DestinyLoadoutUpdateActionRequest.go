@@ -3,10 +3,20 @@
 package api
 
 type Destiny_Requests_Actions_DestinyLoadoutUpdateActionRequest struct {
+    // CharacterId.
+    //
+    // 
+    CharacterId int64 `json:"characterId"`
+
+    // ColorHash.
+    //
+    // 
+    ColorHash *uint32 `json:"colorHash"`
+
     // IconHash.
     //
     // 
-    IconHash uint32 `json:"iconHash"`
+    IconHash *uint32 `json:"iconHash"`
 
     // LoadoutIndex.
     //
@@ -21,15 +31,5 @@ type Destiny_Requests_Actions_DestinyLoadoutUpdateActionRequest struct {
     // NameHash.
     //
     // 
-    NameHash uint32 `json:"nameHash"`
-
-    // CharacterId.
-    //
-    // 
-    CharacterId int64 `json:"characterId"`
-
-    // ColorHash.
-    //
-    // 
-    ColorHash uint32 `json:"colorHash"`
+    NameHash *uint32 `json:"nameHash"`
 }

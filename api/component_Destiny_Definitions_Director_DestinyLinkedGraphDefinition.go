@@ -3,6 +3,11 @@
 package api
 
 type Destiny_Definitions_Director_DestinyLinkedGraphDefinition struct {
+    // Description.
+    //
+    // 
+    Description string `json:"description"`
+
     // LinkedGraphId.
     //
     // 
@@ -29,9 +34,4 @@ type Destiny_Definitions_Director_DestinyLinkedGraphDefinition struct {
     //
     // Use UnlockExpressionParser to evaluate expressions using an IUnlockContext parsed from Babel.
     UnlockExpression Destiny_Definitions_DestinyUnlockExpressionDefinition `json:"unlockExpression"`
-
-    // Description.
-    //
-    // 
-    Description string `json:"description"`
 }

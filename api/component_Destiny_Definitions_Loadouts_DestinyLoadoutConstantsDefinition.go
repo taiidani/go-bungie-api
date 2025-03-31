@@ -3,25 +3,22 @@
 package api
 
 type Destiny_Definitions_Loadouts_DestinyLoadoutConstantsDefinition struct {
-    // LoadoutNameHashes.
+    // BlackIconImagePath.
     //
-    // A list of the loadout name hashes in index order, for convenience.
-    LoadoutNameHashes []uint32 `json:"loadoutNameHashes"`
+    // This is a color-inverted version of the whiteIconImagePath.
+    BlackIconImagePath string `json:"blackIconImagePath"`
 
-    // LoadoutPreviewFilterOutSocketCategoryHashes.
+    // DisplayProperties.
     //
-    // A list of the socket category hashes to be filtered out of loadout item preview displays.
-    LoadoutPreviewFilterOutSocketCategoryHashes []uint32 `json:"loadoutPreviewFilterOutSocketCategoryHashes"`
+    // Many Destiny*Definition contracts - the "first order" entities of Destiny that have their own tables in the Manifest Database - also have displayable information. This is the base class for that display information.
+    DisplayProperties Destiny_Definitions_Common_DestinyDisplayPropertiesDefinition `json:"displayProperties"`
 
-    // Redacted.
+    // Hash.
     //
-    // If this is true, then there is an entity with this identifier/type combination, but BNet is not yet allowed to show it. Sorry!
-    Redacted bool `json:"redacted"`
-
-    // WhiteIconImagePath.
+    // The unique identifier for this entity. Guaranteed to be unique for the type of entity, but not globally.
     //
-    // This is the same icon as the one in the display properties, offered here as well with a more descriptive name.
-    WhiteIconImagePath string `json:"whiteIconImagePath"`
+    // When entities refer to each other in Destiny content, it is this hash that they are referring to.
+    Hash uint32 `json:"hash"`
 
     // Index.
     //
@@ -38,30 +35,33 @@ type Destiny_Definitions_Loadouts_DestinyLoadoutConstantsDefinition struct {
     // The maximum number of loadouts available to each character. The loadouts component API response can return fewer loadouts than this, as more loadouts are unlocked by reaching higher Guardian Ranks.
     LoadoutCountPerCharacter int32 `json:"loadoutCountPerCharacter"`
 
-    // LoadoutPreviewFilterOutSocketTypeHashes.
-    //
-    // A list of the socket type hashes to be filtered out of loadout item preview displays.
-    LoadoutPreviewFilterOutSocketTypeHashes []uint32 `json:"loadoutPreviewFilterOutSocketTypeHashes"`
-
-    // BlackIconImagePath.
-    //
-    // This is a color-inverted version of the whiteIconImagePath.
-    BlackIconImagePath string `json:"blackIconImagePath"`
-
-    // DisplayProperties.
-    //
-    // Many Destiny*Definition contracts - the "first order" entities of Destiny that have their own tables in the Manifest Database - also have displayable information. This is the base class for that display information.
-    DisplayProperties Destiny_Definitions_Common_DestinyDisplayPropertiesDefinition `json:"displayProperties"`
-
     // LoadoutIconHashes.
     //
     // A list of the loadout icon hashes in index order, for convenience.
     LoadoutIconHashes []uint32 `json:"loadoutIconHashes"`
 
-    // Hash.
+    // LoadoutNameHashes.
     //
-    // The unique identifier for this entity. Guaranteed to be unique for the type of entity, but not globally.
+    // A list of the loadout name hashes in index order, for convenience.
+    LoadoutNameHashes []uint32 `json:"loadoutNameHashes"`
+
+    // LoadoutPreviewFilterOutSocketCategoryHashes.
     //
-    // When entities refer to each other in Destiny content, it is this hash that they are referring to.
-    Hash uint32 `json:"hash"`
+    // A list of the socket category hashes to be filtered out of loadout item preview displays.
+    LoadoutPreviewFilterOutSocketCategoryHashes []uint32 `json:"loadoutPreviewFilterOutSocketCategoryHashes"`
+
+    // LoadoutPreviewFilterOutSocketTypeHashes.
+    //
+    // A list of the socket type hashes to be filtered out of loadout item preview displays.
+    LoadoutPreviewFilterOutSocketTypeHashes []uint32 `json:"loadoutPreviewFilterOutSocketTypeHashes"`
+
+    // Redacted.
+    //
+    // If this is true, then there is an entity with this identifier/type combination, but BNet is not yet allowed to show it. Sorry!
+    Redacted bool `json:"redacted"`
+
+    // WhiteIconImagePath.
+    //
+    // This is the same icon as the one in the display properties, offered here as well with a more descriptive name.
+    WhiteIconImagePath string `json:"whiteIconImagePath"`
 }

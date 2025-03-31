@@ -3,11 +3,6 @@
 package api
 
 type GroupsV2_GroupV2ClanInfoAndInvestment struct {
-    // D2ClanProgressions.
-    //
-    // 
-    D2ClanProgressions any `json:"d2ClanProgressions"`
-
     // ClanBannerData.
     //
     // 
@@ -17,4 +12,9 @@ type GroupsV2_GroupV2ClanInfoAndInvestment struct {
     //
     // 
     ClanCallsign string `json:"clanCallsign"`
+
+    // D2ClanProgressions.
+    //
+    // 
+    D2ClanProgressions any `json:"d2ClanProgressions"`
 }

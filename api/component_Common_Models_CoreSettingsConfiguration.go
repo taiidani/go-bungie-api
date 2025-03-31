@@ -3,35 +3,95 @@
 package api
 
 type Common_Models_CoreSettingsConfiguration struct {
-    // DefaultGroupTheme.
+    // ClanBannerDecalColors.
     //
     // 
-    DefaultGroupTheme Common_Models_CoreSetting `json:"defaultGroupTheme"`
-
-    // Environment.
-    //
-    // 
-    Environment string `json:"environment"`
+    ClanBannerDecalColors []Common_Models_CoreSetting `json:"clanBannerDecalColors"`
 
     // ClanBannerDecals.
     //
     // 
     ClanBannerDecals []Common_Models_CoreSetting `json:"clanBannerDecals"`
 
-    // RecruitmentMiscTags.
+    // ClanBannerGonfalonColors.
     //
     // 
-    RecruitmentMiscTags []Common_Models_CoreSetting `json:"recruitmentMiscTags"`
+    ClanBannerGonfalonColors []Common_Models_CoreSetting `json:"clanBannerGonfalonColors"`
+
+    // ClanBannerGonfalonDetailColors.
+    //
+    // 
+    ClanBannerGonfalonDetailColors []Common_Models_CoreSetting `json:"clanBannerGonfalonDetailColors"`
+
+    // ClanBannerGonfalonDetails.
+    //
+    // 
+    ClanBannerGonfalonDetails []Common_Models_CoreSetting `json:"clanBannerGonfalonDetails"`
+
+    // ClanBannerGonfalons.
+    //
+    // 
+    ClanBannerGonfalons []Common_Models_CoreSetting `json:"clanBannerGonfalons"`
+
+    // ClanBannerStandards.
+    //
+    // 
+    ClanBannerStandards []Common_Models_CoreSetting `json:"clanBannerStandards"`
+
+    // DefaultGroupTheme.
+    //
+    // 
+    DefaultGroupTheme Common_Models_CoreSetting `json:"defaultGroupTheme"`
+
+    // Destiny2CoreSettings.
+    //
+    // 
+    Destiny2CoreSettings Common_Models_Destiny2CoreSettings `json:"destiny2CoreSettings"`
+
+    // DestinyMembershipTypes.
+    //
+    // 
+    DestinyMembershipTypes []Common_Models_CoreSetting `json:"destinyMembershipTypes"`
 
     // EmailSettings.
     //
     // The set of all email subscription/opt-in settings and definitions.
     EmailSettings User_EmailSettings `json:"emailSettings"`
 
+    // Environment.
+    //
+    // 
+    Environment string `json:"environment"`
+
+    // FireteamActivities.
+    //
+    // 
+    FireteamActivities []Common_Models_CoreSetting `json:"fireteamActivities"`
+
+    // ForumCategories.
+    //
+    // 
+    ForumCategories []Common_Models_CoreSetting `json:"forumCategories"`
+
     // GroupAvatars.
     //
     // 
     GroupAvatars []Common_Models_CoreSetting `json:"groupAvatars"`
+
+    // IgnoreReasons.
+    //
+    // 
+    IgnoreReasons []Common_Models_CoreSetting `json:"ignoreReasons"`
+
+    // RecruitmentActivities.
+    //
+    // 
+    RecruitmentActivities []Common_Models_CoreSetting `json:"recruitmentActivities"`
+
+    // RecruitmentMiscTags.
+    //
+    // 
+    RecruitmentMiscTags []Common_Models_CoreSetting `json:"recruitmentMiscTags"`
 
     // RecruitmentPlatformTags.
     //
@@ -43,73 +103,13 @@ type Common_Models_CoreSettingsConfiguration struct {
     // 
     SystemContentLocales []Common_Models_CoreSetting `json:"systemContentLocales"`
 
-    // ForumCategories.
-    //
-    // 
-    ForumCategories []Common_Models_CoreSetting `json:"forumCategories"`
-
-    // ClanBannerGonfalonDetails.
-    //
-    // 
-    ClanBannerGonfalonDetails []Common_Models_CoreSetting `json:"clanBannerGonfalonDetails"`
-
-    // IgnoreReasons.
-    //
-    // 
-    IgnoreReasons []Common_Models_CoreSetting `json:"ignoreReasons"`
-
-    // ClanBannerGonfalonColors.
-    //
-    // 
-    ClanBannerGonfalonColors []Common_Models_CoreSetting `json:"clanBannerGonfalonColors"`
-
-    // DestinyMembershipTypes.
-    //
-    // 
-    DestinyMembershipTypes []Common_Models_CoreSetting `json:"destinyMembershipTypes"`
-
-    // FireteamActivities.
-    //
-    // 
-    FireteamActivities []Common_Models_CoreSetting `json:"fireteamActivities"`
-
-    // ClanBannerGonfalonDetailColors.
-    //
-    // 
-    ClanBannerGonfalonDetailColors []Common_Models_CoreSetting `json:"clanBannerGonfalonDetailColors"`
-
     // Systems.
     //
     // 
     Systems any `json:"systems"`
 
-    // ClanBannerDecalColors.
-    //
-    // 
-    ClanBannerDecalColors []Common_Models_CoreSetting `json:"clanBannerDecalColors"`
-
-    // ClanBannerGonfalons.
-    //
-    // 
-    ClanBannerGonfalons []Common_Models_CoreSetting `json:"clanBannerGonfalons"`
-
-    // Destiny2CoreSettings.
-    //
-    // 
-    Destiny2CoreSettings Common_Models_Destiny2CoreSettings `json:"destiny2CoreSettings"`
-
-    // RecruitmentActivities.
-    //
-    // 
-    RecruitmentActivities []Common_Models_CoreSetting `json:"recruitmentActivities"`
-
     // UserContentLocales.
     //
     // 
     UserContentLocales []Common_Models_CoreSetting `json:"userContentLocales"`
-
-    // ClanBannerStandards.
-    //
-    // 
-    ClanBannerStandards []Common_Models_CoreSetting `json:"clanBannerStandards"`
 }

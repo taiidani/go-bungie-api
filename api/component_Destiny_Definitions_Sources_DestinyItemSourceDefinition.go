@@ -3,16 +3,6 @@
 package api
 
 type Destiny_Definitions_Sources_DestinyItemSourceDefinition struct {
-    // MinQuality.
-    //
-    // The minimum Quality at which the item spawns for this level. Examine DestinyInventoryItemDefinition for more information about what Quality means. Just don't ask Phaedrus about it, he'll never stop talking and you'll have to write a book about it.
-    MinQuality int32 `json:"minQuality"`
-
-    // SourceHashes.
-    //
-    // The DestinyRewardSourceDefinitions found that can spawn the item at this level.
-    SourceHashes []uint32 `json:"sourceHashes"`
-
     // ComputedStats.
     //
     // The stats computed for this level/quality range.
@@ -37,4 +27,14 @@ type Destiny_Definitions_Sources_DestinyItemSourceDefinition struct {
     //
     // The minimum Character Level required for equipping the item when the item spawns at the item level defined on this DestinyItemSourceDefinition, as far as we saw in our processing.
     MinLevelRequired int32 `json:"minLevelRequired"`
+
+    // MinQuality.
+    //
+    // The minimum Quality at which the item spawns for this level. Examine DestinyInventoryItemDefinition for more information about what Quality means. Just don't ask Phaedrus about it, he'll never stop talking and you'll have to write a book about it.
+    MinQuality int32 `json:"minQuality"`
+
+    // SourceHashes.
+    //
+    // The DestinyRewardSourceDefinitions found that can spawn the item at this level.
+    SourceHashes []uint32 `json:"sourceHashes"`
 }

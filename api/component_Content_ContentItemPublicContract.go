@@ -3,6 +3,61 @@
 package api
 
 type Content_ContentItemPublicContract struct {
+    // AllowComments.
+    //
+    // 
+    AllowComments bool `json:"allowComments"`
+
+    // Author.
+    //
+    // 
+    Author User_GeneralUser `json:"author"`
+
+    // AutoEnglishPropertyFallback.
+    //
+    // 
+    AutoEnglishPropertyFallback bool `json:"autoEnglishPropertyFallback"`
+
+    // CType.
+    //
+    // 
+    CType string `json:"cType"`
+
+    // CmsPath.
+    //
+    // 
+    CmsPath string `json:"cmsPath"`
+
+    // CommentSummary.
+    //
+    // 
+    CommentSummary Content_CommentSummary `json:"commentSummary"`
+
+    // ContentId.
+    //
+    // 
+    ContentId int64 `json:"contentId"`
+
+    // CreationDate.
+    //
+    // 
+    CreationDate string `json:"creationDate"`
+
+    // HasAgeGate.
+    //
+    // 
+    HasAgeGate bool `json:"hasAgeGate"`
+
+    // MinimumAge.
+    //
+    // 
+    MinimumAge int32 `json:"minimumAge"`
+
+    // ModifyDate.
+    //
+    // 
+    ModifyDate string `json:"modifyDate"`
+
     // Properties.
     //
     // Firehose content is really a collection of metadata and "properties", which are the potentially-but-not-strictly localizable data that comprises the meat of whatever content is being shown.
@@ -10,73 +65,18 @@ type Content_ContentItemPublicContract struct {
     // As Cole Porter would have crooned, "Anything Goes" with Firehose properties. They are most often strings, but they can theoretically be anything. They are JSON encoded, and could be JSON structures, simple strings, numbers etc... The Content Type of the item (cType) will describe the properties, and thus how they ought to be deserialized.
     Properties any `json:"properties"`
 
-    // CreationDate.
-    //
-    // 
-    CreationDate string `json:"creationDate"`
-
-    // CType.
-    //
-    // 
-    CType string `json:"cType"`
-
-    // MinimumAge.
-    //
-    // 
-    MinimumAge int32 `json:"minimumAge"`
-
-    // Author.
-    //
-    // 
-    Author User_GeneralUser `json:"author"`
-
-    // ModifyDate.
-    //
-    // 
-    ModifyDate string `json:"modifyDate"`
-
-    // CommentSummary.
-    //
-    // 
-    CommentSummary Content_CommentSummary `json:"commentSummary"`
-
-    // CmsPath.
-    //
-    // 
-    CmsPath string `json:"cmsPath"`
-
-    // HasAgeGate.
-    //
-    // 
-    HasAgeGate bool `json:"hasAgeGate"`
-
     // RatingImagePath.
     //
     // 
     RatingImagePath string `json:"ratingImagePath"`
-
-    // AllowComments.
-    //
-    // 
-    AllowComments bool `json:"allowComments"`
 
     // Representations.
     //
     // 
     Representations []Content_ContentRepresentation `json:"representations"`
 
-    // ContentId.
-    //
-    // 
-    ContentId int64 `json:"contentId"`
-
     // Tags.
     //
     // NOTE: Tags will always be lower case.
     Tags []string `json:"tags"`
-
-    // AutoEnglishPropertyFallback.
-    //
-    // 
-    AutoEnglishPropertyFallback bool `json:"autoEnglishPropertyFallback"`
 }

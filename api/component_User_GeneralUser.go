@@ -3,155 +3,50 @@
 package api
 
 type User_GeneralUser struct {
-    // LastUpdate.
+    // About.
     //
     // 
-    LastUpdate string `json:"lastUpdate"`
-
-    // Context.
-    //
-    // 
-    Context User_UserToUserContext `json:"context"`
-
-    // ShowGroupMessaging.
-    //
-    // 
-    ShowGroupMessaging bool `json:"showGroupMessaging"`
+    About string `json:"about"`
 
     // BlizzardDisplayName.
     //
     // 
     BlizzardDisplayName string `json:"blizzardDisplayName"`
 
-    // NormalizedName.
-    //
-    // 
-    NormalizedName string `json:"normalizedName"`
-
-    // ProfileBanExpire.
-    //
-    // 
-    ProfileBanExpire string `json:"profileBanExpire"`
-
-    // ProfilePicture.
-    //
-    // 
-    ProfilePicture int32 `json:"profilePicture"`
-
-    // LocaleInheritDefault.
-    //
-    // 
-    LocaleInheritDefault bool `json:"localeInheritDefault"`
-
-    // TwitchDisplayName.
-    //
-    // 
-    TwitchDisplayName string `json:"twitchDisplayName"`
-
-    // UserTitle.
-    //
-    // 
-    UserTitle int32 `json:"userTitle"`
-
-    // SuccessMessageFlags.
-    //
-    // 
-    SuccessMessageFlags int64 `json:"successMessageFlags"`
-
-    // SteamDisplayName.
-    //
-    // 
-    SteamDisplayName string `json:"steamDisplayName"`
-
-    // UniqueName.
-    //
-    // 
-    UniqueName string `json:"uniqueName"`
-
-    // XboxDisplayName.
-    //
-    // 
-    XboxDisplayName string `json:"xboxDisplayName"`
-
-    // ProfileTheme.
-    //
-    // 
-    ProfileTheme int32 `json:"profileTheme"`
-
-    // UserTitleDisplay.
-    //
-    // 
-    UserTitleDisplay string `json:"userTitleDisplay"`
-
     // CachedBungieGlobalDisplayName.
     //
     // 
     CachedBungieGlobalDisplayName string `json:"cachedBungieGlobalDisplayName"`
+
+    // CachedBungieGlobalDisplayNameCode.
+    //
+    // 
+    CachedBungieGlobalDisplayNameCode *int16 `json:"cachedBungieGlobalDisplayNameCode"`
+
+    // Context.
+    //
+    // 
+    Context User_UserToUserContext `json:"context"`
 
     // DisplayName.
     //
     // 
     DisplayName string `json:"displayName"`
 
-    // FirstAccess.
+    // EgsDisplayName.
     //
     // 
-    FirstAccess string `json:"firstAccess"`
-
-    // StatusText.
-    //
-    // 
-    StatusText string `json:"statusText"`
-
-    // CachedBungieGlobalDisplayNameCode.
-    //
-    // 
-    CachedBungieGlobalDisplayNameCode int16 `json:"cachedBungieGlobalDisplayNameCode"`
-
-    // MembershipId.
-    //
-    // 
-    MembershipId int64 `json:"membershipId"`
-
-    // StadiaDisplayName.
-    //
-    // 
-    StadiaDisplayName string `json:"stadiaDisplayName"`
-
-    // LegacyPortalUID.
-    //
-    // 
-    LegacyPortalUID int64 `json:"legacyPortalUID"`
-
-    // ProfilePicturePath.
-    //
-    // 
-    ProfilePicturePath string `json:"profilePicturePath"`
-
-    // PsnDisplayName.
-    //
-    // 
-    PsnDisplayName string `json:"psnDisplayName"`
+    EgsDisplayName string `json:"egsDisplayName"`
 
     // FbDisplayName.
     //
     // 
     FbDisplayName string `json:"fbDisplayName"`
 
-    // EgsDisplayName.
+    // FirstAccess.
     //
     // 
-    EgsDisplayName string `json:"egsDisplayName"`
-
-    // ShowActivity.
-    //
-    // 
-    ShowActivity bool `json:"showActivity"`
-
-    // StatusDate.
-    //
-    // 
-    StatusDate string `json:"statusDate"`
+    FirstAccess *string `json:"firstAccess"`
 
     // IsDeleted.
     //
@@ -161,25 +56,130 @@ type User_GeneralUser struct {
     // LastBanReportId.
     //
     // 
-    LastBanReportId int64 `json:"lastBanReportId"`
+    LastBanReportId *int64 `json:"lastBanReportId"`
 
-    // About.
+    // LastUpdate.
     //
     // 
-    About string `json:"about"`
+    LastUpdate *string `json:"lastUpdate"`
+
+    // LegacyPortalUID.
+    //
+    // 
+    LegacyPortalUID *int64 `json:"legacyPortalUID"`
 
     // Locale.
     //
     // 
     Locale string `json:"locale"`
 
+    // LocaleInheritDefault.
+    //
+    // 
+    LocaleInheritDefault bool `json:"localeInheritDefault"`
+
+    // MembershipId.
+    //
+    // 
+    MembershipId int64 `json:"membershipId"`
+
+    // NormalizedName.
+    //
+    // 
+    NormalizedName string `json:"normalizedName"`
+
+    // ProfileBanExpire.
+    //
+    // 
+    ProfileBanExpire *string `json:"profileBanExpire"`
+
+    // ProfilePicture.
+    //
+    // 
+    ProfilePicture int32 `json:"profilePicture"`
+
+    // ProfilePicturePath.
+    //
+    // 
+    ProfilePicturePath string `json:"profilePicturePath"`
+
     // ProfilePictureWidePath.
     //
     // 
     ProfilePictureWidePath string `json:"profilePictureWidePath"`
 
+    // ProfileTheme.
+    //
+    // 
+    ProfileTheme int32 `json:"profileTheme"`
+
     // ProfileThemeName.
     //
     // 
     ProfileThemeName string `json:"profileThemeName"`
+
+    // PsnDisplayName.
+    //
+    // 
+    PsnDisplayName string `json:"psnDisplayName"`
+
+    // ShowActivity.
+    //
+    // 
+    ShowActivity *bool `json:"showActivity"`
+
+    // ShowGroupMessaging.
+    //
+    // 
+    ShowGroupMessaging bool `json:"showGroupMessaging"`
+
+    // StadiaDisplayName.
+    //
+    // 
+    StadiaDisplayName string `json:"stadiaDisplayName"`
+
+    // StatusDate.
+    //
+    // 
+    StatusDate string `json:"statusDate"`
+
+    // StatusText.
+    //
+    // 
+    StatusText string `json:"statusText"`
+
+    // SteamDisplayName.
+    //
+    // 
+    SteamDisplayName string `json:"steamDisplayName"`
+
+    // SuccessMessageFlags.
+    //
+    // 
+    SuccessMessageFlags int64 `json:"successMessageFlags"`
+
+    // TwitchDisplayName.
+    //
+    // 
+    TwitchDisplayName string `json:"twitchDisplayName"`
+
+    // UniqueName.
+    //
+    // 
+    UniqueName string `json:"uniqueName"`
+
+    // UserTitle.
+    //
+    // 
+    UserTitle int32 `json:"userTitle"`
+
+    // UserTitleDisplay.
+    //
+    // 
+    UserTitleDisplay string `json:"userTitleDisplay"`
+
+    // XboxDisplayName.
+    //
+    // 
+    XboxDisplayName string `json:"xboxDisplayName"`
 }

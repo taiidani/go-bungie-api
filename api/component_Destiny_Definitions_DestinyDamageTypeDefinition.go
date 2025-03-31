@@ -3,11 +3,6 @@
 package api
 
 type Destiny_Definitions_DestinyDamageTypeDefinition struct {
-    // TransparentIconPath.
-    //
-    // A variant of the icon that is transparent and colorless.
-    TransparentIconPath string `json:"transparentIconPath"`
-
     // Color.
     //
     // A color associated with the damage type. The displayProperties icon is tinted with a color close to this.
@@ -44,4 +39,9 @@ type Destiny_Definitions_DestinyDamageTypeDefinition struct {
     //
     // If TRUE, the game shows this damage type's icon. Otherwise, it doesn't. Whether you show it or not is up to you.
     ShowIcon bool `json:"showIcon"`
+
+    // TransparentIconPath.
+    //
+    // A variant of the icon that is transparent and colorless.
+    TransparentIconPath string `json:"transparentIconPath"`
 }

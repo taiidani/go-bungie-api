@@ -3,13 +3,13 @@
 package api
 
 type Destiny_HistoricalStats_DestinyLeaderboard struct {
-    // StatId.
-    //
-    // 
-    StatId string `json:"statId"`
-
     // Entries.
     //
     // 
     Entries []Destiny_HistoricalStats_DestinyLeaderboardEntry `json:"entries"`
+
+    // StatId.
+    //
+    // 
+    StatId string `json:"statId"`
 }

@@ -3,153 +3,153 @@
 package api
 
 type Common_Models_Destiny2CoreSettings struct {
-    // AmmoTypePrimaryIcon.
-    //
-    // 
-    AmmoTypePrimaryIcon string `json:"ammoTypePrimaryIcon"`
-
-    // CurrentSeasonalArtifactHash.
-    //
-    // 
-    CurrentSeasonalArtifactHash uint32 `json:"currentSeasonalArtifactHash"`
-
-    // GuardianRankConstantsHash.
-    //
-    // 
-    GuardianRankConstantsHash uint32 `json:"guardianRankConstantsHash"`
-
     // ActiveSealsRootNodeHash.
     //
     // 
     ActiveSealsRootNodeHash uint32 `json:"activeSealsRootNodeHash"`
 
-    // ExoticCatalystsRootNodeHash.
+    // ActiveTriumphsRootNodeHash.
     //
     // 
-    ExoticCatalystsRootNodeHash uint32 `json:"exoticCatalystsRootNodeHash"`
-
-    // InsertPlugFreeBlockedSocketTypeHashes.
-    //
-    // 
-    InsertPlugFreeBlockedSocketTypeHashes []uint32 `json:"insertPlugFreeBlockedSocketTypeHashes"`
-
-    // CraftingRootNodeHash.
-    //
-    // 
-    CraftingRootNodeHash uint32 `json:"craftingRootNodeHash"`
-
-    // LoreRootNodeHash.
-    //
-    // 
-    LoreRootNodeHash uint32 `json:"loreRootNodeHash"`
-
-    // FutureSeasonHashes.
-    //
-    // 
-    FutureSeasonHashes []uint32 `json:"futureSeasonHashes"`
-
-    // AmmoTypeSpecialIcon.
-    //
-    // 
-    AmmoTypeSpecialIcon string `json:"ammoTypeSpecialIcon"`
-
-    // LoadoutConstantsHash.
-    //
-    // 
-    LoadoutConstantsHash uint32 `json:"loadoutConstantsHash"`
-
-    // MetricsRootNode.
-    //
-    // 
-    MetricsRootNode uint32 `json:"metricsRootNode"`
-
-    // RecordsRootNode.
-    //
-    // 
-    RecordsRootNode uint32 `json:"recordsRootNode"`
-
-    // FireteamFinderConstantsHash.
-    //
-    // 
-    FireteamFinderConstantsHash uint32 `json:"fireteamFinderConstantsHash"`
-
-    // LegacySealsRootNodeHash.
-    //
-    // 
-    LegacySealsRootNodeHash uint32 `json:"legacySealsRootNodeHash"`
-
-    // CollectionRootNode.
-    //
-    // 
-    CollectionRootNode uint32 `json:"collectionRootNode"`
-
-    // MedalsRootNodeHash.
-    //
-    // 
-    MedalsRootNodeHash uint32 `json:"medalsRootNodeHash"`
-
-    // SeasonalChallengesPresentationNodeHash.
-    //
-    // 
-    SeasonalChallengesPresentationNodeHash uint32 `json:"seasonalChallengesPresentationNodeHash"`
-
-    // BadgesRootNode.
-    //
-    // 
-    BadgesRootNode uint32 `json:"badgesRootNode"`
-
-    // GuardianRanksRootNodeHash.
-    //
-    // 
-    GuardianRanksRootNodeHash uint32 `json:"guardianRanksRootNodeHash"`
-
-    // CurrentRankProgressionHashes.
-    //
-    // 
-    CurrentRankProgressionHashes []uint32 `json:"currentRankProgressionHashes"`
-
-    // LegacyTriumphsRootNodeHash.
-    //
-    // 
-    LegacyTriumphsRootNodeHash uint32 `json:"legacyTriumphsRootNodeHash"`
-
-    // MedalsRootNode.
-    //
-    // 
-    MedalsRootNode uint32 `json:"medalsRootNode"`
-
-    // PastSeasonHashes.
-    //
-    // 
-    PastSeasonHashes []uint32 `json:"pastSeasonHashes"`
-
-    // UndiscoveredCollectibleImage.
-    //
-    // 
-    UndiscoveredCollectibleImage string `json:"undiscoveredCollectibleImage"`
-
-    // EnabledFireteamFinderActivityGraphHashes.
-    //
-    // 
-    EnabledFireteamFinderActivityGraphHashes []uint32 `json:"enabledFireteamFinderActivityGraphHashes"`
+    ActiveTriumphsRootNodeHash uint32 `json:"activeTriumphsRootNodeHash"`
 
     // AmmoTypeHeavyIcon.
     //
     // 
     AmmoTypeHeavyIcon string `json:"ammoTypeHeavyIcon"`
 
+    // AmmoTypePrimaryIcon.
+    //
+    // 
+    AmmoTypePrimaryIcon string `json:"ammoTypePrimaryIcon"`
+
+    // AmmoTypeSpecialIcon.
+    //
+    // 
+    AmmoTypeSpecialIcon string `json:"ammoTypeSpecialIcon"`
+
+    // BadgesRootNode.
+    //
+    // 
+    BadgesRootNode uint32 `json:"badgesRootNode"`
+
+    // CollectionRootNode.
+    //
+    // 
+    CollectionRootNode uint32 `json:"collectionRootNode"`
+
+    // CraftingRootNodeHash.
+    //
+    // 
+    CraftingRootNodeHash uint32 `json:"craftingRootNodeHash"`
+
+    // CurrentRankProgressionHashes.
+    //
+    // 
+    CurrentRankProgressionHashes []uint32 `json:"currentRankProgressionHashes"`
+
+    // CurrentSeasonHash.
+    //
+    // 
+    CurrentSeasonHash *uint32 `json:"currentSeasonHash"`
+
+    // CurrentSeasonalArtifactHash.
+    //
+    // 
+    CurrentSeasonalArtifactHash uint32 `json:"currentSeasonalArtifactHash"`
+
+    // EnabledFireteamFinderActivityGraphHashes.
+    //
+    // 
+    EnabledFireteamFinderActivityGraphHashes []uint32 `json:"enabledFireteamFinderActivityGraphHashes"`
+
+    // ExoticCatalystsRootNodeHash.
+    //
+    // 
+    ExoticCatalystsRootNodeHash uint32 `json:"exoticCatalystsRootNodeHash"`
+
+    // FireteamFinderConstantsHash.
+    //
+    // 
+    FireteamFinderConstantsHash uint32 `json:"fireteamFinderConstantsHash"`
+
+    // FutureSeasonHashes.
+    //
+    // 
+    FutureSeasonHashes []uint32 `json:"futureSeasonHashes"`
+
+    // GuardianRankConstantsHash.
+    //
+    // 
+    GuardianRankConstantsHash uint32 `json:"guardianRankConstantsHash"`
+
+    // GuardianRanksRootNodeHash.
+    //
+    // 
+    GuardianRanksRootNodeHash uint32 `json:"guardianRanksRootNodeHash"`
+
+    // InsertPlugFreeBlockedSocketTypeHashes.
+    //
+    // 
+    InsertPlugFreeBlockedSocketTypeHashes []uint32 `json:"insertPlugFreeBlockedSocketTypeHashes"`
+
     // InsertPlugFreeProtectedPlugItemHashes.
     //
     // 
     InsertPlugFreeProtectedPlugItemHashes []uint32 `json:"insertPlugFreeProtectedPlugItemHashes"`
 
-    // CurrentSeasonHash.
+    // LegacySealsRootNodeHash.
     //
     // 
-    CurrentSeasonHash uint32 `json:"currentSeasonHash"`
+    LegacySealsRootNodeHash uint32 `json:"legacySealsRootNodeHash"`
 
-    // ActiveTriumphsRootNodeHash.
+    // LegacyTriumphsRootNodeHash.
     //
     // 
-    ActiveTriumphsRootNodeHash uint32 `json:"activeTriumphsRootNodeHash"`
+    LegacyTriumphsRootNodeHash uint32 `json:"legacyTriumphsRootNodeHash"`
+
+    // LoadoutConstantsHash.
+    //
+    // 
+    LoadoutConstantsHash uint32 `json:"loadoutConstantsHash"`
+
+    // LoreRootNodeHash.
+    //
+    // 
+    LoreRootNodeHash uint32 `json:"loreRootNodeHash"`
+
+    // MedalsRootNode.
+    //
+    // 
+    MedalsRootNode uint32 `json:"medalsRootNode"`
+
+    // MedalsRootNodeHash.
+    //
+    // 
+    MedalsRootNodeHash uint32 `json:"medalsRootNodeHash"`
+
+    // MetricsRootNode.
+    //
+    // 
+    MetricsRootNode uint32 `json:"metricsRootNode"`
+
+    // PastSeasonHashes.
+    //
+    // 
+    PastSeasonHashes []uint32 `json:"pastSeasonHashes"`
+
+    // RecordsRootNode.
+    //
+    // 
+    RecordsRootNode uint32 `json:"recordsRootNode"`
+
+    // SeasonalChallengesPresentationNodeHash.
+    //
+    // 
+    SeasonalChallengesPresentationNodeHash *uint32 `json:"seasonalChallengesPresentationNodeHash"`
+
+    // UndiscoveredCollectibleImage.
+    //
+    // 
+    UndiscoveredCollectibleImage string `json:"undiscoveredCollectibleImage"`
 }

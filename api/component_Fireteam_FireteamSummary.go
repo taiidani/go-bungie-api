@@ -3,20 +3,15 @@
 package api
 
 type Fireteam_FireteamSummary struct {
-    // OwnerCurrentGuardianRankSnapshot.
+    // ActivityType.
     //
     // 
-    OwnerCurrentGuardianRankSnapshot int32 `json:"ownerCurrentGuardianRankSnapshot"`
+    ActivityType int32 `json:"activityType"`
 
-    // TitleBeforeModeration.
+    // AlternateSlotCount.
     //
     // 
-    TitleBeforeModeration string `json:"titleBeforeModeration"`
-
-    // DateCreated.
-    //
-    // 
-    DateCreated string `json:"dateCreated"`
+    AlternateSlotCount *int32 `json:"alternateSlotCount"`
 
     // AvailableAlternateSlotCount.
     //
@@ -28,45 +23,30 @@ type Fireteam_FireteamSummary struct {
     // 
     AvailablePlayerSlotCount int32 `json:"availablePlayerSlotCount"`
 
+    // DateCreated.
+    //
+    // 
+    DateCreated string `json:"dateCreated"`
+
     // DateModified.
     //
     // 
-    DateModified string `json:"dateModified"`
+    DateModified *string `json:"dateModified"`
 
-    // IsValid.
+    // DatePlayerModified.
     //
     // 
-    IsValid bool `json:"isValid"`
+    DatePlayerModified string `json:"datePlayerModified"`
 
-    // Title.
+    // FireteamId.
     //
     // 
-    Title string `json:"title"`
+    FireteamId int64 `json:"fireteamId"`
 
-    // ActivityType.
+    // GroupId.
     //
     // 
-    ActivityType int32 `json:"activityType"`
-
-    // ScheduledTime.
-    //
-    // 
-    ScheduledTime string `json:"scheduledTime"`
-
-    // Locale.
-    //
-    // 
-    Locale string `json:"locale"`
-
-    // PlayerSlotCount.
-    //
-    // 
-    PlayerSlotCount int32 `json:"playerSlotCount"`
-
-    // OwnerMembershipId.
-    //
-    // 
-    OwnerMembershipId int64 `json:"ownerMembershipId"`
+    GroupId int64 `json:"groupId"`
 
     // IsImmediate.
     //
@@ -78,25 +58,30 @@ type Fireteam_FireteamSummary struct {
     // 
     IsPublic bool `json:"isPublic"`
 
+    // IsValid.
+    //
+    // 
+    IsValid bool `json:"isValid"`
+
+    // Locale.
+    //
+    // 
+    Locale string `json:"locale"`
+
+    // OwnerCurrentGuardianRankSnapshot.
+    //
+    // 
+    OwnerCurrentGuardianRankSnapshot int32 `json:"ownerCurrentGuardianRankSnapshot"`
+
     // OwnerHighestLifetimeGuardianRankSnapshot.
     //
     // 
     OwnerHighestLifetimeGuardianRankSnapshot int32 `json:"ownerHighestLifetimeGuardianRankSnapshot"`
 
-    // FireteamId.
+    // OwnerMembershipId.
     //
     // 
-    FireteamId int64 `json:"fireteamId"`
-
-    // AlternateSlotCount.
-    //
-    // 
-    AlternateSlotCount int32 `json:"alternateSlotCount"`
-
-    // GroupId.
-    //
-    // 
-    GroupId int64 `json:"groupId"`
+    OwnerMembershipId int64 `json:"ownerMembershipId"`
 
     // OwnerTotalCommendationScoreSnapshot.
     //
@@ -108,8 +93,23 @@ type Fireteam_FireteamSummary struct {
     // 
     Platform byte `json:"platform"`
 
-    // DatePlayerModified.
+    // PlayerSlotCount.
     //
     // 
-    DatePlayerModified string `json:"datePlayerModified"`
+    PlayerSlotCount int32 `json:"playerSlotCount"`
+
+    // ScheduledTime.
+    //
+    // 
+    ScheduledTime *string `json:"scheduledTime"`
+
+    // Title.
+    //
+    // 
+    Title string `json:"title"`
+
+    // TitleBeforeModeration.
+    //
+    // 
+    TitleBeforeModeration string `json:"titleBeforeModeration"`
 }

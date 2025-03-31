@@ -3,13 +3,13 @@
 package api
 
 type Destiny_DyeReference struct {
-    // DyeHash.
-    //
-    // 
-    DyeHash uint32 `json:"dyeHash"`
-
     // ChannelHash.
     //
     // 
     ChannelHash uint32 `json:"channelHash"`
+
+    // DyeHash.
+    //
+    // 
+    DyeHash uint32 `json:"dyeHash"`
 }

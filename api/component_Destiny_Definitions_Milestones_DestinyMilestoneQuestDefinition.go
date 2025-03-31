@@ -11,7 +11,7 @@ type Destiny_Definitions_Milestones_DestinyMilestoneQuestDefinition struct {
     // DestinationHash.
     //
     // Sometimes, a Milestone's quest is related to an entire Destination rather than a specific activity. In that situation, this will be the hash of that Destination. Hotspots are currently the only Milestones that expose this data, but that does not preclude this data from being returned for other Milestones in the future.
-    DestinationHash uint32 `json:"destinationHash"`
+    DestinationHash *uint32 `json:"destinationHash"`
 
     // DisplayProperties.
     //

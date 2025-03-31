@@ -3,26 +3,6 @@
 package api
 
 type Destiny_Sockets_DestinyItemPlug struct {
-    // MaxStackSize.
-    //
-    // If available, this is the maximum stack size to display for the socket plug item.
-    MaxStackSize int32 `json:"maxStackSize"`
-
-    // PlugItemHash.
-    //
-    // The hash identifier of the DestinyInventoryItemDefinition that represents this plug.
-    PlugItemHash uint32 `json:"plugItemHash"`
-
-    // PlugObjectives.
-    //
-    // Sometimes, Plugs may have objectives: these are often used for flavor and display purposes, but they can be used for any arbitrary purpose (both fortunately and unfortunately). Recently (with Season 2) they were expanded in use to be used as the "gating" for whether the plug can be inserted at all. For instance, a Plug might be tracking the number of PVP kills you have made. It will use the parent item's data about that tracking status to determine what to show, and will generally show it using the DestinyObjectiveDefinition's progressDescription property. Refer to the plug's itemHash and objective property for more information if you would like to display even more data.
-    PlugObjectives []Destiny_Quests_DestinyObjectiveProgress `json:"plugObjectives"`
-
-    // StackSize.
-    //
-    // If available, this is the stack size to display for the socket plug item.
-    StackSize int32 `json:"stackSize"`
-
     // CanInsert.
     //
     // If true, this plug has met all of its insertion requirements. Big if true.
@@ -46,4 +26,24 @@ type Destiny_Sockets_DestinyItemPlug struct {
     //
     // This list will be empty if the plug can be inserted.
     InsertFailIndexes []int32 `json:"insertFailIndexes"`
+
+    // MaxStackSize.
+    //
+    // If available, this is the maximum stack size to display for the socket plug item.
+    MaxStackSize *int32 `json:"maxStackSize"`
+
+    // PlugItemHash.
+    //
+    // The hash identifier of the DestinyInventoryItemDefinition that represents this plug.
+    PlugItemHash uint32 `json:"plugItemHash"`
+
+    // PlugObjectives.
+    //
+    // Sometimes, Plugs may have objectives: these are often used for flavor and display purposes, but they can be used for any arbitrary purpose (both fortunately and unfortunately). Recently (with Season 2) they were expanded in use to be used as the "gating" for whether the plug can be inserted at all. For instance, a Plug might be tracking the number of PVP kills you have made. It will use the parent item's data about that tracking status to determine what to show, and will generally show it using the DestinyObjectiveDefinition's progressDescription property. Refer to the plug's itemHash and objective property for more information if you would like to display even more data.
+    PlugObjectives []Destiny_Quests_DestinyObjectiveProgress `json:"plugObjectives"`
+
+    // StackSize.
+    //
+    // If available, this is the stack size to display for the socket plug item.
+    StackSize *int32 `json:"stackSize"`
 }

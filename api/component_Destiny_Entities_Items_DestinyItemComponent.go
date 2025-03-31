@@ -3,27 +3,42 @@
 package api
 
 type Destiny_Entities_Items_DestinyItemComponent struct {
-    // VersionNumber.
+    // BindStatus.
     //
-    // The version of this item, used to index into the versions list in the item definition quality block.
-    VersionNumber int32 `json:"versionNumber"`
+    // If the item is bound to a location, it will be specified in this enum.
+    BindStatus int32 `json:"bindStatus"`
 
-    // OverrideStyleItemHash.
+    // BucketHash.
     //
-    // If populated, this is the hash of the item whose icon (and other secondary styles, but *not* the human readable strings) should override whatever icons/styles are on the item being sold.
-    //
-    // If you don't do this, certain items whose styles are being overridden by socketed items - such as the "Recycle Shader" item - would show whatever their default icon/style is, and it wouldn't be pretty or look accurate.
-    OverrideStyleItemHash uint32 `json:"overrideStyleItemHash"`
+    // The hash identifier for the specific inventory bucket in which the item is located.
+    BucketHash uint32 `json:"bucketHash"`
 
     // ExpirationDate.
     //
     // If the item can expire, this is the date at which it will/did expire.
-    ExpirationDate string `json:"expirationDate"`
+    ExpirationDate *string `json:"expirationDate"`
+
+    // IsWrapper.
+    //
+    // If this is true, the object is actually a "wrapper" of the object it's representing. This means that it's not the actual item itself, but rather an item that must be "opened" in game before you have and can use the item.
+    //
+    //  Wrappers are an evolution of "bundles", which give an easy way to let you preview the contents of what you purchased while still letting you get a refund before you "open" it.
+    IsWrapper bool `json:"isWrapper"`
 
     // ItemHash.
     //
     // The identifier for the item's definition, which is where most of the useful static information for the item can be found.
     ItemHash uint32 `json:"itemHash"`
+
+    // ItemInstanceId.
+    //
+    // If the item is instanced, it will have an instance ID. Lack of an instance ID implies that the item has no distinct local qualities aside from stack size.
+    ItemInstanceId *int64 `json:"itemInstanceId"`
+
+    // ItemValueVisibility.
+    //
+    // If available, a list that describes which item values (rewards) should be shown (true) or hidden (false).
+    ItemValueVisibility []bool `json:"itemValueVisibility"`
 
     // Location.
     //
@@ -35,60 +50,45 @@ type Destiny_Entities_Items_DestinyItemComponent struct {
     // If the item can be locked, this will indicate that state.
     Lockable bool `json:"lockable"`
 
-    // ItemValueVisibility.
+    // MetricHash.
     //
-    // If available, a list that describes which item values (rewards) should be shown (true) or hidden (false).
-    ItemValueVisibility []bool `json:"itemValueVisibility"`
-
-    // TransferStatus.
-    //
-    // If there is a known error state that would cause this item to not be transferable, this Flags enum will indicate all of those error states. Otherwise, it will be 0 (CanTransfer).
-    TransferStatus int32 `json:"transferStatus"`
-
-    // BucketHash.
-    //
-    // The hash identifier for the specific inventory bucket in which the item is located.
-    BucketHash uint32 `json:"bucketHash"`
-
-    // IsWrapper.
-    //
-    // If this is true, the object is actually a "wrapper" of the object it's representing. This means that it's not the actual item itself, but rather an item that must be "opened" in game before you have and can use the item.
-    //
-    //  Wrappers are an evolution of "bundles", which give an easy way to let you preview the contents of what you purchased while still letting you get a refund before you "open" it.
-    IsWrapper bool `json:"isWrapper"`
-
-    // TooltipNotificationIndexes.
-    //
-    // If this is populated, it is a list of indexes into DestinyInventoryItemDefinition.tooltipNotifications for any special tooltip messages that need to be shown for this item.
-    TooltipNotificationIndexes []int32 `json:"tooltipNotificationIndexes"`
-
-    // ItemInstanceId.
-    //
-    // If the item is instanced, it will have an instance ID. Lack of an instance ID implies that the item has no distinct local qualities aside from stack size.
-    ItemInstanceId int64 `json:"itemInstanceId"`
+    // The identifier for the currently-selected metric definition, to be displayed on the emblem nameplate.
+    MetricHash *uint32 `json:"metricHash"`
 
     // MetricObjective.
     //
     // The objective progress for the currently-selected metric definition, to be displayed on the emblem nameplate.
     MetricObjective any `json:"metricObjective"`
 
-    // MetricHash.
+    // OverrideStyleItemHash.
     //
-    // The identifier for the currently-selected metric definition, to be displayed on the emblem nameplate.
-    MetricHash uint32 `json:"metricHash"`
-
-    // State.
+    // If populated, this is the hash of the item whose icon (and other secondary styles, but *not* the human readable strings) should override whatever icons/styles are on the item being sold.
     //
-    // A flags enumeration indicating the transient/custom states of the item that affect how it is rendered: whether it's tracked or locked for example, or whether it has a masterwork plug inserted.
-    State int32 `json:"state"`
+    // If you don't do this, certain items whose styles are being overridden by socketed items - such as the "Recycle Shader" item - would show whatever their default icon/style is, and it wouldn't be pretty or look accurate.
+    OverrideStyleItemHash *uint32 `json:"overrideStyleItemHash"`
 
     // Quantity.
     //
     // The quantity of the item in this stack. Note that Instanced items cannot stack. If an instanced item, this value will always be 1 (as the stack has exactly one item in it)
     Quantity int32 `json:"quantity"`
 
-    // BindStatus.
+    // State.
     //
-    // If the item is bound to a location, it will be specified in this enum.
-    BindStatus int32 `json:"bindStatus"`
+    // A flags enumeration indicating the transient/custom states of the item that affect how it is rendered: whether it's tracked or locked for example, or whether it has a masterwork plug inserted.
+    State int32 `json:"state"`
+
+    // TooltipNotificationIndexes.
+    //
+    // If this is populated, it is a list of indexes into DestinyInventoryItemDefinition.tooltipNotifications for any special tooltip messages that need to be shown for this item.
+    TooltipNotificationIndexes []int32 `json:"tooltipNotificationIndexes"`
+
+    // TransferStatus.
+    //
+    // If there is a known error state that would cause this item to not be transferable, this Flags enum will indicate all of those error states. Otherwise, it will be 0 (CanTransfer).
+    TransferStatus int32 `json:"transferStatus"`
+
+    // VersionNumber.
+    //
+    // The version of this item, used to index into the versions list in the item definition quality block.
+    VersionNumber *int32 `json:"versionNumber"`
 }

@@ -3,11 +3,6 @@
 package api
 
 type DestinyItemComponentSetOfuint32 struct {
-    // TalentGrids.
-    //
-    // 
-    TalentGrids DictionaryComponentResponseOfuint32AndDestinyItemTalentGridComponent `json:"talentGrids"`
-
     // Instances.
     //
     // 
@@ -18,38 +13,43 @@ type DestinyItemComponentSetOfuint32 struct {
     // 
     Objectives DictionaryComponentResponseOfuint32AndDestinyItemObjectivesComponent `json:"objectives"`
 
-    // Sockets.
+    // Perks.
     //
     // 
-    Sockets DictionaryComponentResponseOfuint32AndDestinyItemSocketsComponent `json:"sockets"`
+    Perks DictionaryComponentResponseOfuint32AndDestinyItemPerksComponent `json:"perks"`
 
     // PlugObjectives.
     //
     // 
     PlugObjectives DictionaryComponentResponseOfuint32AndDestinyItemPlugObjectivesComponent `json:"plugObjectives"`
 
+    // PlugStates.
+    //
+    // 
+    PlugStates DictionaryComponentResponseOfuint32AndDestinyItemPlugComponent `json:"plugStates"`
+
     // RenderData.
     //
     // 
     RenderData DictionaryComponentResponseOfuint32AndDestinyItemRenderComponent `json:"renderData"`
-
-    // Stats.
-    //
-    // 
-    Stats DictionaryComponentResponseOfuint32AndDestinyItemStatsComponent `json:"stats"`
 
     // ReusablePlugs.
     //
     // 
     ReusablePlugs DictionaryComponentResponseOfuint32AndDestinyItemReusablePlugsComponent `json:"reusablePlugs"`
 
-    // Perks.
+    // Sockets.
     //
     // 
-    Perks DictionaryComponentResponseOfuint32AndDestinyItemPerksComponent `json:"perks"`
+    Sockets DictionaryComponentResponseOfuint32AndDestinyItemSocketsComponent `json:"sockets"`
 
-    // PlugStates.
+    // Stats.
     //
     // 
-    PlugStates DictionaryComponentResponseOfuint32AndDestinyItemPlugComponent `json:"plugStates"`
+    Stats DictionaryComponentResponseOfuint32AndDestinyItemStatsComponent `json:"stats"`
+
+    // TalentGrids.
+    //
+    // 
+    TalentGrids DictionaryComponentResponseOfuint32AndDestinyItemTalentGridComponent `json:"talentGrids"`
 }

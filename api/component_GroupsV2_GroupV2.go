@@ -3,40 +3,40 @@
 package api
 
 type GroupsV2_GroupV2 struct {
-    // AvatarPath.
-    //
-    // 
-    AvatarPath string `json:"avatarPath"`
-
     // About.
     //
     // 
     About string `json:"about"`
 
-    // EnableInvitationMessagingForAdmins.
+    // AllowChat.
     //
     // 
-    EnableInvitationMessagingForAdmins bool `json:"enableInvitationMessagingForAdmins"`
+    AllowChat bool `json:"allowChat"`
 
-    // GroupId.
+    // AvatarImageIndex.
     //
     // 
-    GroupId int64 `json:"groupId"`
+    AvatarImageIndex int32 `json:"avatarImageIndex"`
+
+    // AvatarPath.
+    //
+    // 
+    AvatarPath string `json:"avatarPath"`
 
     // BanExpireDate.
     //
     // 
-    BanExpireDate string `json:"banExpireDate"`
+    BanExpireDate *string `json:"banExpireDate"`
 
-    // MembershipOption.
+    // BannerPath.
     //
     // 
-    MembershipOption int32 `json:"membershipOption"`
+    BannerPath string `json:"bannerPath"`
 
-    // GroupType.
+    // ChatSecurity.
     //
     // 
-    GroupType int32 `json:"groupType"`
+    ChatSecurity int32 `json:"chatSecurity"`
 
     // ClanInfo.
     //
@@ -48,103 +48,103 @@ type GroupsV2_GroupV2 struct {
     // 
     ConversationId int64 `json:"conversationId"`
 
-    // ModificationDate.
-    //
-    // 
-    ModificationDate string `json:"modificationDate"`
-
-    // Tags.
-    //
-    // 
-    Tags []string `json:"tags"`
-
-    // MemberCount.
-    //
-    // 
-    MemberCount int32 `json:"memberCount"`
-
-    // RemoteGroupId.
-    //
-    // 
-    RemoteGroupId int64 `json:"remoteGroupId"`
-
-    // Theme.
-    //
-    // 
-    Theme string `json:"theme"`
-
     // CreationDate.
     //
     // 
     CreationDate string `json:"creationDate"`
-
-    // IsPublic.
-    //
-    // 
-    IsPublic bool `json:"isPublic"`
-
-    // Features.
-    //
-    // 
-    Features GroupsV2_GroupFeatures `json:"features"`
-
-    // Homepage.
-    //
-    // 
-    Homepage int32 `json:"homepage"`
-
-    // BannerPath.
-    //
-    // 
-    BannerPath string `json:"bannerPath"`
-
-    // MembershipIdCreated.
-    //
-    // 
-    MembershipIdCreated int64 `json:"membershipIdCreated"`
-
-    // AllowChat.
-    //
-    // 
-    AllowChat bool `json:"allowChat"`
-
-    // Motto.
-    //
-    // 
-    Motto string `json:"motto"`
-
-    // Locale.
-    //
-    // 
-    Locale string `json:"locale"`
-
-    // IsDefaultPostPublic.
-    //
-    // 
-    IsDefaultPostPublic bool `json:"isDefaultPostPublic"`
-
-    // IsPublicTopicAdminOnly.
-    //
-    // 
-    IsPublicTopicAdminOnly bool `json:"isPublicTopicAdminOnly"`
-
-    // AvatarImageIndex.
-    //
-    // 
-    AvatarImageIndex int32 `json:"avatarImageIndex"`
 
     // DefaultPublicity.
     //
     // 
     DefaultPublicity int32 `json:"defaultPublicity"`
 
+    // EnableInvitationMessagingForAdmins.
+    //
+    // 
+    EnableInvitationMessagingForAdmins bool `json:"enableInvitationMessagingForAdmins"`
+
+    // Features.
+    //
+    // 
+    Features GroupsV2_GroupFeatures `json:"features"`
+
+    // GroupId.
+    //
+    // 
+    GroupId int64 `json:"groupId"`
+
+    // GroupType.
+    //
+    // 
+    GroupType int32 `json:"groupType"`
+
+    // Homepage.
+    //
+    // 
+    Homepage int32 `json:"homepage"`
+
+    // IsDefaultPostPublic.
+    //
+    // 
+    IsDefaultPostPublic bool `json:"isDefaultPostPublic"`
+
+    // IsPublic.
+    //
+    // 
+    IsPublic bool `json:"isPublic"`
+
+    // IsPublicTopicAdminOnly.
+    //
+    // 
+    IsPublicTopicAdminOnly bool `json:"isPublicTopicAdminOnly"`
+
+    // Locale.
+    //
+    // 
+    Locale string `json:"locale"`
+
+    // MemberCount.
+    //
+    // 
+    MemberCount int32 `json:"memberCount"`
+
+    // MembershipIdCreated.
+    //
+    // 
+    MembershipIdCreated int64 `json:"membershipIdCreated"`
+
+    // MembershipOption.
+    //
+    // 
+    MembershipOption int32 `json:"membershipOption"`
+
+    // ModificationDate.
+    //
+    // 
+    ModificationDate string `json:"modificationDate"`
+
+    // Motto.
+    //
+    // 
+    Motto string `json:"motto"`
+
     // Name.
     //
     // 
     Name string `json:"name"`
 
-    // ChatSecurity.
+    // RemoteGroupId.
     //
     // 
-    ChatSecurity int32 `json:"chatSecurity"`
+    RemoteGroupId *int64 `json:"remoteGroupId"`
+
+    // Tags.
+    //
+    // 
+    Tags []string `json:"tags"`
+
+    // Theme.
+    //
+    // 
+    Theme string `json:"theme"`
 }

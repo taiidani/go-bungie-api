@@ -3,6 +3,11 @@
 package api
 
 type Destiny_Definitions_DestinyStatDefinition struct {
+    // AggregationType.
+    //
+    // Stats can exist on a character or an item, and they may potentially be aggregated in different ways. The DestinyStatAggregationType enum value indicates the way that this stat is being aggregated.
+    AggregationType int32 `json:"aggregationType"`
+
     // DisplayProperties.
     //
     // Many Destiny*Definition contracts - the "first order" entities of Destiny that have their own tables in the Manifest Database - also have displayable information. This is the base class for that display information.
@@ -36,9 +41,4 @@ type Destiny_Definitions_DestinyStatDefinition struct {
     //
     // The category of the stat, according to the game.
     StatCategory int32 `json:"statCategory"`
-
-    // AggregationType.
-    //
-    // Stats can exist on a character or an item, and they may potentially be aggregated in different ways. The DestinyStatAggregationType enum value indicates the way that this stat is being aggregated.
-    AggregationType int32 `json:"aggregationType"`
 }

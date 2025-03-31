@@ -3,6 +3,16 @@
 package api
 
 type Destiny_Quests_DestinyObjectiveProgress struct {
+    // ActivityHash.
+    //
+    // If the Objective has an Activity associated with it, this is the unique identifier of the Activity being referred to. Use to look up the DestinyActivityDefinition in static data. This will give localized data about *what* you should be playing for the objective to be achieved.
+    ActivityHash *uint32 `json:"activityHash"`
+
+    // Complete.
+    //
+    // Whether or not the Objective is completed.
+    Complete bool `json:"complete"`
+
     // CompletionValue.
     //
     // As of Forsaken, objectives' completion value is determined dynamically at runtime.
@@ -15,7 +25,7 @@ type Destiny_Quests_DestinyObjectiveProgress struct {
     // DestinationHash.
     //
     // If the Objective has a Destination associated with it, this is the unique identifier of the Destination being referred to. Use to look up the DestinyDestinationDefinition in static data. This will give localized data about *where* in the universe the objective should be achieved.
-    DestinationHash uint32 `json:"destinationHash"`
+    DestinationHash *uint32 `json:"destinationHash"`
 
     // ObjectiveHash.
     //
@@ -25,20 +35,10 @@ type Destiny_Quests_DestinyObjectiveProgress struct {
     // Progress.
     //
     // If progress has been made, and the progress can be measured numerically, this will be the value of that progress. You can compare it to the DestinyObjectiveDefinition.completionValue property for current vs. upper bounds, and use DestinyObjectiveDefinition.inProgressValueStyle or completedValueStyle to determine how this should be rendered. Note that progress, in Destiny 2, need not be a literal numeric progression. It could be one of a number of possible values, even a Timestamp. Always examine DestinyObjectiveDefinition.inProgressValueStyle or completedValueStyle before rendering progress.
-    Progress int32 `json:"progress"`
+    Progress *int32 `json:"progress"`
 
     // Visible.
     //
     // If this is true, the objective is visible in-game. Otherwise, it's not yet visible to the player. Up to you if you want to honor this property.
     Visible bool `json:"visible"`
-
-    // ActivityHash.
-    //
-    // If the Objective has an Activity associated with it, this is the unique identifier of the Activity being referred to. Use to look up the DestinyActivityDefinition in static data. This will give localized data about *what* you should be playing for the objective to be achieved.
-    ActivityHash uint32 `json:"activityHash"`
-
-    // Complete.
-    //
-    // Whether or not the Objective is completed.
-    Complete bool `json:"complete"`
 }

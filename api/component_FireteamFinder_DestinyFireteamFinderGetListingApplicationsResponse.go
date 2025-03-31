@@ -3,6 +3,11 @@
 package api
 
 type FireteamFinder_DestinyFireteamFinderGetListingApplicationsResponse struct {
+    // Applications.
+    //
+    // 
+    Applications []FireteamFinder_DestinyFireteamFinderApplication `json:"applications"`
+
     // NextPageToken.
     //
     // 
@@ -12,9 +17,4 @@ type FireteamFinder_DestinyFireteamFinderGetListingApplicationsResponse struct {
     //
     // 
     PageSize int32 `json:"pageSize"`
-
-    // Applications.
-    //
-    // 
-    Applications []FireteamFinder_DestinyFireteamFinderApplication `json:"applications"`
 }

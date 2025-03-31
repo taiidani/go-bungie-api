@@ -3,6 +3,21 @@
 package api
 
 type Destiny_Definitions_DestinyVendorInventoryFlyoutDefinition struct {
+    // Buckets.
+    //
+    // A list of inventory buckets and other metadata to show on the screen.
+    Buckets []Destiny_Definitions_DestinyVendorInventoryFlyoutBucketDefinition `json:"buckets"`
+
+    // DisplayProperties.
+    //
+    // The title and other common properties of the flyout.
+    DisplayProperties any `json:"displayProperties"`
+
+    // EquipmentSlotHash.
+    //
+    // If this flyout is meant to show you the contents of the player's equipment slot, this is the slot to show.
+    EquipmentSlotHash *uint32 `json:"equipmentSlotHash"`
+
     // FlyoutId.
     //
     // An identifier for the flyout, in case anything else needs to refer to them.
@@ -17,19 +32,4 @@ type Destiny_Definitions_DestinyVendorInventoryFlyoutDefinition struct {
     //
     // If this is true, don't show any of the glistening "this is a new item" UI elements, like we show on the inventory items themselves in in-game UI.
     SuppressNewness bool `json:"suppressNewness"`
-
-    // Buckets.
-    //
-    // A list of inventory buckets and other metadata to show on the screen.
-    Buckets []Destiny_Definitions_DestinyVendorInventoryFlyoutBucketDefinition `json:"buckets"`
-
-    // DisplayProperties.
-    //
-    // The title and other common properties of the flyout.
-    DisplayProperties any `json:"displayProperties"`
-
-    // EquipmentSlotHash.
-    //
-    // If this flyout is meant to show you the contents of the player's equipment slot, this is the slot to show.
-    EquipmentSlotHash uint32 `json:"equipmentSlotHash"`
 }

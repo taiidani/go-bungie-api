@@ -3,16 +3,6 @@
 package api
 
 type Destiny_Responses_DestinyProfileResponse struct {
-    // CharacterCollectibles.
-    //
-    // COMPONENT TYPE: Collectibles
-    CharacterCollectibles any `json:"characterCollectibles"`
-
-    // CharacterPresentationNodes.
-    //
-    // COMPONENT TYPE: PresentationNodes
-    CharacterPresentationNodes any `json:"characterPresentationNodes"`
-
     // CharacterActivities.
     //
     // Character activity data - the activities available to this character and its status, keyed by the Character's Id.
@@ -20,17 +10,78 @@ type Destiny_Responses_DestinyProfileResponse struct {
     // COMPONENT TYPE: CharacterActivities
     CharacterActivities any `json:"characterActivities"`
 
-    // ProfilePresentationNodes.
+    // CharacterCollectibles.
+    //
+    // COMPONENT TYPE: Collectibles
+    CharacterCollectibles any `json:"characterCollectibles"`
+
+    // CharacterCraftables.
+    //
+    // COMPONENT TYPE: Craftables
+    CharacterCraftables any `json:"characterCraftables"`
+
+    // CharacterCurrencyLookups.
+    //
+    // A "lookup" convenience component that can be used to quickly check if the character has access to items that can be used for purchasing.
+    //
+    // COMPONENT TYPE: CurrencyLookups
+    CharacterCurrencyLookups any `json:"characterCurrencyLookups"`
+
+    // CharacterEquipment.
+    //
+    // The character's equipped items, keyed by the Character's Id.
+    //
+    // COMPONENT TYPE: CharacterEquipment
+    CharacterEquipment any `json:"characterEquipment"`
+
+    // CharacterInventories.
+    //
+    // The character-level non-equipped inventory items, keyed by the Character's Id.
+    //
+    // COMPONENT TYPE: CharacterInventories
+    CharacterInventories any `json:"characterInventories"`
+
+    // CharacterKiosks.
+    //
+    // Items available from Kiosks that are available to a specific character as opposed to the account as a whole. It must be combined with data from the profileKiosks property to get a full picture of the character's available items to check out of a kiosk.
+    //
+    // This component returns information about what Kiosk items are available to you on a *Character* level. Usually, kiosk items will be earned for the entire Profile (all characters) at once. To find those, look in the profileKiosks property.
+    //
+    // COMPONENT TYPE: Kiosks
+    CharacterKiosks any `json:"characterKiosks"`
+
+    // CharacterLoadouts.
+    //
+    // The character loadouts, keyed by the Character's Id.
+    //
+    // COMPONENT TYPE: CharacterLoadouts
+    CharacterLoadouts any `json:"characterLoadouts"`
+
+    // CharacterPlugSets.
+    //
+    // When sockets refer to reusable Plug Sets (see DestinyPlugSetDefinition for more info), this is the set of plugs and their states, per character, that are character-scoped.
+    //
+    // This comes back with ItemSockets, as it is needed for a complete picture of the sockets on requested items.
+    //
+    // COMPONENT TYPE: ItemSockets
+    CharacterPlugSets any `json:"characterPlugSets"`
+
+    // CharacterPresentationNodes.
     //
     // COMPONENT TYPE: PresentationNodes
-    ProfilePresentationNodes any `json:"profilePresentationNodes"`
+    CharacterPresentationNodes any `json:"characterPresentationNodes"`
 
-    // Profile.
+    // CharacterProgressions.
     //
-    // The basic information about the Destiny Profile (formerly "Account").
+    // Character-level progression data, keyed by the Character's Id.
     //
-    // COMPONENT TYPE: Profiles
-    Profile any `json:"profile"`
+    // COMPONENT TYPE: CharacterProgressions
+    CharacterProgressions any `json:"characterProgressions"`
+
+    // CharacterRecords.
+    //
+    // COMPONENT TYPE: Records
+    CharacterRecords any `json:"characterRecords"`
 
     // CharacterRenderData.
     //
@@ -39,15 +90,10 @@ type Destiny_Responses_DestinyProfileResponse struct {
     // COMPONENT TYPE: CharacterRenderData
     CharacterRenderData any `json:"characterRenderData"`
 
-    // ProfileCollectibles.
+    // CharacterStringVariables.
     //
-    // COMPONENT TYPE: Collectibles
-    ProfileCollectibles any `json:"profileCollectibles"`
-
-    // ProfileRecords.
-    //
-    // COMPONENT TYPE: Records
-    ProfileRecords any `json:"profileRecords"`
+    // COMPONENT TYPE: StringVariables
+    CharacterStringVariables any `json:"characterStringVariables"`
 
     // CharacterUninstancedItemComponents.
     //
@@ -66,6 +112,13 @@ type Destiny_Responses_DestinyProfileResponse struct {
     // I'm not crying, you're crying Okay we're both crying but it's going to be okay I promise Actually I shouldn't promise that, I don't know if it's going to be okay
     CharacterUninstancedItemComponents any `json:"characterUninstancedItemComponents"`
 
+    // Characters.
+    //
+    // Basic information about each character, keyed by the CharacterId.
+    //
+    // COMPONENT TYPE: Characters
+    Characters any `json:"characters"`
+
     // ItemComponents.
     //
     // Information about instanced items across all returned characters, keyed by the item's instance ID.
@@ -73,28 +126,10 @@ type Destiny_Responses_DestinyProfileResponse struct {
     // COMPONENT TYPE: [See inside the DestinyItemComponentSet contract for component types.]
     ItemComponents any `json:"itemComponents"`
 
-    // ProfileCurrencies.
+    // Metrics.
     //
-    // The profile-level currencies owned by the Destiny Profile.
-    //
-    // COMPONENT TYPE: ProfileCurrencies
-    ProfileCurrencies any `json:"profileCurrencies"`
-
-    // ProfileProgression.
-    //
-    // When we have progression information - such as Checklists - that may apply profile-wide, it will be returned here rather than in the per-character progression data.
-    //
-    // COMPONENT TYPE: ProfileProgression
-    ProfileProgression any `json:"profileProgression"`
-
-    // CharacterPlugSets.
-    //
-    // When sockets refer to reusable Plug Sets (see DestinyPlugSetDefinition for more info), this is the set of plugs and their states, per character, that are character-scoped.
-    //
-    // This comes back with ItemSockets, as it is needed for a complete picture of the sockets on requested items.
-    //
-    // COMPONENT TYPE: ItemSockets
-    CharacterPlugSets any `json:"characterPlugSets"`
+    // COMPONENT TYPE: Metrics
+    Metrics any `json:"metrics"`
 
     // PlatformSilver.
     //
@@ -103,15 +138,36 @@ type Destiny_Responses_DestinyProfileResponse struct {
     //  COMPONENT TYPE: PlatformSilver
     PlatformSilver any `json:"platformSilver"`
 
-    // CharacterStringVariables.
+    // Profile.
     //
-    // COMPONENT TYPE: StringVariables
-    CharacterStringVariables any `json:"characterStringVariables"`
+    // The basic information about the Destiny Profile (formerly "Account").
+    //
+    // COMPONENT TYPE: Profiles
+    Profile any `json:"profile"`
 
-    // ProfileTransitoryData.
+    // ProfileCollectibles.
     //
-    // COMPONENT TYPE: Transitory
-    ProfileTransitoryData any `json:"profileTransitoryData"`
+    // COMPONENT TYPE: Collectibles
+    ProfileCollectibles any `json:"profileCollectibles"`
+
+    // ProfileCommendations.
+    //
+    // COMPONENT TYPE: SocialCommendations
+    ProfileCommendations any `json:"profileCommendations"`
+
+    // ProfileCurrencies.
+    //
+    // The profile-level currencies owned by the Destiny Profile.
+    //
+    // COMPONENT TYPE: ProfileCurrencies
+    ProfileCurrencies any `json:"profileCurrencies"`
+
+    // ProfileInventory.
+    //
+    // The profile-level inventory of the Destiny Profile.
+    //
+    // COMPONENT TYPE: ProfileInventories
+    ProfileInventory any `json:"profileInventory"`
 
     // ProfileKiosks.
     //
@@ -122,12 +178,46 @@ type Destiny_Responses_DestinyProfileResponse struct {
     // COMPONENT TYPE: Kiosks
     ProfileKiosks any `json:"profileKiosks"`
 
-    // VendorReceipts.
+    // ProfilePlugSets.
     //
-    // Recent, refundable purchases you have made from vendors. When will you use it? Couldn't say...
+    // When sockets refer to reusable Plug Sets (see DestinyPlugSetDefinition for more info), this is the set of plugs and their states that are profile-scoped.
     //
-    // COMPONENT TYPE: VendorReceipts
-    VendorReceipts any `json:"vendorReceipts"`
+    // This comes back with ItemSockets, as it is needed for a complete picture of the sockets on requested items.
+    //
+    // COMPONENT TYPE: ItemSockets
+    ProfilePlugSets any `json:"profilePlugSets"`
+
+    // ProfilePresentationNodes.
+    //
+    // COMPONENT TYPE: PresentationNodes
+    ProfilePresentationNodes any `json:"profilePresentationNodes"`
+
+    // ProfileProgression.
+    //
+    // When we have progression information - such as Checklists - that may apply profile-wide, it will be returned here rather than in the per-character progression data.
+    //
+    // COMPONENT TYPE: ProfileProgression
+    ProfileProgression any `json:"profileProgression"`
+
+    // ProfileRecords.
+    //
+    // COMPONENT TYPE: Records
+    ProfileRecords any `json:"profileRecords"`
+
+    // ProfileStringVariables.
+    //
+    // COMPONENT TYPE: StringVariables
+    ProfileStringVariables any `json:"profileStringVariables"`
+
+    // ProfileTransitoryData.
+    //
+    // COMPONENT TYPE: Transitory
+    ProfileTransitoryData any `json:"profileTransitoryData"`
+
+    // ResponseMintedTimestamp.
+    //
+    // Records the timestamp of when most components were last generated from the world server source. Unless the component type is specified in the documentation for secondaryComponentsMintedTimestamp, this value is sufficient to do data freshness.
+    ResponseMintedTimestamp string `json:"responseMintedTimestamp"`
 
     // SecondaryComponentsMintedTimestamp.
     //
@@ -138,100 +228,10 @@ type Destiny_Responses_DestinyProfileResponse struct {
     //  All other component types may use the primary timestamp property.
     SecondaryComponentsMintedTimestamp string `json:"secondaryComponentsMintedTimestamp"`
 
-    // CharacterCurrencyLookups.
+    // VendorReceipts.
     //
-    // A "lookup" convenience component that can be used to quickly check if the character has access to items that can be used for purchasing.
+    // Recent, refundable purchases you have made from vendors. When will you use it? Couldn't say...
     //
-    // COMPONENT TYPE: CurrencyLookups
-    CharacterCurrencyLookups any `json:"characterCurrencyLookups"`
-
-    // CharacterEquipment.
-    //
-    // The character's equipped items, keyed by the Character's Id.
-    //
-    // COMPONENT TYPE: CharacterEquipment
-    CharacterEquipment any `json:"characterEquipment"`
-
-    // CharacterRecords.
-    //
-    // COMPONENT TYPE: Records
-    CharacterRecords any `json:"characterRecords"`
-
-    // Characters.
-    //
-    // Basic information about each character, keyed by the CharacterId.
-    //
-    // COMPONENT TYPE: Characters
-    Characters any `json:"characters"`
-
-    // CharacterInventories.
-    //
-    // The character-level non-equipped inventory items, keyed by the Character's Id.
-    //
-    // COMPONENT TYPE: CharacterInventories
-    CharacterInventories any `json:"characterInventories"`
-
-    // ResponseMintedTimestamp.
-    //
-    // Records the timestamp of when most components were last generated from the world server source. Unless the component type is specified in the documentation for secondaryComponentsMintedTimestamp, this value is sufficient to do data freshness.
-    ResponseMintedTimestamp string `json:"responseMintedTimestamp"`
-
-    // CharacterKiosks.
-    //
-    // Items available from Kiosks that are available to a specific character as opposed to the account as a whole. It must be combined with data from the profileKiosks property to get a full picture of the character's available items to check out of a kiosk.
-    //
-    // This component returns information about what Kiosk items are available to you on a *Character* level. Usually, kiosk items will be earned for the entire Profile (all characters) at once. To find those, look in the profileKiosks property.
-    //
-    // COMPONENT TYPE: Kiosks
-    CharacterKiosks any `json:"characterKiosks"`
-
-    // ProfileStringVariables.
-    //
-    // COMPONENT TYPE: StringVariables
-    ProfileStringVariables any `json:"profileStringVariables"`
-
-    // CharacterCraftables.
-    //
-    // COMPONENT TYPE: Craftables
-    CharacterCraftables any `json:"characterCraftables"`
-
-    // ProfileCommendations.
-    //
-    // COMPONENT TYPE: SocialCommendations
-    ProfileCommendations any `json:"profileCommendations"`
-
-    // ProfileInventory.
-    //
-    // The profile-level inventory of the Destiny Profile.
-    //
-    // COMPONENT TYPE: ProfileInventories
-    ProfileInventory any `json:"profileInventory"`
-
-    // CharacterProgressions.
-    //
-    // Character-level progression data, keyed by the Character's Id.
-    //
-    // COMPONENT TYPE: CharacterProgressions
-    CharacterProgressions any `json:"characterProgressions"`
-
-    // Metrics.
-    //
-    // COMPONENT TYPE: Metrics
-    Metrics any `json:"metrics"`
-
-    // CharacterLoadouts.
-    //
-    // The character loadouts, keyed by the Character's Id.
-    //
-    // COMPONENT TYPE: CharacterLoadouts
-    CharacterLoadouts any `json:"characterLoadouts"`
-
-    // ProfilePlugSets.
-    //
-    // When sockets refer to reusable Plug Sets (see DestinyPlugSetDefinition for more info), this is the set of plugs and their states that are profile-scoped.
-    //
-    // This comes back with ItemSockets, as it is needed for a complete picture of the sockets on requested items.
-    //
-    // COMPONENT TYPE: ItemSockets
-    ProfilePlugSets any `json:"profilePlugSets"`
+    // COMPONENT TYPE: VendorReceipts
+    VendorReceipts any `json:"vendorReceipts"`
 }

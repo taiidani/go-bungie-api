@@ -3,20 +3,6 @@
 package api
 
 type Destiny_Entities_Characters_DestinyCharacterProgressionComponent struct {
-    // UninstancedItemObjectives.
-    //
-    // Sometimes, you have items in your inventory that don't have instances, but still have Objective information. This provides you that objective information for uninstanced items. 
-    //
-    // This dictionary is keyed by the item's hash: which you can use to look up the name and description for the overall task(s) implied by the objective. The value is the list of objectives for this item, and their statuses.
-    UninstancedItemObjectives any `json:"uninstancedItemObjectives"`
-
-    // UninstancedItemPerks.
-    //
-    // Sometimes, you have items in your inventory that don't have instances, but still have perks (for example: Trials passage cards). This gives you the perk information for uninstanced items.
-    //
-    // This dictionary is keyed by item hash, which you can use to look up the corresponding item definition. The value is the list of perks states for the item.
-    UninstancedItemPerks any `json:"uninstancedItemPerks"`
-
     // Checklists.
     //
     // The set of checklists that can be examined for this specific character, keyed by the hash identifier of the Checklist (DestinyChecklistDefinition)
@@ -54,4 +40,18 @@ type Destiny_Entities_Characters_DestinyCharacterProgressionComponent struct {
     //
     // Data related to your progress on the current season's artifact that can vary per character.
     SeasonalArtifact any `json:"seasonalArtifact"`
+
+    // UninstancedItemObjectives.
+    //
+    // Sometimes, you have items in your inventory that don't have instances, but still have Objective information. This provides you that objective information for uninstanced items. 
+    //
+    // This dictionary is keyed by the item's hash: which you can use to look up the name and description for the overall task(s) implied by the objective. The value is the list of objectives for this item, and their statuses.
+    UninstancedItemObjectives any `json:"uninstancedItemObjectives"`
+
+    // UninstancedItemPerks.
+    //
+    // Sometimes, you have items in your inventory that don't have instances, but still have perks (for example: Trials passage cards). This gives you the perk information for uninstanced items.
+    //
+    // This dictionary is keyed by item hash, which you can use to look up the corresponding item definition. The value is the list of perks states for the item.
+    UninstancedItemPerks any `json:"uninstancedItemPerks"`
 }

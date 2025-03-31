@@ -8,43 +8,43 @@ type GroupsV2_GroupMemberApplication struct {
     // This contract supplies basic information commonly used to display a minimal amount of information about a user. Take care to not add more properties here unless the property applies in all (or at least the majority) of the situations where UserInfoCard is used. Avoid adding game specific or platform specific details here. In cases where UserInfoCard is a subset of the data needed in a contract, use UserInfoCard as a property of other contracts.
     BungieNetUserInfo User_UserInfoCard `json:"bungieNetUserInfo"`
 
-    // GroupId.
-    //
-    // 
-    GroupId int64 `json:"groupId"`
-
-    // ResolveDate.
-    //
-    // 
-    ResolveDate string `json:"resolveDate"`
-
     // CreationDate.
     //
     // 
     CreationDate string `json:"creationDate"`
-
-    // ResolveState.
-    //
-    // 
-    ResolveState int32 `json:"resolveState"`
-
-    // ResolveMessage.
-    //
-    // 
-    ResolveMessage string `json:"resolveMessage"`
-
-    // ResolvedByMembershipId.
-    //
-    // 
-    ResolvedByMembershipId int64 `json:"resolvedByMembershipId"`
 
     // DestinyUserInfo.
     //
     // 
     DestinyUserInfo GroupsV2_GroupUserInfoCard `json:"destinyUserInfo"`
 
+    // GroupId.
+    //
+    // 
+    GroupId int64 `json:"groupId"`
+
     // RequestMessage.
     //
     // 
     RequestMessage string `json:"requestMessage"`
+
+    // ResolveDate.
+    //
+    // 
+    ResolveDate *string `json:"resolveDate"`
+
+    // ResolveMessage.
+    //
+    // 
+    ResolveMessage string `json:"resolveMessage"`
+
+    // ResolveState.
+    //
+    // 
+    ResolveState int32 `json:"resolveState"`
+
+    // ResolvedByMembershipId.
+    //
+    // 
+    ResolvedByMembershipId *int64 `json:"resolvedByMembershipId"`
 }

@@ -3,10 +3,22 @@
 package api
 
 type Destiny_Definitions_DestinyProgressionDefinition struct {
-    // Redacted.
+    // Color.
     //
-    // If this is true, then there is an entity with this identifier/type combination, but BNet is not yet allowed to show it. Sorry!
-    Redacted bool `json:"redacted"`
+    // The #RGB string value for the color related to this progression, if there is one.
+    Color any `json:"color"`
+
+    // DisplayProperties.
+    //
+    // 
+    DisplayProperties Destiny_Definitions_DestinyProgressionDisplayPropertiesDefinition `json:"displayProperties"`
+
+    // FactionHash.
+    //
+    // If the value exists, this is the hash identifier for the Faction that owns this Progression.
+    //
+    // This is purely for convenience, if you're looking at a progression and want to know if and who it's related to in terms of Faction Reputation.
+    FactionHash *uint32 `json:"factionHash"`
 
     // Hash.
     //
@@ -15,27 +27,25 @@ type Destiny_Definitions_DestinyProgressionDefinition struct {
     // When entities refer to each other in Destiny content, it is this hash that they are referring to.
     Hash uint32 `json:"hash"`
 
+    // Index.
+    //
+    // The index of the entity as it was found in the investment tables.
+    Index int32 `json:"index"`
+
     // RankIcon.
     //
     // For progressions that have it, this is the rank icon we use in the Companion, displayed above the progressions' rank value.
     RankIcon string `json:"rankIcon"`
 
+    // Redacted.
+    //
+    // If this is true, then there is an entity with this identifier/type combination, but BNet is not yet allowed to show it. Sorry!
+    Redacted bool `json:"redacted"`
+
     // RepeatLastStep.
     //
     // If this is True, then the progression doesn't have a maximum level.
     RepeatLastStep bool `json:"repeatLastStep"`
-
-    // Color.
-    //
-    // The #RGB string value for the color related to this progression, if there is one.
-    Color any `json:"color"`
-
-    // FactionHash.
-    //
-    // If the value exists, this is the hash identifier for the Faction that owns this Progression.
-    //
-    // This is purely for convenience, if you're looking at a progression and want to know if and who it's related to in terms of Faction Reputation.
-    FactionHash uint32 `json:"factionHash"`
 
     // RewardItems.
     //
@@ -67,14 +77,4 @@ type Destiny_Definitions_DestinyProgressionDefinition struct {
     //
     // If false, BNet isn't going to show it. But that doesn't mean you can't. We're all friends here.
     Visible bool `json:"visible"`
-
-    // DisplayProperties.
-    //
-    // 
-    DisplayProperties Destiny_Definitions_DestinyProgressionDisplayPropertiesDefinition `json:"displayProperties"`
-
-    // Index.
-    //
-    // The index of the entity as it was found in the investment tables.
-    Index int32 `json:"index"`
 }

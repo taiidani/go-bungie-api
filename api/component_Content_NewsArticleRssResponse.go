@@ -21,7 +21,7 @@ type Content_NewsArticleRssResponse struct {
     // NextPaginationToken.
     //
     // 
-    NextPaginationToken int32 `json:"NextPaginationToken"`
+    NextPaginationToken *int32 `json:"NextPaginationToken"`
 
     // PagerAction.
     //

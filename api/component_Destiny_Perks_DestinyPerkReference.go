@@ -3,6 +3,11 @@
 package api
 
 type Destiny_Perks_DestinyPerkReference struct {
+    // IconPath.
+    //
+    // The icon for the perk.
+    IconPath string `json:"iconPath"`
+
     // IsActive.
     //
     // Whether this perk is currently active. (We may return perks that you have not actually activated yet: these represent perks that you should show in the item's tooltip, but that the user has not yet activated.)
@@ -17,9 +22,4 @@ type Destiny_Perks_DestinyPerkReference struct {
     //
     // Some perks provide benefits, but aren't visible in the UI. This value will let you know if this is perk should be shown in your UI.
     Visible bool `json:"visible"`
-
-    // IconPath.
-    //
-    // The icon for the perk.
-    IconPath string `json:"iconPath"`
 }

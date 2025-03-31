@@ -3,18 +3,18 @@
 package api
 
 type User_UserToUserContext struct {
-    // IsFollowing.
-    //
-    // 
-    IsFollowing bool `json:"isFollowing"`
-
     // GlobalIgnoreEndDate.
     //
     // 
-    GlobalIgnoreEndDate string `json:"globalIgnoreEndDate"`
+    GlobalIgnoreEndDate *string `json:"globalIgnoreEndDate"`
 
     // IgnoreStatus.
     //
     // 
     IgnoreStatus Ignores_IgnoreResponse `json:"ignoreStatus"`
+
+    // IsFollowing.
+    //
+    // 
+    IsFollowing bool `json:"isFollowing"`
 }

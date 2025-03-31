@@ -11,7 +11,7 @@ type Destiny_Definitions_DestinyTalentExclusiveGroup struct {
     // LoreHash.
     //
     // If this group has an associated piece of lore to show next to it, this will be the identifier for that DestinyLoreDefinition.
-    LoreHash uint32 `json:"loreHash"`
+    LoreHash *uint32 `json:"loreHash"`
 
     // NodeHashes.
     //

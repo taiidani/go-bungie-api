@@ -3,11 +3,6 @@
 package api
 
 type Destiny_Responses_DestinyItemChangeResponse struct {
-    // RemovedInventoryItems.
-    //
-    // Items that disappeared from the inventory possibly as a result of an action.
-    RemovedInventoryItems []Destiny_Entities_Items_DestinyItemComponent `json:"removedInventoryItems"`
-
     // AddedInventoryItems.
     //
     // Items that appeared in the inventory possibly as a result of an action.
@@ -17,4 +12,9 @@ type Destiny_Responses_DestinyItemChangeResponse struct {
     //
     // The response object for retrieving an individual instanced item. None of these components are relevant for an item that doesn't have an "itemInstanceId": for those, get your information from the DestinyInventoryDefinition.
     Item Destiny_Responses_DestinyItemResponse `json:"item"`
+
+    // RemovedInventoryItems.
+    //
+    // Items that disappeared from the inventory possibly as a result of an action.
+    RemovedInventoryItems []Destiny_Entities_Items_DestinyItemComponent `json:"removedInventoryItems"`
 }

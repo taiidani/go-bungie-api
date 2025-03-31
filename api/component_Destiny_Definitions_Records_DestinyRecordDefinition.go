@@ -3,55 +3,25 @@
 package api
 
 type Destiny_Definitions_Records_DestinyRecordDefinition struct {
-    // PresentationInfo.
+    // CompletionInfo.
     //
     // 
-    PresentationInfo Destiny_Definitions_Presentation_DestinyPresentationChildBlock `json:"presentationInfo"`
-
-    // RecordValueStyle.
-    //
-    // 
-    RecordValueStyle int32 `json:"recordValueStyle"`
-
-    // Scope.
-    //
-    // Indicates whether this Record's state is determined on a per-character or on an account-wide basis.
-    Scope int32 `json:"scope"`
-
-    // ParentNodeHashes.
-    //
-    // A quick reference to presentation nodes that have this node as a child. Presentation nodes can be parented under multiple parents.
-    ParentNodeHashes []uint32 `json:"parentNodeHashes"`
-
-    // ExpirationInfo.
-    //
-    // If this record has an expiration after which it cannot be earned, this is some information about that expiration.
-    ExpirationInfo Destiny_Definitions_Records_DestinyRecordExpirationBlock `json:"expirationInfo"`
-
-    // TitleInfo.
-    //
-    // 
-    TitleInfo Destiny_Definitions_Records_DestinyRecordTitleBlock `json:"titleInfo"`
-
-    // ForTitleGilding.
-    //
-    // 
-    ForTitleGilding bool `json:"forTitleGilding"`
+    CompletionInfo Destiny_Definitions_Records_DestinyRecordCompletionBlock `json:"completionInfo"`
 
     // DisplayProperties.
     //
     // Many Destiny*Definition contracts - the "first order" entities of Destiny that have their own tables in the Manifest Database - also have displayable information. This is the base class for that display information.
     DisplayProperties Destiny_Definitions_Common_DestinyDisplayPropertiesDefinition `json:"displayProperties"`
 
-    // StateInfo.
+    // ExpirationInfo.
+    //
+    // If this record has an expiration after which it cannot be earned, this is some information about that expiration.
+    ExpirationInfo Destiny_Definitions_Records_DestinyRecordExpirationBlock `json:"expirationInfo"`
+
+    // ForTitleGilding.
     //
     // 
-    StateInfo Destiny_Definitions_Records_SchemaRecordStateBlock `json:"stateInfo"`
-
-    // RecordTypeName.
-    //
-    // A display name for the type of record this is (Triumphs, Lore, Medals, Seasonal Challenge, etc.).
-    RecordTypeName string `json:"recordTypeName"`
+    ForTitleGilding bool `json:"forTitleGilding"`
 
     // Hash.
     //
@@ -60,40 +30,60 @@ type Destiny_Definitions_Records_DestinyRecordDefinition struct {
     // When entities refer to each other in Destiny content, it is this hash that they are referring to.
     Hash uint32 `json:"hash"`
 
-    // Requirements.
+    // Index.
     //
-    // Presentation nodes can be restricted by various requirements. This defines the rules of those requirements, and the message(s) to be shown if these requirements aren't met.
-    Requirements Destiny_Definitions_Presentation_DestinyPresentationNodeRequirementsBlock `json:"requirements"`
-
-    // ShouldShowLargeIcons.
-    //
-    // A hint to show a large icon for a reward
-    ShouldShowLargeIcons bool `json:"shouldShowLargeIcons"`
-
-    // ObjectiveHashes.
-    //
-    // 
-    ObjectiveHashes []uint32 `json:"objectiveHashes"`
-
-    // CompletionInfo.
-    //
-    // 
-    CompletionInfo Destiny_Definitions_Records_DestinyRecordCompletionBlock `json:"completionInfo"`
-
-    // LoreHash.
-    //
-    // 
-    LoreHash uint32 `json:"loreHash"`
+    // The index of the entity as it was found in the investment tables.
+    Index int32 `json:"index"`
 
     // IntervalInfo.
     //
     // Some records have multiple 'interval' objectives, and the record may be claimed at each completed interval
     IntervalInfo any `json:"intervalInfo"`
 
-    // TraitIds.
+    // LoreHash.
     //
     // 
-    TraitIds []string `json:"traitIds"`
+    LoreHash *uint32 `json:"loreHash"`
+
+    // ObjectiveHashes.
+    //
+    // 
+    ObjectiveHashes []uint32 `json:"objectiveHashes"`
+
+    // ParentNodeHashes.
+    //
+    // A quick reference to presentation nodes that have this node as a child. Presentation nodes can be parented under multiple parents.
+    ParentNodeHashes []uint32 `json:"parentNodeHashes"`
+
+    // PresentationInfo.
+    //
+    // 
+    PresentationInfo Destiny_Definitions_Presentation_DestinyPresentationChildBlock `json:"presentationInfo"`
+
+    // PresentationNodeType.
+    //
+    // 
+    PresentationNodeType int32 `json:"presentationNodeType"`
+
+    // RecordTypeName.
+    //
+    // A display name for the type of record this is (Triumphs, Lore, Medals, Seasonal Challenge, etc.).
+    RecordTypeName string `json:"recordTypeName"`
+
+    // RecordValueStyle.
+    //
+    // 
+    RecordValueStyle int32 `json:"recordValueStyle"`
+
+    // Redacted.
+    //
+    // If this is true, then there is an entity with this identifier/type combination, but BNet is not yet allowed to show it. Sorry!
+    Redacted bool `json:"redacted"`
+
+    // Requirements.
+    //
+    // Presentation nodes can be restricted by various requirements. This defines the rules of those requirements, and the message(s) to be shown if these requirements aren't met.
+    Requirements Destiny_Definitions_Presentation_DestinyPresentationNodeRequirementsBlock `json:"requirements"`
 
     // RewardItems.
     //
@@ -102,23 +92,33 @@ type Destiny_Definitions_Records_DestinyRecordDefinition struct {
     //  However, note that some records intentionally have "hidden" rewards. These will not be returned in this list.
     RewardItems []Destiny_DestinyItemQuantity `json:"rewardItems"`
 
-    // Index.
+    // Scope.
     //
-    // The index of the entity as it was found in the investment tables.
-    Index int32 `json:"index"`
+    // Indicates whether this Record's state is determined on a per-character or on an account-wide basis.
+    Scope int32 `json:"scope"`
+
+    // ShouldShowLargeIcons.
+    //
+    // A hint to show a large icon for a reward
+    ShouldShowLargeIcons bool `json:"shouldShowLargeIcons"`
+
+    // StateInfo.
+    //
+    // 
+    StateInfo Destiny_Definitions_Records_SchemaRecordStateBlock `json:"stateInfo"`
+
+    // TitleInfo.
+    //
+    // 
+    TitleInfo Destiny_Definitions_Records_DestinyRecordTitleBlock `json:"titleInfo"`
 
     // TraitHashes.
     //
     // 
     TraitHashes []uint32 `json:"traitHashes"`
 
-    // PresentationNodeType.
+    // TraitIds.
     //
     // 
-    PresentationNodeType int32 `json:"presentationNodeType"`
-
-    // Redacted.
-    //
-    // If this is true, then there is an entity with this identifier/type combination, but BNet is not yet allowed to show it. Sorry!
-    Redacted bool `json:"redacted"`
+    TraitIds []string `json:"traitIds"`
 }

@@ -3,11 +3,6 @@
 package api
 
 type Destiny_Definitions_DestinyLocationDefinition struct {
-    // VendorHash.
-    //
-    // If the location has a Vendor on it, this is the hash identifier for that Vendor. Look them up with DestinyVendorDefinition.
-    VendorHash uint32 `json:"vendorHash"`
-
     // Hash.
     //
     // The unique identifier for this entity. Guaranteed to be unique for the type of entity, but not globally.
@@ -29,4 +24,9 @@ type Destiny_Definitions_DestinyLocationDefinition struct {
     //
     // If this is true, then there is an entity with this identifier/type combination, but BNet is not yet allowed to show it. Sorry!
     Redacted bool `json:"redacted"`
+
+    // VendorHash.
+    //
+    // If the location has a Vendor on it, this is the hash identifier for that Vendor. Look them up with DestinyVendorDefinition.
+    VendorHash uint32 `json:"vendorHash"`
 }

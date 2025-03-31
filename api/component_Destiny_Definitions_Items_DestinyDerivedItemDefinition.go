@@ -3,11 +3,6 @@
 package api
 
 type Destiny_Definitions_Items_DestinyDerivedItemDefinition struct {
-    // VendorItemIndex.
-    //
-    // If the item was derived from a "Preview Vendor", this will be an index into the DestinyVendorDefinition's itemList property. Otherwise, -1.
-    VendorItemIndex int32 `json:"vendorItemIndex"`
-
     // IconPath.
     //
     // An icon for the item.
@@ -26,10 +21,15 @@ type Destiny_Definitions_Items_DestinyDerivedItemDefinition struct {
     // ItemHash.
     //
     // The hash for the DestinyInventoryItemDefinition of this derived item, if there is one. Sometimes we are given this information as a manual override, in which case there won't be an actual DestinyInventoryItemDefinition for what we display, but you can still show the strings from this object itself.
-    ItemHash uint32 `json:"itemHash"`
+    ItemHash *uint32 `json:"itemHash"`
 
     // ItemName.
     //
     // The name of the derived item.
     ItemName string `json:"itemName"`
+
+    // VendorItemIndex.
+    //
+    // If the item was derived from a "Preview Vendor", this will be an index into the DestinyVendorDefinition's itemList property. Otherwise, -1.
+    VendorItemIndex int32 `json:"vendorItemIndex"`
 }

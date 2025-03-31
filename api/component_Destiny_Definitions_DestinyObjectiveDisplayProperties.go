@@ -6,7 +6,7 @@ type Destiny_Definitions_DestinyObjectiveDisplayProperties struct {
     // ActivityHash.
     //
     // The activity associated with this objective in the context of this item, if any.
-    ActivityHash uint32 `json:"activityHash"`
+    ActivityHash *uint32 `json:"activityHash"`
 
     // DisplayOnItemPreviewScreen.
     //

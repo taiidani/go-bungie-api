@@ -3,6 +3,16 @@
 package api
 
 type Content_Models_TagMetadataItem struct {
+    // Description.
+    //
+    // 
+    Description string `json:"description"`
+
+    // Groups.
+    //
+    // 
+    Groups []string `json:"groups"`
+
     // IsDefault.
     //
     // 
@@ -17,14 +27,4 @@ type Content_Models_TagMetadataItem struct {
     //
     // 
     TagText string `json:"tagText"`
-
-    // Description.
-    //
-    // 
-    Description string `json:"description"`
-
-    // Groups.
-    //
-    // 
-    Groups []string `json:"groups"`
 }

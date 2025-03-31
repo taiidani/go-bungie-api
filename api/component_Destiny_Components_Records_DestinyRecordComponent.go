@@ -3,6 +3,21 @@
 package api
 
 type Destiny_Components_Records_DestinyRecordComponent struct {
+    // CompletedCount.
+    //
+    // If available, this is the number of times this record has been completed. For example, the number of times a seal title has been gilded.
+    CompletedCount *int32 `json:"completedCount"`
+
+    // IntervalObjectives.
+    //
+    // 
+    IntervalObjectives []Destiny_Quests_DestinyObjectiveProgress `json:"intervalObjectives"`
+
+    // IntervalsRedeemedCount.
+    //
+    // 
+    IntervalsRedeemedCount int32 `json:"intervalsRedeemedCount"`
+
     // Objectives.
     //
     // 
@@ -17,19 +32,4 @@ type Destiny_Components_Records_DestinyRecordComponent struct {
     //
     // 
     State int32 `json:"state"`
-
-    // CompletedCount.
-    //
-    // If available, this is the number of times this record has been completed. For example, the number of times a seal title has been gilded.
-    CompletedCount int32 `json:"completedCount"`
-
-    // IntervalObjectives.
-    //
-    // 
-    IntervalObjectives []Destiny_Quests_DestinyObjectiveProgress `json:"intervalObjectives"`
-
-    // IntervalsRedeemedCount.
-    //
-    // 
-    IntervalsRedeemedCount int32 `json:"intervalsRedeemedCount"`
 }

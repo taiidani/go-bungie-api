@@ -3,50 +3,10 @@
 package api
 
 type Destiny_DestinyActivity struct {
-    // IsCompleted.
-    //
-    // If true, we both have the ability to know that the user has completed this activity and they have completed it. Unfortunately, we can't necessarily know this for all activities. As such, this should probably only be used if you already know in advance which specific activities you wish to check.
-    IsCompleted bool `json:"isCompleted"`
-
-    // IsNew.
-    //
-    // If true, then the activity should have a "new" indicator in the Director UI.
-    IsNew bool `json:"isNew"`
-
-    // CanLead.
-    //
-    // If true, the user is allowed to lead a Fireteam into this activity.
-    CanLead bool `json:"canLead"`
-
-    // Challenges.
-    //
-    // 
-    Challenges []Destiny_Challenges_DestinyChallengeStatus `json:"challenges"`
-
-    // DisplayLevel.
-    //
-    // The difficulty level of the activity, if applicable.
-    DisplayLevel int32 `json:"displayLevel"`
-
-    // RecommendedLight.
-    //
-    // The recommended light level for the activity, if applicable.
-    RecommendedLight int32 `json:"recommendedLight"`
-
     // ActivityHash.
     //
     // The hash identifier of the Activity. Use this to look up the DestinyActivityDefinition of the activity.
     ActivityHash uint32 `json:"activityHash"`
-
-    // CanJoin.
-    //
-    // If true, the user is allowed to join with another Fireteam in this activity.
-    CanJoin bool `json:"canJoin"`
-
-    // DifficultyTier.
-    //
-    // A DestinyActivityDifficultyTier enum value indicating the difficulty of the activity.
-    DifficultyTier int32 `json:"difficultyTier"`
 
     // BooleanActivityOptions.
     //
@@ -59,6 +19,41 @@ type Destiny_DestinyActivity struct {
     // On our side, we don't necessarily even know what these are used for (the game designers know, but we don't), and we have no human readable data for them. In order to use them, you will have to do some experimentation.
     BooleanActivityOptions any `json:"booleanActivityOptions"`
 
+    // CanJoin.
+    //
+    // If true, the user is allowed to join with another Fireteam in this activity.
+    CanJoin bool `json:"canJoin"`
+
+    // CanLead.
+    //
+    // If true, the user is allowed to lead a Fireteam into this activity.
+    CanLead bool `json:"canLead"`
+
+    // Challenges.
+    //
+    // 
+    Challenges []Destiny_Challenges_DestinyChallengeStatus `json:"challenges"`
+
+    // DifficultyTier.
+    //
+    // A DestinyActivityDifficultyTier enum value indicating the difficulty of the activity.
+    DifficultyTier int32 `json:"difficultyTier"`
+
+    // DisplayLevel.
+    //
+    // The difficulty level of the activity, if applicable.
+    DisplayLevel *int32 `json:"displayLevel"`
+
+    // IsCompleted.
+    //
+    // If true, we both have the ability to know that the user has completed this activity and they have completed it. Unfortunately, we can't necessarily know this for all activities. As such, this should probably only be used if you already know in advance which specific activities you wish to check.
+    IsCompleted bool `json:"isCompleted"`
+
+    // IsNew.
+    //
+    // If true, then the activity should have a "new" indicator in the Director UI.
+    IsNew bool `json:"isNew"`
+
     // IsVisible.
     //
     // If true, the user should be able to see this activity.
@@ -67,7 +62,7 @@ type Destiny_DestinyActivity struct {
     // LoadoutRequirementIndex.
     //
     // If returned, this is the index into the DestinyActivityDefinition's "loadouts" property, indicating the currently active loadout requirements.
-    LoadoutRequirementIndex int32 `json:"loadoutRequirementIndex"`
+    LoadoutRequirementIndex *int32 `json:"loadoutRequirementIndex"`
 
     // ModifierHashes.
     //
@@ -75,4 +70,9 @@ type Destiny_DestinyActivity struct {
     //
     // Note that, in the DestiyActivityDefinition, you will see many more modifiers than this being referred to: those are all *possible* modifiers for the activity, not the active ones. Use only the active ones to match what's really live.
     ModifierHashes []uint32 `json:"modifierHashes"`
+
+    // RecommendedLight.
+    //
+    // The recommended light level for the activity, if applicable.
+    RecommendedLight *int32 `json:"recommendedLight"`
 }

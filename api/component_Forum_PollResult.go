@@ -3,11 +3,6 @@
 package api
 
 type Forum_PollResult struct {
-    // Votes.
-    //
-    // 
-    Votes int32 `json:"votes"`
-
     // AnswerSlot.
     //
     // 
@@ -27,4 +22,9 @@ type Forum_PollResult struct {
     //
     // 
     RequestingUserVoted bool `json:"requestingUserVoted"`
+
+    // Votes.
+    //
+    // 
+    Votes int32 `json:"votes"`
 }

@@ -3,6 +3,11 @@
 package api
 
 type Destiny_Advanced_AwaUserResponse struct {
+    // CorrelationId.
+    //
+    // Correlation ID of the request
+    CorrelationId string `json:"correlationId"`
+
     // Nonce.
     //
     // Secret nonce received via the PUSH notification.
@@ -12,9 +17,4 @@ type Destiny_Advanced_AwaUserResponse struct {
     //
     // Indication of the selection the user has made (Approving or rejecting the action)
     Selection int32 `json:"selection"`
-
-    // CorrelationId.
-    //
-    // Correlation ID of the request
-    CorrelationId string `json:"correlationId"`
 }

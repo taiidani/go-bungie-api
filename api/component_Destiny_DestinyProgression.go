@@ -3,35 +3,35 @@
 package api
 
 type Destiny_DestinyProgression struct {
-    // WeeklyProgress.
-    //
-    // The amount of progress earned toward this progression in the current week.
-    WeeklyProgress int32 `json:"weeklyProgress"`
-
-    // LevelCap.
-    //
-    // This is the maximum possible level you can achieve for this progression (for example, the maximum character level obtainable)
-    LevelCap int32 `json:"levelCap"`
-
-    // RewardItemSocketOverrideStates.
-    //
-    // Information about items stats and states that have socket overrides, if there is any data for it.
-    RewardItemSocketOverrideStates any `json:"rewardItemSocketOverrideStates"`
-
     // CurrentProgress.
     //
     // This is the total amount of progress obtained overall for this progression (for instance, the total amount of Character Level experience earned)
     CurrentProgress int32 `json:"currentProgress"`
+
+    // CurrentResetCount.
+    //
+    // The number of resets of this progression you've executed this season, if applicable to this progression.
+    CurrentResetCount *int32 `json:"currentResetCount"`
+
+    // DailyLimit.
+    //
+    // If this progression has a daily limit, this is that limit.
+    DailyLimit int32 `json:"dailyLimit"`
 
     // DailyProgress.
     //
     // The amount of progress earned today for this progression.
     DailyProgress int32 `json:"dailyProgress"`
 
-    // CurrentResetCount.
+    // Level.
     //
-    // The number of resets of this progression you've executed this season, if applicable to this progression.
-    CurrentResetCount int32 `json:"currentResetCount"`
+    // This is the level of the progression (for instance, the Character Level).
+    Level int32 `json:"level"`
+
+    // LevelCap.
+    //
+    // This is the maximum possible level you can achieve for this progression (for example, the maximum character level obtainable)
+    LevelCap int32 `json:"levelCap"`
 
     // NextLevelAt.
     //
@@ -48,10 +48,10 @@ type Destiny_DestinyProgression struct {
     // The hash identifier of the Progression in question. Use it to look up the DestinyProgressionDefinition in static data.
     ProgressionHash uint32 `json:"progressionHash"`
 
-    // Level.
+    // RewardItemSocketOverrideStates.
     //
-    // This is the level of the progression (for instance, the Character Level).
-    Level int32 `json:"level"`
+    // Information about items stats and states that have socket overrides, if there is any data for it.
+    RewardItemSocketOverrideStates any `json:"rewardItemSocketOverrideStates"`
 
     // RewardItemStates.
     //
@@ -63,18 +63,18 @@ type Destiny_DestinyProgression struct {
     // Information about historical resets of this progression, if there is any data for it.
     SeasonResets []Destiny_DestinyProgressionResetEntry `json:"seasonResets"`
 
+    // StepIndex.
+    //
+    // Progressions define their levels in "steps". Since the last step may be repeatable, the user may be at a higher level than the actual Step achieved in the progression. Not necessarily useful, but potentially interesting for those cruising the API. Relate this to the "steps" property of the DestinyProgression to see which step the user is on, if you care about that. (Note that this is Content Version dependent since it refers to indexes.)
+    StepIndex int32 `json:"stepIndex"`
+
     // WeeklyLimit.
     //
     // If this progression has a weekly limit, this is that limit.
     WeeklyLimit int32 `json:"weeklyLimit"`
 
-    // DailyLimit.
+    // WeeklyProgress.
     //
-    // If this progression has a daily limit, this is that limit.
-    DailyLimit int32 `json:"dailyLimit"`
-
-    // StepIndex.
-    //
-    // Progressions define their levels in "steps". Since the last step may be repeatable, the user may be at a higher level than the actual Step achieved in the progression. Not necessarily useful, but potentially interesting for those cruising the API. Relate this to the "steps" property of the DestinyProgression to see which step the user is on, if you care about that. (Note that this is Content Version dependent since it refers to indexes.)
-    StepIndex int32 `json:"stepIndex"`
+    // The amount of progress earned toward this progression in the current week.
+    WeeklyProgress int32 `json:"weeklyProgress"`
 }

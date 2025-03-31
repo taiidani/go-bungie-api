@@ -8,15 +8,15 @@ type Destiny_Definitions_DestinyVendorItemDefinition struct {
     // The action to be performed when purchasing the item, if it's not just "buy".
     Action any `json:"action"`
 
-    // DisplayCategoryIndex.
-    //
-    // This is an index specifically into the display category, as opposed to the server-side Categories (which do not need to match or pair with each other in any way: server side categories are really just structures for common validation. Display Category will let us more easily categorize items visually)
-    DisplayCategoryIndex int32 `json:"displayCategoryIndex"`
-
     // CategoryIndex.
     //
     // The index into the DestinyVendorDefinition.categories array, so you can find the category associated with this item.
     CategoryIndex int32 `json:"categoryIndex"`
+
+    // CreationLevels.
+    //
+    // The Default level at which the item will spawn. Almost always driven by an adjusto these days. Ideally should be singular. It's a long story how this ended up as a list, but there is always either going to be 0:1 of these entities.
+    CreationLevels []Destiny_Definitions_DestinyItemCreationEntryLevelDefinition `json:"creationLevels"`
 
     // Currencies.
     //
@@ -25,27 +25,45 @@ type Destiny_Definitions_DestinyVendorItemDefinition struct {
     // The somewhat crappy part about this is that, now that item quantity overrides have dynamic modifiers, this will not necessarily be statically true. If you were using this instead of live data, switch to using live data.
     Currencies []Destiny_Definitions_DestinyVendorItemQuantity `json:"currencies"`
 
+    // DisplayCategory.
+    //
+    // The string identifier for the category selling this item.
+    DisplayCategory string `json:"displayCategory"`
+
+    // DisplayCategoryIndex.
+    //
+    // This is an index specifically into the display category, as opposed to the server-side Categories (which do not need to match or pair with each other in any way: server side categories are really just structures for common validation. Display Category will let us more easily categorize items visually)
+    DisplayCategoryIndex int32 `json:"displayCategoryIndex"`
+
+    // Exclusivity.
+    //
+    // If this item can only be purchased by a given platform, this indicates the platform to which it is restricted.
+    Exclusivity int32 `json:"exclusivity"`
+
+    // ExpirationTooltip.
+    //
+    // If this item can expire, this is the tooltip message to show with its expiration info.
+    ExpirationTooltip string `json:"expirationTooltip"`
+
+    // FailureIndexes.
+    //
+    // An list of indexes into the DestinyVendorDefinition.failureStrings array, indicating the possible failure strings that can be relevant for this item.
+    FailureIndexes []int32 `json:"failureIndexes"`
+
     // InventoryBucketHash.
     //
     // The inventory bucket into which this item will be placed upon purchase.
     InventoryBucketHash uint32 `json:"inventoryBucketHash"`
 
-    // RedirectToSaleIndexes.
+    // IsCrm.
     //
-    // If this is populated, the purchase of this item should redirect to purchasing these other items instead.
-    RedirectToSaleIndexes []int32 `json:"redirectToSaleIndexes"`
+    // If this sale can only be performed as the result of receiving a CRM offer, this is true.
+    IsCrm *bool `json:"isCrm"`
 
-    // SocketOverrides.
+    // IsOffer.
     //
-    // 
-    SocketOverrides []Destiny_Definitions_DestinyVendorItemSocketOverride `json:"socketOverrides"`
-
-    // Unpurchasable.
-    //
-    // If true, this item is some sort of dummy sale item that cannot actually be purchased. It may be a display only item, or some fluff left by a content designer for testing purposes, or something that got disabled because it was a terrible idea. You get the picture. We won't know *why* it can't be purchased, only that it can't be. Sorry.
-    //
-    // This is also only whether it's unpurchasable as a static property according to game content. There are other reasons why an item may or may not be purchasable at runtime, so even if this isn't set to True you should trust the runtime value for this sale item over the static definition if this is unset.
-    Unpurchasable bool `json:"unpurchasable"`
+    // If this sale can only be performed as the result of an offer check, this is true.
+    IsOffer *bool `json:"isOffer"`
 
     // ItemHash.
     //
@@ -54,32 +72,20 @@ type Destiny_Definitions_DestinyVendorItemDefinition struct {
     // Note that a vendor can sell the same item in multiple ways, so don't assume that itemHash is a unique identifier for this entity.
     ItemHash uint32 `json:"itemHash"`
 
-    // IsOffer.
+    // MaximumLevel.
     //
-    // If this sale can only be performed as the result of an offer check, this is true.
-    IsOffer bool `json:"isOffer"`
+    // The maximum character level at which this item is available for sale.
+    MaximumLevel int32 `json:"maximumLevel"`
 
-    // DisplayCategory.
+    // MinimumLevel.
     //
-    // The string identifier for the category selling this item.
-    DisplayCategory string `json:"displayCategory"`
+    // The minimum character level at which this item is available for sale.
+    MinimumLevel int32 `json:"minimumLevel"`
 
-    // IsCrm.
+    // OriginalCategoryIndex.
     //
-    // If this sale can only be performed as the result of receiving a CRM offer, this is true.
-    IsCrm bool `json:"isCrm"`
-
-    // VisibilityScope.
-    //
-    // The most restrictive scope that determines whether the item is available in the Vendor's inventory. See DestinyGatingScope's documentation for more information.
-    //
-    // This can be determined by Unlock gating, or by whether or not the item has purchase level requirements (minimumLevel and maximumLevel properties).
-    VisibilityScope int32 `json:"visibilityScope"`
-
-    // ExpirationTooltip.
-    //
-    // If this item can expire, this is the tooltip message to show with its expiration info.
-    ExpirationTooltip string `json:"expirationTooltip"`
+    // Same as above, but for the original category indexes.
+    OriginalCategoryIndex int32 `json:"originalCategoryIndex"`
 
     // PurchasableScope.
     //
@@ -88,58 +94,52 @@ type Destiny_Definitions_DestinyVendorItemDefinition struct {
     // See DestinyGatingScope's documentation for more information.
     PurchasableScope int32 `json:"purchasableScope"`
 
-    // MaximumLevel.
-    //
-    // The maximum character level at which this item is available for sale.
-    MaximumLevel int32 `json:"maximumLevel"`
-
-    // VendorItemIndex.
-    //
-    // The index into the DestinyVendorDefinition.saleList. This is what we use to refer to items being sold throughout live and definition data.
-    VendorItemIndex int32 `json:"vendorItemIndex"`
-
-    // OriginalCategoryIndex.
-    //
-    // Same as above, but for the original category indexes.
-    OriginalCategoryIndex int32 `json:"originalCategoryIndex"`
-
-    // RefundTimeLimit.
-    //
-    // The amount of time before refundability of the newly purchased item will expire.
-    RefundTimeLimit int32 `json:"refundTimeLimit"`
-
-    // Exclusivity.
-    //
-    // If this item can only be purchased by a given platform, this indicates the platform to which it is restricted.
-    Exclusivity int32 `json:"exclusivity"`
-
-    // MinimumLevel.
-    //
-    // The minimum character level at which this item is available for sale.
-    MinimumLevel int32 `json:"minimumLevel"`
-
     // Quantity.
     //
     // The amount you will recieve of the item described in itemHash if you make the purchase.
     Quantity int32 `json:"quantity"`
+
+    // RedirectToSaleIndexes.
+    //
+    // If this is populated, the purchase of this item should redirect to purchasing these other items instead.
+    RedirectToSaleIndexes []int32 `json:"redirectToSaleIndexes"`
 
     // RefundPolicy.
     //
     // If this item can be refunded, this is the policy for what will be refundd, how, and in what time period.
     RefundPolicy int32 `json:"refundPolicy"`
 
+    // RefundTimeLimit.
+    //
+    // The amount of time before refundability of the newly purchased item will expire.
+    RefundTimeLimit int32 `json:"refundTimeLimit"`
+
+    // SocketOverrides.
+    //
+    // 
+    SocketOverrides []Destiny_Definitions_DestinyVendorItemSocketOverride `json:"socketOverrides"`
+
     // SortValue.
     //
     // *if* the category this item is in supports non-default sorting, this value should represent the sorting value to use, pre-processed and ready to go.
     SortValue int32 `json:"sortValue"`
 
-    // FailureIndexes.
+    // Unpurchasable.
     //
-    // An list of indexes into the DestinyVendorDefinition.failureStrings array, indicating the possible failure strings that can be relevant for this item.
-    FailureIndexes []int32 `json:"failureIndexes"`
+    // If true, this item is some sort of dummy sale item that cannot actually be purchased. It may be a display only item, or some fluff left by a content designer for testing purposes, or something that got disabled because it was a terrible idea. You get the picture. We won't know *why* it can't be purchased, only that it can't be. Sorry.
+    //
+    // This is also only whether it's unpurchasable as a static property according to game content. There are other reasons why an item may or may not be purchasable at runtime, so even if this isn't set to True you should trust the runtime value for this sale item over the static definition if this is unset.
+    Unpurchasable *bool `json:"unpurchasable"`
 
-    // CreationLevels.
+    // VendorItemIndex.
     //
-    // The Default level at which the item will spawn. Almost always driven by an adjusto these days. Ideally should be singular. It's a long story how this ended up as a list, but there is always either going to be 0:1 of these entities.
-    CreationLevels []Destiny_Definitions_DestinyItemCreationEntryLevelDefinition `json:"creationLevels"`
+    // The index into the DestinyVendorDefinition.saleList. This is what we use to refer to items being sold throughout live and definition data.
+    VendorItemIndex int32 `json:"vendorItemIndex"`
+
+    // VisibilityScope.
+    //
+    // The most restrictive scope that determines whether the item is available in the Vendor's inventory. See DestinyGatingScope's documentation for more information.
+    //
+    // This can be determined by Unlock gating, or by whether or not the item has purchase level requirements (minimumLevel and maximumLevel properties).
+    VisibilityScope int32 `json:"visibilityScope"`
 }

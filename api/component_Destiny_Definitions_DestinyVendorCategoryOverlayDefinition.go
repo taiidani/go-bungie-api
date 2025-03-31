@@ -3,6 +3,16 @@
 package api
 
 type Destiny_Definitions_DestinyVendorCategoryOverlayDefinition struct {
+    // ChoiceDescription.
+    //
+    // 
+    ChoiceDescription string `json:"choiceDescription"`
+
+    // CurrencyItemHash.
+    //
+    // If this overlay has a currency item that it features, this is said featured item.
+    CurrencyItemHash *uint32 `json:"currencyItemHash"`
+
     // Description.
     //
     // 
@@ -17,14 +27,4 @@ type Destiny_Definitions_DestinyVendorCategoryOverlayDefinition struct {
     //
     // 
     Title string `json:"title"`
-
-    // ChoiceDescription.
-    //
-    // 
-    ChoiceDescription string `json:"choiceDescription"`
-
-    // CurrencyItemHash.
-    //
-    // If this overlay has a currency item that it features, this is said featured item.
-    CurrencyItemHash uint32 `json:"currencyItemHash"`
 }

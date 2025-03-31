@@ -3,11 +3,6 @@
 package api
 
 type SingleComponentResponseOfDestinyItemRenderComponent struct {
-    // Privacy.
-    //
-    // 
-    Privacy int32 `json:"privacy"`
-
     // Data.
     //
     // Many items can be rendered in 3D. When you request this block, you will obtain the custom data needed to render this specific instance of the item.
@@ -16,5 +11,10 @@ type SingleComponentResponseOfDestinyItemRenderComponent struct {
     // Disabled.
     //
     // If true, this component is disabled.
-    Disabled bool `json:"disabled"`
+    Disabled *bool `json:"disabled"`
+
+    // Privacy.
+    //
+    // 
+    Privacy int32 `json:"privacy"`
 }

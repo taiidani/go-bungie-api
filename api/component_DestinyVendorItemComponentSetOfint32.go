@@ -23,25 +23,15 @@ type DestinyVendorItemComponentSetOfint32 struct {
     // 
     Perks DictionaryComponentResponseOfint32AndDestinyItemPerksComponent `json:"perks"`
 
-    // PlugStates.
-    //
-    // 
-    PlugStates DictionaryComponentResponseOfuint32AndDestinyItemPlugComponent `json:"plugStates"`
-
-    // Sockets.
-    //
-    // 
-    Sockets DictionaryComponentResponseOfint32AndDestinyItemSocketsComponent `json:"sockets"`
-
-    // Stats.
-    //
-    // 
-    Stats DictionaryComponentResponseOfint32AndDestinyItemStatsComponent `json:"stats"`
-
     // PlugObjectives.
     //
     // 
     PlugObjectives DictionaryComponentResponseOfint32AndDestinyItemPlugObjectivesComponent `json:"plugObjectives"`
+
+    // PlugStates.
+    //
+    // 
+    PlugStates DictionaryComponentResponseOfuint32AndDestinyItemPlugComponent `json:"plugStates"`
 
     // RenderData.
     //
@@ -52,6 +42,16 @@ type DestinyVendorItemComponentSetOfint32 struct {
     //
     // 
     ReusablePlugs DictionaryComponentResponseOfint32AndDestinyItemReusablePlugsComponent `json:"reusablePlugs"`
+
+    // Sockets.
+    //
+    // 
+    Sockets DictionaryComponentResponseOfint32AndDestinyItemSocketsComponent `json:"sockets"`
+
+    // Stats.
+    //
+    // 
+    Stats DictionaryComponentResponseOfint32AndDestinyItemStatsComponent `json:"stats"`
 
     // TalentGrids.
     //

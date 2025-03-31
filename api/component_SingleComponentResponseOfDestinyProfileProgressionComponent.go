@@ -3,20 +3,20 @@
 package api
 
 type SingleComponentResponseOfDestinyProfileProgressionComponent struct {
-    // Disabled.
-    //
-    // If true, this component is disabled.
-    Disabled bool `json:"disabled"`
-
-    // Privacy.
-    //
-    // 
-    Privacy int32 `json:"privacy"`
-
     // Data.
     //
     // The set of progression-related information that applies at a Profile-wide level for your Destiny experience. This differs from the Jimi Hendrix Experience because there's less guitars on fire. Yet. #spoileralert?
     //
     // This will include information such as Checklist info.
     Data Destiny_Components_Profiles_DestinyProfileProgressionComponent `json:"data"`
+
+    // Disabled.
+    //
+    // If true, this component is disabled.
+    Disabled *bool `json:"disabled"`
+
+    // Privacy.
+    //
+    // 
+    Privacy int32 `json:"privacy"`
 }

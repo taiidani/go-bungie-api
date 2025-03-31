@@ -3,16 +3,6 @@
 package api
 
 type Destiny_Components_Records_DestinyProfileRecordsComponent struct {
-    // Score.
-    //
-    // Your 'active' Triumphs score, maintained for backwards compatibility.
-    Score int32 `json:"score"`
-
-    // TrackedRecordHash.
-    //
-    // If this profile is tracking a record, this is the hash identifier of the record it is tracking.
-    TrackedRecordHash uint32 `json:"trackedRecordHash"`
-
     // ActiveScore.
     //
     // Your 'active' Triumphs score.
@@ -42,4 +32,14 @@ type Destiny_Components_Records_DestinyProfileRecordsComponent struct {
     //
     // 
     Records any `json:"records"`
+
+    // Score.
+    //
+    // Your 'active' Triumphs score, maintained for backwards compatibility.
+    Score int32 `json:"score"`
+
+    // TrackedRecordHash.
+    //
+    // If this profile is tracking a record, this is the hash identifier of the record it is tracking.
+    TrackedRecordHash *uint32 `json:"trackedRecordHash"`
 }

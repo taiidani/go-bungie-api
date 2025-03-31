@@ -3,6 +3,11 @@
 package api
 
 type Destiny_Definitions_DestinyItemActionRequiredItemDefinition struct {
+    // Count.
+    //
+    // The minimum quantity of the item you have to have.
+    Count int32 `json:"count"`
+
     // DeleteOnAction.
     //
     // If true, the item/quantity will be deleted from your inventory when the action is performed. Otherwise, you'll retain these required items after the action is complete.
@@ -12,9 +17,4 @@ type Destiny_Definitions_DestinyItemActionRequiredItemDefinition struct {
     //
     // The hash identifier of the item you need to have. Use it to look up the DestinyInventoryItemDefinition for more info.
     ItemHash uint32 `json:"itemHash"`
-
-    // Count.
-    //
-    // The minimum quantity of the item you have to have.
-    Count int32 `json:"count"`
 }

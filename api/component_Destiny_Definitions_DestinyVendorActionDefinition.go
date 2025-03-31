@@ -3,15 +3,25 @@
 package api
 
 type Destiny_Definitions_DestinyVendorActionDefinition struct {
-    // Verb.
-    //
-    // 
-    Verb string `json:"verb"`
-
     // ActionHash.
     //
     // 
     ActionHash uint32 `json:"actionHash"`
+
+    // ActionId.
+    //
+    // 
+    ActionId string `json:"actionId"`
+
+    // AutoPerformAction.
+    //
+    // 
+    AutoPerformAction bool `json:"autoPerformAction"`
+
+    // Description.
+    //
+    // 
+    Description string `json:"description"`
 
     // ExecuteSeconds.
     //
@@ -28,23 +38,13 @@ type Destiny_Definitions_DestinyVendorActionDefinition struct {
     // 
     IsPositive bool `json:"isPositive"`
 
-    // Description.
-    //
-    // 
-    Description string `json:"description"`
-
-    // ActionId.
-    //
-    // 
-    ActionId string `json:"actionId"`
-
-    // AutoPerformAction.
-    //
-    // 
-    AutoPerformAction bool `json:"autoPerformAction"`
-
     // Name.
     //
     // 
     Name string `json:"name"`
+
+    // Verb.
+    //
+    // 
+    Verb string `json:"verb"`
 }

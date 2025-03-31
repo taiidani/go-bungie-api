@@ -3,6 +3,21 @@
 package api
 
 type Destiny_Advanced_AwaAuthorizationResult struct {
+    // ActionToken.
+    //
+    // Credential used to prove the user authorized an advanced write action.
+    ActionToken string `json:"actionToken"`
+
+    // DeveloperNote.
+    //
+    // Message to the app developer to help understand the response.
+    DeveloperNote string `json:"developerNote"`
+
+    // MaximumNumberOfUses.
+    //
+    // This token may be used to perform the requested action this number of times, at a maximum. If this value is 0, then there is no limit.
+    MaximumNumberOfUses int32 `json:"maximumNumberOfUses"`
+
     // MembershipType.
     //
     // MembershipType from the permission request.
@@ -26,20 +41,5 @@ type Destiny_Advanced_AwaAuthorizationResult struct {
     // ValidUntil.
     //
     // Time, UTC, when token expires.
-    ValidUntil string `json:"validUntil"`
-
-    // ActionToken.
-    //
-    // Credential used to prove the user authorized an advanced write action.
-    ActionToken string `json:"actionToken"`
-
-    // DeveloperNote.
-    //
-    // Message to the app developer to help understand the response.
-    DeveloperNote string `json:"developerNote"`
-
-    // MaximumNumberOfUses.
-    //
-    // This token may be used to perform the requested action this number of times, at a maximum. If this value is 0, then there is no limit.
-    MaximumNumberOfUses int32 `json:"maximumNumberOfUses"`
+    ValidUntil *string `json:"validUntil"`
 }

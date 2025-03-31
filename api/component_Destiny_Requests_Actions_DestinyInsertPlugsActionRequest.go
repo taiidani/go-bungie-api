@@ -3,6 +3,16 @@
 package api
 
 type Destiny_Requests_Actions_DestinyInsertPlugsActionRequest struct {
+    // ActionToken.
+    //
+    // Action token provided by the AwaGetActionToken API call.
+    ActionToken string `json:"actionToken"`
+
+    // CharacterId.
+    //
+    // 
+    CharacterId int64 `json:"characterId"`
+
     // ItemInstanceId.
     //
     // The instance ID of the item having a plug inserted. Only instanced items can have sockets.
@@ -17,14 +27,4 @@ type Destiny_Requests_Actions_DestinyInsertPlugsActionRequest struct {
     //
     // The plugs being inserted.
     Plug any `json:"plug"`
-
-    // ActionToken.
-    //
-    // Action token provided by the AwaGetActionToken API call.
-    ActionToken string `json:"actionToken"`
-
-    // CharacterId.
-    //
-    // 
-    CharacterId int64 `json:"characterId"`
 }

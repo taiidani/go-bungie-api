@@ -3,11 +3,6 @@
 package api
 
 type Destiny_Milestones_DestinyPublicMilestone struct {
-    // Vendors.
-    //
-    // This is why we can't have nice things. This is the ordered list of vendors to be shown that relate to this milestone, potentially along with other interesting data.
-    Vendors []Destiny_Milestones_DestinyPublicMilestoneVendor `json:"vendors"`
-
     // Activities.
     //
     // 
@@ -21,7 +16,7 @@ type Destiny_Milestones_DestinyPublicMilestone struct {
     // EndDate.
     //
     // If known, this is the date when the Milestone will expire/recycle/end.
-    EndDate string `json:"endDate"`
+    EndDate *string `json:"endDate"`
 
     // MilestoneHash.
     //
@@ -36,7 +31,7 @@ type Destiny_Milestones_DestinyPublicMilestone struct {
     // StartDate.
     //
     // If known, this is the date when the Milestone started/became active.
-    StartDate string `json:"startDate"`
+    StartDate *string `json:"startDate"`
 
     // VendorHashes.
     //
@@ -44,4 +39,9 @@ type Destiny_Milestones_DestinyPublicMilestone struct {
     //
     // Deprecated, already, for the sake of the new "vendors" property that has more data. What was I thinking.
     VendorHashes []uint32 `json:"vendorHashes"`
+
+    // Vendors.
+    //
+    // This is why we can't have nice things. This is the ordered list of vendors to be shown that relate to this milestone, potentially along with other interesting data.
+    Vendors []Destiny_Milestones_DestinyPublicMilestoneVendor `json:"vendors"`
 }

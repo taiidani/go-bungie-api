@@ -13,28 +13,6 @@ type Destiny_Definitions_Social_DestinySocialCommendationDefinition struct {
     // 
     CardImagePath string `json:"cardImagePath"`
 
-    // Index.
-    //
-    // The index of the entity as it was found in the investment tables.
-    Index int32 `json:"index"`
-
-    // ParentCommendationNodeHash.
-    //
-    // 
-    ParentCommendationNodeHash uint32 `json:"parentCommendationNodeHash"`
-
-    // DisplayProperties.
-    //
-    // Many Destiny*Definition contracts - the "first order" entities of Destiny that have their own tables in the Manifest Database - also have displayable information. This is the base class for that display information.
-    DisplayProperties Destiny_Definitions_Common_DestinyDisplayPropertiesDefinition `json:"displayProperties"`
-
-    // Hash.
-    //
-    // The unique identifier for this entity. Guaranteed to be unique for the type of entity, but not globally.
-    //
-    // When entities refer to each other in Destiny content, it is this hash that they are referring to.
-    Hash uint32 `json:"hash"`
-
     // Color.
     //
     // Represents a color whose RGBA values are all represented as values between 0 and 255.
@@ -49,6 +27,28 @@ type Destiny_Definitions_Social_DestinySocialCommendationDefinition struct {
     //
     // 
     DisplayPriority int32 `json:"displayPriority"`
+
+    // DisplayProperties.
+    //
+    // Many Destiny*Definition contracts - the "first order" entities of Destiny that have their own tables in the Manifest Database - also have displayable information. This is the base class for that display information.
+    DisplayProperties Destiny_Definitions_Common_DestinyDisplayPropertiesDefinition `json:"displayProperties"`
+
+    // Hash.
+    //
+    // The unique identifier for this entity. Guaranteed to be unique for the type of entity, but not globally.
+    //
+    // When entities refer to each other in Destiny content, it is this hash that they are referring to.
+    Hash uint32 `json:"hash"`
+
+    // Index.
+    //
+    // The index of the entity as it was found in the investment tables.
+    Index int32 `json:"index"`
+
+    // ParentCommendationNodeHash.
+    //
+    // 
+    ParentCommendationNodeHash uint32 `json:"parentCommendationNodeHash"`
 
     // Redacted.
     //

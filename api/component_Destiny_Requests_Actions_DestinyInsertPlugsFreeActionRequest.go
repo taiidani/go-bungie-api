@@ -3,16 +3,6 @@
 package api
 
 type Destiny_Requests_Actions_DestinyInsertPlugsFreeActionRequest struct {
-    // MembershipType.
-    //
-    // 
-    MembershipType int32 `json:"membershipType"`
-
-    // Plug.
-    //
-    // The plugs being inserted.
-    Plug any `json:"plug"`
-
     // CharacterId.
     //
     // 
@@ -22,4 +12,14 @@ type Destiny_Requests_Actions_DestinyInsertPlugsFreeActionRequest struct {
     //
     // The instance ID of the item for this action request.
     ItemId int64 `json:"itemId"`
+
+    // MembershipType.
+    //
+    // 
+    MembershipType int32 `json:"membershipType"`
+
+    // Plug.
+    //
+    // The plugs being inserted.
+    Plug any `json:"plug"`
 }

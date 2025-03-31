@@ -3,6 +3,11 @@
 package api
 
 type Destiny_HistoricalStats_DestinyLeaderboardEntry struct {
+    // CharacterId.
+    //
+    // ID of the player's best character for the reported stat.
+    CharacterId int64 `json:"characterId"`
+
     // Player.
     //
     // Identity details of the player
@@ -17,9 +22,4 @@ type Destiny_HistoricalStats_DestinyLeaderboardEntry struct {
     //
     // Value of the stat for this player
     Value any `json:"value"`
-
-    // CharacterId.
-    //
-    // ID of the player's best character for the reported stat.
-    CharacterId int64 `json:"characterId"`
 }
