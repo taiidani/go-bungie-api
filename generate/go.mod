@@ -2,7 +2,7 @@ module github.com/taiidani/go-bungie-api/generate
 
 go 1.24.1
 
-require github.com/getkin/kin-openapi v0.131.0
+require github.com/getkin/kin-openapi v0.132.0
 
 require (
 	github.com/go-openapi/jsonpointer v0.21.0 // indirect
