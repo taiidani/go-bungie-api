@@ -16,7 +16,7 @@ type Destiny_Definitions_Records_DestinyRecordTitleBlock struct {
     // TitlesByGender.
     //
     // 
-    TitlesByGender map[int32]string `json:"titlesByGender"`
+    TitlesByGender map[string]string `json:"titlesByGender"`
 
     // TitlesByGenderHash.
     //

@@ -141,6 +141,12 @@ func renderObject(_ context.Context, key string, schema openapi3.SchemaRef) (*Ob
 			Description: strings.Split(prop.Value.Description, "\n"),
 		}
 
+		// Odd exception
+		// TODO: There could be more exceptions!
+		if id == "titlesByGender" {
+			add.Type = "map[string]string"
+		}
+
 		ret.Properties = append(ret.Properties, add)
 	}
 
@@ -212,6 +218,7 @@ func resolveObject(prop *openapi3.SchemaRef) string {
 		return "any"
 	}
 
+	// Next, determine the type of the map's value
 	value := "any"
 	additionalRef := prop.Value.AdditionalProperties.Schema.Ref
 	if additionalRef != "" {
