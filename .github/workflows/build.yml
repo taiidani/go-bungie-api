@@ -9,8 +9,8 @@ jobs:
         dir: ["", "generate"]
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: jdx/mise-action@v2
+      - uses: actions/checkout@v5
+      - uses: jdx/mise-action@v3
 
       - name: Vet
         working-directory: ${{ matrix.dir }}
